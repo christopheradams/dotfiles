@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/etc/apache2/mods-available'
+let g:netrw_dirhist_2='/etc/aiki'
+let g:netrw_dirhist_3='/srv/www/streetarchive.org/public_html/lithium/libraries/lithium'
+let g:netrw_dirhist_4='/srv/www/streetarchive.org/public_html/html5/css'
+let g:netrw_dirhist_5='/srv/www/streetarchive.org/public_html/html5'
+let g:netrw_dirhist_6='/home/christopher/.vim'
