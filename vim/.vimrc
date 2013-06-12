@@ -1,4 +1,5 @@
 syntax enable
+filetype plugin on
 "set t_Co=256
 "colorscheme wombat256
 set background=dark
