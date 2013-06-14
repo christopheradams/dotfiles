@@ -3,3 +3,9 @@
 	email = chris@raysend.com
 [core]
 	editor = vim
+[merge]
+	tool = vimdiff
+[diff]
+	tool = vimdiff
+[color]
+	ui = true
