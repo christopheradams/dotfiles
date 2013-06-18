@@ -20,6 +20,7 @@ set tabstop=4
 set noswapfile
 set incsearch
 set hlsearch
+set cursorline
 
 "folding settings
 set foldmethod=indent   "fold based on indent
