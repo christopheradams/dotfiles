@@ -18,6 +18,9 @@ colorscheme solarized
 " Enable line numbers
 set number
 
+" Enable ruler
+set ruler
+
 " Spacing
 set autoindent
 set shiftwidth=4
