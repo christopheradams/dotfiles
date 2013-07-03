@@ -39,3 +39,6 @@ set foldmethod=indent   "fold based on indent
 set foldnestmax=10      "deepest fold is 10 levels
 set nofoldenable        "dont fold by default
 set foldlevel=1
+
+" Handlebars
+au BufRead,BufNewFile *.handlebars,*.hbs set ft=html syntax=handlebars
