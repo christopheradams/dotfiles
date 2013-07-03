@@ -11,8 +11,8 @@ filetype plugin on
 "colorscheme github
 
 " Use for solarized terminals
-"set background=dark
-set background=light
+set background=dark
+" set background=light
 colorscheme solarized
 
 " Enable line numbers
