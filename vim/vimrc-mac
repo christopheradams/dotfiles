@@ -29,9 +29,10 @@ set number
 set ruler
 
 " Spacing
-set autoindent
-set shiftwidth=4
-set tabstop=4
+setlocal autoindent
+setlocal expandtab
+setlocal shiftwidth=2
+setlocal tabstop=2
 
 " Disable swap files
 set noswapfile
