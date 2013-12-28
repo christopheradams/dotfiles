@@ -85,3 +85,6 @@ let g:netrw_liststyle=3
 
 " Change directory to the current buffer when opening files.
 set autochdir
+
+" Highlight at column 81
+2mat ErrorMsg '\%81v.'
