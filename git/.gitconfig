@@ -7,5 +7,7 @@
 	tool = vimdiff
 [diff]
 	tool = vimdiff
+[difftool]
+  prompt = false
 [color]
 	ui = true
