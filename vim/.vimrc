@@ -79,4 +79,4 @@ let g:netrw_altv = 1
 let g:netrw_liststyle=3
 
 " Change directory to the current buffer when opening files.
-set autochdir
+" set autochdir
