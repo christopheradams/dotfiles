@@ -49,6 +49,9 @@ set foldlevel=1
 " Handlebars
 au BufRead,BufNewFile *.handlebars,*.hbs set ft=html syntax=handlebars
 
+" ErlyDTL
+au BufRead,BufNewFile *.dtl set syntax=htmldjango
+
 " Toggle Vexplore with Ctrl-E
 function! ToggleVExplorer()
   if exists("t:expl_buf_num")
