@@ -37,20 +37,20 @@ set ruler
 " Highlight current line
 set cursorline
 
+" Highlight at column 81
+2mat ErrorMsg '\%81v.'
+
 " Folding settings
 set foldmethod=indent   "fold based on indent
 set foldnestmax=10      "deepest fold is 10 levels
 set nofoldenable        "dont fold by default
 set foldlevel=1
 
-" Highlight at column 81
-2mat ErrorMsg '\%81v.'
-
 " Handlebars
 au BufRead,BufNewFile *.handlebars,*.hbs set ft=html syntax=handlebars
 
 " ErlyDTL
-au BufRead,BufNewFile *.dtl set syntax=htmldjango
+au BufRead,BufNewFile *.dtl set ft=html syntax=htmldjango
 
 " Toggle Vexplore with Ctrl-E
 function! ToggleVExplorer()
