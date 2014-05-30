@@ -112,6 +112,7 @@ channels = (
   { name = "#irssi"; chatnet = "ircnet"; autojoin = "No"; },
   { name = "silc"; chatnet = "silc"; autojoin = "No"; },
   { name = "#fabricatorz"; chatnet = "Freenode"; autojoin = "yes"; }
+  { name = "##fabricatorz"; chatnet = "Freenode"; autojoin = "yes"; }
 );
 
 aliases = {
