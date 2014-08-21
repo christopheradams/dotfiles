@@ -1,14 +1,1 @@
-[user]
-	name = Christopher Adams
-	email = chris@raysend.com
-[core]
-	editor = vim
-	excludesfile = ~/.gitignore
-[merge]
-	tool = vimdiff
-[diff]
-	tool = vimdiff
-[difftool]
-  prompt = false
-[color]
-	ui = true
+gitconfig
