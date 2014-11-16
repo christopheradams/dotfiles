@@ -1,8 +1,8 @@
 Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
        , borderColor = "black"
        , border = TopB
-       , bgColor = "#fdf7e3"
-       , fgColor = "#657b83"
+       , bgColor = "#F7F7F7"
+       , fgColor = "#505050"
        , position = Top
        , lowerOnStart = True
        , persistent = False
@@ -11,15 +11,15 @@ Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
        , overrideRedirect = True
        , commands = [ Run Weather "RCSS" ["-t","<station>: <tempC>C",
                                           "-L","18","-H","25",
-                                          "--normal","#859900",
-                                          "--high","#dc322f",
-                                          "--low","#268bd2"] 36000
+                                          "--normal","#90A959",
+                                          "--high","#AC4142",
+                                          "--low","#6A9FB5"] 36000
                     , Run Network "eth0" ["-L","0","-H","32",
-                                          "--normal","#859900","--high","#dc322f"] 11
+                                          "--normal","#90A959","--high","#AC4142"] 11
                     , Run Network "eth1" ["-L","0","-H","32",
-                                          "--normal","#859900","--high","#dc322f"] 10
+                                          "--normal","#90A959","--high","#AC4142"] 10
                     , Run Cpu ["-L","3","-H","50",
-                               "--normal","#859900","--high","#dc322f"] 10
+                               "--normal","#90A959","--high","#AC4142"] 10
                     , Run Memory ["-t","Mem: <usedratio>%"] 10
                     , Run Swap [] 10
                     , Run Com "uname" ["-s","-r"] "" 36000
@@ -27,5 +27,5 @@ Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%cpu% | %memory% * %swap% | %eth0% - %eth1% } { <fc=#ee9a00>%date%</fc>| %RCSS% | %uname%"
+       , template = "%cpu% | %memory% * %swap% | %eth0% - %eth1% } { <fc=#8F5536>%date%</fc>| %RCSS% | %uname%"
        }
