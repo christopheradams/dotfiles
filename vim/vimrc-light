@@ -14,6 +14,7 @@ filetype plugin on
 "set background=dark
 set background=light
 colorscheme solarized
+set t_Co=16
 
 " Enable line numbers
 set number
