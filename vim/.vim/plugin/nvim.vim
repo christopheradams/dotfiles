@@ -16,7 +16,7 @@ let g:NVIM_intialised = 0
 
 " The extension used for files.
 " Anything *not* ending in this will be ignored.
-let g:NVIM_extension = '.md'
+let g:NVIM_extension = '.txt'
 " The directory used for the note database
 let g:NVIM_database  = '.nvim'
 " The language used for xapian stemming
