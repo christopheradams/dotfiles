@@ -18,7 +18,7 @@ let g:NVIM_intialised = 0
 " Anything *not* ending in this will be ignored.
 let g:NVIM_extension = '.txt'
 " The directory used for the note database
-let g:NVIM_database  = '.nvim'
+let g:NVIM_database  = '/home/christopher/.nvim'
 " The language used for xapian stemming
 let g:NVIM_language  = 'en'
 " Which side you want the sidebar on. valid choices are 'right','left'.
