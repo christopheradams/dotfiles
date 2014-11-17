@@ -291,7 +291,7 @@ settings = {
     hilight_nick_matches = "yes";
 
     # Solarized
-    theme = "solarized-custom";
+    theme = "base16-custom";
     hilight_color = "= %R";
     bell_beeps = "yes";
     beep_msg_level = "MSGS NOTICES DCC DCCMSGS HILIGHT";
