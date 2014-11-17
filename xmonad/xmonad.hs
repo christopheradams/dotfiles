@@ -11,7 +11,7 @@ xmonad $ defaultConfig
     { manageHook = manageDocks <+> manageHook defaultConfig
     , layoutHook = avoidStruts  $  layoutHook defaultConfig
 	, borderWidth = 1
-	, focusedBorderColor = "#d33682"
+	, focusedBorderColor = "#AC4142"
 	, normalBorderColor = "#eee8d5"
     } `additionalKeys`
     [ ((mod4Mask .|. shiftMask, xK_z), spawn "gnome-screensaver-command --lock") --mod4mask is the windows key
