@@ -24,8 +24,9 @@ Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
                     , Run Swap [] 10
                     , Run Com "uname" ["-s","-r"] "" 36000
     		    , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
+    		    , Run Com "/bin/bash" ["-c", "~/dotfiles/bin/wireless.sh"] "wifi" 30
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%cpu% | %memory% * %swap% | %eth0% - %eth1% } { <fc=#8F5536>%date%</fc>| %RCSS% | %uname%"
+       , template = "%cpu% | %memory% * %swap% | %eth0% - %eth1% | %wifi% } { <fc=#8F5536>%date%</fc>| %RCSS% | %uname%"
        }
