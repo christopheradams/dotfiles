@@ -1,26 +1,14 @@
-" Golang
-filetype off
-filetype plugin indent off
-set runtimepath+=/usr/local/go/misc/vim
-filetype plugin indent on
-syntax on
-
 " Enable syntax highlighting
 syntax enable
 
 " Allow filetype plugins
 filetype plugin on
 
-" Use for dark terminals
-"colorscheme wombat256
-
-" Use for white terminals
-"colorscheme github
-
-" Use for solarized terminals
-" set background=dark
+" Base 16
+colorscheme base16-grayscale
 set background=light
-colorscheme solarized
+" Make sure line number background is white
+highlight LineNr ctermbg=white
 
 " Enable line numbers
 set number
@@ -29,10 +17,9 @@ set number
 set ruler
 
 " Spacing
-setlocal autoindent
-setlocal expandtab
-setlocal shiftwidth=2
-setlocal tabstop=2
+set autoindent
+set shiftwidth=4
+set tabstop=4
 
 " Disable swap files
 set noswapfile
@@ -86,8 +73,20 @@ map <silent> <C-E> :call ToggleVExplorer()<CR>
 let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 
+" Open selected file into a new tab (overriding = 4)
+let g:netrw_browse_split = 3
+
 " Default to tree mode
 let g:netrw_liststyle=3
+
+" Sort by date
+let g:netrw_sort_by = 'time'
+
+" Set window size
+let g:netrw_winsize = 50
+
+" Remove the banner
+let g:netrw_banner = 0
 
 " Change directory to the current buffer when opening files.
 " set autochdir
