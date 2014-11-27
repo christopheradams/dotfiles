@@ -40,7 +40,7 @@ set incsearch
 set hlsearch
 set ruler
 " Highlight current line
-set cursorline
+" set cursorline
 
 " Highlight at column 81
 2mat ErrorMsg '\%81v.'
