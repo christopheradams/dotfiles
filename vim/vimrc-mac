@@ -5,7 +5,7 @@ syntax enable
 filetype plugin on
 
 " Base 16
-colorscheme base16-grayscale
+colorscheme base16-grayscale-mac
 set background=light
 " Make sure line number background is white
 highlight LineNr ctermbg=white
