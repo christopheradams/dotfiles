@@ -1,3 +1,6 @@
+" Pathogen
+execute pathogen#infect()
+
 " Enable syntax highlighting
 syntax enable
 
@@ -80,7 +83,7 @@ let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 
 " Open selected file into a new tab (overriding = 4)
-let g:netrw_browse_split = 3
+" let g:netrw_browse_split = 3
 
 " Default to tree mode
 let g:netrw_liststyle=3
