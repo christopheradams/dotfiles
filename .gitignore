@@ -10,3 +10,5 @@ xmonad.o
 
 # Vim
 .*.sw[a-z]
+
+emacs/emacs.d/auto-save-list/
