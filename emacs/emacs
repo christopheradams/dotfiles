@@ -3,12 +3,15 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes (quote (base16-default-light)))
+ '(ansi-color-faces-vector
+   [default default default italic underline success warning error])
+ '(custom-enabled-themes (quote (base16-grayscale-light)))
  '(custom-safe-themes
    (quote
-    ("af68e021f330fc192394e9c4913f483616d308957573a57a2792756869bd7b3e" "3a6d8378f18a5ba2a0c88ddcad2500675a755d056b3343b13b36911453e96c34" default)))
+    ("5432cb257727ff8690087e47816b4d7793e1c91d398b3444dd80bacea7b947c8" "1bfb834e59ced6991d21efa4872642d9ca4d9d67428908c4cf13b0363c196cf1" "264eed2cbce49e1406c592345c04b81402c471abb9ddf001fc09477be568f47c" "3fd955a810a7037ffca68b241d7efb89df3e4da6b18a62b7c1b34b9512bad401" "7bf1058f81e39efd2389985d427b5f834647336ab0b0cfd9698bc984d0da293c" "cf1349cec4d8ae22646ed5d2a8b8574f507b3e7dc09701c8b5213030a3a1b43a" "0a1ec4790f0c5381c3c38c31666fa969476cd7eaf8dd5ac93bca829e77304a16" "af68e021f330fc192394e9c4913f483616d308957573a57a2792756869bd7b3e" "3a6d8378f18a5ba2a0c88ddcad2500675a755d056b3343b13b36911453e96c34" default)))
  '(inhibit-startup-screen t)
- '(org-agenda-files (quote ("~/Desktop/todo.org"))))
+ '(org-agenda-files (quote ("~/Desktop/todo.org")))
+ '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
