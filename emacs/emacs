@@ -19,6 +19,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
- ; Themes
+ ;; Themes
  (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
  (load-theme 'base16-grayscale-light)
+ ;; Org-mode
+ (setq org-log-done t)
