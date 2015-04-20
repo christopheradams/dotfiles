@@ -10,9 +10,9 @@
    (quote
     ("5432cb257727ff8690087e47816b4d7793e1c91d398b3444dd80bacea7b947c8" default)))
  '(inhibit-startup-screen t)
- '(org-agenda-files (quote ("~/Desktop/todo.org")))
  '(tool-bar-mode nil))
 (setq ring-bell-function #'ignore)
+(setq auto-save-default nil)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -24,3 +24,8 @@
  (load-theme 'base16-grayscale-light)
  ;; Org-mode
  (setq org-log-done t)
+ (define-key global-map "\C-ca" 'org-agenda)
+ (setq org-agenda-files '("~/Dropbox/Org"))
+ (setq org-directory '"~/Dropbox/Org")
+ (setq org-default-notes-file (concat org-directory "/Notes.org"))
+ (define-key global-map "\C-cc" 'org-capture)
