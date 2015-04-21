@@ -3,14 +3,13 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ansi-color-faces-vector
-   [default default default italic underline success warning error])
+ '(ansi-color-faces-vector [default default default italic underline success warning error])
+ '(column-number-mode t)
  '(custom-enabled-themes (quote (base16-grayscale-light)))
- '(custom-safe-themes
-   (quote
-    ("5432cb257727ff8690087e47816b4d7793e1c91d398b3444dd80bacea7b947c8" default)))
+ '(custom-safe-themes (quote ("5432cb257727ff8690087e47816b4d7793e1c91d398b3444dd80bacea7b947c8" default)))
  '(inhibit-startup-screen t)
- '(tool-bar-mode nil))
+ '(tool-bar-mode nil)
+ '(truncate-lines t))
 (setq ring-bell-function #'ignore)
 (setq auto-save-default nil)
 (custom-set-faces
