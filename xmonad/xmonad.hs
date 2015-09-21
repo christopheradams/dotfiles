@@ -1,6 +1,7 @@
 import XMonad
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
+import XMonad.Layout.NoBorders
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
 import System.IO
@@ -9,7 +10,7 @@ main = do
 xmproc <- spawnPipe "/usr/bin/xmobar ~/.xmobarrc"
 xmonad $ defaultConfig
     { manageHook = manageDocks <+> manageHook defaultConfig
-    , layoutHook = avoidStruts  $  layoutHook defaultConfig
+    , layoutHook = smartBorders $ avoidStruts  $  layoutHook defaultConfig
 	, borderWidth = 1
 	, focusedBorderColor = "#AC4142"
 	, normalBorderColor = "#eee8d5"
