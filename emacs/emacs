@@ -28,3 +28,10 @@
  (setq org-directory '"~/Dropbox/Org")
  (setq org-default-notes-file (concat org-directory "/Notes.org"))
  (define-key global-map "\C-cc" 'org-capture)
+
+(setq org-agenda-custom-commands
+      '(("W" "Completed and/or deferred tasks from previous week"
+       ((agenda "" ((org-agenda-span 7)
+            (org-agenda-start-day "-7d")
+            (org-agenda-entry-types '(:timestamp))
+            (org-agenda-show-log t)))))))
