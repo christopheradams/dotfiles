@@ -8,6 +8,7 @@
  '(custom-enabled-themes (quote (base16-grayscale-light)))
  '(custom-safe-themes (quote ("5432cb257727ff8690087e47816b4d7793e1c91d398b3444dd80bacea7b947c8" default)))
  '(inhibit-startup-screen t)
+ '(org-agenda-prefix-format (quote ((agenda . " %i %-12:c%?-12t% s") (timeline . "  % s") (todo . " %i %-12:c") (tags . " %i %-12:c") (search . " %i %-12:c"))))
  '(org-agenda-remove-tags t)
  '(org-agenda-skip-archived-trees nil)
  '(org-agenda-use-time-grid nil)
