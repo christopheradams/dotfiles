@@ -8,6 +8,8 @@
  '(custom-enabled-themes (quote (base16-grayscale-light)))
  '(custom-safe-themes (quote ("5432cb257727ff8690087e47816b4d7793e1c91d398b3444dd80bacea7b947c8" default)))
  '(inhibit-startup-screen t)
+ '(org-agenda-remove-tags t)
+ '(org-agenda-skip-archived-trees nil)
  '(tool-bar-mode nil)
  '(truncate-lines t))
 (setq ring-bell-function #'ignore)
