@@ -21,8 +21,8 @@
  '(org-agenda-remove-tags t)
  '(org-agenda-skip-archived-trees nil)
  '(org-agenda-use-time-grid nil)
- '(tool-bar-mode nil)
- '(truncate-lines t))
+ '(org-startup-truncated nil)
+ '(tool-bar-mode nil))
 (setq ring-bell-function #'ignore)
 (setq auto-save-default nil)
 (custom-set-faces
