@@ -1,0 +1,3 @@
+#!/bin/sh
+
+date -u +'%_d %b %H:%M UTC'
