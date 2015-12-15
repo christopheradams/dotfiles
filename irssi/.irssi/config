@@ -113,6 +113,9 @@ channels = (
   { name = "silc"; chatnet = "silc"; autojoin = "No"; },
   { name = "#fabricatorz"; chatnet = "Freenode"; autojoin = "yes"; }
   { name = "##fabricatorz"; chatnet = "Freenode"; autojoin = "yes"; }
+  { name = "#newpalmyra"; chatnet = "Freenode"; autojoin = "yes"; }
+  { name = "#protocultural"; chatnet = "Freenode"; autojoin = "yes"; }
+  { name = "#costoffreedom"; chatnet = "Freenode"; autojoin = "yes"; }
 );
 
 aliases = {
