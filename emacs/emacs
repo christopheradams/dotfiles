@@ -34,6 +34,10 @@
  ;; Themes
  (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
  (load-theme 'base16-grayscale-light)
+
+(scroll-bar-mode -1)
+;; (menu-bar-mode -1)
+
  ;; Org-mode
  (setq org-log-done t)
  (define-key global-map "\C-ca" 'org-agenda)
