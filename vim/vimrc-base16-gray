@@ -4,5 +4,7 @@ source ~/dotfiles/vim/vimrc-common
 colorscheme base16-grayscale
 set background=light
 
+hi MatchParen ctermfg=blue guifg=lightblue
+
 " Don't highlight current line
 set nocursorline
