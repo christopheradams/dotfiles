@@ -12,3 +12,4 @@ xmonad.o
 .*.sw[a-z]
 
 emacs/emacs.d/auto-save-list/
+emacs/emacs.d/bookmarks
