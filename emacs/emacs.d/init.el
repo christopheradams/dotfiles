@@ -49,7 +49,7 @@
 (setq inhibit-splash-screen t)
 (require 'bookmark)
 (bookmark-bmenu-list)
-;; (switch-to-buffer "*Bookmark List*")
+(switch-to-buffer "*Bookmark List*")
 
  ;; Org-mode
  (setq org-log-done t)
@@ -78,4 +78,4 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (package-initialize)
 
-(init-open-recentf)
+;; (init-open-recentf)
