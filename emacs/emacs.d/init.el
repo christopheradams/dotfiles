@@ -45,6 +45,9 @@
 (recentf-mode t)
 (add-to-list 'recentf-exclude "\\.emacs.d/")
 
+;;Auto Fill Mode (wraps line automatically in text mode)
+(add-hook 'text-mode-hook 'turn-on-auto-fill)
+
 ;; Bookmarks
 (setq inhibit-splash-screen t)
 (require 'bookmark)
