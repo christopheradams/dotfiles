@@ -70,3 +70,8 @@
             (org-agenda-entry-types '(:timestamp))
 			(org-agenda-prefix-format (quote ((agenda . " %i %-12:c") (timeline . "  % s") (todo . " %i %-12:c") (tags . " %i %-12:c") (search . " %i %-12:c"))))
             (org-agenda-show-log t)))))))
+
+;; Melpa
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+(package-initialize)
