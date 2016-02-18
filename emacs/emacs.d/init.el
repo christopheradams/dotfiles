@@ -38,6 +38,17 @@
 (scroll-bar-mode -1)
 ;; (menu-bar-mode -1)
 
+;; Recentf
+(require 'recentf)
+(setq recentf-max-saved-items 50
+	 recentf-max-menu-items 15)
+(recentf-mode t)
+;; Bookmarks
+(setq inhibit-splash-screen t)
+(require 'bookmark)
+(bookmark-bmenu-list)
+(switch-to-buffer "*Bookmark List*")
+
  ;; Org-mode
  (setq org-log-done t)
  (define-key global-map "\C-ca" 'org-agenda)
