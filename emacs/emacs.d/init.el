@@ -57,6 +57,9 @@
  (setq org-agenda-files '("~/Dropbox/Org"))
  (setq org-directory '"~/Dropbox/Org")
  (setq org-default-notes-file (concat org-directory "/Notes.org"))
+ (setq org-refile-use-outline-path 'file)
+ (setq org-refile-targets
+	        '((org-agenda-files . (:maxlevel . 4))))
  (define-key global-map "\C-cc" 'org-capture)
 
 (setq org-todo-keywords
