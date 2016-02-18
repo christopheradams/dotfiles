@@ -43,7 +43,7 @@
 (setq recentf-max-saved-items 50
 	 recentf-max-menu-items 15)
 (recentf-mode t)
-(add-to-list 'recentf-exclude "\\.emacs.d")
+(add-to-list 'recentf-exclude "\\.emacs.d/")
 
 ;; Bookmarks
 (setq inhibit-splash-screen t)
