@@ -84,12 +84,22 @@
 			(org-agenda-prefix-format (quote ((agenda . " %i %-12:c") (timeline . "  % s") (todo . " %i %-12:c") (tags . " %i %-12:c") (search . " %i %-12:c"))))
             (org-agenda-show-log t)))))))
 
-;; Melpa
+;; Packages
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (package-initialize)
 
-(require 'evil)
-(evil-mode 1)
+;;; use-package
+(if (not (package-installed-p 'use-package))
+    (progn
+      (package-refresh-contents)
+      (package-install 'use-package)))
+(require 'use-package)
+
+;;; Evil
+(use-package evil
+	:ensure t
+	:config
+	(evil-mode 1))
 
 ;; (init-open-recentf)
