@@ -37,7 +37,7 @@
    `(highlight ((t (:foreground ,base01))))
    `(link ((t (:underline t :foreground ,base0D))))
    `(link-visited ((t (:underline t :foreground ,base0E))))
-   `(linum ((t (:background ,base03))))
+   `(linum ((t (:background ,base07))))
    `(minibuffer-prompt ((t (:foreground ,base0D))))
    `(mode-line ((t (:background ,base07 :foreground ,base03 :box ,base03))))
    `(mode-line-buffer-id ((t (:foreground ,base0E :background nil))))
