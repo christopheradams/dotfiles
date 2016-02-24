@@ -22,7 +22,8 @@
       (base0C "#868686")
       (base0D "#686868")
       (base0E "#747474")
-      (base0F "#5e5e5e"))
+      (base0F "#5e5e5e")
+      (baseFF "#AB4642"))
 
   (custom-theme-set-faces
    'base16-grayscale-light
@@ -30,7 +31,7 @@
    ;; Built-in stuff (Emacs 23)
    `(border ((t (:background ,base03))))
    `(border-glyph ((t (nil))))
-   `(cursor ((t (:background ,base08))))
+   `(cursor ((t (:background ,baseFF))))
    `(default ((t (:background ,base07 :foreground ,base02))))
    `(fringe ((t (:background ,base07))))
    `(gui-element ((t (:background ,base03 :foreground ,base06))))
@@ -112,7 +113,7 @@
    `(org-todo ((t (:foreground ,base08))))
 
    ;; show-paren-mode
-   `(show-paren-match ((t (:background ,base0D :foreground ,base01))))
+   `(show-paren-match ((t (:background ,baseFF :foreground ,base07))))
    `(show-paren-mismatch ((t (:background ,base09 :foreground ,base01))))
 
    ;; rainbow-delimiters
