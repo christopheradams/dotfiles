@@ -103,4 +103,9 @@
 	:config
 	(evil-mode 1))
 
+;;; Magit
+(use-package magit
+  :ensure t)
+
+
 ;; (init-open-recentf)
