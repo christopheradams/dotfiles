@@ -105,7 +105,8 @@
 
 ;;; Magit
 (use-package magit
-  :ensure t)
-
+  :ensure t
+  :init
+  (global-set-key (kbd "C-x g") 'magit-status))
 
 ;; (init-open-recentf)
