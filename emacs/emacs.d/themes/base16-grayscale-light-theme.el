@@ -113,7 +113,7 @@
    `(org-todo ((t (:foreground ,base08))))
 
    ;; show-paren-mode
-   `(show-paren-match ((t (:background ,baseFF :foreground ,base07))))
+   `(show-paren-match ((t (:background ,base07 :foreground ,baseFF))))
    `(show-paren-mismatch ((t (:background ,base09 :foreground ,base01))))
 
    ;; rainbow-delimiters
