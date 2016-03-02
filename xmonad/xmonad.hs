@@ -3,6 +3,7 @@ import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
 import XMonad.Layout.NoBorders
 import XMonad.Util.Run(spawnPipe)
+import XMonad.Actions.SpawnOn
 import XMonad.Util.EZConfig(additionalKeys)
 import System.IO
 
@@ -16,6 +17,7 @@ xmonad $ defaultConfig
 	, normalBorderColor = "#eee8d5"
     } `additionalKeys`
     [ ((mod4Mask .|. shiftMask, xK_z), spawn "gnome-screensaver-command --lock") --mod4mask is the windows key
+    , ((mod1Mask .|. shiftMask, xK_e), spawnHere "emacsclient --no-wait --create-frame --alternate-editor=''") -- %! Launch emacs
     , ((0, xK_Print), spawn "gnome-screenshot")
     ]
 
