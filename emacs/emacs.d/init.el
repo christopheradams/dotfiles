@@ -58,7 +58,8 @@
 (setq inhibit-splash-screen t)
 (require 'bookmark)
 (bookmark-bmenu-list)
-(switch-to-buffer "*Bookmark List*")
+(setq initial-buffer-choice
+      (lambda () (list-bookmarks) (get-buffer "*Bookmark List*")))
 
  ;; Org-mode
  (setq org-log-done t)
