@@ -23,6 +23,7 @@
  '(org-agenda-use-time-grid nil)
  '(org-startup-truncated nil)
  '(show-paren-mode t)
+ '(show-trailing-whitespace t)
  '(tool-bar-mode nil))
 (setq ring-bell-function #'ignore)
 (setq auto-save-default nil)
