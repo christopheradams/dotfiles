@@ -32,9 +32,10 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
- ;; Themes
- (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
- (load-theme 'base16-grayscale-light)
+
+;;; Themes
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+(load-theme 'base16-grayscale-light)
 
 ;; Make sure the theme is loaded after frame creation
 (defun load-custom-theme (frame)
@@ -44,41 +45,41 @@
     (add-hook 'after-make-frame-functions #'load-custom-theme)
   (load-theme 'base16-grayscale-light t))
 
+;;; Appearance
 (scroll-bar-mode -1)
 ;; (menu-bar-mode -1)
-
 ;; line numbers
 ;; (global-linum-mode 1)
 ;; (add-hook 'org-mode-hook (lambda () (linum-mode 0)))
 
-;; Recentf
+;;; Recentf
 (require 'recentf)
 (setq recentf-max-saved-items 50
-	 recentf-max-menu-items 15)
+      recentf-max-menu-items 15)
 (recentf-mode t)
 (add-to-list 'recentf-exclude "\\.emacs.d/")
 
-;;Auto Fill Mode (wraps line automatically)
+;;; Auto Fill Mode (wraps line automatically)
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
 (add-hook 'org-mode-hook 'turn-on-auto-fill)
 
-;; Bookmarks
+;;; Bookmarks
 (setq inhibit-splash-screen t)
 (require 'bookmark)
 (bookmark-bmenu-list)
 (setq initial-buffer-choice
       (lambda () (list-bookmarks) (get-buffer "*Bookmark List*")))
 
- ;; Org-mode
- (setq org-log-done t)
- (define-key global-map "\C-ca" 'org-agenda)
- (setq org-agenda-files '("~/Dropbox/Org"))
- (setq org-directory '"~/Dropbox/Org")
- (setq org-default-notes-file (concat org-directory "/Notes.org"))
- (setq org-refile-use-outline-path 'file)
- (setq org-refile-targets
-	        '((org-agenda-files . (:maxlevel . 4))))
- (define-key global-map "\C-cc" 'org-capture)
+;;; Org-mode
+(setq org-log-done t)
+(define-key global-map "\C-ca" 'org-agenda)
+(setq org-agenda-files '("~/Dropbox/Org"))
+(setq org-directory '"~/Dropbox/Org")
+(setq org-default-notes-file (concat org-directory "/Notes.org"))
+(setq org-refile-use-outline-path 'file)
+(setq org-refile-targets
+	    '((org-agenda-files . (:maxlevel . 4))))
+(define-key global-map "\C-cc" 'org-capture)
 
 (setq org-todo-keywords
       (quote ((sequence "TODO(t)" "IDEA(i)" "STARTED(s@/!)" "WAITING(w@/!)" "|" "DONE(d)")
@@ -94,7 +95,7 @@
 			(org-agenda-prefix-format (quote ((agenda . " %i %-12:c") (timeline . "  % s") (todo . " %i %-12:c") (tags . " %i %-12:c") (search . " %i %-12:c"))))
             (org-agenda-show-log t)))))))
 
-;; Packages
+;;; Packages
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (package-initialize)
