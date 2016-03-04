@@ -120,4 +120,8 @@
   :init
   (global-set-key (kbd "C-x g") 'magit-status))
 
+;;; Erlang
+(use-package erlang
+  :ensure t)
+
 ;; (init-open-recentf)
