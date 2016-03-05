@@ -120,6 +120,10 @@
   :init
   (global-set-key (kbd "C-x g") 'magit-status))
 
+;;; web-mode
+(use-package web-mode
+  :ensure t)
+
 ;;; Erlang
 (use-package erlang
   :ensure t)
