@@ -128,4 +128,8 @@
 (use-package erlang
   :ensure t)
 
+;;; Elixir
+(use-package elixir-mode
+  :ensure t)
+
 ;; (init-open-recentf)
