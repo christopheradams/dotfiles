@@ -71,6 +71,12 @@
 (setq initial-buffer-choice
       (lambda () (list-bookmarks) (get-buffer "*Bookmark List*")))
 
+;;; Backups
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
+
 ;;; Org-mode
 (setq org-log-done t)
 (define-key global-map "\C-ca" 'org-agenda)
