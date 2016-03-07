@@ -110,9 +110,10 @@
 
 ;;; Evil
 (use-package evil
-	:ensure t
-	:config
-	(evil-mode 1))
+  :ensure t
+  :init (evil-mode +1)
+  :config
+    (evil-set-initial-state 'dired-mode 'emacs))
 
 ;;; Magit
 (use-package magit
