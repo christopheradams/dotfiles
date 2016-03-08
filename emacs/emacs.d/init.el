@@ -119,6 +119,8 @@
   :ensure t
   :init (evil-mode +1)
   :config
+    (evil-set-initial-state 'git-rebase-mode 'emacs)
+    (evil-set-initial-state 'magit-popup-mode 'emacs)
     (evil-set-initial-state 'dired-mode 'emacs))
 
 ;;; Magit
