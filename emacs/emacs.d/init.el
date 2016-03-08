@@ -114,6 +114,14 @@
       (package-install 'use-package)))
 (require 'use-package)
 
+;;; exec-path-from-shell
+;;; ensure environment variables match the shell
+(use-package exec-path-from-shell
+  :ensure t
+  :init
+    (when (memq window-system '(mac ns))
+    (exec-path-from-shell-initialize)))
+
 ;;; Evil
 (use-package evil
   :ensure t
