@@ -111,10 +111,10 @@ chatnets = {
 channels = (
   { name = "#irssi"; chatnet = "ircnet"; autojoin = "No"; },
   { name = "silc"; chatnet = "silc"; autojoin = "No"; },
-  { name = "#fabricatorz"; chatnet = "Freenode"; autojoin = "yes"; }
-  { name = "##fabricatorz"; chatnet = "Freenode"; autojoin = "yes"; }
-  { name = "#newpalmyra"; chatnet = "Freenode"; autojoin = "yes"; }
-  { name = "#protocultural"; chatnet = "Freenode"; autojoin = "yes"; }
+  { name = "#fabricatorz"; chatnet = "Freenode"; autojoin = "yes"; },
+  { name = "##fabricatorz"; chatnet = "Freenode"; autojoin = "yes"; },
+  { name = "#newpalmyra"; chatnet = "Freenode"; autojoin = "yes"; },
+  { name = "#protocultural"; chatnet = "Freenode"; autojoin = "yes"; },
   { name = "#costoffreedom"; chatnet = "Freenode"; autojoin = "yes"; }
 );
 
@@ -293,7 +293,6 @@ settings = {
     autocreate_query_level = "MSGS";
     hilight_nick_matches = "yes";
 
-    # Solarized
     theme = "base16-custom";
     hilight_color = "= %R";
     bell_beeps = "yes";
@@ -304,12 +303,8 @@ hilights = (
   { text = "cxadams"; color = "%R"; nick = "yes"; word = "yes"; }
 );
 ignores = (
-  {
-    level = "JOINS PARTS QUITS NICKS";
-    channels = ( "#emberjs", "#li3" );
-  },
-  {
-    level = "JOINS PARTS QUITS NICKS";
-    channels = ( "#emberjs", "#li3", "#elementary" );
+  { 
+    level = "JOINS PARTS QUITS NICKS MODES";
+    channels = ( "#elixir-lang", "#erlang" );
   }
 );
