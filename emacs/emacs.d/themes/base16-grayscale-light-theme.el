@@ -238,6 +238,9 @@
    `(term-color-blue ((t (:foreground ,base0D :background ,base0D))))
    `(term-color-magenta ((t (:foreground ,base0E :background ,base0E))))
 
+   ;; Magit (a patch is pending in magit to make these standard upstream)
+   `(magit-popup-argument ((t (:inherit highlight :weight bold :background nil))))
+
    `(link ((t (:foreground nil :underline t))))
    `(widget-button ((t (:underline t))))
    `(widget-field ((t (:background ,base03 :box (:line-width 1 :color ,base06)))))
