@@ -35,7 +35,7 @@
    `(default ((t (:background ,base07 :foreground ,base02))))
    `(fringe ((t (:background ,base07))))
    `(gui-element ((t (:background ,base03 :foreground ,base06))))
-   `(highlight ((t (:foreground ,base01))))
+   `(highlight ((t (:foreground ,baseFF))))
    `(link ((t (:underline t :foreground ,base0D))))
    `(link-visited ((t (:underline t :foreground ,base0E))))
    `(linum ((t (:background ,base07))))
