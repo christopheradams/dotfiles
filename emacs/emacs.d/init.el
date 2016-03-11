@@ -19,7 +19,7 @@
      (tags . " %i %-12:c")
      (search . " %i %-12:c"))))
  '(org-agenda-remove-tags t)
- '(org-agenda-skip-archived-trees nil)
+ '(org-agenda-skip-archived-trees t)
  '(org-agenda-use-time-grid nil)
  '(org-startup-truncated nil)
  '(show-paren-mode t)
