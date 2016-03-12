@@ -53,6 +53,9 @@
 ;; (global-linum-mode 1)
 ;; (add-hook 'org-mode-hook (lambda () (linum-mode 0)))
 
+;;; Formatting
+(setq-default indent-tabs-mode nil)
+
 ;;; Recentf
 (require 'recentf)
 (setq recentf-max-saved-items 50
