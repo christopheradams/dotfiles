@@ -243,7 +243,7 @@
 
    `(link ((t (:foreground nil :underline t))))
    `(widget-button ((t (:underline t))))
-   `(widget-field ((t (:background ,base03 :box (:line-width 1 :color ,base06)))))
+   `(widget-field ((t (:foreground, base07 :background ,base03 :box (:line-width 1 :color ,base06)))))
 
    ;; Compilation (most faces politely inherit from 'success, 'error, 'warning etc.)
    `(compilation-column-number ((t (:foreground ,base0A))))
