@@ -16,4 +16,5 @@ emacs/emacs.d/auto-save-list/
 emacs/emacs.d/bookmarks
 emacs/emacs.d/recentf
 emacs/emacs.d/recentf~
+emacs/emacs.d/eshell
 emacs/emacs.d/elpa
