@@ -155,7 +155,9 @@
 
 ;;; Markdown
 (use-package markdown-mode
-  :ensure t)
+  :ensure t
+  :config
+  (setq markdown-command "pandoc --from markdown_github --to html --standalone"))
 
 ;;; Erlang
 (use-package erlang
