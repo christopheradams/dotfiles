@@ -153,6 +153,10 @@
   (add-to-list 'auto-mode-alist '("\\.js[x]?\\'" . web-mode))
   (add-to-list 'auto-mode-alist '("\\.[s]?css\\'" . web-mode)))
 
+;;; Markdown
+(use-package markdown-mode
+  :ensure t)
+
 ;;; Erlang
 (use-package erlang
   :ensure t)
