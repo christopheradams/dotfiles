@@ -169,4 +169,8 @@
 (use-package elixir-mode
   :ensure t)
 
+;;; Haskell
+(use-package haskell-mode
+  :ensure t)
+
 ;; (init-open-recentf)
