@@ -168,6 +168,8 @@
 ;;; Elixir
 (use-package elixir-mode
   :ensure t)
+(use-package alchemist
+  :ensure t)
 
 ;;; Haskell
 (use-package haskell-mode
