@@ -9,7 +9,7 @@
  '(custom-enabled-themes (quote (base16-grayscale-light)))
  '(custom-safe-themes
    (quote
-    ("f13790d562e8a5770f023f4bcbe798a6c07d1bc984110119f78bd3612aaee583" default)))
+    ("564eb79e2e4c291a3b65c69880b30a412c9005a65c78f06f8b99c142079dbab4" default)))
  '(inhibit-startup-screen t)
  '(org-agenda-prefix-format
    (quote
@@ -32,7 +32,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(org-document-title ((t (:foreground "#999999" :weight bold :height 1.0)))))
 
 ;;; Themes
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
