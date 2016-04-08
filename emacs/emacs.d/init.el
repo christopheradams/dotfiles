@@ -105,6 +105,11 @@
 			(org-agenda-prefix-format (quote ((agenda . " %i %-12:c") (timeline . "  % s") (todo . " %i %-12:c") (tags . " %i %-12:c") (search . " %i %-12:c"))))
             (org-agenda-show-log t)))))))
 
+;;; SQLi
+(add-hook 'sql-interactive-mode-hook
+          (lambda ()
+            (toggle-truncate-lines t)))
+
 ;;; Packages
 (require 'package)
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
