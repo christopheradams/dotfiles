@@ -8,6 +8,7 @@ import XMonad.Util.EZConfig(additionalKeys)
 import System.IO
 
 main = do
+spawn "dropbox start"
 xmproc <- spawnPipe "/usr/bin/xmobar ~/.xmobarrc"
 xmonad $ defaultConfig
     { manageHook = manageDocks <+> manageHook defaultConfig
