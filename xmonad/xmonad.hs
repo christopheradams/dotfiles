@@ -21,7 +21,7 @@ xmonad $ defaultConfig
         , ppTitle = xmobarColor "#505050" "" . shorten 7
         }
     , layoutHook = smartBorders $ avoidStruts  $  layoutHook defaultConfig
-        , borderWidth = 1
+        , borderWidth = 2
         , focusedBorderColor = "#AC4142"
         , normalBorderColor = "#eee8d5"
     } `additionalKeys`
