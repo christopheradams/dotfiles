@@ -180,4 +180,8 @@
 (use-package haskell-mode
   :ensure t)
 
+;;; PHP
+(use-package php-mode
+  :ensure t)
+
 ;; (init-open-recentf)
