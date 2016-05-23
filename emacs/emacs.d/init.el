@@ -97,7 +97,8 @@
               (sequence "|" "CANCELLED(c@/!)" "DELEGATED(l@/!)"))))
 
 (setq org-todo-keyword-faces
-      (quote (("TODO" . org-warning) ("STARTED" . org-warning))))
+      (quote (("TODO" . org-warning)
+              ("STARTED" . org-warning))))
 
 (setq org-treat-S-cursor-todo-selection-as-state-change nil)
 
