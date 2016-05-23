@@ -93,11 +93,12 @@
 (define-key global-map "\C-cc" 'org-capture)
 
 (setq org-todo-keywords
-      (quote ((sequence "TODO(t)" "IDEA(i)" "STARTED(s@/!)" "WAITING(w@/!)" "|" "DONE(d)")
+      (quote ((sequence "TODO(t)" "IDEA(i)" "NEXT(n)" "STARTED(s@/!)" "WAITING(w@/!)" "|" "DONE(d)")
               (sequence "|" "CANCELLED(c@/!)" "DELEGATED(l@/!)"))))
 
 (setq org-todo-keyword-faces
       (quote (("TODO" . org-warning)
+              ("NEXT" . org-warning)
               ("STARTED" . org-warning))))
 
 (setq org-treat-S-cursor-todo-selection-as-state-change nil)
