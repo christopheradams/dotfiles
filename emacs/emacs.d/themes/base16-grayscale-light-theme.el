@@ -103,15 +103,6 @@
    `(mmm-comment-submode-face ((t (:inherit font-lock-comment-face))))
    `(mmm-output-submode-face ((t (:background ,base03))))
 
-
-
-   ;; org-mode
-   `(org-date ((t (:foreground ,base0E))))
-   `(org-done ((t (:foreground ,base0B))))
-   `(org-hide ((t (:foreground ,base01))))
-   `(org-link ((t (:underline t :foreground ,base0D))))
-   `(org-todo ((t (:foreground ,base08))))
-
    ;; show-paren-mode
    `(show-paren-match ((t (:background ,base07 :foreground ,baseFF))))
    `(show-paren-mismatch ((t (:background ,base09 :foreground ,base01))))
@@ -265,6 +256,7 @@
    `(mm/master-face ((t (:inherit region :foreground nil :background nil))))
    `(mm/mirror-face ((t (:inherit region :foreground nil :background nil))))
 
+   ;; org-mode
    `(org-agenda-structure ((t (:foreground ,base0E))))
    `(org-agenda-date ((t (:foreground ,base0D :underline nil))))
    `(org-agenda-done ((t (:foreground ,base0B))))
@@ -273,7 +265,7 @@
    `(org-code ((t (:foreground ,base0A))))
    `(org-column ((t (:background ,base03))))
    `(org-column-title ((t (:inherit org-column :weight bold :underline t))))
-   `(org-date ((t (:foreground ,base0E :underline t))))
+   `(org-date ((t (:foreground ,base0E))))
    `(org-document-info ((t (:foreground ,base0C))))
    `(org-document-info-keyword ((t (:foreground ,base0B))))
    `(org-document-title ((t (:weight bold :foreground ,base09 :height 1.44))))
@@ -281,8 +273,8 @@
    `(org-ellipsis ((t (:foreground ,base04))))
    `(org-footnote ((t (:foreground ,base0C))))
    `(org-formula ((t (:foreground ,base08))))
-   `(org-hide ((t (:foreground ,base03))))
-   `(org-link ((t (:undreline t :foreground ,base0D))))
+   `(org-hide ((t (:foreground ,base01))))
+   `(org-link ((t (:underline t :foreground ,base0D))))
    `(org-scheduled ((t (:foreground ,base0B))))
    `(org-scheduled-previously ((t (:foreground ,base09))))
    `(org-scheduled-today ((t (:foreground ,base0B))))
