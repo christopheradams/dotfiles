@@ -96,6 +96,9 @@
       (quote ((sequence "TODO(t)" "IDEA(i)" "STARTED(s@/!)" "WAITING(w@/!)" "|" "DONE(d)")
               (sequence "|" "CANCELLED(c@/!)" "DELEGATED(l@/!)"))))
 
+(setq org-todo-keyword-faces
+      (quote (("TODO" . org-warning) ("STARTED" . org-warning))))
+
 (setq org-treat-S-cursor-todo-selection-as-state-change nil)
 
 (setq org-agenda-custom-commands
