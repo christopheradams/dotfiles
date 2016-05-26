@@ -81,6 +81,11 @@
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
 
+;;; Secrets
+(let ((secret.el (expand-file-name "secret.el" user-emacs-directory)))
+  (when (file-exists-p secret.el)
+    (load secret.el)))
+
 ;;; Org-mode
 (setq org-log-done t)
 (define-key global-map "\C-ca" 'org-agenda)
