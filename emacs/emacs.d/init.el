@@ -105,7 +105,7 @@
 
 (setq org-todo-keywords
       (quote ((sequence "TODO(t)" "IDEA(i)" "NEXT(n)" "STARTED(s@/!)" "WAITING(w@/!)" "|" "DONE(d)")
-              (sequence "|" "CANCELLED(c@/!)" "DELEGATED(l@/!)"))))
+              (sequence "|" "CANCELLED(c@/!)" "DELEGATED(l@/!)" "DEFERRED(f!)"))))
 
 (setq org-todo-keyword-faces
       (quote (("TODO" . org-warning)
