@@ -229,6 +229,13 @@
    `(term-color-blue ((t (:foreground ,base0D :background ,base0D))))
    `(term-color-magenta ((t (:foreground ,base0E :background ,base0E))))
 
+   ;; eshell
+   `(eshell-prompt ((t (:foreground ,baseFF :weight bold))))
+   `(eshell-ls-directory ((t (:foreground ,base0D :weight bold))))
+   `(eshell-ls-clutter ((t (:foreground ,base05))))
+   `(eshell-ls-symlink ((t (:foreground ,base0B :weight bold))))
+   `(eshell-ls-executable ((t (:foreground ,baseFF :weight normal))))
+
    ;; Magit (a patch is pending in magit to make these standard upstream)
    `(magit-popup-argument ((t (:inherit highlight :weight bold :background nil))))
 
