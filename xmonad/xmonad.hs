@@ -28,7 +28,7 @@ xmonad $ defaultConfig
     [ ((mod4Mask .|. shiftMask, xK_z), spawn "gnome-screensaver-command --lock") --mod4mask is the windows key
     , ((mod1Mask .|. shiftMask, xK_e), spawnHere "emacsclient --no-wait --create-frame --alternate-editor=''") -- %! Launch emacs
     , ((mod1Mask .|. shiftMask, xK_f), spawnHere "firefox") -- %! Launch Firefox
-    , ((mod1Mask .|. shiftMask, xK_r), spawnHere "nautilus") -- %! Launch Nautilus
+    , ((mod1Mask .|. shiftMask, xK_r), spawnHere "nautilus -w") -- %! Launch Nautilus
     , ((0, xK_Print), spawn "gnome-screenshot")
     ]
 
