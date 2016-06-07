@@ -164,6 +164,10 @@
   :init
   (global-set-key (kbd "C-x g") 'magit-status))
 
+;;; rainbow-mode
+(use-package rainbow-mode
+  :ensure t)
+
 ;;; web-mode
 (use-package web-mode
   :ensure t
