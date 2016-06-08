@@ -23,7 +23,15 @@
       (base0D "#686868")
       (base0E "#747474")
       (base0F "#5e5e5e")
-      (baseFF "#AB4642"))
+      (baseFF "#ab4642")
+      (case08 "#db2d20")
+      (case09 "#e8bbd0")
+      (case0A "#fded02")
+      (case0B "#01a252")
+      (case0C "#b5e4f4")
+      (case0D "#01a0e4")
+      (case0E "#a16a94")
+      (case0F "#cdab53"))
 
   (custom-theme-set-faces
    'base16-grayscale-light
