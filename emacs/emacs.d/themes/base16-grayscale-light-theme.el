@@ -236,6 +236,17 @@
    `(eshell-ls-symlink ((t (:foreground ,base0B :weight bold))))
    `(eshell-ls-executable ((t (:foreground ,baseFF :weight normal))))
 
+   ;; company-mode
+   `(company-tooltip ((t (:background ,base06))))
+   `(company-tooltip-selection ((t (:background ,base05))))
+   `(company-tooltip-search ((t (:foreground ,baseFF))))
+   `(company-tooltip-common ((t (:foreground ,baseFF))))
+   `(company-tooltip-annotation ((t (:foreground ,baseFF))))
+   `(company-scrollbar-fg ((t (:background ,base02))))
+   `(company-scrollbar-bg ((t (:background ,base04))))
+   `(company-preview ((t (:background ,base05 :foreground ,baseFF))))
+   `(company-echo-common ((t (:foreground ,baseFF))))
+
    ;; Magit (a patch is pending in magit to make these standard upstream)
    `(magit-popup-argument ((t (:inherit highlight :weight bold :background nil))))
 
