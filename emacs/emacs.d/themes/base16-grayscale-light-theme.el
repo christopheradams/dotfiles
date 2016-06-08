@@ -245,14 +245,14 @@
    `(eshell-ls-executable ((t (:foreground ,baseFF :weight normal))))
 
    ;; company-mode
-   `(company-tooltip ((t (:background ,base06))))
-   `(company-tooltip-selection ((t (:background ,base05))))
+   `(company-tooltip ((t (:background ,case0C))))
+   `(company-tooltip-selection ((t (:background ,case0A))))
    `(company-tooltip-search ((t (:foreground ,baseFF))))
    `(company-tooltip-common ((t (:foreground ,baseFF))))
-   `(company-tooltip-annotation ((t (:foreground ,baseFF))))
-   `(company-scrollbar-fg ((t (:background ,base02))))
-   `(company-scrollbar-bg ((t (:background ,base04))))
-   `(company-preview ((t (:background ,base05 :foreground ,baseFF))))
+   `(company-tooltip-annotation ((t (:foreground ,base03))))
+   `(company-scrollbar-fg ((t (:background ,baseFF))))
+   `(company-scrollbar-bg ((t (:background ,case0D))))
+   `(company-preview ((t (:background ,case0C :foreground ,base07))))
    `(company-echo-common ((t (:foreground ,baseFF))))
 
    ;; Magit (a patch is pending in magit to make these standard upstream)
