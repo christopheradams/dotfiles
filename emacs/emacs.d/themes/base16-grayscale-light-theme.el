@@ -301,6 +301,7 @@
    `(org-formula ((t (:foreground ,base08))))
    `(org-hide ((t (:foreground ,base01))))
    `(org-link ((t (:underline t :foreground ,base0D))))
+   `(org-priority ((t (:foreground ,case0D))))
    `(org-scheduled ((t (:foreground ,base0B))))
    `(org-scheduled-previously ((t (:foreground ,base09))))
    `(org-scheduled-today ((t (:foreground ,base0B))))
