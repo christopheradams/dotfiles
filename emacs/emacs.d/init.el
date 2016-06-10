@@ -102,6 +102,7 @@
 (setq org-refile-targets
 	    '((org-agenda-files . (:maxlevel . 4))))
 (define-key global-map "\C-cc" 'org-capture)
+(setq org-clock-in-switch-to-state "STARTED")
 
 ;; ‘!’ (for a timestamp) or ‘@’ (for a note with timestamp)
 (setq org-todo-keywords
