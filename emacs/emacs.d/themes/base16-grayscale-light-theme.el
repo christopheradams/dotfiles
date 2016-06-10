@@ -306,6 +306,7 @@
    `(org-scheduled-today ((t (:foreground ,base0B))))
    `(org-special-keyword ((t (:foreground ,base09))))
    `(org-table ((t (:foreground ,base0E))))
+   `(org-tag ((t (:foreground ,base00 :weight normal))))
    `(org-todo ((t (:foreground ,base08))))
    `(org-upcoming-deadline ((t (:foreground ,base09))))
    `(org-warning ((t (:weight bold :foreground ,base08))))
