@@ -295,7 +295,7 @@
    `(org-document-info ((t (:foreground ,base0C))))
    `(org-document-info-keyword ((t (:foreground ,base0B))))
    `(org-document-title ((t (:weight bold :foreground ,base09 :height 1.44))))
-   `(org-done ((t (:foreground ,base0B))))
+   `(org-done ((t (:foreground ,base05))))
    `(org-ellipsis ((t (:foreground ,base04))))
    `(org-footnote ((t (:foreground ,base0C))))
    `(org-formula ((t (:foreground ,base08))))

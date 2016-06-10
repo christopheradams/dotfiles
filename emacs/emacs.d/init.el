@@ -9,7 +9,7 @@
  '(custom-enabled-themes (quote (base16-grayscale-light)))
  '(custom-safe-themes
    (quote
-    ("c9334bacb8e0957e7c27d468011c69df0cc24a9ac87bd8e4d178bdfb96758606" default)))
+    ("5809d82dc8cf20199f35d07a48e0f96eb9af0c96027320923c14f2baef1f654e" default)))
  '(inhibit-startup-screen t)
  '(org-agenda-prefix-format
    (quote
