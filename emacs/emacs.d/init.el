@@ -189,6 +189,11 @@
   :config
   (setq markdown-command "pandoc --from markdown_github --to html --standalone"))
 
+;;; SQL
+;;; sudo pip install format-sql --prefix='/usr/local'
+(use-package format-sql
+  :ensure t)
+
 ;;; Erlang
 (use-package erlang
   :ensure t)
