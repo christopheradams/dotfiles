@@ -103,6 +103,7 @@
 	    '((org-agenda-files . (:maxlevel . 4))))
 (define-key global-map "\C-cc" 'org-capture)
 
+;; ‘!’ (for a timestamp) or ‘@’ (for a note with timestamp)
 (setq org-todo-keywords
       (quote ((sequence "TODO(t)" "IDEA(i)" "NEXT(n)" "STARTED(s!)" "WAITING(w@/!)" "|" "DONE(d)")
               (sequence "|" "CANCELLED(c@/!)" "DELEGATED(l@/!)" "DEFERRED(f!)"))))
