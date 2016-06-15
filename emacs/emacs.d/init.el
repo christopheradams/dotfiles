@@ -160,6 +160,11 @@
     (evil-set-initial-state 'magit-popup-mode 'emacs)
     (evil-set-initial-state 'dired-mode 'emacs))
 
+;;; Projectile
+(use-package projectile
+  :ensure t
+  :init (projectile-global-mode +1))
+
 ;;; Magit
 (use-package magit
   :ensure t
