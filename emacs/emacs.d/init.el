@@ -70,6 +70,9 @@
 (recentf-mode t)
 (add-to-list 'recentf-exclude "\\.emacs.d/")
 
+;;; Tail logs
+(add-to-list 'auto-mode-alist '("\\.log\\'" . auto-revert-tail-mode))
+
 ;;; Auto Fill Mode (wraps line automatically)
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
 (add-hook 'org-mode-hook 'turn-on-auto-fill)
