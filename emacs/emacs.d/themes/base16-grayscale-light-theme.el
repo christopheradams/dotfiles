@@ -106,6 +106,10 @@
    `(clojure-special ((t (:foreground ,base0D))))
    `(clojure-java-call ((t (:foreground ,base0E))))
 
+   ;; Elixir
+   `(elixir-atom-face ((t (:foreground ,case0D))))
+   `(elixir-attribute-face ((t (:foreground ,case0E))))
+
    ;; MMM-mode
    `(mmm-code-submode-face ((t (:background ,base03))))
    `(mmm-comment-submode-face ((t (:inherit font-lock-comment-face))))
