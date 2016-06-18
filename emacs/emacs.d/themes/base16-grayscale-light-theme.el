@@ -259,8 +259,14 @@
    `(company-preview ((t (:background ,case0C :foreground ,base07))))
    `(company-echo-common ((t (:foreground ,baseFF))))
 
-   ;; Magit (a patch is pending in magit to make these standard upstream)
+   ;; Magit
    `(magit-popup-argument ((t (:inherit highlight :weight bold :background nil))))
+   `(magit-popup-key ((t (:foreground ,case0D))))
+   `(magit-branch-local ((t (:foreground ,case0D))))
+   `(magit-branch-current ((t (:foreground ,case0D :weight bold))))
+   `(magit-branch-remote ((t (:foreground ,case0B))))
+   `(magit-section-heading ((t (:foreground ,case0F :weight bold))))
+
 
    `(link ((t (:foreground nil :underline t))))
    `(widget-button ((t (:underline t))))
