@@ -266,6 +266,8 @@
    `(magit-branch-current ((t (:foreground ,case0D :weight bold))))
    `(magit-branch-remote ((t (:foreground ,case0B))))
    `(magit-section-heading ((t (:foreground ,case0F :weight bold))))
+   `(magit-diff-hunk-heading ((t (:background ,base06))))
+   `(magit-diff-hunk-heading-highlight ((t (:background ,base05))))
 
 
    `(link ((t (:foreground nil :underline t))))
