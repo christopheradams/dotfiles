@@ -12,7 +12,7 @@ xmonad.o
 .*.sw[a-z]
 
 # Emacs
-emacs/emacs.d/projectile-bookmarks.el
+emacs/emacs.d/projectile-bookmarks.eld
 emacs/emacs.d/auto-save-list/
 emacs/emacs.d/bookmarks
 emacs/emacs.d/secret.el
