@@ -159,6 +159,9 @@
   :ensure t
   :init (evil-mode +1)
   :config
+    (evil-define-key 'insert comint-mode-map
+      (kbd "<up>") 'comint-previous-input
+      (kbd "<down>") 'comint-next-input)
     (evil-set-initial-state 'git-rebase-mode 'emacs)
     (evil-set-initial-state 'magit-popup-mode 'emacs)
     (evil-set-initial-state 'dired-mode 'emacs))
