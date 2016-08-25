@@ -171,6 +171,10 @@
   :ensure t
   :init (projectile-global-mode +1))
 
+;;; Company
+(use-package company
+  :ensure t)
+
 ;;; Magit
 (use-package magit
   :ensure t
