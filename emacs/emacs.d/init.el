@@ -175,6 +175,10 @@
 (use-package company
   :ensure t)
 
+;;; Ag
+(use-package ag
+  :ensure t)
+
 ;;; Magit
 (use-package magit
   :ensure t
@@ -209,6 +213,11 @@
 (use-package format-sql
   :ensure t)
 
+;;; Ruby
+(use-package ruby-end
+  :ensure t
+  :defer t)
+
 ;;; Erlang
 (use-package erlang
   :ensure t
@@ -218,6 +227,13 @@
 ;;; Elixir
 (use-package elixir-mode
   :ensure t
+  :config
+  (add-to-list 'elixir-mode-hook
+               (defun auto-activate-ruby-end-mode-for-elixir-mode ()
+                 (set (make-variable-buffer-local 'ruby-end-expand-keywords-before-re)
+                      "\\(?:^\\|\\s-+\\)\\(?:do\\)")
+                 (set (make-variable-buffer-local 'ruby-end-check-statement-modifiers) nil)
+                 (ruby-end-mode +1)))
   :init
   (add-hook 'elixir-mode-hook
             (function (lambda()
