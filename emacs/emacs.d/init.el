@@ -111,6 +111,9 @@
 (define-key global-map "\C-cc" 'org-capture)
 (setq org-clock-in-switch-to-state "STARTED")
 
+;; Automatically save org buffers after refile
+(advice-add 'org-refile :after 'org-save-all-org-buffers)
+
 ;; ‘!’ (for a timestamp) or ‘@’ (for a note with timestamp)
 (setq org-todo-keywords
       (quote ((sequence "TODO(t)" "IDEA(i)" "NEXT(n)" "STARTED(s)" "WAITING(w@/!)" "|" "DONE(d)")
