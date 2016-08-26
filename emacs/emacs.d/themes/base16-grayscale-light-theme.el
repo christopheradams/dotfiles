@@ -259,6 +259,9 @@
    `(company-preview ((t (:background ,case0C :foreground ,base07))))
    `(company-echo-common ((t (:foreground ,baseFF))))
 
+   ;; Ag
+   `(ag-match-face ((t (:inherit highlight :weight bold :background nil))))
+
    ;; Magit
    `(magit-popup-argument ((t (:inherit highlight :weight bold :background nil))))
    `(magit-popup-key ((t (:foreground ,case0D))))
@@ -275,12 +278,13 @@
    `(widget-field ((t (:foreground, base07 :background ,base03 :box (:line-width 1 :color ,base06)))))
 
    ;; Compilation (most faces politely inherit from 'success, 'error, 'warning etc.)
-   `(compilation-column-number ((t (:foreground ,base0A))))
-   `(compilation-line-number ((t (:foreground ,base0A))))
+   `(compilation-column-number ((t (:inherit default :underline t))))
+   `(compilation-line-number ((t (:inherit default :underline t))))
    `(compilation-message-face ((t (:foreground ,base0D))))
    `(compilation-mode-line-exit ((t (:foreground ,base0B))))
    `(compilation-mode-line-fail ((t (:foreground ,base08))))
    `(compilation-mode-line-run ((t (:foreground ,base0D))))
+   `(compilation-info ((t (:weight bold :foreground ,base08))))
 
    ;; Grep
    `(grep-context-face ((t (:foreground ,base04))))
