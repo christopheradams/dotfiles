@@ -183,6 +183,7 @@
 (use-package ag
   :ensure t
   :config
+  (setq ag-reuse-buffers 't)
   (setq ag-highlight-search t))
 
 ;;; Magit
