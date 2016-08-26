@@ -177,7 +177,9 @@
 
 ;;; Ag
 (use-package ag
-  :ensure t)
+  :ensure t
+  :config
+  (setq ag-highlight-search t))
 
 ;;; Magit
 (use-package magit
