@@ -139,6 +139,11 @@
           (lambda ()
             (toggle-truncate-lines t)))
 
+;;; C/C++
+(setq-default c-basic-offset 4
+              tab-width 4
+              indent-tabs-mode t)
+
 ;;; Packages
 (require 'package)
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
