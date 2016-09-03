@@ -66,6 +66,9 @@
 
 ;;; Formatting
 (setq-default indent-tabs-mode nil)
+(add-hook 'prog-mode-hook '(lambda ()
+    (setq truncate-lines t
+          word-wrap nil)))
 
 ;;; Recentf
 (require 'recentf)
