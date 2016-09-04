@@ -10,6 +10,7 @@ xmonad.o
 
 # Vim
 .*.sw[a-z]
+vim/vim/bundle
 
 # Emacs
 emacs/emacs.d/projectile-bookmarks.eld
