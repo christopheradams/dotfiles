@@ -3,3 +3,6 @@
 
 # Vim
 .*.sw[a-z]
+
+# Emacs
+.dir-locals.el
