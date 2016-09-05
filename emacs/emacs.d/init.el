@@ -241,8 +241,11 @@
 ;;; Erlang
 (use-package erlang
   :ensure t
-  :config
-  (setq tab-width 4))
+  :init
+  (add-hook 'erlang-mode-hook
+            (lambda ()
+              (setq tab-width 4)
+              (setq erlang-indent-level tab-width))))
 
 ;;; Elixir
 (use-package elixir-mode
