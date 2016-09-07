@@ -229,7 +229,6 @@
                       :foreground "#aa2222"
                       :weight 'normal)
   (require 'git-gutter-fringe)
-  (setq git-gutter-fr:side 'right-fringe)
   (define-fringe-bitmap 'git-gutter-fr:added
     [224 224 224 224 224 224 224 224 224 224 224 224 224 224 224 224 224 224 224 224 224 224 224 224 224]
     nil nil 'center)
