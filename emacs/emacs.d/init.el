@@ -212,6 +212,33 @@
   :init
   (global-set-key (kbd "C-x g") 'magit-status))
 
+;;; GitGutter
+(use-package git-gutter-fringe
+  :ensure t)
+(use-package git-gutter
+  :ensure t
+  :init (global-git-gutter-mode +1)
+  :config
+  (set-face-attribute 'git-gutter:added nil
+                      :foreground "#22aa22"
+                      :weight 'normal)
+  (set-face-attribute 'git-gutter:modified nil
+                      :foreground "#a16a94"
+                      :weight 'normal)
+  (set-face-attribute 'git-gutter:deleted nil
+                      :foreground "#aa2222"
+                      :weight 'normal)
+  (require 'git-gutter-fringe)
+  (define-fringe-bitmap 'git-gutter-fr:added
+    [224 224 224 224 224 224 224 224 224 224 224 224 224 224 224 224 224 224 224 224 224 224 224 224 224]
+    nil nil 'center)
+  (define-fringe-bitmap 'git-gutter-fr:modified
+    [224 224 224 224 224 224 224 224 224 224 224 224 224 224 224 224 224 224 224 224 224 224 224 224 224]
+    nil nil 'center)
+  (define-fringe-bitmap 'git-gutter-fr:deleted
+    [0 0 0 0 0 0 0 0 0 0 0 0 0 128 192 224 240 248]
+nil nil 'center))
+
 ;;; restclient
 (use-package restclient
   :ensure t)
