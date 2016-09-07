@@ -212,6 +212,10 @@
   :init
   (global-set-key (kbd "C-x g") 'magit-status))
 
+;;; restclient
+(use-package restclient
+  :ensure t)
+
 ;;; rainbow-mode
 (use-package rainbow-mode
   :ensure t)
