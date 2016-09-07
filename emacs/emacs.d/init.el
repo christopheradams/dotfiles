@@ -13,7 +13,7 @@
  '(custom-enabled-themes (quote (base16-grayscale-light)))
  '(custom-safe-themes
    (quote
-    ("6c43b7eecbf7010f500c8a26434a7f382a17e2fbdef4a28fe6f9e1edfb69da54" default)))
+    ("f8ae1da2c8b546b360fc7f89c4b24c8e1846c021ddb1d97cdf77429feee7ef83" default)))
  '(inhibit-startup-screen t)
  '(org-agenda-prefix-format
    (quote
