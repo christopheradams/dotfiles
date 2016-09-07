@@ -64,6 +64,13 @@
 (global-set-key (kbd "M-<down>") 'shrink-window)
 (global-set-key (kbd "M-<up>") 'enlarge-window)
 
+;;; Scrolling
+(setq scroll-step 1)
+(setq scroll-conservatively 10000)
+(setq auto-window-vscroll nil)
+(setq mouse-wheel-progressive-speed nil)
+(setq mouse-wheel-scroll-amount '(2 ((shift) . 1)))
+
 ;;; Formatting
 (setq-default indent-tabs-mode nil)
 (add-hook 'prog-mode-hook '(lambda ()
