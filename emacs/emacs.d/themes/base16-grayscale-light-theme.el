@@ -272,6 +272,11 @@
    `(magit-diff-hunk-heading ((t (:background ,base06))))
    `(magit-diff-hunk-heading-highlight ((t (:background ,base05))))
 
+   ;; diff-hl
+   `(diff-hl-change ((t (:background "#DDEEFF"))))
+   `(diff-hl-delete ((t (:inherit magit-diff-removed))))
+   `(diff-hl-insert ((t (:inherit magit-diff-added))))
+   `(diff-hl-unknown ((t (:foreground ,base05))))
 
    `(link ((t (:foreground nil :underline t))))
    `(widget-button ((t (:underline t))))
