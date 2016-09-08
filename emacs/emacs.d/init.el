@@ -212,6 +212,18 @@
   :init
   (global-set-key (kbd "C-x g") 'magit-status))
 
+;;; diff-hl
+(use-package diff-hl
+  :ensure t
+  :init
+  (global-diff-hl-mode)
+  :config
+  (diff-hl-dired-mode)
+  ;;(setq diff-hl-draw-borders nil)
+  ;;(diff-hl-margin-mode)
+  (setq diff-hl-side 'right)
+  (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh))
+
 ;;; restclient
 (use-package restclient
   :ensure t)
