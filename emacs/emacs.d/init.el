@@ -41,7 +41,7 @@
 
 ;;; Themes
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-(load-theme 'base16-grayscale-light)
+(load-theme 'base16-grayscale-light t)
 
 ;; Make sure the theme is loaded after frame creation
 (defun load-custom-theme (frame)
