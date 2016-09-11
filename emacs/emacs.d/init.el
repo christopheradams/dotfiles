@@ -190,6 +190,15 @@
     (evil-set-initial-state 'magit-popup-mode 'emacs)
     (evil-set-initial-state 'dired-mode 'emacs))
 
+;;; Smex
+(use-package smex
+  :ensure t
+  :init
+  (smex-initialize)
+  :config
+  (global-set-key (kbd "M-x") 'smex)
+  (global-set-key (kbd "M-X") 'smex-major-mode-commands))
+
 ;;; Projectile
 (use-package projectile
   :ensure t
