@@ -195,6 +195,16 @@
   :ensure t
   :init (projectile-global-mode +1))
 
+;;; ibuffer-vc
+(use-package ibuffer-vc
+  :ensure t
+  :config
+  (add-hook 'ibuffer-hook
+            (lambda ()
+              (ibuffer-vc-set-filter-groups-by-vc-root)
+              (unless (eq ibuffer-sorting-mode 'alphabetic)
+                (ibuffer-do-sort-by-alphabetic)))))
+
 ;;; Company
 (use-package company
   :ensure t)
