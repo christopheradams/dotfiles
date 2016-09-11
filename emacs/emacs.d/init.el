@@ -198,6 +198,8 @@
 ;;; ibuffer-vc
 (use-package ibuffer-vc
   :ensure t
+  :init
+  (global-set-key (kbd "C-x C-b") 'ibuffer)
   :config
   (add-hook 'ibuffer-hook
             (lambda ()
