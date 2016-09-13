@@ -182,6 +182,15 @@
 
 ;;; Evil
 (setq evil-want-C-i-jump nil)
+(use-package evil-leader
+  :ensure t
+  :init (global-evil-leader-mode)
+  :config
+  (evil-leader/set-leader "<SPC>")
+  (evil-leader/set-key
+   "g" 'magit-status
+   "pp" 'projectile-switch-project
+   "pf" 'projectile-find-file))
 (use-package evil
   :ensure t
   :init (evil-mode +1)
