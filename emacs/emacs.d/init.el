@@ -201,7 +201,9 @@
     "s" 'save-buffer
     "g" 'magit-status
     "pp" 'projectile-switch-project
-    "pf" 'projectile-find-file))
+    "pf" 'projectile-find-file
+    "at"  'alchemist-mix-test
+    "amc" 'alchemist-mix-compile))
 (use-package evil
   :ensure t
   :init (evil-mode +1)
