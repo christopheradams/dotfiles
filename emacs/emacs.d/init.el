@@ -188,6 +188,16 @@
   :config
   (evil-leader/set-leader "<SPC>")
   (evil-leader/set-key
+    "1" 'delete-other-windows
+    "2" 'split-window-below
+    "3" 'split-window-right
+    "0" 'delete-window
+    "=" 'balance-windows
+    "h" 'evil-window-left
+    "j" 'evil-window-down
+    "k" 'evil-window-up
+    "l" 'evil-window-right
+    "s" 'save-buffer
     "g" 'magit-status
     "pp" 'projectile-switch-project
     "pf" 'projectile-find-file))
