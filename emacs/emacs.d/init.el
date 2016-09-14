@@ -182,6 +182,7 @@
 
 ;;; Evil
 (setq evil-want-C-i-jump nil)
+(setq evil-leader/no-prefix-mode-rx '("magit-.*-mode"))
 (use-package evil-leader
   :ensure t
   :init (global-evil-leader-mode)
