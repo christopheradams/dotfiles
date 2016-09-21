@@ -306,6 +306,14 @@
 (use-package ruby-end
   :ensure t
   :defer t)
+(use-package ruby-mode
+  :ensure t
+  :init
+  :config
+  (add-to-list 'auto-mode-alist
+               '("\\.\\(?:cap\\|gemspec\\|irbrc\\|gemrc\\|rake\\|rb\\|ru\\|thor\\)\\'" . ruby-mode))
+  (add-to-list 'auto-mode-alist
+               '("\\(?:Brewfile\\|Capfile\\|Gemfile\\(?:\\.[a-zA-Z0-9._-]+\\)?\\|[rR]akefile\\)\\'" . ruby-mode)))
 
 ;;; Erlang
 (use-package erlang
