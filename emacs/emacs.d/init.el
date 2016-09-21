@@ -309,6 +309,9 @@
 (use-package ruby-mode
   :ensure t
   :init
+  (add-hook 'ruby-mode-hook
+            (function (lambda()
+                        (setq evil-shift-width ruby-indent-level))))
   :config
   (add-to-list 'auto-mode-alist
                '("\\.\\(?:cap\\|gemspec\\|irbrc\\|gemrc\\|rake\\|rb\\|ru\\|thor\\)\\'" . ruby-mode))
