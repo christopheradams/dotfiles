@@ -346,7 +346,9 @@
 
 ;;; Haskell
 (use-package haskell-mode
-  :ensure t)
+  :ensure t
+  :config
+  (add-to-list 'auto-mode-alist '("\\.xmobarrc\\'" . haskell-mode)))
 
 ;;; PHP
 (use-package php-mode
