@@ -24,11 +24,13 @@ Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
                     , Run Swap [] 10
                     , Run Com "uname" ["-s","-r"] "" 36000
                     , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
+                    , Run Com "/bin/bash" ["-c", "~/dotfiles/bin/xmobar-tz 'America/Los_Angeles'"] "latime" 300
+                    , Run Com "/bin/bash" ["-c", "~/dotfiles/bin/xmobar-tz 'America/New_York'"] "nytime" 300
                     , Run Com "/bin/bash" ["-c", "~/dotfiles/bin/xmobar-utc"] "utcdate" 300
                     , Run Com "/bin/bash" ["-c", "~/dotfiles/bin/wireless.sh"] "wifi" 30
                     , Run StdinReader
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% | %cpu% | %memory% * %swap% | %eth0% - %eth1% | %wifi% } { %utcdate% | <fc=#8F5536>%date%</fc> | %RCSS% | %uname%"
+       , template = "%StdinReader% | %cpu% | %memory% * %swap% | %eth0% - %eth1% | %wifi% } { %latime% | %nytime% | %utcdate% | <fc=#8F5536>%date%</fc> | %RCSS% | %uname%"
        }
