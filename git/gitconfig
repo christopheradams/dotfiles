@@ -1,6 +1,7 @@
 [user]
 	name = Christopher Adams
 	email = christopher@fabricatorz.com
+	signingkey = E63327DF8735843F
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore
