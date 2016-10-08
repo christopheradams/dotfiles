@@ -53,6 +53,9 @@ set foldnestmax=10      "deepest fold is 10 levels
 set nofoldenable        "dont fold by default
 set foldlevel=1
 
+" Elixir
+au BufRead,BufNewFile *.ex,*.exs set tabstop=2 shiftwidth=2 softtabstop=2
+
 " Handlebars
 au BufRead,BufNewFile *.handlebars,*.hbs set ft=html syntax=handlebars
 
