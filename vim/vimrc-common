@@ -29,6 +29,9 @@ set statusline+=%<%P                         " file position
 set autoindent
 set shiftwidth=4
 set tabstop=4
+set softtabstop=0
+set expandtab
+set smarttab
 
 " Disable swap files
 set noswapfile
