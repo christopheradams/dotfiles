@@ -273,6 +273,14 @@
 ;;; restclient
 (use-package restclient
   :ensure t)
+(use-package company-restclient
+  :ensure t
+  :config
+  (add-to-list 'company-backends 'company-restclient))
+
+;;; know-your-http-well
+(use-package know-your-http-well
+  :ensure t)
 
 ;;; rainbow-mode
 (use-package rainbow-mode
