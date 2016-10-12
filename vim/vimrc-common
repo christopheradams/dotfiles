@@ -2,7 +2,7 @@
 execute pathogen#infect()
 
 " Enable syntax highlighting
-syntax enable
+syntax on
 
 " Allow filetype plugins
 filetype plugin indent on
