@@ -5,7 +5,7 @@ execute pathogen#infect()
 syntax enable
 
 " Allow filetype plugins
-filetype plugin on
+filetype plugin indent on
 
 " Enable line numbers
 set number
