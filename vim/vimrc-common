@@ -54,7 +54,7 @@ set nofoldenable        "dont fold by default
 set foldlevel=1
 
 " Elixir
-au BufRead,BufNewFile *.ex,*.exs set tabstop=2 shiftwidth=2 softtabstop=2
+au BufRead,BufNewFile *.ex,*.exs,*.eex set tabstop=2 shiftwidth=2 softtabstop=2 ft=elixir syntax=elixir autoindent
 
 " Handlebars
 au BufRead,BufNewFile *.handlebars,*.hbs set ft=html syntax=handlebars
