@@ -56,9 +56,6 @@ set foldlevel=1
 " Elixir
 au BufRead,BufNewFile *.ex,*.exs,*.eex set tabstop=2 shiftwidth=2 softtabstop=2 ft=elixir syntax=elixir autoindent
 
-" ErlyDTL
-au BufRead,BufNewFile *.dtl set ft=html syntax=htmldjango
-
 " Toggle Vexplore with Ctrl-E
 function! ToggleVExplorer()
   if exists("t:expl_buf_num")
