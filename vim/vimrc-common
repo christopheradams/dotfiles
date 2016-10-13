@@ -1,4 +1,5 @@
 " Pathogen
+filetype off
 execute pathogen#infect()
 
 " Enable syntax highlighting
