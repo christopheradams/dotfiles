@@ -10,17 +10,10 @@
    ["#101010" "#7c7c7c" "#8e8e8e" "#a0a0a0" "#686868" "#747474" "#686868" "#b9b9b9"])
  '(ansi-term-color-vector
    [unspecified "#101010" "#7c7c7c" "#8e8e8e" "#a0a0a0" "#686868" "#747474" "#686868" "#b9b9b9"])
- '(column-number-mode t)
  '(custom-enabled-themes (quote (base16-grayscale-light)))
  '(custom-safe-themes
    (quote
-    (default)))
- '(inhibit-startup-screen t)
- '(show-paren-mode t)
- '(show-trailing-whitespace t)
- '(tool-bar-mode nil))
-(setq ring-bell-function #'ignore)
-(setq auto-save-default nil)
+    (default))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -44,10 +37,20 @@
 
 ;;; Appearance
 (scroll-bar-mode -1)
+(tool-bar-mode -1)
+(setq inhibit-startup-screen t)
 ;; (menu-bar-mode -1)
+
 ;; line numbers
 ;; (global-linum-mode 1)
 ;; (add-hook 'org-mode-hook (lambda () (linum-mode 0)))
+(setq column-number-mode t)
+
+(setq ring-bell-function #'ignore)
+(setq auto-save-default nil)
+
+(setq-default show-trailing-whitespace t)
+(show-paren-mode t)
 
 ;;; Window Resize
 (global-set-key (kbd "M-<left>") 'shrink-window-horizontally)
