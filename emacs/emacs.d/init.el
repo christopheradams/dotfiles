@@ -16,17 +16,6 @@
    (quote
     (default)))
  '(inhibit-startup-screen t)
- '(org-agenda-prefix-format
-   (quote
-    ((agenda . " %i %-12:c%?-12t% s")
-     (timeline . "  % s")
-     (todo . " %i %-12:c")
-     (tags . " %i %-12:c")
-     (search . " %i %-12:c"))))
- '(org-agenda-remove-tags nil)
- '(org-agenda-skip-archived-trees t)
- '(org-agenda-use-time-grid nil)
- '(org-startup-truncated nil)
  '(show-paren-mode t)
  '(show-trailing-whitespace t)
  '(tool-bar-mode nil))
@@ -120,6 +109,18 @@
 (setq org-refile-targets
 	    '((org-agenda-files . (:maxlevel . 4))))
 (setq org-clock-in-switch-to-state "STARTED")
+
+(setq org-agenda-prefix-format
+(quote
+((agenda . " %i %-12:c%?-12t% s")
+    (timeline . "  % s")
+    (todo . " %i %-12:c")
+    (tags . " %i %-12:c")
+    (search . " %i %-12:c"))))
+(setq org-agenda-remove-tags nil)
+(setq org-agenda-skip-archived-trees t)
+(setq org-agenda-use-time-grid nil)
+(setq org-startup-truncated nil)
 
 ;; Automatically save org buffers after refile
 (advice-add 'org-refile :after 'org-save-all-org-buffers)
