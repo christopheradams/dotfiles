@@ -113,14 +113,12 @@
 
 ;;; Org-mode
 (setq org-log-done t)
-(define-key global-map "\C-ca" 'org-agenda)
 (setq org-agenda-files '("~/Dropbox/Org"))
 (setq org-directory '"~/Dropbox/Org")
 (setq org-default-notes-file (concat org-directory "/Notes.org"))
 (setq org-refile-use-outline-path 'file)
 (setq org-refile-targets
 	    '((org-agenda-files . (:maxlevel . 4))))
-(define-key global-map "\C-cc" 'org-capture)
 (setq org-clock-in-switch-to-state "STARTED")
 
 ;; Automatically save org buffers after refile
@@ -200,6 +198,10 @@
     "l" 'evil-window-right
     "s" 'save-buffer
     "g" 'magit-status
+    "oa" 'org-agenda
+    "oc" 'org-capture
+    "ob" 'org-iswitchb
+    "ol" 'org-store-link
     "pp" 'projectile-switch-project
     "pf" 'projectile-find-file
     "at"  'alchemist-mix-test
