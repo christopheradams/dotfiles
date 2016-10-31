@@ -9,7 +9,7 @@ import System.IO
 
 main = do
 spawn "dropbox start"
-xmproc <- spawnPipe "/usr/bin/xmobar ~/.xmobarrc"
+xmproc <- spawnPipe "xmobar ~/.xmobarrc"
 xmonad $ defaultConfig
     { manageHook = manageDocks <+> manageHook defaultConfig
     , logHook = dynamicLogWithPP $ xmobarPP
