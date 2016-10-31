@@ -114,6 +114,11 @@
 	    '((org-agenda-files . (:maxlevel . 4))))
 (setq org-clock-in-switch-to-state "STARTED")
 
+;; Separate drawers for clocking and logs
+(setq org-drawers (quote ("PROPERTIES" "LOGBOOK")))
+;; Save clock data and state changes and notes in the LOGBOOK drawer
+(setq org-clock-into-drawer t)
+
 (setq org-agenda-prefix-format
 (quote
 ((agenda . " %i %-12:c%?-12t% s")
