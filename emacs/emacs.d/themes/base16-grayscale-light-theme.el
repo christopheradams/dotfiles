@@ -53,7 +53,7 @@
    `(mode-line-emphasis ((t (:foreground ,base06 :slant italic))))
    `(mode-line-highlight ((t (:foreground ,base0E :box nil :weight bold))))
    `(mode-line-inactive ((t (:background ,base07 :foreground ,base04 :box ,base04))))
-   `(region ((t (:background ,base02))))
+   `(region ((t (:background ,case0A))))
    `(secondary-selection ((t (:background ,base03))))
    `(error ((t (:foreground ,base08 :weight bold))))
    `(warning ((t (:foreground ,base09 :weight bold))))
@@ -84,8 +84,8 @@
 
    ;; Search
    `(match ((t (:foreground ,base0D :background ,base01 :inverse-video t))))
-   `(isearch ((t (:foreground ,base0A :background ,base01 :inverse-video t))))
-   `(isearch-lazy-highlight-face ((t (:foreground ,base0C :background ,base01 :inverse-video t))))
+   `(isearch ((t (:foreground ,case0A :background ,base01 :inverse-video t))))
+   `(isearch-lazy-highlight-face ((t (:foreground ,base05 :background ,base01 :inverse-video t))))
    `(isearch-fail ((t (:background ,base01 :inherit font-lock-warning-face :inverse-video t))))
 
    ;; Flymake
