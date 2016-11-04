@@ -24,15 +24,15 @@
 
 ;;; Themes
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-(when window-system
+(if (display-graphic-p)
   (load-theme 'base16-grayscale-light t)
 
   ;; Make sure the theme is loaded after frame creation
-  (defun load-custom-theme (frame)
-    (select-frame frame)
-    (load-theme 'base16-grayscale-light t))
   (if (daemonp)
-      (add-hook 'after-make-frame-functions #'load-custom-theme)
+      (add-hook 'after-make-frame-functions
+                (lambda (frame)
+                  (select-frame frame
+                    (load-theme 'base16-grayscale-light t))))
     (load-theme 'base16-grayscale-light t)))
 
 ;;; Appearance
