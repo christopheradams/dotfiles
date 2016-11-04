@@ -24,6 +24,7 @@
 
 ;;; Themes
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+(add-to-list 'default-frame-alist '(tty-color-mode . -1))
 (if (display-graphic-p)
   (load-theme 'base16-grayscale-light t)
 
