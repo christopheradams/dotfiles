@@ -71,6 +71,9 @@
 (add-hook 'prog-mode-hook '(lambda ()
     (setq truncate-lines t
           word-wrap nil)))
+(add-hook 'org-mode-hook '(lambda ()
+    (setq truncate-lines t
+          word-wrap nil)))
 
 ;;; Recentf
 (require 'recentf)
