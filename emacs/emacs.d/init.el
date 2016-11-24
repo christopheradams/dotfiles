@@ -87,6 +87,11 @@
 (add-hook 'org-mode-hook 'turn-on-auto-fill)
 (setq-default fill-column 80)
 
+;;; Text mode shift width
+(add-hook 'text-mode-hook
+          (function (lambda()
+                      (setq evil-shift-width 2))))
+
 ;;; Bookmarks
 (setq inhibit-splash-screen t)
 (require 'bookmark)
