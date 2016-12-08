@@ -8,8 +8,6 @@ import XMonad.Util.EZConfig(additionalKeys)
 import System.IO
 
 main = do
-spawn "dropbox start"
-spawn "setxkbmap -option 'compose:ralt'"
 xmproc <- spawnPipe "xmobar ~/.xmobarrc"
 xmonad $ defaultConfig
     { manageHook = manageDocks <+> manageHook defaultConfig
