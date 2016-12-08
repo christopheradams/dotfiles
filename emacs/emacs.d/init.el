@@ -141,7 +141,9 @@
 (setq org-startup-truncated nil)
 
 ;; Automatically save org buffers after refile
-(advice-add 'org-refile :after 'org-save-all-org-buffers)
+(advice-add 'org-refile :after
+            (lambda (&rest _)
+            (org-save-all-org-buffers)))
 
 ;; ‘!’ (for a timestamp) or ‘@’ (for a note with timestamp)
 (setq org-todo-keywords
