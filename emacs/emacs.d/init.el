@@ -320,7 +320,11 @@
 		  '(("jsx" . "\\.js[x]?\\'")))
   (add-to-list 'auto-mode-alist '("\\.htm[l]?\\'" . web-mode))
   (add-to-list 'auto-mode-alist '("\\.js[x]?\\'" . web-mode))
-  (add-to-list 'auto-mode-alist '("\\.[s]?css\\'" . web-mode)))
+  (add-to-list 'auto-mode-alist '("\\.[s]?css\\'" . web-mode))
+  :init
+  (add-hook 'web-mode-hook
+            (function (lambda()
+                        (setq evil-shift-width web-mode-markup-indent-offset)))))
 
 ;;; Markdown
 (use-package markdown-mode
