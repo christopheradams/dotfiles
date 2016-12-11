@@ -174,12 +174,12 @@
 
    `(csv-separator-face ((t (:foreground ,base09))))
 
-   `(diff-added ((t (:foreground ,base0B))))
-   `(diff-changed ((t (:foreground ,base0A))))
-   `(diff-removed ((t (:foreground ,base08))))
-   `(diff-header ((t (:background ,base01))))
-   `(diff-file-header ((t (:background ,base02))))
-   `(diff-hunk-header ((t (:background ,base01 :foreground ,base0E))))
+   `(diff-added ((t (:foreground ,case0B))))
+   `(diff-changed ((t (:foreground ,case0E))))
+   `(diff-removed ((t (:foreground ,baseFF))))
+   `(diff-header ((t (:foreground ,base05))))
+   `(diff-file-header ((t (:foreground ,base05))))
+   `(diff-hunk-header ((t (:foreground ,base05))))
 
    `(ediff-even-diff-A ((t (:foreground nil :background nil :inverse-video t))))
    `(ediff-even-diff-B ((t (:foreground nil :background nil :inverse-video t))))
