@@ -4,8 +4,8 @@
 # and change /usr/share/xsessions/xmonad.desktop to
 # Exec=xmonad.start
 
-dropbox start
+dropbox start &
 
-setxkbmap -option 'compose:ralt'
+setxkbmap -option 'compose:ralt' &
 
 exec xmonad
