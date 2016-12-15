@@ -75,6 +75,26 @@
     (setq truncate-lines t
           word-wrap nil)))
 
+;;; Line wrap fringe bitmaps
+(define-fringe-bitmap 'right-curly-arrow
+  [#b00000000
+   #b00000000
+   #b00000000
+   #b00000000
+   #b01110000
+   #b00010000
+   #b00010000
+   #b00000000])
+(define-fringe-bitmap 'left-curly-arrow
+  [#b00000000
+   #b00001000
+   #b00001000
+   #b00001110
+   #b00000000
+   #b00000000
+   #b00000000
+   #b00000000])
+
 ;;; Recentf
 (require 'recentf)
 (setq recentf-max-saved-items 50
