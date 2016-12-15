@@ -332,6 +332,16 @@
   :config
   (setq markdown-command "pandoc --from markdown_github --to html --standalone"))
 
+;;; YAML
+(use-package yaml-mode
+  :ensure t
+  :config
+  (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
+  :init
+  (add-hook 'yaml-mode-hook
+            '(lambda ()
+               (define-key yaml-mode-map "\C-m" 'newline-and-indent))))
+
 ;;; SQL
 ;;; sudo pip install format-sql --prefix='/usr/local'
 (use-package format-sql
