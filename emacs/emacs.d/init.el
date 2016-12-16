@@ -272,6 +272,11 @@
   :ensure t
   :init (projectile-global-mode +1))
 
+;;; EditorConfig
+(use-package editorconfig
+  :ensure t
+  :config (editorconfig-mode 1))
+
 ;;; ibuffer-vc
 (use-package ibuffer-vc
   :ensure t
