@@ -32,5 +32,5 @@ Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% | %cpu% | %memory% * %swap% | %eth0% - %eth1% | %wifi% } { %latime% | %nytime% | %utcdate% | <fc=#8F5536>%date%</fc> | %RCSS% | %uname%"
+       , template = "%StdinReader% | %cpu% | %memory% * %swap% | %eth0% - %eth1% | %wifi% } { %latime% | %nytime% | %utcdate% | <fc=#8F5536>%date%</fc> | %uname%"
        }
