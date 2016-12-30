@@ -233,6 +233,7 @@
     "3" 'split-window-right
     "0" 'delete-window
     "=" 'balance-windows
+    "f" 'fill-paragraph
     "h" 'evil-window-left
     "j" 'evil-window-down
     "k" 'evil-window-up
