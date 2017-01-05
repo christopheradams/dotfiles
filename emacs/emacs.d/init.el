@@ -234,6 +234,7 @@
     "0" 'delete-window
     "=" 'balance-windows
     "f" 'fill-paragraph
+    "i" 'indent-region
     "h" 'evil-window-left
     "j" 'evil-window-down
     "k" 'evil-window-up
