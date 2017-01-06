@@ -1,0 +1,6 @@
+/* Prevents indentation of inbox Subjects when View
+ * is Sort by Threaded
+ */
+#threadTree treechildren::-moz-tree-indentation{
+  width: 0 !important;
+}
