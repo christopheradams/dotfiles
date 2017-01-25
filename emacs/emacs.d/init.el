@@ -141,6 +141,7 @@
 (setq org-refile-use-outline-path 'file)
 (setq org-refile-targets
 	    '((org-agenda-files . (:maxlevel . 4))))
+(setq org-reverse-note-order t)
 (setq org-clock-in-switch-to-state "STARTED")
 
 ;; Separate drawers for clocking and logs
