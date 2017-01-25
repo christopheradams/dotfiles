@@ -376,6 +376,13 @@
 (use-package format-sql
   :ensure t)
 
+;;; JavaScript
+(add-hook 'js-mode-hook
+          (lambda ()
+            (setq tab-width 2)
+            (setq js-indent-level tab-width)
+            (setq evil-shift-width js-indent-level)))
+
 ;;; Ruby
 (use-package ruby-end
   :ensure t
