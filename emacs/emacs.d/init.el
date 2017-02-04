@@ -56,6 +56,8 @@
 (setq-default show-trailing-whitespace t)
 (show-paren-mode t)
 
+(put 'upcase-region 'disabled nil)
+
 ;;; Window Resize
 (global-set-key (kbd "M-<left>") 'shrink-window-horizontally)
 (global-set-key (kbd "M-<right>") 'enlarge-window-horizontally)
