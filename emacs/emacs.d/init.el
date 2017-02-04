@@ -1,3 +1,6 @@
+;; Start emacs as a server
+(server-start)
+
 ;;(setq gc-cons-threshold (* 10 1024 1024))
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
