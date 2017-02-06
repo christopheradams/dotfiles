@@ -381,6 +381,10 @@
 (use-package format-sql
   :ensure t)
 
+;;; TeX
+(use-package tex
+  :ensure auctex)
+
 ;;; JavaScript
 (add-hook 'js-mode-hook
           (lambda ()
