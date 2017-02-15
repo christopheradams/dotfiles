@@ -154,6 +154,10 @@
 ;; Save clock data and state changes and notes in the LOGBOOK drawer
 (setq org-clock-into-drawer t)
 
+(setq org-capture-templates
+      '(("t" "Todo" entry (file+headline "" "Tasks")
+         "* TODO %?\n  %u\n  %a")))
+
 (setq org-agenda-prefix-format
 (quote
 ((agenda . " %i %-12:c%?-12t% s")
