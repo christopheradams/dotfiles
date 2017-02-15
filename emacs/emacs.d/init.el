@@ -156,6 +156,10 @@
 
 (setq org-capture-templates
       '(("t" "Todo" entry (file+headline "" "Tasks")
+         "* TODO %?\n  %u\n  %i")
+        ("i" "Idea" entry (file+headline "" "Tasks")
+         "* IDEA %?\n  %u\n  %i")
+        ("l" "Link" entry (file+headline "" "Tasks")
          "* TODO %?\n  %u\n  %a")))
 
 (setq org-agenda-prefix-format
