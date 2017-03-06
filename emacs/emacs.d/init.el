@@ -469,3 +469,4 @@
   :ensure t)
 
 ;; (init-open-recentf)
+(put 'downcase-region 'disabled nil)
