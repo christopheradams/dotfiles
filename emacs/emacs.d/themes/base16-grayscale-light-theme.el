@@ -249,14 +249,15 @@
    `(eshell-ls-executable ((t (:foreground ,baseFF :weight normal))))
 
    ;; company-mode
-   `(company-tooltip ((t (:background ,case0C))))
-   `(company-tooltip-selection ((t (:background ,case0A))))
+   `(company-tooltip ((t (:background ,base02 :foreground ,base07))))
+   `(company-tooltip-selection ((t (:background ,case0A :foreground ,base00))))
    `(company-tooltip-search ((t (:foreground ,baseFF))))
-   `(company-tooltip-common ((t (:foreground ,baseFF))))
-   `(company-tooltip-annotation ((t (:foreground ,base03))))
+   `(company-tooltip-common ((t (:weight bold))))
+   `(company-tooltip-annotation ((t (:foreground ,base06))))
+   `(company-tooltip-annotation-selection ((t (:foreground ,base03))))
    `(company-scrollbar-fg ((t (:background ,baseFF))))
-   `(company-scrollbar-bg ((t (:background ,case0D))))
-   `(company-preview ((t (:background ,case0C :foreground ,base07))))
+   `(company-scrollbar-bg ((t (:background ,base08))))
+   `(company-preview ((t (:background ,case0A))))
    `(company-echo-common ((t (:foreground ,baseFF))))
 
    ;; Ag
