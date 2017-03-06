@@ -100,6 +100,12 @@
    #b00000000
    #b00000000])
 
+;;; Dired
+;; Hide details by default. Show them with `(`.
+(add-hook 'dired-mode-hook
+          (function (lambda()
+                      (dired-hide-details-mode 1))))
+
 ;;; Recentf
 (require 'recentf)
 (setq recentf-max-saved-items 50
