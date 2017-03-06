@@ -432,6 +432,12 @@
             (lambda ()
               (setq tab-width 4)
               (setq erlang-indent-level tab-width))))
+(use-package edts
+  :ensure t
+  :init
+  (add-hook 'after-init-hook
+            (lambda ()
+              (require 'edts-start))))
 
 ;;; Elixir
 (use-package elixir-mode
