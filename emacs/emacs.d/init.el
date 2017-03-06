@@ -253,6 +253,7 @@
     "3" 'split-window-right
     "0" 'delete-window
     "=" 'balance-windows
+    "d" 'dired
     "f" 'fill-paragraph
     "i" 'indent-region
     "h" 'evil-window-left
