@@ -316,7 +316,9 @@
 
 ;;; Company
 (use-package company
-  :ensure t)
+  :ensure t
+  :init
+  (add-hook 'after-init-hook 'global-company-mode))
 
 ;;; Ag
 (use-package ag
