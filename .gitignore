@@ -23,3 +23,6 @@ emacs/emacs.d/recentf~
 emacs/emacs.d/eshell
 emacs/emacs.d/elpa
 emacs/emacs.d/url
+
+# irssi
+irssi/irssi/config.autosave
