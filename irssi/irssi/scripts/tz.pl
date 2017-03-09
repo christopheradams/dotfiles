@@ -1,0 +1,1 @@
+exec $ENV{'TZ'}='PRC';
