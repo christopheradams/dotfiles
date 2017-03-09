@@ -105,7 +105,7 @@ chatnets = {
   Freenode = {
     type = "IRC";
     nick = "cxadams";
-    autosendcmd = "/msg nickserv identify <PASSWORD>";
+    autosendcmd = "/msg nickserv identify <PASSWORD> ;wait 2000";
   };
 };
 
