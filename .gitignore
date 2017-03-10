@@ -14,6 +14,7 @@ vim/vim/bundle
 
 # Emacs
 emacs/emacs.d/projectile-bookmarks.eld
+emacs/emacs.d/ac-comphist.dat
 emacs/emacs.d/auto-save-list/
 emacs/emacs.d/smex-items
 emacs/emacs.d/bookmarks
