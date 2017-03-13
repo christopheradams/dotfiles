@@ -142,6 +142,9 @@
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
 
+;;; Lock files
+(setq create-lockfiles nil)
+
 ;;; Secrets
 (let ((secret.el (expand-file-name "secret.el" user-emacs-directory)))
   (when (file-exists-p secret.el)
