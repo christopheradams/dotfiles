@@ -160,6 +160,8 @@
 	    '((org-agenda-files . (:maxlevel . 4))))
 (setq org-reverse-note-order t)
 (setq org-clock-in-switch-to-state "STARTED")
+(setq org-time-clocksum-format
+      '(:hours "%d" :require-hours t :minutes ":%02d" :require-minutes t))
 
 ;; Separate drawers for clocking and logs
 (setq org-drawers (quote ("PROPERTIES" "LOGBOOK")))
