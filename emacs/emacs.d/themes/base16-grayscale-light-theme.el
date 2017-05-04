@@ -82,6 +82,9 @@
    ;; linum-mode
    `(linum ((t (:background ,base01 :foreground ,base03))))
 
+   ;; column-marker
+   `(column-marker-1 ((t (:background nil :inherit highlight))))
+
    ;; Search
    `(match ((t (:foreground ,base0D :background ,base01 :inverse-video t))))
    `(isearch ((t (:foreground ,case0A :background ,base01 :inverse-video t))))

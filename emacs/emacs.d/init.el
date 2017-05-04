@@ -240,6 +240,12 @@
       (package-install 'use-package)))
 (require 'use-package)
 
+;;; Column-marker
+(use-package column-marker
+  :ensure t
+  :config
+(column-marker-1 80))
+
 ;;; exec-path-from-shell
 ;;; ensure environment variables match the shell
 (use-package exec-path-from-shell
