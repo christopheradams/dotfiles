@@ -213,6 +213,10 @@
             (org-agenda-prefix-format (quote ((agenda . " %i %-12:c") (timeline . "  % s") (todo . " %i %-12:c") (tags . " %i %-12:c") (search . " %i %-12:c"))))
             (org-agenda-show-log t)))))))
 
+;; agenda clock report
+(setq org-agenda-clockreport-parameter-plist
+      (quote (:link t :maxlevel 5 :fileskip0 t :compact t :narrow 80)))
+
 ;;; SQLi
 (add-hook 'sql-interactive-mode-hook
           (lambda ()
