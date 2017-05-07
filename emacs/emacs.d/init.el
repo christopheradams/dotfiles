@@ -48,6 +48,7 @@
 ;; line numbers
 ;; (global-linum-mode 1)
 ;; (add-hook 'org-mode-hook (lambda () (linum-mode 0)))
+(setq line-number-mode t)
 (setq column-number-mode t)
 
 (setq ring-bell-function #'ignore)
