@@ -248,7 +248,7 @@
 (use-package column-marker
   :ensure t
   :config
-(column-marker-1 80))
+  (add-hook 'prog-mode-hook (lambda () (interactive) (column-marker-1 80))))
 
 ;;; exec-path-from-shell
 ;;; ensure environment variables match the shell
