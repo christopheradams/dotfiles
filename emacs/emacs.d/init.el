@@ -366,6 +366,12 @@
   (setq diff-hl-side 'right)
   (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh))
 
+;;; hlinum-mode
+(use-package hlinum
+  :ensure t
+  :init
+  (hlinum-activate))
+
 ;;; restclient
 (use-package restclient
   :ensure t)

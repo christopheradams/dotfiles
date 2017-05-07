@@ -79,6 +79,9 @@
    `(font-lock-variable-name-face ((t (:foreground ,base0C))))
    `(font-lock-warning-face ((t (:foreground ,base08))))
 
+   ;; hlinum-mode
+   `(linum-highlight-face ((t (:background ,base07 :foreground ,case09))))
+
    ;; column-marker
    `(column-marker-1 ((t (:background ,base06))))
 
