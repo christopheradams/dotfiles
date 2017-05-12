@@ -281,8 +281,8 @@
     "j" 'evil-window-down
     "k" 'evil-window-up
     "l" 'evil-window-right
-    "b" 'evil-jump-backward
-    "n" 'evil-jump-forward
+    "b" 'previous-buffer
+    "n" 'next-buffer
     "s" 'save-buffer
     "g" 'magit-status
     "oa" 'org-agenda
