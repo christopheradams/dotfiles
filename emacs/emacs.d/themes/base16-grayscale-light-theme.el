@@ -77,7 +77,7 @@
    `(font-lock-string-face ((t (:foreground ,base0B))))
    `(font-lock-type-face ((t (:foreground ,base0A))))
    `(font-lock-variable-name-face ((t (:foreground ,base0C))))
-   `(font-lock-warning-face ((t (:foreground ,base08))))
+   `(font-lock-warning-face ((t (:foreground ,baseFF :weight bold))))
 
    ;; hlinum-mode
    `(linum-highlight-face ((t (:background ,base07 :foreground ,case09))))
