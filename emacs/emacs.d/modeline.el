@@ -37,11 +37,7 @@
         "] "
 
         ;; the current major mode for the buffer.
-        "["
-
-        '(:eval (propertize "%m" 'face 'font-lock-string-face
-                            'help-echo buffer-file-coding-system))
-        "] "
+        '(:propertize ("" mode-name))
 
         '(vc-mode vc-mode)
 
