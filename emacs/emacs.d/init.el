@@ -506,3 +506,7 @@
 
 ;; (init-open-recentf)
 (put 'downcase-region 'disabled nil)
+
+;;; mode-line
+(let ((modeline.el (expand-file-name "modeline.el" user-emacs-directory)))
+    (load modeline.el))
