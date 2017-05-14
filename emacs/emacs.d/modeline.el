@@ -34,17 +34,19 @@
         (propertize "%p" 'face 'font-lock-constant-face) ;; % above top
         "/"
         (propertize "%I" 'face 'font-lock-constant-face) ;; size
-        "] "
+        "]"
+
+        '(vc-mode vc-mode)
+
+        " "
 
         ;; the current major mode for the buffer.
         '(:propertize ("" mode-name))
 
-        '(vc-mode vc-mode)
+        ;; " --"
+        ;; minor-mode-alist  ;; list of minor modes
 
         'mode-line-misc-info
         'mode-line-end-spaces
-
-        ;; " --"
-        ;; minor-mode-alist  ;; list of minor modes
         )))
   (setq-default mode-line-format my-mode-line-format))
