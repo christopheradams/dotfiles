@@ -272,6 +272,7 @@
   :config
   (evil-leader/set-leader "<SPC>")
   (evil-leader/set-key
+    "<SPC>" 'smex
     "1" 'delete-other-windows
     "2" 'split-window-below
     "3" 'split-window-right
