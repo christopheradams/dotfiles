@@ -161,7 +161,8 @@
 (setq org-refile-targets
 	    '((org-agenda-files . (:maxlevel . 4))))
 (setq org-reverse-note-order t)
-(setq org-clock-in-switch-to-state "STARTED")
+(setq org-clock-in-switch-to-state "CURRENT")
+(setq org-clock-out-switch-to-state "STARTED")
 (setq org-time-clocksum-format
       '(:hours "%d" :require-hours t :minutes ":%02d" :require-minutes t))
 
@@ -200,12 +201,13 @@
 
 ;; ‘!’ (for a timestamp) or ‘@’ (for a note with timestamp)
 (setq org-todo-keywords
-      (quote ((sequence "TODO(t)" "IDEA(i)" "NEXT(n)" "STARTED(s)" "WAITING(w@/!)" "|" "DONE(d)")
+      (quote ((sequence "TODO(t)" "IDEA(i)" "NEXT(n)" "CURRENT(r)" "STARTED(s)" "WAITING(w@/!)" "|" "DONE(d)")
               (sequence "|" "CANCELLED(c@/!)" "DELEGATED(l@/!)" "DEFERRED(f!)"))))
 
 (setq org-todo-keyword-faces
       (quote (("TODO" . org-warning)
               ("NEXT" . org-warning)
+              ("CURRENT" . org-priority)
               ("STARTED" . org-warning))))
 
 (setq org-treat-S-cursor-todo-selection-as-state-change nil)
