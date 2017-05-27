@@ -38,6 +38,7 @@
 
    ;; Built-in stuff (Emacs 23)
    `(border ((t (:background ,base03))))
+   `(vertical-border ((t (:foreground ,base04))))
    `(border-glyph ((t (nil))))
    `(cursor ((t (:background ,baseFF))))
    `(default ((t (:background ,base07 :foreground ,base02))))
