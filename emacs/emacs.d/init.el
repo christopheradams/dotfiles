@@ -201,13 +201,14 @@
 
 ;; ‘!’ (for a timestamp) or ‘@’ (for a note with timestamp)
 (setq org-todo-keywords
-      (quote ((sequence "TODO(t)" "IDEA(i)" "NEXT(n)" "CURRENT(r)" "STARTED(s)" "WAITING(w@/!)" "|" "DONE(d)")
-              (sequence "|" "CANCELLED(c@/!)" "DELEGATED(l@/!)" "DEFERRED(f!)"))))
+      (quote ((sequence "TODO(t)" "IDEA(i)" "NEXT(n)" "CURRENT(c)" "STARTED(s)" "|" "DONE(d)")
+              (sequence "|" "WAITING(w@/!)" "CANCELLED(x@/!)" "DELEGATED(l@/!)" "DEFERRED(f!)"))))
 
 (setq org-todo-keyword-faces
       (quote (("TODO" . org-warning)
               ("NEXT" . org-warning)
               ("CURRENT" . org-priority)
+              ("WAITING" . org-priority)
               ("STARTED" . org-warning))))
 
 (setq org-treat-S-cursor-todo-selection-as-state-change nil)
