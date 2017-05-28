@@ -13,6 +13,7 @@ xmonad.o
 vim/vim/bundle
 
 # Emacs
+emacs/emacs.d/network-security.data
 emacs/emacs.d/projectile-bookmarks.eld
 emacs/emacs.d/ac-comphist.dat
 emacs/emacs.d/auto-save-list/
