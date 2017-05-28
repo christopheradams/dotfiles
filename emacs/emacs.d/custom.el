@@ -13,7 +13,7 @@
  '(custom-safe-themes (quote (default)))
  '(package-selected-packages
    (quote
-    (hlinum yaml-mode web-mode use-package spaceline smex slim-mode ruby-end rainbow-mode projectile php-mode markdown-mode magit init-open-recentf ibuffer-vc haskell-mode git-gutter-fringe format-sql exec-path-from-shell evil-leader eproject edts editorconfig diff-hl company-restclient column-marker auctex alchemist ag))))
+    (ivy hlinum yaml-mode web-mode use-package spaceline smex slim-mode ruby-end rainbow-mode projectile php-mode markdown-mode magit init-open-recentf ibuffer-vc haskell-mode git-gutter-fringe format-sql exec-path-from-shell evil-leader eproject edts editorconfig diff-hl company-restclient column-marker auctex alchemist ag))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

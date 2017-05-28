@@ -308,6 +308,11 @@
   :ensure t
   :init (projectile-global-mode +1))
 
+;;; Ivy
+(use-package ivy
+  :ensure t
+  :config (ivy-mode 1))
+
 ;;; EditorConfig
 (use-package editorconfig
   :ensure t
