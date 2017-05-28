@@ -139,9 +139,10 @@
 (setq org-agenda-files '("~/Dropbox/Org"))
 (setq org-directory '"~/Dropbox/Org")
 (setq org-default-notes-file (concat org-directory "/Notes.org"))
-(setq org-refile-use-outline-path 'file)
+(setq org-refile-use-outline-path 'file
+      org-outline-path-complete-in-steps nil)
 (setq org-refile-targets
-	    '((org-agenda-files . (:maxlevel . 4))))
+	    '((org-agenda-files . (:maxlevel . 2))))
 (setq org-reverse-note-order t)
 (setq org-clock-in-switch-to-state "CURRENT")
 (setq org-clock-out-switch-to-state "STARTED")
