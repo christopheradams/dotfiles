@@ -272,6 +272,7 @@
     "l" 'evil-window-right
     "b" 'previous-buffer
     "n" 'next-buffer
+    "m" 'switch-to-buffer
     "s" 'save-buffer
     "g" 'magit-status
     "oa" 'org-agenda
