@@ -265,8 +265,8 @@
     "0" 'delete-window
     "=" 'balance-windows
     "d" 'dired
-    "f" 'fill-paragraph
-    "i" 'indent-region
+    "f" 'find-file
+    "i" 'fill-paragraph
     "h" 'evil-window-left
     "j" 'evil-window-down
     "k" 'evil-window-up
