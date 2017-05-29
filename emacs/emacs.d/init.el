@@ -308,7 +308,8 @@
 ;;; Projectile
 (use-package projectile
   :ensure t
-  :init (projectile-global-mode +1))
+  :init (projectile-global-mode +1)
+  :config (setq projectile-completion-system 'ivy))
 
 ;;; Ivy
 (use-package ivy
