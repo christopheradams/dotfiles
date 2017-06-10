@@ -19,6 +19,7 @@ main = do
 xmproc <- spawnPipe "xmobar ~/.xmobarrc"
 xmonad $ defaultConfig
     { manageHook = manageDocks <+> manageHook defaultConfig
+    , terminal = "gnome-terminal"
     , logHook = dynamicLogWithPP $ xmobarPP
         { ppOutput = hPutStrLn xmproc
         , ppCurrent = xmobarColor "#6A9FB5" "" . wrap "[" "]"
