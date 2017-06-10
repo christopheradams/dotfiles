@@ -1,6 +1,6 @@
 Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
-       , borderColor = "black"
-       , border = TopB
+       , borderColor = "#505050"
+       , border = NoBorder
        , bgColor = "#F7F7F7"
        , fgColor = "#505050"
        , position = Bottom
