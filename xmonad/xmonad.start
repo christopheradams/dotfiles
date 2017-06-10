@@ -8,4 +8,5 @@ dropbox start &
 
 setxkbmap -option 'compose:ralt' &
 
-exec xmonad
+# exec xmonad
+exec $HOME/.cabal/bin/xmonad
