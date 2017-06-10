@@ -1,7 +1,7 @@
 import XMonad
 import XMonad.Hooks.DynamicLog
 import XMonad.Layout.ResizableTile
-import XMonad.Hooks.ManageDocks
+import XMonad.Hooks.ManageDocks (ToggleStruts(..),avoidStruts,docks,manageDocks)
 import XMonad.Layout.NoBorders
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Actions.SpawnOn
@@ -17,7 +17,7 @@ myLayout = ( smartBorders $ avoidStruts  (resizableTile ||| Mirror resizableTile
 
 main = do
 xmproc <- spawnPipe "xmobar ~/.xmobarrc"
-xmonad $ defaultConfig
+xmonad $ docks defaultConfig
     { manageHook = manageDocks <+> manageHook defaultConfig
     , terminal = "gnome-terminal"
     , logHook = dynamicLogWithPP $ xmobarPP
