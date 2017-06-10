@@ -2,6 +2,7 @@
 
 xmonad-x86_64-linux
 xmonad.errors
+xmonad.state
 xmonad.hi
 xmonad.o
 
