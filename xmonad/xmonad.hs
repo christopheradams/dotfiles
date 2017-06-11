@@ -30,8 +30,8 @@ xmonad $ docks defaultConfig
         }
     , layoutHook = myLayout
         , borderWidth = 2
-        , focusedBorderColor = "#AC4142"
-        , normalBorderColor = "#eee8d5"
+        , focusedBorderColor = "#E7766B"
+        , normalBorderColor = "#E7E8EB"
     } `additionalKeys`
     [ ((mod4Mask .|. shiftMask, xK_z), spawn "gnome-screensaver-command --lock") --mod4mask is the windows key
     , ((mod1Mask .|. shiftMask, xK_e), spawnHere "emacsclient --no-wait --create-frame --alternate-editor='' --eval '(switch-to-buffer nil)'") -- %! Launch emacs
