@@ -282,7 +282,8 @@
     "ol" 'org-store-link
     "pp" 'projectile-switch-project
     "pf" 'projectile-find-file
-    "ps" 'projectile-ag
+    "ps" 'counsel-projectile-ag
+    "pS" 'projectile-ag
     "at"  'alchemist-mix-test
     "amc" 'alchemist-mix-compile))
 (use-package evil
