@@ -282,6 +282,7 @@
     "ol" 'org-store-link
     "pp" 'projectile-switch-project
     "pf" 'projectile-find-file
+    "pm" 'projectile-switch-to-buffer
     "ps" 'counsel-projectile-ag
     "pS" 'projectile-ag
     "at"  'alchemist-mix-test
