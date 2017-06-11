@@ -314,7 +314,11 @@
 ;;; Ivy
 (use-package ivy
   :ensure t
-  :config (ivy-mode 1))
+  :config (ivy-mode 1)
+
+  (use-package counsel-projectile
+    :ensure t
+    :init (counsel-projectile-off)))
 
 ;;; EditorConfig
 (use-package editorconfig
