@@ -1,0 +1,7 @@
+source ~/dotfiles/vim/vimrc-common
+
+" Base 16
+colorscheme base16-grayscale-light
+
+" Don't highlight current line
+set nocursorline
