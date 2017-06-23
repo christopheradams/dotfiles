@@ -175,7 +175,7 @@
     (search . " %i %-12:c"))))
 (setq org-agenda-remove-tags nil)
 (setq org-agenda-skip-archived-trees t)
-(setq org-agenda-use-time-grid nil)
+(setq org-agenda-use-time-grid t)
 (setq org-startup-truncated nil)
 
 ;; Automatically save org buffers after refile
