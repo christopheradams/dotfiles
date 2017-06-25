@@ -276,6 +276,7 @@
     "n" 'next-buffer
     "m" 'switch-to-buffer
     "s" 'save-buffer
+    "S" 'save-some-buffers
     "g" 'magit-status
     "oa" 'org-agenda
     "oc" 'org-capture
