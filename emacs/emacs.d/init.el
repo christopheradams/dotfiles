@@ -285,6 +285,7 @@
     "pp" 'projectile-switch-project
     "pf" 'projectile-find-file
     "pm" 'projectile-switch-to-buffer
+    "pr" 'projectile-replace
     "ps" 'counsel-projectile-ag
     "pS" 'projectile-ag
     "at"  'alchemist-mix-test
