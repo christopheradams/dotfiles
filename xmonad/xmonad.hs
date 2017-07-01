@@ -36,7 +36,9 @@ xmonad $ docks defaultConfig
     [ ((mod4Mask .|. shiftMask, xK_z), spawn "gnome-screensaver-command --lock") --mod4mask is the windows key
     , ((mod1Mask .|. shiftMask, xK_e), spawnHere "emacsclient --no-wait --create-frame --alternate-editor='' --eval '(switch-to-buffer nil)'") -- %! Launch emacs
     , ((mod1Mask .|. shiftMask, xK_f), spawnHere "firefox") -- %! Launch Firefox
+    , ((mod1Mask .|. shiftMask, xK_g), spawnHere "chromium-browser") -- %! Launch Chromium
     , ((mod1Mask .|. shiftMask, xK_r), spawnHere "nautilus -w") -- %! Launch Nautilus
+    , ((mod1Mask .|. shiftMask, xK_t), spawnHere "thunderbird") -- %! Launch Thunderbird
     , ((mod1Mask .|. shiftMask, xK_u), spawnHere "unity-control-center network")
     , ((mod1Mask .|. shiftMask, xK_d), spawnHere "gnome-calculator")
     , ((mod1Mask,               xK_p), spawn "dmenu_run -fn 'Input Bold-8' -nf 'white' -nb '#252525' -sf 'white' -sb '#DB2D20'")
