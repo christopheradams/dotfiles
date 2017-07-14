@@ -177,6 +177,7 @@
 (setq org-agenda-skip-archived-trees t)
 (setq org-agenda-use-time-grid t)
 (setq org-startup-truncated nil)
+(setq org-agenda-window-setup 'current-window)
 
 ;; Automatically save org buffers after refile
 (advice-add 'org-refile :after
