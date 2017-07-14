@@ -23,5 +23,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(fixed-pitch ((t nil)))
  '(org-agenda-date-weekend ((t (:inherit org-agenda-date :weight normal :slant italic))) t)
  '(org-document-title ((t (:foreground "#999999" :weight bold :height 1.0)))))
