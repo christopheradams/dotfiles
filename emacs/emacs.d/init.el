@@ -66,6 +66,9 @@
 (add-hook 'org-mode-hook '(lambda ()
     (setq truncate-lines t
           word-wrap nil)))
+(add-hook 'org-agenda-mode-hook '(lambda ()
+    (setq truncate-lines t
+          word-wrap nil)))
 
 ;;; Line wrap fringe bitmaps
 (define-fringe-bitmap 'right-curly-arrow
