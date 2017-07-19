@@ -55,7 +55,7 @@
    `(mode-line-highlight ((t (:foreground ,base0E :box nil :weight bold))))
    `(mode-line-inactive ((t (:background ,base07 :foreground ,base04 :box ,base04))))
    `(region ((t (:background ,case0A))))
-   `(secondary-selection ((t (:background ,base03))))
+   `(secondary-selection ((t (:background ,base06))))
    `(error ((t (:foreground ,base08 :weight bold))))
    `(warning ((t (:foreground ,base09 :weight bold))))
    `(success ((t (:foreground ,base0B :weight bold))))
