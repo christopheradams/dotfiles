@@ -286,6 +286,8 @@
     "oc" 'org-capture
     "ob" 'org-iswitchb
     "ol" 'org-store-link
+    "ot" 'org-todo
+    "o/" 'org-show-todo-tree
     "pp" 'projectile-switch-project
     "pf" 'projectile-find-file
     "pm" 'projectile-switch-to-buffer
