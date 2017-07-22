@@ -288,6 +288,7 @@
     "ol" 'org-store-link
     "ot" 'org-todo
     "o/" 'org-show-todo-tree
+    "oj" 'counsel-org-goto
     "pp" 'projectile-switch-project
     "pf" 'projectile-find-file
     "pm" 'projectile-switch-to-buffer
