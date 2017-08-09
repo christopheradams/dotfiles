@@ -296,6 +296,7 @@
     "ps" 'counsel-projectile-ag
     "pS" 'projectile-ag
     "at"  'alchemist-mix-test
+    "a."  'alchemist-mix-test-at-point
     "amc" 'alchemist-mix-compile))
 (use-package evil
   :ensure t
