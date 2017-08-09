@@ -366,6 +366,9 @@
 ;;; Magit
 (use-package magit
   :ensure t
+  :config
+  (setq git-commit-summary-max-length 50
+        git-commit-fill-column 72)
   :init
   (global-set-key (kbd "C-x g") 'magit-status))
 
