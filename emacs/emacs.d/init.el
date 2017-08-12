@@ -302,6 +302,7 @@
   :ensure t
   :init (evil-mode +1)
   :config
+  (fset 'evil-visual-update-x-selection 'ignore)
   (evil-define-key 'insert comint-mode-map
     (kbd "<up>") 'comint-previous-input
     (kbd "<down>") 'comint-next-input)
