@@ -22,6 +22,12 @@
                     (load-theme 'base16-grayscale-light t))))
     (load-theme 'base16-grayscale-light t)))
 
+;;; init.el
+(global-set-key (kbd "C-c i")
+                (lambda ()
+                  (interactive)
+                  (find-file user-init-file)))
+
 ;;; Appearance
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
