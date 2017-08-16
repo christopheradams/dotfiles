@@ -248,6 +248,10 @@
       (package-install 'use-package)))
 (require 'use-package)
 
+;;; Org-mode
+(use-package org
+  :ensure org-plus-contrib)
+
 ;;; Column-marker
 (use-package column-marker
   :ensure t
