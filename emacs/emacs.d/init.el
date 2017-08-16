@@ -158,6 +158,7 @@
 (setq org-time-clocksum-use-fractional t)
 (setq org-time-clocksum-format
       '(:hours "%d" :require-hours t :minutes ":%02d" :require-minutes t))
+(setq org-clock-idle-time 20)
 
 ;; Keep mouse-1 clicks from following a link
 (setq org-mouse-1-follows-link nil)
