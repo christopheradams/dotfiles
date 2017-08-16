@@ -250,7 +250,11 @@
 
 ;;; Org-mode
 (use-package org
-  :ensure org-plus-contrib)
+  :ensure org-plus-contrib
+  :init
+  (require 'org-bibtex)
+  (require 'ox-bibtex)
+  (setq org-bibtex-file "Papers.org"))
 
 ;;; Column-marker
 (use-package column-marker
