@@ -338,6 +338,8 @@
    `(org-upcoming-deadline ((t (:foreground ,base09))))
    `(org-warning ((t (:weight bold :foreground ,base08))))
 
+   `(gscholar-bibtex-title ((t (:height 1.0 :foreground ,case0B))))
+
    `(markdown-url-face ((t (:inherit link))))
    `(markdown-link-face ((t (:foreground ,base0D :underline t))))
 

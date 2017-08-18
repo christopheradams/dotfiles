@@ -419,6 +419,10 @@
 (use-package know-your-http-well
   :ensure t)
 
+;;; gscholar bibtex
+(use-package gscholar-bibtex
+  :ensure t)
+
 ;;; rainbow-mode
 (use-package rainbow-mode
   :ensure t)
