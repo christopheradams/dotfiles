@@ -298,6 +298,7 @@
     "s" 'save-buffer
     "S" 'save-some-buffers
     "g" 'magit-status
+    "G" 'magit-blame-toggle
     "oa" 'org-agenda
     "oc" 'org-capture
     "ob" 'org-iswitchb
@@ -386,7 +387,14 @@
   :config
   (setq git-commit-summary-max-length 50
         git-commit-fill-column 72)
+  (defun magit-blame-toggle()
+    (interactive)
+    (let* ((active (--filter (and (boundp it) (symbol-value it)) minor-mode-list)))
+      (if (member 'magit-blame-mode active)
+          (magit-blame-quit)
+        (magit-blame nil buffer-file-name))))
   :init
+  (global-set-key (kbd "C-x G") 'magit-blame-toggle)
   (global-set-key (kbd "C-x g") 'magit-status))
 
 ;;; diff-hl
