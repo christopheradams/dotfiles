@@ -256,6 +256,9 @@
   (require 'ox-bibtex)
   (setq org-bibtex-file "Papers.org"))
 
+(use-package org-clock-convenience
+  :ensure t)
+
 ;;; Column-marker
 (use-package column-marker
   :ensure t
