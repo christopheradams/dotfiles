@@ -258,6 +258,8 @@
 
 (use-package org-clock-convenience
   :ensure t)
+(use-package epresent
+  :ensure t)
 
 (defun cxa-org-todo-done-last-clockout-time ()
     "Close the task at the time of the last clock out."
