@@ -75,6 +75,9 @@
 (add-hook 'org-agenda-mode-hook '(lambda ()
     (setq truncate-lines t
           word-wrap nil)))
+(add-hook 'epresent-mode-hook '(lambda ()
+    (setq truncate-lines nil
+          word-wrap t)))
 
 ;;; Line wrap fringe bitmaps
 (define-fringe-bitmap 'right-curly-arrow
@@ -259,7 +262,9 @@
 (use-package org-clock-convenience
   :ensure t)
 (use-package epresent
-  :ensure t)
+  :ensure t
+  :config
+  (add-hook 'epresent-mode-hook (lambda () (setq show-trailing-whitespace nil))))
 
 (defun cxa-org-todo-done-last-clockout-time ()
     "Close the task at the time of the last clock out."
@@ -344,6 +349,7 @@
     (kbd "<down>") 'comint-next-input)
   (evil-set-initial-state 'git-rebase-mode 'emacs)
   (evil-set-initial-state 'magit-popup-mode 'emacs)
+  (evil-set-initial-state 'epresent-mode 'emacs)
   (evil-set-initial-state 'dired-mode 'emacs))
 
 ;;; Smex
