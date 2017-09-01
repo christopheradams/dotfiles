@@ -327,6 +327,7 @@
     "oc" 'org-capture
     "ob" 'org-iswitchb
     "ol" 'org-store-link
+    "oL" 'org-insert-link
     "ot" 'org-todo
     "o/" 'org-show-todo-tree
     "oj" 'counsel-org-goto
