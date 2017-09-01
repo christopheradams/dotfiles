@@ -312,6 +312,7 @@
     "d" 'dired
     "f" 'find-file
     "i" 'fill-paragraph
+    "I" 'counsel-unicode-char
     "h" 'evil-window-left
     "j" 'evil-window-down
     "k" 'evil-window-up
