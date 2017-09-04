@@ -330,7 +330,7 @@
    `(org-priority ((t (:foreground ,case0D))))
    `(org-scheduled ((t (:foreground ,base0B))))
    `(org-scheduled-previously ((t (:foreground ,base09))))
-   `(org-scheduled-today ((t (:foreground ,base0B))))
+   `(org-scheduled-today ((t (:foreground ,case0B :weight bold))))
    `(org-special-keyword ((t (:foreground ,base09))))
    `(org-table ((t (:foreground ,base0E))))
    `(org-tag ((t (:foreground ,base00 :weight normal))))
