@@ -208,7 +208,7 @@
 
 (setq org-todo-keyword-faces
       (quote (("TODO" . org-warning)
-              ("NEXT" . org-warning)
+              ("NEXT" . org-scheduled-today)
               ("CURRENT" . org-priority)
               ("WAITING" . org-priority)
               ("STARTED" . org-warning))))
