@@ -27,6 +27,10 @@
                 (lambda ()
                   (interactive)
                   (find-file user-init-file)))
+(global-set-key (kbd "C-c I")
+                (lambda ()
+                  (interactive)
+                  (load-file user-init-file)))
 
 ;;; Appearance
 (scroll-bar-mode -1)
