@@ -282,7 +282,6 @@
           (re-search-forward org-closed-time-regexp)
           (re-search-backward org-ts-regexp1)
           (replace-match last-clock-out)))))
-(global-set-key (kbd "C-c o t") 'cxa-org-todo-done-last-clockout-time)
 
 ;;; Column-marker
 (use-package column-marker
@@ -334,6 +333,7 @@
     "ol" 'org-store-link
     "oL" 'org-insert-link
     "ot" 'org-todo
+    "oT" 'cxa-org-todo-done-last-clockout-time
     "o/" 'org-show-todo-tree
     "oj" 'counsel-org-goto
     "pp" 'projectile-switch-project
