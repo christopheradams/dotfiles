@@ -337,6 +337,9 @@
    `(org-todo ((t (:foreground ,base08))))
    `(org-upcoming-deadline ((t (:foreground ,base09))))
    `(org-warning ((t (:weight bold :foreground ,base08))))
+   `(org-level-1 ((t (:foreground ,case0D :weight bold))))
+   `(org-level-2 ((t (:foreground ,base02 :weight bold))))
+   `(org-level-3 ((t (:foreground ,case0E))))
 
    `(gscholar-bibtex-title ((t (:height 1.0 :foreground ,case0B))))
 
