@@ -261,6 +261,7 @@
   :init
   (require 'org-bibtex)
   (require 'ox-bibtex)
+  (setq bibtex-set-dialect 'biblatex)
   (setq org-bibtex-file "Papers.org"))
 
 (use-package org-clock-convenience
