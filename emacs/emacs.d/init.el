@@ -238,6 +238,12 @@
       (package-install 'use-package)))
 (require 'use-package)
 
+;;; base16
+(use-package base16-theme
+  :ensure t
+  :config
+  (load-theme 'base16-grayscale-light t))
+
 ;;; Org-mode
 (use-package org
   :ensure org-plus-contrib
