@@ -11,16 +11,6 @@
 ;;; Themes
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (add-to-list 'default-frame-alist '(tty-color-mode . -1))
-(if (display-graphic-p)
-  (load-theme 'base16-grayscale-light t)
-
-  ;; Make sure the theme is loaded after frame creation
-  (if (daemonp)
-      (add-hook 'after-make-frame-functions
-                (lambda (frame)
-                  (select-frame frame
-                    (load-theme 'base16-grayscale-light t))))
-    (load-theme 'base16-grayscale-light t)))
 
 ;;; init.el
 (global-set-key (kbd "C-c i")
