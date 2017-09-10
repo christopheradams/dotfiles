@@ -242,7 +242,8 @@
 (use-package base16-theme
   :ensure t
   :config
-  (load-theme 'base16-grayscale-light t))
+  (load-theme 'base16-grayscale-light t)
+  (load-theme 'base16-custom t))
 
 ;;; Org-mode
 (use-package org
