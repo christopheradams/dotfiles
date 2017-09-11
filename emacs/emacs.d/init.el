@@ -467,6 +467,13 @@
 (use-package rainbow-mode
   :ensure t)
 
+;;; css-mode
+(add-hook 'css-mode-hook
+          (function (lambda()
+                      (setq css-indent-offset 2)
+                      (setq evil-shift-width css-indent-offset))))
+(add-to-list 'auto-mode-alist '("\\.less$" . css-mode))
+
 ;;; web-mode
 (use-package web-mode
   :ensure t
