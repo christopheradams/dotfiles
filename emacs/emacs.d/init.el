@@ -216,14 +216,6 @@
 
 (setq org-treat-S-cursor-todo-selection-as-state-change nil)
 
-(setq org-agenda-custom-commands
-      '(("W" "Completed and/or deferred tasks from previous week"
-       ((agenda "" ((org-agenda-span 7)
-            (org-agenda-start-day "-7d")
-            (org-agenda-entry-types '(:timestamp))
-            (org-agenda-prefix-format (quote ((agenda . " %i %-12:c") (timeline . "  % s") (todo . " %i %-12:c") (tags . " %i %-12:c") (search . " %i %-12:c"))))
-            (org-agenda-show-log t)))))))
-
 ;; agenda clock report
 (setq org-agenda-clockreport-parameter-plist
       (quote (:link t :maxlevel 5 :fileskip0 t :compact t :narrow 80)))
