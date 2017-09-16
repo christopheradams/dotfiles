@@ -23,7 +23,7 @@
  '(org-fontify-whole-heading-line t)
  '(package-selected-packages
    (quote
-    (base16-theme epresent org-clock-convenience gscholar-bibtex org-plus-contrib counsel-projectile ivy hlinum yaml-mode web-mode use-package spaceline smex slim-mode ruby-end rainbow-mode projectile php-mode markdown-mode magit init-open-recentf ibuffer-vc haskell-mode git-gutter-fringe format-sql exec-path-from-shell evil-leader eproject edts editorconfig diff-hl company-restclient column-marker auctex alchemist ag)))
+    (go-mode base16-theme epresent org-clock-convenience gscholar-bibtex org-plus-contrib counsel-projectile ivy hlinum yaml-mode web-mode use-package spaceline smex slim-mode ruby-end rainbow-mode projectile php-mode markdown-mode magit init-open-recentf ibuffer-vc haskell-mode git-gutter-fringe format-sql exec-path-from-shell evil-leader eproject edts editorconfig diff-hl company-restclient column-marker auctex alchemist ag)))
  '(show-paren-mode t)
  '(tool-bar-mode nil)
  '(vc-annotate-background "#f0f0f0")

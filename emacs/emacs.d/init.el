@@ -573,6 +573,14 @@
   :config
   (add-to-list 'auto-mode-alist '("\\.xmobarrc\\'" . haskell-mode)))
 
+;;; Go
+(use-package go-mode
+  :ensure t
+  :init
+  (add-hook 'go-mode-hook
+            (lambda ()
+              (setq tab-width 4))))
+
 ;;; PHP
 (use-package php-mode
   :ensure t)
