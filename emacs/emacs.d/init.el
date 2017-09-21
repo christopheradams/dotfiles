@@ -323,6 +323,8 @@
     "ob" 'org-iswitchb
     "ol" 'org-store-link
     "oL" 'org-insert-link
+    "oi" 'org-clock-in
+    "oo" 'org-clock-out
     "ot" 'org-todo
     "oT" 'cxa-org-todo-done-last-clockout-time
     "o/" 'org-show-todo-tree
