@@ -485,6 +485,14 @@
             (function (lambda()
                         (setq evil-shift-width web-mode-markup-indent-offset)))))
 
+;;; Yankpad
+(use-package yankpad
+  :ensure t
+  :defer 10
+  :init
+  (setq yankpad-file (concat org-directory "/Yankpad.org"))
+  (add-to-list 'company-backends #'company-yankpad))
+
 ;;; Markdown
 (use-package markdown-mode
   :ensure t
