@@ -17,6 +17,17 @@
                                            'face 'font-lock-warning-face
                                            'help-echo "Buffer has been modified"))))
 
+        '(:eval
+          (let* ((code (symbol-name buffer-file-coding-system))
+                 (eol-type (coding-system-eol-type buffer-file-coding-system))
+                 (eol (if (eq 0 eol-type) ""
+                        (if (eq 1 eol-type)
+                            (concat " " (propertize "DOS" 'face 'font-lock-warning-face))
+                          (if (eq 2 eol-type)
+                              (concat " " (propertize "MAC" 'face 'font-lock-warning-face))
+                            (propertize "???" 'face 'font-lock-warning-face))))))
+            eol))
+
         " "
 
         ;; the buffer name; the file name as a tool tip
