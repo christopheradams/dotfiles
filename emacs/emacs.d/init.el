@@ -210,6 +210,18 @@
 (setq org-agenda-clockreport-parameter-plist
       (quote (:link t :maxlevel 5 :fileskip0 t :compact t :narrow 80)))
 
+;; code
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((emacs-lisp . t)
+   (ruby . t)
+   (js . t)
+   (shell . t)))
+(setq org-src-fontify-natively t)
+(defun cxa-org-confirm-babel-evaluate (lang body)
+  (not (member lang '("emacs-lisp"))))
+(setq org-confirm-babel-evaluate 'cxa-org-confirm-babel-evaluate)
+
 ;;; SQLi
 (add-hook 'sql-interactive-mode-hook
           (lambda ()
