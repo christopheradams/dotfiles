@@ -140,88 +140,6 @@
   (when (file-exists-p secret.el)
     (load secret.el)))
 
-;;; Org-mode
-(setq org-log-done t)
-(setq org-agenda-files '("~/Dropbox/Org"))
-(setq org-directory '"~/Dropbox/Org")
-(setq org-default-notes-file (concat org-directory "/Notes.org"))
-(setq org-refile-use-outline-path 'file
-      org-outline-path-complete-in-steps nil)
-(setq org-refile-targets
-	    '((org-agenda-files . (:maxlevel . 2))))
-(setq org-reverse-note-order t)
-(setq org-clock-in-switch-to-state "CURRENT")
-(setq org-clock-out-switch-to-state "STARTED")
-(setq org-time-clocksum-use-fractional t)
-(setq org-time-clocksum-format
-      '(:hours "%d" :require-hours t :minutes ":%02d" :require-minutes t))
-(setq org-clock-idle-time 20)
-
-;; Keep mouse-1 clicks from following a link
-(setq org-mouse-1-follows-link nil)
-
-;; Separate drawers for clocking and logs
-(setq org-drawers (quote ("PROPERTIES" "LOGBOOK")))
-;; Save clock data and state changes and notes in the LOGBOOK drawer
-(setq org-clock-into-drawer t)
-
-(setq org-capture-templates
-      '(("t" "Todo" entry (file+headline "" "Tasks")
-         "* TODO %?\n  %u\n  %i")
-        ("i" "Idea" entry (file+headline "" "Tasks")
-         "* IDEA %?\n  %u\n  %i")
-        ("l" "Link" entry (file+headline "" "Tasks")
-         "* TODO %?\n  %u\n  %a")))
-
-(setq org-agenda-prefix-format
-(quote
-((agenda . " %i %-12:c%?-12t% s")
-    (timeline . "  % s")
-    (todo . " %i %-12:c")
-    (tags . " %i %-12:c")
-    (search . " %i %-12:c"))))
-(setq org-agenda-remove-tags nil)
-(setq org-agenda-skip-archived-trees t)
-(setq org-agenda-use-time-grid t)
-(setq org-startup-truncated nil)
-(setq org-agenda-window-setup 'current-window)
-(setq org-agenda-start-with-clockreport-mode t)
-
-;; Automatically save org buffers after refile
-(advice-add 'org-refile :after
-            (lambda (&rest _)
-            (org-save-all-org-buffers)))
-
-;; ‘!’ (for a timestamp) or ‘@’ (for a note with timestamp)
-(setq org-todo-keywords
-      (quote ((sequence "TODO(t)" "IDEA(i)" "NEXT(n)" "CURRENT(c)" "STARTED(s)" "|" "DONE(d)")
-              (sequence "|" "WAITING(w@/!)" "CANCELLED(x@/!)" "DELEGATED(l@/!)" "DEFERRED(f!)"))))
-
-(setq org-todo-keyword-faces
-      (quote (("TODO" . org-warning)
-              ("NEXT" . org-scheduled-today)
-              ("CURRENT" . org-priority)
-              ("WAITING" . org-priority)
-              ("STARTED" . org-warning))))
-
-(setq org-treat-S-cursor-todo-selection-as-state-change nil)
-
-;; agenda clock report
-(setq org-agenda-clockreport-parameter-plist
-      (quote (:link t :maxlevel 5 :fileskip0 t :compact t :narrow 80)))
-
-;; code
-(org-babel-do-load-languages
- 'org-babel-load-languages
- '((emacs-lisp . t)
-   (ruby . t)
-   (js . t)
-   (shell . t)))
-(setq org-src-fontify-natively t)
-(defun cxa-org-confirm-babel-evaluate (lang body)
-  (not (member lang '("emacs-lisp"))))
-(setq org-confirm-babel-evaluate 'cxa-org-confirm-babel-evaluate)
-
 ;;; SQLi
 (add-hook 'sql-interactive-mode-hook
           (lambda ()
@@ -263,8 +181,92 @@
   :init
   (require 'org-bibtex)
   (require 'ox-bibtex)
-  (setq bibtex-set-dialect 'biblatex)
-  (setq org-bibtex-file "Papers.org"))
+  :config
+  (progn
+    (setq org-log-done t)
+    (setq org-agenda-files '("~/Dropbox/Org"))
+    (setq org-directory '"~/Dropbox/Org")
+    (setq org-default-notes-file (concat org-directory "/Notes.org"))
+    (setq org-refile-use-outline-path 'file
+          org-outline-path-complete-in-steps nil)
+    (setq org-refile-targets
+          '((org-agenda-files . (:maxlevel . 2))))
+    (setq org-reverse-note-order t)
+    (setq org-clock-in-switch-to-state "CURRENT")
+    (setq org-clock-out-switch-to-state "STARTED")
+    (setq org-time-clocksum-use-fractional t)
+    (setq org-time-clocksum-format
+          '(:hours "%d" :require-hours t :minutes ":%02d" :require-minutes t))
+    (setq org-clock-idle-time 20)
+
+    ;; Keep mouse-1 clicks from following a link
+    (setq org-mouse-1-follows-link nil)
+
+    ;; Separate drawers for clocking and logs
+    (setq org-drawers (quote ("PROPERTIES" "LOGBOOK")))
+    ;; Save clock data and state changes and notes in the LOGBOOK drawer
+    (setq org-clock-into-drawer t)
+
+    (setq org-capture-templates
+          '(("t" "Todo" entry (file+headline "" "Tasks")
+             "* TODO %?\n  %u\n  %i")
+            ("i" "Idea" entry (file+headline "" "Tasks")
+             "* IDEA %?\n  %u\n  %i")
+            ("l" "Link" entry (file+headline "" "Tasks")
+             "* TODO %?\n  %u\n  %a")))
+
+    (setq org-agenda-prefix-format
+          (quote
+           ((agenda . " %i %-12:c%?-12t% s")
+            (timeline . "  % s")
+            (todo . " %i %-12:c")
+            (tags . " %i %-12:c")
+            (search . " %i %-12:c"))))
+    (setq org-agenda-remove-tags nil)
+    (setq org-agenda-skip-archived-trees t)
+    (setq org-agenda-use-time-grid t)
+    (setq org-startup-truncated nil)
+    (setq org-agenda-window-setup 'current-window)
+    (setq org-agenda-start-with-clockreport-mode t)
+
+    ;; Automatically save org buffers after refile
+    (advice-add 'org-refile :after
+                (lambda (&rest _)
+                  (org-save-all-org-buffers)))
+
+    ;; ‘!’ (for a timestamp) or ‘@’ (for a note with timestamp)
+    (setq org-todo-keywords
+          (quote ((sequence "TODO(t)" "IDEA(i)" "NEXT(n)" "CURRENT(c)" "STARTED(s)" "|" "DONE(d)")
+                  (sequence "|" "WAITING(w@/!)" "CANCELLED(x@/!)" "DELEGATED(l@/!)" "DEFERRED(f!)"))))
+
+    (setq org-todo-keyword-faces
+          (quote (("TODO" . org-warning)
+                  ("NEXT" . org-scheduled-today)
+                  ("CURRENT" . org-priority)
+                  ("WAITING" . org-priority)
+                  ("STARTED" . org-warning))))
+
+    (setq org-treat-S-cursor-todo-selection-as-state-change nil)
+
+    ;; agenda clock report
+    (setq org-agenda-clockreport-parameter-plist
+          (quote (:link t :maxlevel 5 :fileskip0 t :compact t :narrow 80)))
+
+    ;; code
+    (org-babel-do-load-languages
+     'org-babel-load-languages
+     '((emacs-lisp . t)
+       (ruby . t)
+       (js . t)
+       (shell . t)))
+    (setq org-src-fontify-natively t)
+    (defun cxa-org-confirm-babel-evaluate (lang body)
+      (not (member lang '("emacs-lisp"))))
+    (setq org-confirm-babel-evaluate 'cxa-org-confirm-babel-evaluate)
+
+    ;; bibtex
+    (setq bibtex-set-dialect 'biblatex)
+    (setq org-bibtex-file "Papers.org")))
 
 (use-package org-clock-convenience
   :ensure t)
