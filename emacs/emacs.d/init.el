@@ -356,6 +356,8 @@
     "ot" 'org-todo
     "oT" 'cxa-org-todo-done-last-clockout-time
     "o/" 'org-show-todo-tree
+    "oq" 'org-set-tags
+    "ow" 'cxa-org-refile
     "oj" 'counsel-org-goto
     "pp" 'projectile-switch-project
     "pf" 'projectile-find-file
