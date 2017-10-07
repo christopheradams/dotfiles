@@ -275,6 +275,11 @@
   :config
   (add-hook 'epresent-mode-hook (lambda () (setq show-trailing-whitespace nil))))
 
+(defun cxa-add-property-with-date-created ()
+  "Add CREATED property to the current item."
+  (interactive)
+  (org-set-property "CREATED" (format-time-string (org-time-stamp-format '(16) t))))
+
 (defun cxa-org-todo-done-last-clockout-time ()
     "Close the task at the time of the last clock out."
     (interactive)
