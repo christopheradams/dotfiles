@@ -277,6 +277,13 @@
   :config
   (add-hook 'epresent-mode-hook (lambda () (setq show-trailing-whitespace nil))))
 
+(defun cxa-org-refile ()
+  "Move the entry or entries at point to another heading."
+  (interactive)
+  (if (bound-and-true-p org-capture-mode)
+      (org-capture-refile)
+    (org-refile)))
+
 (defun cxa-add-property-with-date-created ()
   "Add CREATED property to the current item."
   (interactive)
