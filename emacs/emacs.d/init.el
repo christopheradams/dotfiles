@@ -209,11 +209,13 @@
 
     (setq org-capture-templates
           '(("t" "Todo" entry (file+headline "" "Tasks")
-             "* TODO %?\n  %u\n  %i")
+             "* TODO %?\n  %i")
             ("i" "Idea" entry (file+headline "" "Tasks")
-             "* IDEA %?\n  %u\n  %i")
+             "* IDEA %?\n  %i")
             ("l" "Link" entry (file+headline "" "Tasks")
-             "* TODO %?\n  %u\n  %a")))
+             "* TODO %?\n  %a")))
+
+    (add-hook 'org-capture-before-finalize-hook 'cxa-add-property-with-date-created)
 
     (setq org-agenda-prefix-format
           (quote
