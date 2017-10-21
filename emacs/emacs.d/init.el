@@ -503,10 +503,7 @@
   (setq web-mode-css-indent-offset 2)
   (setq web-mode-code-indent-offset 2)
   (setq web-mode-markup-indent-offset 2)
-  (setq web-mode-content-types-alist
-		  '(("jsx" . "\\.js[x]?\\'")))
   (add-to-list 'auto-mode-alist '("\\.htm[l]?\\'" . web-mode))
-  (add-to-list 'auto-mode-alist '("\\.js[x]?\\'" . web-mode))
   (add-to-list 'auto-mode-alist '("\\.eex\\'" . web-mode))
   (add-to-list 'auto-mode-alist '("\\.hbs\\'" . web-mode))
   (add-to-list 'auto-mode-alist '("\\.[s]?css\\'" . web-mode))
@@ -559,11 +556,19 @@
   :ensure auctex)
 
 ;;; JavaScript
-(add-hook 'js-mode-hook
-          (lambda ()
-            (setq tab-width 2)
-            (setq js-indent-level tab-width)
-            (setq evil-shift-width js-indent-level)))
+(use-package js2-mode
+  :ensure t
+  :init
+  (add-hook 'js2-mode-hook
+            (lambda ()
+              (setq tab-width 2)
+              (setq js-indent-level tab-width)
+              (setq evil-shift-width js-indent-level)))
+  :config
+  (setq js2-mode-show-parse-errors nil)
+  (setq js2-mode-show-strict-warnings nil)
+  (setq js2-strict-missing-semi-warning nil)
+  (add-to-list 'auto-mode-alist '("\\.js[x]?\\'" . js2-mode)))
 
 ;;; Ruby
 (use-package ruby-end
