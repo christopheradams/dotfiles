@@ -332,6 +332,7 @@
     "0" 'delete-window
     "=" 'balance-windows
     "d" 'dired
+    "e" 'evil-edit
     "f" 'find-file
     "i" 'fill-paragraph
     "I" 'counsel-unicode-char
