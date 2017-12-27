@@ -87,6 +87,11 @@
    `(elixir-atom-face ((t (:foreground ,base-3024-0D))))
    `(elixir-attribute-face ((t (:foreground ,base-3024-0E))))
 
+   ;; epresent
+   `(epresent-author-face ((t (:height 360))))
+   `(epresent-heading-face ((t (:height 360))))
+   `(epresent-subheading-face ((t (:height 360))))
+
    ;; gscholar
    `(gscholar-bibtex-title ((t (:height 1.0 :foreground ,base-3024-0B))))
 
