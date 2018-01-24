@@ -400,14 +400,13 @@
   :init (projectile-global-mode +1)
   :config (setq projectile-completion-system 'ivy))
 
+(use-package counsel-projectile
+    :ensure t)
+
 ;;; Ivy
 (use-package ivy
   :ensure t
-  :config (ivy-mode 1)
-
-  (use-package counsel-projectile
-    :ensure t
-    :init (counsel-projectile-off)))
+  :config (ivy-mode 1))
 
 ;;; EditorConfig
 (use-package editorconfig
