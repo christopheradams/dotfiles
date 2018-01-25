@@ -366,6 +366,9 @@
     "pr" 'projectile-replace
     "ps" 'counsel-projectile-ag
     "pS" 'projectile-ag
+    "yi" 'yankpad-insert
+    "yc" 'yankpad-capture-snippet
+    "yy" 'yankpad-set-category
     "at"  'alchemist-mix-test
     "a."  'alchemist-mix-test-at-point
     "amc" 'alchemist-mix-compile))
