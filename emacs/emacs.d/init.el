@@ -451,6 +451,7 @@
           (magit-blame-quit)
         (magit-blame nil buffer-file-name))))
   :init
+  (add-hook 'with-editor-mode-hook 'evil-insert-state)
   (global-set-key (kbd "C-x G") 'magit-blame-toggle)
   (global-set-key (kbd "C-x g") 'magit-status))
 
