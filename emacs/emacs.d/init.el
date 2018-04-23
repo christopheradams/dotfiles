@@ -194,9 +194,7 @@
     (setq org-reverse-note-order t)
     (setq org-clock-in-switch-to-state "CURRENT")
     (setq org-clock-out-switch-to-state "STARTED")
-    (setq org-time-clocksum-use-fractional t)
-    (setq org-time-clocksum-format
-          '(:hours "%d" :require-hours t :minutes ":%02d" :require-minutes t))
+    (setq org-duration-format '(("h" . nil) (special . 2)))
     (setq org-clock-idle-time 20)
 
     ;; Keep mouse-1 clicks from following a link
