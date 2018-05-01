@@ -368,6 +368,7 @@
     "yi" 'yankpad-insert
     "yc" 'yankpad-capture-snippet
     "yy" 'yankpad-set-category
+    "ax"  'alchemist-mix
     "at"  'alchemist-mix-test
     "a."  'alchemist-mix-test-at-point
     "amc" 'alchemist-mix-compile))
