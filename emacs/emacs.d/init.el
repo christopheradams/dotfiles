@@ -349,6 +349,7 @@
     "oa" 'org-agenda
     "oc" 'org-capture
     "ob" 'org-iswitchb
+    "oD" 'org-dblock-update
     "ol" 'org-store-link
     "oL" 'org-insert-link
     "oi" 'org-clock-in
