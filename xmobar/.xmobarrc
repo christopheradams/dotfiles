@@ -23,7 +23,7 @@ Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
                     , Run Memory ["-t","Mem: <usedratio>%"] 10
                     , Run Swap [] 10
                     , Run Com "uname" ["-s","-r"] "" 36000
-                    , Run Com "hostname" ["-I"] "" 36000
+                    , Run Com "hostname" ["-s"] "" 36000
                     , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
                     , Run Com "/bin/bash" ["-c", "~/dotfiles/bin/xmobar-tz 'America/Los_Angeles'"] "latime" 30
                     , Run Com "/bin/bash" ["-c", "~/dotfiles/bin/xmobar-tz 'America/New_York'"] "nytime" 30
