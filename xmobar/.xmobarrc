@@ -24,6 +24,7 @@ Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
                     , Run Swap [] 10
                     , Run Com "uname" ["-s","-r"] "" 36000
                     , Run Com "hostname" ["-s"] "" 36000
+                    , Run Com "/bin/bash" ["-c", "~/dotfiles/bin/xmobar-ip"] "ipaddress" 36000
                     , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
                     , Run Com "/bin/bash" ["-c", "~/dotfiles/bin/xmobar-tz 'America/Los_Angeles'"] "latime" 30
                     , Run Com "/bin/bash" ["-c", "~/dotfiles/bin/xmobar-tz 'America/New_York'"] "nytime" 30
@@ -33,5 +34,5 @@ Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% | %cpu% | %memory% * %swap% | %eth0% - %eth1% | %wifi% } { %latime% | %nytime% | %utcdate% | <fc=#8F5536>%date%</fc> | %hostname%"
+       , template = "%StdinReader% | %cpu% | %memory% * %swap% | %eth0% - %eth1% | %wifi% } { %latime% | %nytime% | %utcdate% | <fc=#8F5536>%date%</fc> | %hostname% %ipaddress% "
        }
