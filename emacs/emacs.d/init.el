@@ -556,6 +556,12 @@
 (use-package format-sql
   :ensure t)
 
+(use-package sql-indent
+  :ensure t
+  :init
+  (add-hook 'sql-mode-hook
+            (lambda () (sqlind-minor-mode))))
+
 ;;; TeX
 (use-package tex
   :ensure auctex)
@@ -634,6 +640,10 @@
 
 ;;; PHP
 (use-package php-mode
+  :ensure t)
+
+;;; GraphQL
+(use-package graphql-mode
   :ensure t)
 
 ;; (init-open-recentf)
