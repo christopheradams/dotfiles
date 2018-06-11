@@ -438,6 +438,7 @@
 (use-package ag
   :ensure t
   :config
+  (setq ag-arguments (quote ("--smart-case" "--stats" "--width" "120")))
   (setq ag-reuse-buffers 't)
   (setq ag-highlight-search t))
 
