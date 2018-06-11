@@ -39,6 +39,7 @@
 
 (setq-default show-trailing-whitespace t)
 (show-paren-mode t)
+(winner-mode 1)
 
 (put 'upcase-region 'disabled nil)
 
