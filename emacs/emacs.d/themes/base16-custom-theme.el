@@ -117,7 +117,7 @@
    `(magit-section-heading ((t (:foreground ,base-3024-0F :weight bold))))
 
    ;; mode-line
-   `(mode-line ((t (:background ,base-gray-00 :foreground ,base-gray-04 :box ,base-gray-04))))
+   `(mode-line ((t (:background ,base-gray-00 :foreground ,base-gray-07 :box ,base-gray-04))))
    `(mode-line-inactive ((t (:background ,base-gray-00 :foreground ,base-gray-03 :box ,base-gray-03))))
 
    ;; org-mode
