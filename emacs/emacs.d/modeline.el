@@ -1,3 +1,15 @@
+(defvar ml-selected-window nil)
+
+(defun ml-record-selected-window ()
+  (setq ml-selected-window (selected-window)))
+
+(defun ml-update-all ()
+  (force-mode-line-update t))
+
+(add-hook 'post-command-hook 'ml-record-selected-window)
+
+(add-hook 'buffer-list-update-hook 'ml-update-all)
+
 (let ((my-mode-line-format
        (list
 
@@ -57,7 +69,10 @@
         ;; " --"
         ;; minor-mode-alist  ;; list of minor modes
 
-        'mode-line-misc-info
+        '(:eval
+          (if (eq ml-selected-window (selected-window))
+              'mode-line-misc-info))
+
         'mode-line-end-spaces
         )))
   (setq-default mode-line-format my-mode-line-format))
