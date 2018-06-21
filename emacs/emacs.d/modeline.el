@@ -54,9 +54,9 @@
 
         ;; relative position, size of file
         "["
-        (propertize "%p" 'face 'font-lock-constant-face) ;; % above top
+        (propertize "%p" 'face 'font-lock-type-face) ;; % above top
         "/"
-        (propertize "%I" 'face 'font-lock-constant-face) ;; size
+        (propertize "%I" 'face 'font-lock-type-face) ;; size
         "]"
 
         '(vc-mode vc-mode)
