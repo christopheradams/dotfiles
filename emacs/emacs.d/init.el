@@ -651,6 +651,10 @@
 (use-package graphql-mode
   :ensure t)
 
+;;; Solidity
+(use-package solidity-mode
+  :ensure t)
+
 ;; (init-open-recentf)
 (put 'downcase-region 'disabled nil)
 
