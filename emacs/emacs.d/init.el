@@ -653,7 +653,10 @@
 
 ;;; Solidity
 (use-package solidity-mode
-  :ensure t)
+  :ensure t
+  :config
+  (setq solidity-comment-style 'slash))
+
 
 ;; (init-open-recentf)
 (put 'downcase-region 'disabled nil)
