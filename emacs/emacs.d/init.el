@@ -350,6 +350,8 @@
     "oa" 'org-agenda
     "oc" 'org-capture
     "ob" 'org-iswitchb
+    "od" 'org-deadline
+    "os" 'org-schedule
     "oD" 'org-dblock-update
     "ol" 'org-store-link
     "oL" 'org-insert-link
