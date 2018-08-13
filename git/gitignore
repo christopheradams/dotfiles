@@ -7,3 +7,6 @@
 # Emacs
 .dir-locals.el
 .projectile
+
+# Elixir
+.iex.exs
