@@ -170,6 +170,71 @@
       (package-install 'use-package)))
 (require 'use-package)
 
+;;; general
+(use-package general
+  :ensure t
+  :config
+  (general-evil-setup t)
+
+  (general-define-key
+   :states '(normal emacs)
+   :keymaps 'override
+   :prefix "SPC"
+   "<SPC>" 'smex
+   "1" 'delete-other-windows
+   "2" 'split-window-below
+   "3" 'split-window-right
+   "0" 'delete-window
+   "=" 'balance-windows
+   "d" 'dired
+   "e" 'evil-edit
+   "f" 'find-file
+   "i" 'fill-paragraph
+   "I" 'counsel-unicode-char
+   "h" 'evil-window-left
+   "j" 'evil-window-down
+   "k" 'evil-window-up
+   "l" 'evil-window-right
+   "b" 'previous-buffer
+   "n" 'next-buffer
+   "m" 'switch-to-buffer
+   "s" 'save-buffer
+   "S" 'save-some-buffers
+   "g" 'magit-status
+   "G" 'magit-blame-toggle
+   "oa" 'org-agenda
+   "oc" 'org-capture
+   "ob" 'org-iswitchb
+   "od" 'org-deadline
+   "os" 'org-schedule
+   "oD" 'org-dblock-update
+   "ol" 'org-store-link
+   "oL" 'org-insert-link
+   "oi" 'org-clock-in
+   "on" 'org-insert-todo-heading-respect-content
+   "oo" 'org-clock-out
+   "ot" 'org-todo
+   "oT" 'cxa-org-todo-done-last-clockout-time
+   "o/" 'org-show-todo-tree
+   "oq" 'org-set-tags
+   "ow" 'cxa-org-refile
+   "oj" 'counsel-org-goto
+   "oe" 'org-table-recalculate
+   "pp" 'projectile-switch-project
+   "pf" 'projectile-find-file
+   "pm" 'projectile-switch-to-buffer
+   "pr" 'projectile-replace
+   "ps" 'counsel-projectile-ag
+   "pS" 'projectile-ag
+   "yi" 'yankpad-insert
+   "yc" 'yankpad-capture-snippet
+   "yy" 'yankpad-set-category
+   "af" 'elixir-format
+   "ax" 'alchemist-mix
+   "at" 'alchemist-mix-test
+   "a." 'alchemist-mix-test-at-point
+   "amc" 'alchemist-mix-compile))
+
 ;;; base16
 (use-package base16-theme
   :ensure t
@@ -319,67 +384,7 @@
 
 ;;; Evil
 (setq evil-want-C-i-jump nil)
-(setq evil-leader/no-prefix-mode-rx '("magit-.*-mode" "org-.*-mode" "dired-mode" "bookmark-bmenu-mode"))
-(use-package evil-leader
-  :ensure t
-  :init (global-evil-leader-mode)
-  :config
-  (evil-leader/set-leader "<SPC>")
-  (evil-leader/set-key
-    "<SPC>" 'smex
-    "1" 'delete-other-windows
-    "2" 'split-window-below
-    "3" 'split-window-right
-    "0" 'delete-window
-    "=" 'balance-windows
-    "d" 'dired
-    "e" 'evil-edit
-    "f" 'find-file
-    "i" 'fill-paragraph
-    "I" 'counsel-unicode-char
-    "h" 'evil-window-left
-    "j" 'evil-window-down
-    "k" 'evil-window-up
-    "l" 'evil-window-right
-    "b" 'previous-buffer
-    "n" 'next-buffer
-    "m" 'switch-to-buffer
-    "s" 'save-buffer
-    "S" 'save-some-buffers
-    "g" 'magit-status
-    "G" 'magit-blame-toggle
-    "oa" 'org-agenda
-    "oc" 'org-capture
-    "ob" 'org-iswitchb
-    "od" 'org-deadline
-    "os" 'org-schedule
-    "oD" 'org-dblock-update
-    "ol" 'org-store-link
-    "oL" 'org-insert-link
-    "oi" 'org-clock-in
-    "on" 'org-insert-todo-heading-respect-content
-    "oo" 'org-clock-out
-    "ot" 'org-todo
-    "oT" 'cxa-org-todo-done-last-clockout-time
-    "o/" 'org-show-todo-tree
-    "oq" 'org-set-tags
-    "ow" 'cxa-org-refile
-    "oj" 'counsel-org-goto
-    "o*" 'org-table-recalculate
-    "pp" 'projectile-switch-project
-    "pf" 'projectile-find-file
-    "pm" 'projectile-switch-to-buffer
-    "pr" 'projectile-replace
-    "ps" 'counsel-projectile-ag
-    "pS" 'projectile-ag
-    "yi" 'yankpad-insert
-    "yc" 'yankpad-capture-snippet
-    "yy" 'yankpad-set-category
-    "af"  'elixir-format
-    "ax"  'alchemist-mix
-    "at"  'alchemist-mix-test
-    "a."  'alchemist-mix-test-at-point
-    "amc" 'alchemist-mix-compile))
+
 (use-package evil
   :ensure t
   :init (evil-mode +1)
