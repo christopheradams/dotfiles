@@ -33,6 +33,7 @@
 ;; (add-hook 'org-mode-hook (lambda () (linum-mode 0)))
 (setq line-number-mode t)
 (setq column-number-mode t)
+(setq column-number-indicator-zero-based nil)
 
 (setq ring-bell-function #'ignore)
 (setq auto-save-default nil)
