@@ -277,6 +277,12 @@
              "* TODO %?\n  %i")
             ("i" "Idea" entry (file+headline "" "Tasks")
              "* IDEA %?\n  %i")
+            ("d" "Date" entry (file+headline "" "Tasks")
+             "* %?%t\n  %i")
+            ("m" "Time" entry (file+headline "" "Tasks")
+             "* %?%T\n  %i")
+            ("r" "Range" entry (file+headline "" "Tasks")
+             "* %?%t--%t\n  %i")
             ("l" "Link" entry (file+headline "" "Tasks")
              "* TODO %?\n  %a")))
 
