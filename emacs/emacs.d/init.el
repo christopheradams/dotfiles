@@ -219,7 +219,7 @@
    "oq" 'org-set-tags
    "ow" 'cxa-org-refile
    "oj" 'counsel-org-goto
-   "oe" 'org-table-recalculate
+   "o*" 'org-table-recalculate
    "pp" 'projectile-switch-project
    "pf" 'projectile-find-file
    "pm" 'projectile-switch-to-buffer
