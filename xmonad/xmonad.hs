@@ -3,10 +3,19 @@ import XMonad.Hooks.DynamicLog
 import XMonad.Layout.ResizableTile
 import XMonad.Hooks.ManageDocks (ToggleStruts(..),avoidStruts,docks,manageDocks)
 import XMonad.Layout.NoBorders
+import XMonad.Util.Dmenu
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Actions.SpawnOn
 import XMonad.Util.EZConfig(additionalKeys)
+import System.Exit
 import System.IO
+import Control.Monad
+
+quitWithWarning :: X()
+quitWithWarning = do
+  let m = "confirm quit"
+  s <- dmenu [m]
+  when (m == s) (io exitSuccess)
 
 myLayout = ( smartBorders $ avoidStruts  (resizableTile ||| Mirror resizableTile |||  Full ))
     where
@@ -42,6 +51,7 @@ xmonad $ docks defaultConfig
     , ((mod1Mask .|. shiftMask, xK_t), spawnHere "thunderbird") -- %! Launch Thunderbird
     , ((mod1Mask .|. shiftMask, xK_u), spawnHere "unity-control-center network")
     , ((mod1Mask .|. shiftMask, xK_d), spawnHere "gnome-calculator")
+    , ((mod1Mask .|. shiftMask, xK_q), quitWithWarning)
     , ((mod1Mask,               xK_p), spawn "dmenu_run -fn 'Input Bold-8' -nf 'white' -nb '#252525' -sf 'white' -sb '#DB2D20'")
     , ((mod1Mask,               xK_z), sendMessage MirrorShrink)
     , ((mod1Mask,               xK_a), sendMessage MirrorExpand)
