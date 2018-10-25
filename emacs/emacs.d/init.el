@@ -174,12 +174,11 @@
 (use-package general
   :ensure t
   :config
-  (general-evil-setup t)
-
   (general-define-key
-   :states '(normal emacs)
+   :states '(normal visual emacs motion)
    :keymaps 'override
    :prefix "SPC"
+   "" nil
    "<SPC>" 'smex
    "1" 'delete-other-windows
    "2" 'split-window-below
