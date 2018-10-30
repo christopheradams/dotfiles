@@ -5,10 +5,6 @@
  ;; If there is more than one, they won't work right.
  '(ansi-color-faces-vector
    [default default default italic underline success warning error])
- '(ansi-color-names-vector
-   ["#101010" "#7c7c7c" "#8e8e8e" "#a0a0a0" "#686868" "#747474" "#686868" "#b9b9b9"])
- '(ansi-term-color-vector
-   [unspecified "#101010" "#7c7c7c" "#8e8e8e" "#a0a0a0" "#686868" "#747474" "#686868" "#b9b9b9"] t)
  '(column-number-mode t)
  '(custom-enabled-themes (quote (base16-grayscale-light)))
  '(custom-safe-themes (quote (default)))
@@ -24,7 +20,7 @@
  '(org-fontify-whole-heading-line t)
  '(package-selected-packages
    (quote
-    (general solidity-mode graphql-mode sql-indent js2-mode yankpad go-mode base16-theme epresent org-clock-convenience gscholar-bibtex org-plus-contrib counsel-projectile ivy hlinum yaml-mode web-mode use-package spaceline smex slim-mode ruby-end rainbow-mode projectile php-mode markdown-mode magit init-open-recentf ibuffer-vc haskell-mode git-gutter-fringe format-sql exec-path-from-shell evil-leader eproject editorconfig diff-hl company-restclient column-marker auctex alchemist ag)))
+    (solidity-mode erlang ruby-end slim-mode yaml-mode yankpad web-mode smex general graphql-mode sql-indent js2-mode go-mode base16-theme epresent org-clock-convenience gscholar-bibtex org-plus-contrib counsel-projectile ivy hlinum rainbow-mode php-mode markdown-mode magit init-open-recentf ibuffer-vc haskell-mode git-gutter-fringe format-sql exec-path-from-shell evil-leader eproject editorconfig diff-hl company-restclient column-marker auctex alchemist ag)))
  '(show-paren-mode t)
  '(tool-bar-mode nil)
  '(vc-annotate-background "#f0f0f0")
