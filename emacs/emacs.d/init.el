@@ -8,6 +8,9 @@
   (setq custom-file custom.el)
   (load custom.el))
 
+;;; User
+(setq user-mail-address "email@christopheradams.io")
+
 ;;; Themes
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (add-to-list 'default-frame-alist '(tty-color-mode . -1))
