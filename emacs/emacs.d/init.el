@@ -419,7 +419,9 @@
 (use-package projectile
   :ensure t
   :init (projectile-global-mode +1)
-  :config (setq projectile-completion-system 'ivy))
+  :config
+  (setq projectile-indexing-method 'hybrid)
+  (setq projectile-completion-system 'ivy))
 
 (use-package counsel-projectile
     :ensure t)
