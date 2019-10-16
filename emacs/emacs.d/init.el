@@ -672,6 +672,8 @@
   :ensure t
   :config
   (setq solidity-comment-style 'slash))
+(use-package company-solidity
+  :ensure t)
 
 
 ;; (init-open-recentf)
