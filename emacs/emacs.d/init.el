@@ -248,6 +248,7 @@
 (use-package org
   :ensure org-plus-contrib
   :init
+  (require 'org-invoice)
   (require 'org-bibtex)
   (require 'ox-bibtex)
   :config
@@ -343,6 +344,9 @@
     ;; bibtex
     (setq bibtex-set-dialect 'biblatex)
     (setq org-bibtex-file "Papers.org")))
+
+(autoload 'org-invoice-report "org-invoice")
+(autoload 'org-dblock-write:invoice "org-invoice")
 
 (use-package org-clock-convenience
   :ensure t)
