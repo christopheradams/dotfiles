@@ -429,7 +429,9 @@
 ;;; Ivy
 (use-package ivy
   :ensure t
-  :config (ivy-mode 1))
+  :config
+  (ivy-mode 1)
+  (setq ivy-use-selectable-prompt t))
 
 ;;; EditorConfig
 (use-package editorconfig
