@@ -48,10 +48,10 @@
 (put 'upcase-region 'disabled nil)
 
 ;;; Window Resize
-(global-set-key (kbd "M-<left>") 'shrink-window-horizontally)
-(global-set-key (kbd "M-<right>") 'enlarge-window-horizontally)
-(global-set-key (kbd "M-<down>") 'shrink-window)
-(global-set-key (kbd "M-<up>") 'enlarge-window)
+(global-set-key (kbd "C-<left>") 'shrink-window-horizontally)
+(global-set-key (kbd "C-<right>") 'enlarge-window-horizontally)
+(global-set-key (kbd "C-<down>") 'shrink-window)
+(global-set-key (kbd "C-<up>") 'enlarge-window)
 
 ;;; Scrolling
 (setq scroll-step 1)
