@@ -533,6 +533,7 @@
   (setq web-mode-css-indent-offset 2)
   (setq web-mode-code-indent-offset 2)
   (setq web-mode-markup-indent-offset 2)
+  (setq web-mode-enable-auto-closing t)
   (add-to-list 'auto-mode-alist '("\\.htm[l]?\\'" . web-mode))
   (add-to-list 'auto-mode-alist '("\\.eex\\'" . web-mode))
   (add-to-list 'auto-mode-alist '("\\.hbs\\'" . web-mode))
