@@ -12,12 +12,6 @@ import System.Exit
 import System.IO
 import Control.Monad
 
-quitWithWarning :: X()
-quitWithWarning = do
-  let m = "confirm quit"
-  s <- dmenu [m]
-  when (m == s) (io exitSuccess)
-
 myLayout = ( smartBorders $ avoidStruts  (resizableTile ||| Mirror resizableTile |||  Full ))
     where
     resizableTile = ResizableTall nmaster delta ratio []
@@ -52,7 +46,7 @@ xmonad $ docks gnomeConfig
     , ((mod1Mask .|. shiftMask, xK_t), spawnHere "thunderbird") -- %! Launch Thunderbird
     , ((mod1Mask .|. shiftMask, xK_u), spawnHere "gnome-control-center network")
     , ((mod1Mask .|. shiftMask, xK_d), spawnHere "gnome-calculator")
-    , ((mod1Mask .|. shiftMask, xK_q), quitWithWarning)
+    , ((mod1Mask .|. shiftMask, xK_q), spawn "gnome-session-quit")
     , ((mod1Mask,               xK_p), spawn "dmenu_run -fn 'Input Bold-8' -nf 'white' -nb '#252525' -sf 'white' -sb '#DB2D20'")
     , ((mod1Mask,               xK_z), sendMessage MirrorShrink)
     , ((mod1Mask,               xK_a), sendMessage MirrorExpand)
