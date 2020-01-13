@@ -1,4 +1,5 @@
 import XMonad
+import XMonad.Config.Gnome
 import XMonad.Hooks.DynamicLog
 import XMonad.Layout.ResizableTile
 import XMonad.Hooks.ManageDocks (ToggleStruts(..),avoidStruts,docks,manageDocks)
@@ -27,7 +28,7 @@ myLayout = ( smartBorders $ avoidStruts  (resizableTile ||| Mirror resizableTile
 main = do
 xmproc <- spawnPipe "dropbox start"
 xmproc <- spawnPipe "xmobar ~/.xmobarrc"
-xmonad $ docks defaultConfig
+xmonad $ docks gnomeConfig
     { manageHook = manageDocks <+> manageHook defaultConfig
     , terminal = "gnome-terminal"
     , logHook = dynamicLogWithPP $ xmobarPP
@@ -49,7 +50,7 @@ xmonad $ docks defaultConfig
     , ((mod1Mask .|. shiftMask, xK_g), spawnHere "google-chrome") -- %! Launch Chrome
     , ((mod1Mask .|. shiftMask, xK_r), spawnHere "nautilus -w") -- %! Launch Nautilus
     , ((mod1Mask .|. shiftMask, xK_t), spawnHere "thunderbird") -- %! Launch Thunderbird
-    , ((mod1Mask .|. shiftMask, xK_u), spawnHere "unity-control-center network")
+    , ((mod1Mask .|. shiftMask, xK_u), spawnHere "gnome-control-center network")
     , ((mod1Mask .|. shiftMask, xK_d), spawnHere "gnome-calculator")
     , ((mod1Mask .|. shiftMask, xK_q), quitWithWarning)
     , ((mod1Mask,               xK_p), spawn "dmenu_run -fn 'Input Bold-8' -nf 'white' -nb '#252525' -sf 'white' -sb '#DB2D20'")
