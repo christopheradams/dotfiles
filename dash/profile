@@ -25,3 +25,5 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
+
+PATH=/usr/local/texlive/2019/bin/x86_64-linux:$PATH
