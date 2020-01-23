@@ -470,6 +470,7 @@
   :config
   (setq git-commit-summary-max-length 50
         git-commit-fill-column 72)
+  (setq magit-log-margin '(t "%Y-%m-%d %H:%M " magit-log-margin-width t 18))
   (defun magit-blame-toggle()
     (interactive)
     (let* ((active (--filter (and (boundp it) (symbol-value it)) minor-mode-list)))
