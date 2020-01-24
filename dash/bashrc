@@ -117,3 +117,6 @@ if ! shopt -oq posix; then
 fi
 
 export PS1="=> \W \$ "
+
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
