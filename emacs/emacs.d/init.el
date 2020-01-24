@@ -206,7 +206,7 @@
    "G" 'magit-blame-toggle
    "oa" 'org-agenda
    "oc" 'org-capture
-   "ob" 'org-iswitchb
+   "ob" 'org-switchb
    "od" 'org-deadline
    "os" 'org-schedule
    "oD" 'org-dblock-update
