@@ -676,6 +676,12 @@
 ;;; Solidity
 (use-package solidity-mode
   :ensure t
+  :init
+  (add-hook 'solidity-mode-hook
+          (lambda ()
+            (setq c-basic-offset 4
+                  tab-width 4
+                  indent-tabs-mode nil)))
   :config
   (setq solidity-comment-style 'slash))
 (use-package company-solidity
