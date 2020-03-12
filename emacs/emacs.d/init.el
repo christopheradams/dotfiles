@@ -204,6 +204,7 @@
    "S" 'save-some-buffers
    "g" 'magit-status
    "G" 'magit-blame-toggle
+   "Y" 'cxa-copy-simple
    "oa" 'org-agenda
    "oc" 'org-capture
    "ob" 'org-switchb
