@@ -266,6 +266,7 @@
     (setq org-clock-out-switch-to-state "STARTED")
     (setq org-duration-format '(("h" . nil) (special . 2)))
     (setq org-clock-idle-time 20)
+    (setq-default org-catch-invisible-edits 'smart)
 
     ;; Keep mouse-1 clicks from following a link
     (setq org-mouse-1-follows-link nil)
