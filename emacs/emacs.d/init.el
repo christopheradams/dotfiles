@@ -583,6 +583,7 @@
   :config
   (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
   :init
+  (add-hook 'yaml-mode-hook (lambda () (auto-fill-mode -1)))
   (add-hook 'yaml-mode-hook
             '(lambda ()
                (define-key yaml-mode-map "\C-m" 'newline-and-indent))))
