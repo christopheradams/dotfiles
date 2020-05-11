@@ -277,17 +277,17 @@
     (setq org-clock-into-drawer t)
 
     (setq org-capture-templates
-          '(("t" "Todo" entry (file+headline "" "Tasks")
+          '(("t" "Todo" entry (file+olp "" "Inbox" "Tasks")
              "* TODO %?\n  %i")
-            ("i" "Idea" entry (file+headline "" "Tasks")
+            ("i" "Idea" entry (file+olp "" "Inbox" "Ideas")
              "* IDEA %?\n  %i")
-            ("d" "Date" entry (file+headline "" "Tasks")
+            ("d" "Date" entry (file+olp "" "Inbox" "Tasks")
              "* %?%t\n  %i")
-            ("m" "Time" entry (file+headline "" "Tasks")
+            ("m" "Time" entry (file+olp "" "Inbox" "Tasks")
              "* %?%T\n  %i")
-            ("r" "Range" entry (file+headline "" "Tasks")
+            ("r" "Range" entry (file+olp "" "Inbox" "Tasks")
              "* %?%t--%t\n  %i")
-            ("l" "Link" entry (file+headline "" "Tasks")
+            ("l" "Link" entry (file+olp "" "Inbox" "Tasks")
              "* TODO %?\n  %a")))
 
     (add-hook 'org-capture-before-finalize-hook 'cxa-add-property-with-date-created)
