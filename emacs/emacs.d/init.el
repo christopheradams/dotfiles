@@ -313,8 +313,8 @@
 
     ;; ‘!’ (for a timestamp) or ‘@’ (for a note with timestamp)
     (setq org-todo-keywords
-          (quote ((sequence "TODO(t)" "IDEA(i)" "NEXT(n)" "CURRENT(c)" "STARTED(s)" "|" "DONE(d)")
-                  (sequence "|" "WAITING(w@/!)" "CANCELLED(x)" "DELEGATED(l@/!)" "DEFERRED(f!)"))))
+          (quote ((sequence "TODO(t)" "IDEA(i)" "NEXT(n)" "CURRENT(c)" "STARTED(s)" "WAITING(w@/!)" "|" "DONE(d)")
+                  (sequence "|" "CANCELLED(x)" "DELEGATED(l@/!)" "DEFERRED(f!)"))))
 
     (setq org-todo-keyword-faces
           (quote (("TODO" . org-warning)
