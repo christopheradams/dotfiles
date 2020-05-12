@@ -295,7 +295,6 @@
     (setq org-agenda-prefix-format
           (quote
            ((agenda . " %i %-12:c%?-12t% s")
-            (timeline . "  % s")
             (todo . " %i %-12:c")
             (tags . " %i %-12:c")
             (search . " %i %-12:c"))))
