@@ -156,6 +156,10 @@
             (setq c-basic-offset 4
                   tab-width 4
                   indent-tabs-mode t)))
+;;; Makefile
+(add-hook 'makefile-mode-hook
+          (lambda ()
+            (setq evil-shift-width 8)))
 
 ;;; Packages
 (require 'package)
