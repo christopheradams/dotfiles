@@ -226,7 +226,7 @@
    "oq" 'org-set-tags
    "ow" 'cxa-org-refile
    "oW" 'org-refile-goto-last-stored
-   "oj" 'counsel-org-goto
+   "oj" 'cxa-org-refile-jump
    "o*" 'org-table-iterate
    "pp" 'projectile-switch-project
    "pf" 'projectile-find-file
