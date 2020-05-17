@@ -364,6 +364,12 @@
       (org-capture-refile)
     (org-refile)))
 
+(defun cxa-org-refile-jump ()
+  "Use the refile interface to jump to a heading."
+  (interactive)
+  (let ((current-prefix-arg '(4))) ;; emulate C-u
+    (call-interactively 'org-refile)))
+
 (defun cxa-add-property-with-date-created ()
   "Add CREATED property to the current item."
   (interactive)
