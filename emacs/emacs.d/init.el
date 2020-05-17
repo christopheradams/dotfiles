@@ -225,6 +225,7 @@
    "o/" 'org-show-todo-tree
    "oq" 'org-set-tags
    "ow" 'cxa-org-refile
+   "oW" 'org-refile-goto-last-stored
    "oj" 'counsel-org-goto
    "o*" 'org-table-iterate
    "pp" 'projectile-switch-project
