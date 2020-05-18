@@ -215,6 +215,7 @@
    "od" 'org-deadline
    "os" 'org-schedule
    "oD" 'org-dblock-update
+   "oe" 'org-set-effort
    "ol" 'org-store-link
    "oL" 'org-insert-link
    "oi" 'org-clock-in
