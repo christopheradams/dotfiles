@@ -239,6 +239,8 @@
    "yi" 'yankpad-insert
    "yc" 'yankpad-capture-snippet
    "yy" 'yankpad-set-category
+   "x"  'eval-defun
+   ":"  'eval-expression
    "af" 'elixir-format
    "ax" 'alchemist-mix
    "at" 'alchemist-mix-test
