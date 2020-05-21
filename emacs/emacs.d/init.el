@@ -284,7 +284,9 @@
     (setq org-clock-into-drawer t)
 
     (setq org-capture-templates
-          '(("t" "Todo" entry (file+olp "" "Inbox" "Tasks")
+          '(("n" "Note" entry (file+olp "" "Inbox" "Notes")
+             "* %?\n  %i" :prepend t)
+            ("t" "Todo" entry (file+olp "" "Inbox" "Tasks")
              "* TODO %?\n  %i" :prepend t)
             ("i" "Idea" entry (file+olp "" "Inbox" "Ideas")
              "* IDEA %?\n  %i" :prepend t)
