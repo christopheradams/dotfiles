@@ -627,7 +627,10 @@
 
 ;;; TeX
 (use-package tex
-  :ensure auctex)
+  :ensure auctex
+  :config
+  (add-hook 'TeX-mode-hook
+            (lambda () (auto-fill-mode -1))))
 
 ;;; JavaScript
 (use-package js2-mode
