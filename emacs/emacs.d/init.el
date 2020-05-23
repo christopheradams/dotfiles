@@ -147,6 +147,14 @@
             (setq c-basic-offset 4
                   tab-width 4
                   indent-tabs-mode t)))
+
+;;; css-mode
+(add-hook 'css-mode-hook
+          (function (lambda()
+                      (setq css-indent-offset 2)
+                      (setq evil-shift-width css-indent-offset))))
+(add-to-list 'auto-mode-alist '("\\.less$" . css-mode))
+
 ;;; Makefile
 (add-hook 'makefile-mode-hook
           (lambda ()
@@ -546,13 +554,6 @@
 ;;; rainbow-mode
 (use-package rainbow-mode
   :ensure t)
-
-;;; css-mode
-(add-hook 'css-mode-hook
-          (function (lambda()
-                      (setq css-indent-offset 2)
-                      (setq evil-shift-width css-indent-offset))))
-(add-to-list 'auto-mode-alist '("\\.less$" . css-mode))
 
 ;;; web-mode
 (use-package web-mode
