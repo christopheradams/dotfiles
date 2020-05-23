@@ -62,21 +62,12 @@
 
 ;;; Formatting
 (setq-default indent-tabs-mode nil)
-(add-hook 'prog-mode-hook '(lambda ()
-                             (setq truncate-lines t
-                                   word-wrap nil)))
-(add-hook 'nxml-mode-hook '(lambda ()
-                             (setq truncate-lines t
-                                   word-wrap nil)))
-(add-hook 'org-mode-hook '(lambda ()
-                            (setq truncate-lines t
-                                  word-wrap nil)))
-(add-hook 'org-agenda-mode-hook '(lambda ()
-                                   (setq truncate-lines t
-                                         word-wrap nil)))
-(add-hook 'epresent-mode-hook '(lambda ()
-                                 (setq truncate-lines nil
-                                       word-wrap t)))
+(defun cxa-truncate-no-wrap () (setq truncate-lines t word-wrap nil))
+(add-hook 'prog-mode-hook 'cxa-truncate-no-wrap)
+(add-hook 'nxml-mode-hook 'cxa-truncate-no-wrap)
+(add-hook 'org-mode-hook 'cxa-truncate-no-wrap)
+(add-hook 'org-agenda-mode-hook 'cxa-truncate-no-wrap)
+(add-hook 'epresent-mode-hook 'cxa-truncate-no-wrap)
 
 ;;; Line wrap fringe bitmaps
 (define-fringe-bitmap 'right-curly-arrow
