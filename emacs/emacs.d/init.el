@@ -424,7 +424,7 @@
   (evil-set-initial-state 'epresent-mode 'emacs)
   (evil-set-initial-state 'dired-mode 'emacs))
 
-; https://gist.github.com/xahlee/d364cbbff9b3abd12d29
+;; https://gist.github.com/xahlee/d364cbbff9b3abd12d29
 (defun cxa-copy-simple (&optional beg end)
   "Save the current region (or line) to the `kill-ring' after stripping extra whitespace and new lines"
   (interactive
