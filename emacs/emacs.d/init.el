@@ -63,20 +63,20 @@
 ;;; Formatting
 (setq-default indent-tabs-mode nil)
 (add-hook 'prog-mode-hook '(lambda ()
-    (setq truncate-lines t
-          word-wrap nil)))
+                             (setq truncate-lines t
+                                   word-wrap nil)))
 (add-hook 'nxml-mode-hook '(lambda ()
-    (setq truncate-lines t
-          word-wrap nil)))
+                             (setq truncate-lines t
+                                   word-wrap nil)))
 (add-hook 'org-mode-hook '(lambda ()
-    (setq truncate-lines t
-          word-wrap nil)))
+                            (setq truncate-lines t
+                                  word-wrap nil)))
 (add-hook 'org-agenda-mode-hook '(lambda ()
-    (setq truncate-lines t
-          word-wrap nil)))
+                                   (setq truncate-lines t
+                                         word-wrap nil)))
 (add-hook 'epresent-mode-hook '(lambda ()
-    (setq truncate-lines nil
-          word-wrap t)))
+                                 (setq truncate-lines nil
+                                       word-wrap t)))
 
 ;;; Line wrap fringe bitmaps
 (define-fringe-bitmap 'right-curly-arrow
@@ -382,17 +382,17 @@
   (org-set-property "CREATED" (format-time-string (org-time-stamp-format '(16) t))))
 
 (defun cxa-org-todo-done-last-clockout-time ()
-    "Close the task at the time of the last clock out."
-    (interactive)
-    (save-excursion
-      (org-back-to-heading t)
-      (when (re-search-forward org-clock-convenience-tr-re nil t)
-        (let ((last-clock-out (match-string 9)))
-          (org-back-to-heading t)
-          (org-todo "DONE")
-          (re-search-forward org-closed-time-regexp)
-          (re-search-backward org-ts-regexp1)
-          (replace-match last-clock-out)))))
+  "Close the task at the time of the last clock out."
+  (interactive)
+  (save-excursion
+    (org-back-to-heading t)
+    (when (re-search-forward org-clock-convenience-tr-re nil t)
+      (let ((last-clock-out (match-string 9)))
+        (org-back-to-heading t)
+        (org-todo "DONE")
+        (re-search-forward org-closed-time-regexp)
+        (re-search-backward org-ts-regexp1)
+        (replace-match last-clock-out)))))
 
 ;;; Column-marker
 (use-package column-marker
@@ -405,7 +405,7 @@
 (use-package exec-path-from-shell
   :ensure t
   :init
- (when (memq window-system '(mac ns nil))
+  (when (memq window-system '(mac ns nil))
     (exec-path-from-shell-initialize)))
 
 ;;; Evil
@@ -459,7 +459,7 @@
   (setq projectile-completion-system 'ivy))
 
 (use-package counsel-projectile
-    :ensure t)
+  :ensure t)
 
 ;;; Ivy
 (use-package ivy
@@ -717,10 +717,10 @@
   :ensure t
   :init
   (add-hook 'solidity-mode-hook
-          (lambda ()
-            (setq c-basic-offset 4
-                  tab-width 4
-                  indent-tabs-mode nil)))
+            (lambda ()
+              (setq c-basic-offset 4
+                    tab-width 4
+                    indent-tabs-mode nil)))
   :config
   (setq solidity-comment-style 'slash))
 (use-package company-solidity
@@ -732,4 +732,4 @@
 
 ;;; mode-line
 (let ((modeline.el (expand-file-name "modeline.el" user-emacs-directory)))
-    (load modeline.el))
+  (load modeline.el))
