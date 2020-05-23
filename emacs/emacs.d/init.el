@@ -718,7 +718,6 @@
 (use-package company-solidity
   :ensure t)
 
-
 ;; (init-open-recentf)
 (put 'downcase-region 'disabled nil)
 
