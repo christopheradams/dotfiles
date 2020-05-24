@@ -1,0 +1,1 @@
+alias ew="emacsclient -t -alternate-editor ''"
