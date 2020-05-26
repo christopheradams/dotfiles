@@ -10,6 +10,15 @@
 
 (add-hook 'buffer-list-update-hook 'ml-update-all)
 
+;; Make modeline look inactive when frame loses focus
+(add-hook 'focus-out-hook
+          (lambda ()
+            (copy-face 'mode-line '--mode-line-backup)
+            (copy-face 'mode-line-inactive 'mode-line)))
+(add-hook 'focus-in-hook
+          (lambda ()
+            (copy-face '--mode-line-backup 'mode-line)))
+
 (let ((my-mode-line-format
        (list
 
