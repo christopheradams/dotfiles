@@ -551,6 +551,10 @@
 (use-package gscholar-bibtex
   :ensure t)
 
+;;; nginx
+(use-package nginx-mode
+  :ensure t)
+
 ;;; rainbow-mode
 (use-package rainbow-mode
   :ensure t)
