@@ -386,15 +386,8 @@
 (defun cxa-org-todo-done-last-clockout-time ()
   "Close the task at the time of the last clock out."
   (interactive)
-  (save-excursion
-    (org-back-to-heading t)
-    (when (re-search-forward org-clock-convenience-tr-re nil t)
-      (let ((last-clock-out (match-string 9)))
-        (org-back-to-heading t)
-        (org-todo "DONE")
-        (re-search-forward org-closed-time-regexp)
-        (re-search-backward org-ts-regexp1)
-        (replace-match last-clock-out)))))
+  (let ((org-use-last-clock-out-time-as-effective-time t))
+    (org-todo "DONE")))
 
 ;;; Column-marker
 (use-package column-marker
