@@ -257,7 +257,7 @@
 ;;; Org-mode
 (straight-use-package 'org-plus-contrib)
 (use-package org
-  :straight t
+  :straight (:branch "maint")
   :init
   (require 'org-bibtex)
   (require 'ox-bibtex)
