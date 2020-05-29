@@ -3,6 +3,20 @@
 
 ;;(setq gc-cons-threshold (* 10 1024 1024))
 
+;; bootstrap straight.el
+(defvar bootstrap-version)
+(let ((bootstrap-file
+       (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
+      (bootstrap-version 5))
+  (unless (file-exists-p bootstrap-file)
+    (with-current-buffer
+        (url-retrieve-synchronously
+         "https://raw.githubusercontent.com/raxod502/straight.el/develop/install.el"
+         'silent 'inhibit-cookies)
+      (goto-char (point-max))
+      (eval-print-last-sexp)))
+  (load bootstrap-file nil 'nomessage))
+
 ;; custom set-variables and set-faces
 (let ((custom.el (expand-file-name "custom.el" user-emacs-directory)))
   (setq custom-file custom.el)
@@ -161,24 +175,11 @@
             (setq evil-shift-width 8)))
 
 ;;; Packages
-(require 'package)
-(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
-                         ("melpa-stable" . "https://stable.melpa.org/packages/")
-                         ("marmalade" . "http://marmalade-repo.org/packages/")
-                         ("org" . "http://orgmode.org/elpa/")
-                         ("melpa" . "https://melpa.org/packages/")))
-(package-initialize)
-
-;;; use-package
-(if (not (package-installed-p 'use-package))
-    (progn
-      (package-refresh-contents)
-      (package-install 'use-package)))
-(require 'use-package)
+(straight-use-package 'use-package)
 
 ;;; general
 (use-package general
-  :ensure t
+  :straight t
   :config
   (general-define-key
    :states '(normal visual emacs motion)
@@ -248,14 +249,15 @@
 
 ;;; base16
 (use-package base16-theme
-  :ensure t
+  :straight t
   :config
   (load-theme 'base16-grayscale-light t)
   (load-theme 'base16-custom t))
 
 ;;; Org-mode
+(straight-use-package 'org-plus-contrib)
 (use-package org
-  :ensure org-plus-contrib
+  :straight t
   :init
   (require 'org-bibtex)
   (require 'ox-bibtex)
@@ -356,10 +358,10 @@
     (setq org-bibtex-file "Papers.org")))
 
 (use-package org-clock-convenience
-  :ensure t)
+  :straight t)
 
 (use-package epresent
-  :ensure t
+  :straight t
   :config
   (add-hook 'epresent-mode-hook (lambda () (setq show-trailing-whitespace nil))))
 
@@ -396,14 +398,14 @@
 
 ;;; Column-marker
 (use-package column-marker
-  :ensure t
+  :straight t
   :config
   (add-hook 'prog-mode-hook (lambda () (interactive) (column-marker-1 80))))
 
 ;;; exec-path-from-shell
 ;;; ensure environment variables match the shell
 (use-package exec-path-from-shell
-  :ensure t
+  :straight t
   :init
   (when (memq window-system '(mac ns nil))
     (exec-path-from-shell-initialize)))
@@ -412,8 +414,8 @@
 (setq evil-want-C-i-jump nil)
 
 (use-package evil
-  :ensure t
   :init (evil-mode +1)
+  :straight t
   :config
   (fset 'evil-visual-update-x-selection 'ignore)
   (evil-define-key 'insert comint-mode-map
@@ -443,7 +445,7 @@
 
 ;;; Smex
 (use-package smex
-  :ensure t
+  :straight t
   :init
   (smex-initialize)
   :config
@@ -452,30 +454,30 @@
 
 ;;; Projectile
 (use-package projectile
-  :ensure t
+  :straight t
   :init (projectile-global-mode +1)
   :config
   (setq projectile-indexing-method 'hybrid)
   (setq projectile-completion-system 'ivy))
 
 (use-package counsel-projectile
-  :ensure t)
+  :straight t)
 
 ;;; Ivy
 (use-package ivy
-  :ensure t
+  :straight t
   :config
   (ivy-mode 1)
   (setq ivy-use-selectable-prompt t))
 
 ;;; EditorConfig
 (use-package editorconfig
-  :ensure t
+  :straight t
   :config (editorconfig-mode 1))
 
 ;;; ibuffer-vc
 (use-package ibuffer-vc
-  :ensure t
+  :straight t
   :init
   (global-set-key (kbd "C-x C-b") 'ibuffer)
   :config
@@ -487,13 +489,13 @@
 
 ;;; Company
 (use-package company
-  :ensure t
+  :straight t
   :init
   (add-hook 'after-init-hook 'global-company-mode))
 
 ;;; Ag
 (use-package ag
-  :ensure t
+  :straight t
   :config
   (setq ag-arguments (quote ("--smart-case" "--stats" "--width" "120")))
   (setq ag-reuse-buffers 't)
@@ -501,7 +503,7 @@
 
 ;;; Magit
 (use-package magit
-  :ensure t
+  :straight t
   :config
   (setq git-commit-summary-max-length 50
         git-commit-fill-column 72)
@@ -519,7 +521,7 @@
 
 ;;; diff-hl
 (use-package diff-hl
-  :ensure t
+  :straight t
   :init
   (global-diff-hl-mode)
   :config
@@ -531,37 +533,37 @@
 
 ;;; hlinum-mode
 (use-package hlinum
-  :ensure t
+  :straight t
   :init
   (hlinum-activate))
 
 ;;; restclient
 (use-package restclient
-  :ensure t)
+  :straight t)
 (use-package company-restclient
-  :ensure t
+  :straight t
   :config
   (add-to-list 'company-backends 'company-restclient))
 
 ;;; know-your-http-well
 (use-package know-your-http-well
-  :ensure t)
+  :straight t)
 
 ;;; gscholar bibtex
 (use-package gscholar-bibtex
-  :ensure t)
+  :straight t)
 
 ;;; nginx
 (use-package nginx-mode
-  :ensure t)
+  :straight t)
 
 ;;; rainbow-mode
 (use-package rainbow-mode
-  :ensure t)
+  :straight t)
 
 ;;; web-mode
 (use-package web-mode
-  :ensure t
+  :straight t
   :config
   (setq web-mode-css-indent-offset 2)
   (setq web-mode-code-indent-offset 2)
@@ -578,7 +580,7 @@
 
 ;;; Yankpad
 (use-package yankpad
-  :ensure t
+  :straight t
   :defer 10
   :init
   (setq yankpad-file (concat org-directory "/Yankpad.org"))
@@ -586,13 +588,13 @@
 
 ;;; Markdown
 (use-package markdown-mode
-  :ensure t
+  :straight t
   :config
   (setq markdown-command "pandoc --from markdown_github --to html --standalone"))
 
 ;;; YAML
 (use-package yaml-mode
-  :ensure t
+  :straight t
   :config
   (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
   :init
@@ -603,7 +605,7 @@
 
 ;;; Slim
 (use-package slim-mode
-  :ensure t
+  :straight t
   :init
   (add-hook 'slim-mode-hook
             (function (lambda()
@@ -614,24 +616,24 @@
 ;;; SQL
 ;;; sudo pip install format-sql --prefix='/usr/local'
 (use-package format-sql
-  :ensure t)
+  :straight t)
 
 (use-package sql-indent
-  :ensure t
+  :straight t
   :init
   (add-hook 'sql-mode-hook
             (lambda () (sqlind-minor-mode))))
 
 ;;; TeX
 (use-package tex
-  :ensure auctex
+  :straight auctex
   :config
   (add-hook 'TeX-mode-hook
             (lambda () (auto-fill-mode -1))))
 
 ;;; JavaScript
 (use-package js2-mode
-  :ensure t
+  :straight t
   :init
   (add-hook 'js2-mode-hook
             (lambda ()
@@ -647,10 +649,10 @@
 
 ;;; Ruby
 (use-package ruby-end
-  :ensure t
+  :straight t
   :defer t)
 (use-package ruby-mode
-  :ensure t
+  :straight t
   :init
   (add-hook 'ruby-mode-hook
             (function (lambda()
@@ -663,7 +665,7 @@
 
 ;;; Erlang
 (use-package erlang
-  :ensure t
+  :straight t
   :init
   (add-hook 'erlang-mode-hook
             (lambda ()
@@ -672,7 +674,7 @@
 
 ;;; Elixir
 (use-package elixir-mode
-  :ensure t
+  :straight t
   :config
   (add-to-list 'elixir-mode-hook
                (defun auto-activate-ruby-end-mode-for-elixir-mode ()
@@ -685,17 +687,17 @@
             (function (lambda()
                         (setq evil-shift-width elixir-smie-indent-basic)))))
 (use-package alchemist
-  :ensure t)
+  :straight t)
 
 ;;; Haskell
 (use-package haskell-mode
-  :ensure t
+  :straight t
   :config
   (add-to-list 'auto-mode-alist '("\\.xmobarrc\\'" . haskell-mode)))
 
 ;;; Go
 (use-package go-mode
-  :ensure t
+  :straight t
   :init
   (add-hook 'go-mode-hook
             (lambda ()
@@ -703,15 +705,15 @@
 
 ;;; PHP
 (use-package php-mode
-  :ensure t)
+  :straight t)
 
 ;;; GraphQL
 (use-package graphql-mode
-  :ensure t)
+  :straight t)
 
 ;;; Solidity
 (use-package solidity-mode
-  :ensure t
+  :straight t
   :init
   (add-hook 'solidity-mode-hook
             (lambda ()
@@ -721,7 +723,7 @@
   :config
   (setq solidity-comment-style 'slash))
 (use-package company-solidity
-  :ensure t)
+  :straight t)
 
 ;; (init-open-recentf)
 (put 'downcase-region 'disabled nil)
