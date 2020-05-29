@@ -414,9 +414,9 @@
 (setq evil-want-C-i-jump nil)
 
 (use-package evil
-  :init (evil-mode +1)
   :straight t
   :config
+  (evil-mode +1)
   (fset 'evil-visual-update-x-selection 'ignore)
   (evil-define-key 'insert comint-mode-map
     (kbd "<up>") 'comint-previous-input
