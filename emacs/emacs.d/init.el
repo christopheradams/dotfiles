@@ -225,7 +225,7 @@
    "ot" 'org-todo
    "oT" 'cxa-org-todo-done-last-clockout-time
    "o/" 'org-show-todo-tree
-   "oq" 'org-set-tags
+   "oq" 'org-set-tags-command
    "ow" 'cxa-org-refile
    "oW" 'org-refile-goto-last-stored
    "oj" 'cxa-org-refile-jump
