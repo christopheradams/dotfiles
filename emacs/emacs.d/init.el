@@ -223,7 +223,7 @@
    "on" 'org-insert-todo-heading-respect-content
    "oo" 'org-clock-out
    "ot" 'org-todo
-   "oT" 'cxa-org-todo-done-last-clockout-time
+   "oT" 'cxa-org-todo-done-last-clock-out-time
    "o/" 'org-show-todo-tree
    "oq" 'org-set-tags-command
    "ow" 'cxa-org-refile
@@ -383,7 +383,7 @@
   (interactive)
   (org-set-property "CREATED" (format-time-string (org-time-stamp-format '(16) t))))
 
-(defun cxa-org-todo-done-last-clockout-time ()
+(defun cxa-org-todo-done-last-clock-out-time ()
   "Close the task at the time of the last clock out."
   (interactive)
   (let ((org-use-last-clock-out-time-as-effective-time t))
