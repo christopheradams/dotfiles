@@ -25,6 +25,7 @@ emacs/emacs.d/%backup%~
 emacs/emacs.d/bookmarks
 emacs/emacs.d/secret.el
 emacs/emacs.d/session*
+emacs/emacs.d/straight
 emacs/emacs.d/recentf
 emacs/emacs.d/recentf~
 emacs/emacs.d/eshell
