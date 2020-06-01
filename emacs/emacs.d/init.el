@@ -260,6 +260,7 @@
   :straight (:branch "maint")
   :init
   (require 'org-bibtex)
+  (require 'org-tempo)
   (require 'ox-bibtex)
   :config
   (progn
