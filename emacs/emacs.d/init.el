@@ -508,7 +508,7 @@
     (let* ((active (--filter (and (boundp it) (symbol-value it)) minor-mode-list)))
       (if (member 'magit-blame-mode active)
           (magit-blame-quit)
-        (magit-blame ))))
+        (magit-blame))))
   :init
   (add-hook 'with-editor-mode-hook 'evil-insert-state)
   (global-set-key (kbd "C-x G") 'magit-blame-toggle)
