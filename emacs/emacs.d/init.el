@@ -318,6 +318,8 @@
     (setq org-startup-truncated nil)
     (setq org-agenda-window-setup 'current-window)
     (setq org-agenda-start-with-clockreport-mode t)
+    (setq org-default-priority ?D)
+    (setq org-lowest-priority ?D)
 
     ;; Automatically save org buffers after refile
     (advice-add 'org-refile :after
