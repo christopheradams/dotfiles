@@ -280,6 +280,7 @@
     (setq org-clock-out-switch-to-state "STARTED")
     (setq org-duration-format '(("h" . nil) (special . 2)))
     (setq org-clock-idle-time 20)
+    (setq org-ellipsis "…") ;; … ⤵ ⬎
     (setq org-src-window-setup 'split-window-below)
     (setq-default org-catch-invisible-edits 'smart)
 
