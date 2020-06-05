@@ -187,6 +187,7 @@
    :prefix "SPC"
    "" nil
    "<SPC>" 'smex
+   "<RET>" "<M-return>"
    "1" 'delete-other-windows
    "2" 'split-window-below
    "3" 'split-window-right
@@ -210,6 +211,7 @@
    "g" 'magit-status
    "G" 'magit-blame-toggle
    "Y" 'cxa-copy-simple
+   "o <RET>" 'org-meta-return
    "oa" 'org-agenda
    "oc" 'org-capture
    "ob" 'org-switchb
