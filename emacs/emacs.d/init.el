@@ -280,6 +280,9 @@
     (setq org-src-window-setup 'split-window-below)
     (setq-default org-catch-invisible-edits 'smart)
 
+    ;; Don't split line for M-return or org-meta-return
+    (setq org-M-RET-may-split-line '((default . nil)))
+
     ;; Keep mouse-1 clicks from following a link
     (setq org-mouse-1-follows-link nil)
 
