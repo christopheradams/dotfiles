@@ -224,6 +224,7 @@
    "oi" 'org-clock-in
    "on" 'org-insert-heading-respect-content
    "oo" 'org-clock-out
+   "or" 'org-reveal
    "ot" 'org-todo
    "oT" 'cxa-org-todo-done-last-clock-out-time
    "o/" 'org-show-todo-tree
