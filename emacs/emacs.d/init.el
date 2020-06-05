@@ -220,7 +220,7 @@
    "ol" 'org-store-link
    "oL" 'org-insert-link
    "oi" 'org-clock-in
-   "on" 'org-insert-todo-heading-respect-content
+   "on" 'org-insert-heading-respect-content
    "oo" 'org-clock-out
    "ot" 'org-todo
    "oT" 'cxa-org-todo-done-last-clock-out-time
