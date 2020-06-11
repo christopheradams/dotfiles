@@ -588,9 +588,7 @@
   :straight t
   :defer 10
   :init
-  (setq yankpad-file (concat org-directory "/Yankpad.org"))
-  :config
-  (add-to-list 'company-backends #'company-yankpad))
+  (setq yankpad-file (concat org-directory "/Yankpad.org")))
 
 ;;; Markdown
 (use-package markdown-mode
