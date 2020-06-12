@@ -56,6 +56,7 @@
 (setq auto-save-default nil)
 
 (setq-default show-trailing-whitespace t)
+(setq sort-fold-case t)
 (show-paren-mode t)
 (winner-mode 1)
 
