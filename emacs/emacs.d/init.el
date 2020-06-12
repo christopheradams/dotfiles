@@ -61,6 +61,9 @@
 
 (put 'upcase-region 'disabled nil)
 
+;;; Frames
+(add-hook 'after-make-frame-functions 'cxa-contextual-menubar)
+
 ;;; Window Resize
 (global-set-key (kbd "C-<left>") 'shrink-window-horizontally)
 (global-set-key (kbd "C-<right>") 'enlarge-window-horizontally)
@@ -173,6 +176,13 @@
 (add-hook 'makefile-mode-hook
           (lambda ()
             (setq evil-shift-width 8)))
+
+;;; Functions
+(defun cxa-contextual-menubar (&optional frame)
+  "Display the menubar in FRAME (default: selected frame) if on a
+graphical display, but hide it if in terminal."
+  (interactive)
+  (set-frame-parameter frame 'menu-bar-lines (if (display-graphic-p frame) 1 0)))
 
 ;;; Packages
 (straight-use-package 'use-package)
