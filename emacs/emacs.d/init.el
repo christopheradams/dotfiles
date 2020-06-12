@@ -202,7 +202,7 @@ graphical display, but hide it if in terminal."
    "2" 'split-window-below
    "3" 'split-window-right
    "0" 'delete-window
-   "=" 'balance-windows
+   "4" 'balance-windows
    "d" 'dired
    "D" 'dired-jump
    "e" 'evil-edit
