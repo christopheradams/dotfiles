@@ -65,9 +65,6 @@
 ;;; Frames
 (add-hook 'after-make-frame-functions 'cxa-contextual-menubar)
 
-;;; Windows
-(setq split-window-keep-point nil)
-
 ;;; Window Resize
 (global-set-key (kbd "C-<left>") 'shrink-window-horizontally)
 (global-set-key (kbd "C-<right>") 'enlarge-window-horizontally)
