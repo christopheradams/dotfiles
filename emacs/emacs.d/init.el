@@ -605,7 +605,7 @@ graphical display, but hide it if in terminal."
 (use-package markdown-mode
   :straight t
   :config
-  (setq markdown-command "pandoc --from markdown_github --to html --standalone"))
+  (setq markdown-command "pandoc --from gfm --to html --standalone"))
 
 ;;; YAML
 (use-package yaml-mode
