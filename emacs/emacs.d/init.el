@@ -294,6 +294,7 @@ graphical display, but hide it if in terminal."
     (setq org-ellipsis "…") ;; … ⤵ ⬎
     (setq org-src-window-setup 'split-window-below)
     (setq-default org-catch-invisible-edits 'smart)
+    (setq org-html-validation-link nil)
 
     ;; Don't split line for M-return or org-meta-return
     (setq org-M-RET-may-split-line '((default . nil)))
