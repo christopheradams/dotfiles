@@ -126,7 +126,7 @@
 ;;; Auto Fill Mode (wraps line automatically)
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
 (add-hook 'org-mode-hook 'turn-on-auto-fill)
-(setq-default fill-column 80)
+(setq-default fill-column 72)
 
 ;;; Text mode shift width
 (add-hook 'text-mode-hook
