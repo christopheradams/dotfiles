@@ -606,6 +606,7 @@ graphical display, but hide it if in terminal."
 (use-package markdown-mode
   :straight t
   :config
+  (add-hook 'markdown-mode-hook (lambda () (set-fill-column 80)))
   (setq markdown-command "pandoc --from gfm --to html --standalone"))
 
 ;;; YAML
