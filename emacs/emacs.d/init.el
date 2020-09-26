@@ -243,6 +243,7 @@ graphical display, but hide it if in terminal."
    "oq" 'org-set-tags-command
    "or" 'org-reveal
    "os" 'org-schedule
+   "oS" 'org-narrow-to-subtree
    "oT" 'cxa-org-todo-done-last-clock-out-time
    "ot" 'org-todo
    "ow" 'cxa-org-refile
@@ -255,6 +256,7 @@ graphical display, but hide it if in terminal."
    "pS" 'projectile-ag
    "s" 'save-buffer
    "S" 'save-some-buffers
+   "w" 'widen
    "x"  'eval-defun
    "Y" 'cxa-copy-simple
    "yc" 'yankpad-capture-snippet
