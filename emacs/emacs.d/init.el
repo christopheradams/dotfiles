@@ -646,9 +646,11 @@ graphical display, but hide it if in terminal."
 ;;; TeX
 (use-package tex
   :straight auctex
-  :config
+  :init
   (add-hook 'TeX-mode-hook
-            (lambda () (auto-fill-mode -1))))
+            (lambda ()
+              (setq require-final-newline t)
+              (auto-fill-mode -1))))
 
 ;;; JavaScript
 (use-package js2-mode
