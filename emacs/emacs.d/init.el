@@ -256,6 +256,7 @@ graphical display, but hide it if in terminal."
    "pS" 'projectile-ag
    "s" 'save-buffer
    "S" 'save-some-buffers
+   "T" 'toggle-truncate-lines
    "w" 'widen
    "x"  'eval-defun
    "Y" 'cxa-copy-simple
