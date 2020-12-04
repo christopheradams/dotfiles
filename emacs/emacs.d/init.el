@@ -527,6 +527,7 @@ graphical display, but hide it if in terminal."
   :config
   (setq git-commit-summary-max-length 50
         git-commit-fill-column 72)
+  (setq-default magit-diff-refine-hunk 'all)
   (setq magit-log-margin '(t "%Y-%m-%d %H:%M " magit-log-margin-width t 18))
   (setq magit-display-buffer-function #'magit-display-buffer-same-window-except-diff-v1)
   (defun magit-blame-toggle()
