@@ -86,6 +86,7 @@
 (add-hook 'org-mode-hook 'cxa-truncate-no-wrap)
 (add-hook 'org-agenda-mode-hook 'cxa-truncate-no-wrap)
 (add-hook 'epresent-mode-hook 'cxa-truncate-no-wrap)
+(add-hook 'diff-mode-hook (lambda () (setq truncate-lines nil)))
 
 ;;; Line wrap fringe bitmaps
 (define-fringe-bitmap 'right-curly-arrow
@@ -535,6 +536,8 @@ graphical display, but hide it if in terminal."
           (magit-blame-quit)
         (magit-blame))))
   :init
+  (add-hook 'magit-diff-mode-hook (lambda () (setq truncate-lines nil)))
+  (add-hook 'magit-status-mode-hook (lambda () (setq truncate-lines nil)))
   (add-hook 'with-editor-mode-hook 'evil-insert-state)
   (global-set-key (kbd "C-x G") 'magit-blame-toggle)
   (global-set-key (kbd "C-x g") 'magit-status))
