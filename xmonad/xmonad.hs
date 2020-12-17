@@ -19,10 +19,13 @@ myLayout = ( smartBorders $ avoidStruts  (resizableTile ||| Mirror resizableTile
     ratio = toRational (2/(1+sqrt(5)::Double))
     delta = 3/100
 
+myManageHooks = composeAll
+  [ className =? "Gnome-calculator" --> doFloat]
+
 main = do
 xmproc <- spawnPipe "xmobar ~/.xmobarrc"
 xmonad $ docks gnomeConfig
-    { manageHook = manageDocks <+> manageHook defaultConfig
+    { manageHook = myManageHooks <+> manageDocks <+> manageHook defaultConfig
     , terminal = "gnome-terminal"
     , logHook = dynamicLogWithPP $ xmobarPP
         { ppOutput = hPutStrLn xmproc
