@@ -20,7 +20,9 @@ myLayout = ( smartBorders $ avoidStruts  (resizableTile ||| Mirror resizableTile
     delta = 3/100
 
 myManageHooks = composeAll
-  [ className =? "Gnome-calculator" --> doFloat]
+  [ className =? "Gnome-calculator" --> doFloat
+  , className =? "kruler" --> doFloat
+  ]
 
 main = do
 xmproc <- spawnPipe "xmobar ~/.xmobarrc"
