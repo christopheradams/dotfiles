@@ -20,7 +20,6 @@ myLayout = ( smartBorders $ avoidStruts  (resizableTile ||| Mirror resizableTile
     delta = 3/100
 
 main = do
-xmproc <- spawnPipe "dropbox start"
 xmproc <- spawnPipe "xmobar ~/.xmobarrc"
 xmonad $ docks gnomeConfig
     { manageHook = manageDocks <+> manageHook defaultConfig
