@@ -655,7 +655,9 @@ graphical display, but hide it if in terminal."
   (add-hook 'TeX-mode-hook
             (lambda ()
               (setq require-final-newline t)
-              (auto-fill-mode -1))))
+              (auto-fill-mode -1)))
+  :config
+  (add-to-list 'auto-mode-alist '("\\.latex\\'" . LaTeX-mode)))
 
 ;;; JavaScript
 (use-package js2-mode
