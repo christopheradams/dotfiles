@@ -657,7 +657,8 @@ graphical display, but hide it if in terminal."
               (setq require-final-newline t)
               (auto-fill-mode -1)))
   :config
-  (add-to-list 'auto-mode-alist '("\\.latex\\'" . LaTeX-mode)))
+  (add-to-list 'auto-mode-alist '("\\.latex\\'" . LaTeX-mode))
+  (add-to-list 'auto-mode-alist '("\\.fontspec\\'" . LaTeX-mode)))
 
 ;;; JavaScript
 (use-package js2-mode
