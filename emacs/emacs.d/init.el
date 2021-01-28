@@ -212,6 +212,7 @@ graphical display, but hide it if in terminal."
    "at" 'alchemist-mix-test
    "ax" 'alchemist-mix
    "b" 'previous-buffer
+   "c" 'comment-or-uncomment-region
    "d" 'dired
    "D" 'dired-jump
    "e" 'evil-edit
