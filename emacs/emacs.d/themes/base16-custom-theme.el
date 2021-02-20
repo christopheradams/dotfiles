@@ -139,7 +139,7 @@
    `(org-link ((t (:underline t :foreground ,base-gray-0D))))
    `(org-priority ((t (:foreground ,base-gray-06))))
    `(org-scheduled-today ((t (:foreground ,base-3024-0B :weight bold))))
-   `(org-tag ((t (:foreground ,base-gray-07 :weight normal))))
+   `(org-tag ((t (:foreground ,base-gray-06 :weight normal))))
 
    ;; show-paren-mode
    `(show-paren-match ((t (:foreground ,base-3024-08 :background ,base-gray-00 :weight bold))))
