@@ -137,7 +137,7 @@
    `(org-level-8 ((t (:foreground ,base-3024-0F))))
    `(org-link ((t (:underline t :foreground ,base-gray-0D))))
    `(org-link ((t (:underline t :foreground ,base-gray-0D))))
-   `(org-priority ((t (:foreground ,base-3024-0D))))
+   `(org-priority ((t (:foreground ,base-gray-06))))
    `(org-scheduled-today ((t (:foreground ,base-3024-0B :weight bold))))
    `(org-tag ((t (:foreground ,base-gray-07 :weight normal))))
 
