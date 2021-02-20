@@ -358,7 +358,7 @@ graphical display, but hide it if in terminal."
     (setq org-todo-keyword-faces
           (quote (("TODO" . org-warning)
                   ("NEXT" . org-scheduled-today)
-                  ("CURRENT" . org-priority)
+                  ("CURRENT" . org-agenda-current-time)
                   ("WAITING" . org-priority)
                   ("STARTED" . org-warning))))
 
