@@ -124,6 +124,7 @@
    `(org-date ((t (:foreground ,base-gray-0E))))
    `(org-drawer ((t (:foreground ,base-gray-0E))))
    `(org-done ((t (:background ,base-gray-00 :foreground ,base-gray-02))))
+   `(org-headline-done ((t (:background ,base-gray-00 :foreground ,base-gray-02))))
    `(org-todo ((t (:background ,base-gray-00))))
    `(org-hide ((t (:foreground ,base-gray-06))))
    `(org-level-1 ((t (:foreground ,base-3024-0D :weight bold))))
