@@ -1,6 +1,0 @@
-#!/bin/bash
-xrdb -merge .Xresources
-
-if [ -x /usr/bin/dropbox ] ; then
-   dropbox start &
-fi
