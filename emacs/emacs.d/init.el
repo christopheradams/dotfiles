@@ -174,6 +174,9 @@
                       (setq evil-shift-width css-indent-offset))))
 (add-to-list 'auto-mode-alist '("\\.less$" . css-mode))
 
+;;; xml-mode
+(add-to-list `auto-mode-alist '("\\.svg\\'" . xml-mode))
+
 ;;; Makefile
 (add-hook 'makefile-mode-hook
           (lambda ()
