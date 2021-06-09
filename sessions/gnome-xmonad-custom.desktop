@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=GNOME + XMonad Custom
-Comment=This session logs you into GNOME + XMonad with no gnome-panel
-Exec=/usr/lib/gnome-session/run-systemd-session gnome-session-flashback.target
-TryExec=xmonad
-Type=Application
-DesktopNames=GNOME-Flashback;GNOME;
-X-Ubuntu-Gettext-Domain=gnome-flashback
