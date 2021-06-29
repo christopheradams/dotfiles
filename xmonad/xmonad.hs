@@ -3,6 +3,7 @@ import XMonad.Config.Gnome
 import XMonad.Hooks.DynamicLog
 import XMonad.Layout.ResizableTile
 import XMonad.Hooks.ManageDocks (ToggleStruts(..),avoidStruts,docks,manageDocks)
+import XMonad.Hooks.ManageHelpers
 import XMonad.Layout.NoBorders
 import XMonad.Util.Dmenu
 import XMonad.Util.Run(spawnPipe)
@@ -22,6 +23,7 @@ myLayout = ( smartBorders $ avoidStruts  (resizableTile ||| Mirror resizableTile
 myManageHooks = composeAll
   [ className =? "Gnome-calculator" --> doFloat
   , className =? "kruler" --> doFloat
+  , isFullscreen --> doFullFloat
   ]
 
 main = do
