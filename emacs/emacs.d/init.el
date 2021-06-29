@@ -680,6 +680,16 @@ graphical display, but hide it if in terminal."
   (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
   (add-to-list 'auto-mode-alist '("\\.jsx\\'" . js2-jsx-mode)))
 
+;;; Typescript
+(use-package typescript-mode
+  :straight t
+  :init
+  (add-hook 'typescript-mode-hook
+            (lambda ()
+              (setq tab-width 2)
+              (setq typescript-indent-level tab-width)
+              (setq evil-shift-width typescript-indent-level))))
+
 ;;; Ruby
 (use-package ruby-end
   :straight t
