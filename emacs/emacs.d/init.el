@@ -391,11 +391,6 @@ graphical display, but hide it if in terminal."
 (use-package org-clock-convenience
   :straight t)
 
-(use-package epresent
-  :straight t
-  :config
-  (add-hook 'epresent-mode-hook (lambda () (setq show-trailing-whitespace nil))))
-
 (defun cxa-org-refile ()
   "Move the entry or entries at point to another heading."
   (interactive)
