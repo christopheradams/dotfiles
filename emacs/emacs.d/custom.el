@@ -6,8 +6,6 @@
  '(ansi-color-faces-vector
    [default default default italic underline success warning error])
  '(column-number-mode t)
- '(custom-enabled-themes (quote (base16-grayscale-light)))
- '(custom-safe-themes (quote (default)))
  '(debug-on-error nil)
  '(fci-rule-color "#383a42")
  '(font-use-system-font t)
