@@ -37,3 +37,6 @@ emacs/emacs.d/url
 
 # irssi
 irssi/irssi/config.autosave
+
+# ruby
+ruby/bundle/cache
