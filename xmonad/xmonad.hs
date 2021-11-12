@@ -22,6 +22,7 @@ myLayout = ( smartBorders $ avoidStruts  (resizableTile ||| Mirror resizableTile
 
 myManageHooks = composeAll
   [ className =? "Gnome-calculator" --> doFloat
+  , className =? "Gnome-control-center" --> doFloat
   , className =? "kruler" --> doFloat
   , isFullscreen --> doFullFloat
   ]
