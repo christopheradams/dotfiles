@@ -16,10 +16,13 @@ Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
        , allDesktops = True
        , overrideRedirect = False
        , commands = [ Run StdinReader
-                    , Run Network "eth0" ["-L","0","-H","32",
-                                          "--normal","#90A959","--high","#AC4142"] 11
-                    , Run Network "eth1" ["-L","0","-H","32",
-                                          "--normal","#90A959","--high","#AC4142"] 10
+                    , Run DynNetwork [ "--template" , "<dev>: <tx>kB/s|<rx>kB/s"
+                                     , "--Low"      , "1000"       -- units: kB/s
+                                     , "--High"     , "5000"       -- units: kB/s
+                                     , "--low"      , "#90A959"
+                                     , "--normal"   , "#90A959"
+                                     , "--high"     , "#AC4142"
+                                     ] 10
                     , Run Cpu ["-L","3","-H","50",
                                "--normal","#90A959","--high","#AC4142"] 10
                     , Run Memory ["-t","Mem: <usedratio>%"] 10
@@ -35,5 +38,5 @@ Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% | %cpu% | %memory% * %swap% | %eth0% - %eth1% | %wifi% } { %latime% | %nytime% | %utcdate% | <fc=#8F5536>%date%</fc> | %hostname% %ipaddress% "
+       , template = "%StdinReader% | %cpu% | %memory% * %swap% | %dynnetwork% }{ %latime% | %nytime% | %utcdate% | <fc=#8F5536>%date%</fc> | %hostname% %ipaddress% "
        }
