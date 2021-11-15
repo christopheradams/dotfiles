@@ -659,6 +659,15 @@ graphical display, but hide it if in terminal."
   (add-to-list 'auto-mode-alist '("\\.latex\\'" . LaTeX-mode))
   (add-to-list 'auto-mode-alist '("\\.fontspec\\'" . LaTeX-mode)))
 
+;;; JSON
+(use-package json-mode
+  :straight t
+  :init
+  (add-hook 'json-mode-hook
+            (lambda ()
+              (make-local-variable 'js-indent-level)
+              (setq js-indent-level 2))))
+
 ;;; JavaScript
 (use-package js2-mode
   :straight t
