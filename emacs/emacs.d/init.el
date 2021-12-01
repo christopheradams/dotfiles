@@ -23,7 +23,7 @@
   (load custom.el))
 
 ;;; User
-(setq user-mail-address "email@christopheradams.io")
+(setq user-mail-address "info@christopheradams.io")
 
 ;;; Themes
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
