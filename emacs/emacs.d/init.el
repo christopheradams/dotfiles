@@ -304,6 +304,13 @@ graphical display, but hide it if in terminal."
     (setq org-html-validation-link nil)
     (setq org-clock-x11idle-program-name "xprintidle")
 
+    (setq org-file-apps
+         (quote ((auto-mode . emacs)
+                (directory . emacs)
+                ("\\.mm\\'" . default)
+                ("\\.x?html?\\'" . browse-url)
+                ("\\.pdf\\'" . default))))
+
     ;; Don't split line for M-return or org-meta-return
     (setq org-M-RET-may-split-line '((default . nil)))
 
