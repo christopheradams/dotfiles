@@ -280,7 +280,7 @@ graphical display, but hide it if in terminal."
 (straight-use-package 'org-plus-contrib)
 (use-package org
   :init
-  (require 'org-bibtex)
+  (require 'ol-bibtex)
   (require 'org-tempo)
   (require 'ox-bibtex)
   :config
