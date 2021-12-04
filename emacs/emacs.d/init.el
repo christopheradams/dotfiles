@@ -286,7 +286,6 @@ graphical display, but hide it if in terminal."
   :config
   (progn
     (setq org-adapt-indentation t)
-    (setq org-agenda-files '("~/Dropbox/Org"))
     (setq org-agenda-remove-tags nil)
     (setq org-agenda-skip-archived-trees t)
     (setq org-agenda-start-with-clockreport-mode t)
@@ -297,10 +296,7 @@ graphical display, but hide it if in terminal."
     (setq org-clock-into-drawer t)
     (setq org-clock-out-switch-to-state "STARTED")
     (setq org-clock-x11idle-program-name "xprintidle")
-    (setq org-default-notes-file (concat
-                                  org-directory "/Notes.org"))
     (setq org-default-priority ?D)
-    (setq org-directory '"~/Dropbox/Org")
     (setq org-drawers '("PROPERTIES" "LOGBOOK")) ;; separate drawers
     (setq org-duration-format '(("h" . nil) (special . 2)))
     (setq org-ellipsis "…") ;; … ⤵ ⬎
@@ -318,6 +314,12 @@ graphical display, but hide it if in terminal."
     (setq org-startup-truncated nil)
     (setq org-treat-S-cursor-todo-selection-as-state-change nil)
     (setq-default org-catch-invisible-edits 'smart)
+
+    ;; Org files
+    (setq org-directory '"~/Dropbox/Org")
+    (setq org-agenda-files '("~/Dropbox/Org"))
+    (setq org-default-notes-file (concat
+                                  org-directory "/Notes.org"))
 
     (setq org-file-apps
          (quote ((auto-mode . emacs)
