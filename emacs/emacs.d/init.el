@@ -277,7 +277,7 @@ graphical display, but hide it if in terminal."
   (load-theme 'base16-custom t))
 
 ;;; Org-mode
-(straight-use-package 'org-plus-contrib)
+(straight-use-package 'org-contrib)
 (use-package org
   :init
   (require 'ol-bibtex)
