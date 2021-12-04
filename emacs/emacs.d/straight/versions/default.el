@@ -32,7 +32,7 @@
  ("json-mode" . "eedb4560034f795a7950fa07016bd4347c368873")
  ("json-snatcher" . "b28d1c0670636da6db508d03872d96ffddbc10f2")
  ("know-your-http-well" . "3cc5ab6d2764ab7aacb1b6e026abaccbeb6c37f2")
- ("magit" . "f6e8bb71ee63ee1f96000c3b43e1ccfa676c1d5c")
+ ("magit" . "b6a103b6bf62dfea556f3e5523e52d1a16228ea8")
  ("markdown-mode" . "023da0f25399b1cd05cf4f5e8cff3e9f61d3e44e")
  ("melpa" . "6105d5302a5fdec261f30168f811fa1e277bcb21")
  ("nginx-mode" . "a2bab83c2eb233d57d76b236e7c141c2ccc97005")
