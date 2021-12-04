@@ -285,24 +285,38 @@ graphical display, but hide it if in terminal."
   (require 'ox-bibtex)
   :config
   (progn
-    (setq org-log-done t)
     (setq org-agenda-files '("~/Dropbox/Org"))
+    (setq org-agenda-remove-tags nil)
+    (setq org-agenda-skip-archived-trees t)
+    (setq org-agenda-start-with-clockreport-mode t)
+    (setq org-agenda-use-time-grid t)
+    (setq org-agenda-window-setup 'current-window)
+    (setq org-clock-idle-time 10)
+    (setq org-clock-in-switch-to-state "CURRENT")
+    (setq org-clock-into-drawer t)
+    (setq org-clock-out-switch-to-state "STARTED")
+    (setq org-clock-x11idle-program-name "xprintidle")
+    (setq org-default-notes-file (concat
+                                  org-directory "/Notes.org"))
+    (setq org-default-priority ?D)
     (setq org-directory '"~/Dropbox/Org")
-    (setq org-default-notes-file (concat org-directory "/Notes.org"))
+    (setq org-drawers '("PROPERTIES" "LOGBOOK")) ;; separate drawers
+    (setq org-duration-format '(("h" . nil) (special . 2)))
+    (setq org-ellipsis "…") ;; … ⤵ ⬎
+    (setq org-html-validation-link nil)
+    (setq org-log-done t)
+    (setq org-lowest-priority ?D)
+    (setq org-M-RET-may-split-line '((default . nil)))
+    (setq org-mouse-1-follows-link nil)
+    (setq org-refile-targets '((org-agenda-files . (:maxlevel
+                                                    . 2))))
     (setq org-refile-use-outline-path 'file
           org-outline-path-complete-in-steps nil)
-    (setq org-refile-targets
-          '((org-agenda-files . (:maxlevel . 2))))
     (setq org-reverse-note-order t)
-    (setq org-clock-in-switch-to-state "CURRENT")
-    (setq org-clock-out-switch-to-state "STARTED")
-    (setq org-duration-format '(("h" . nil) (special . 2)))
-    (setq org-clock-idle-time 10)
-    (setq org-ellipsis "…") ;; … ⤵ ⬎
     (setq org-src-window-setup 'split-window-below)
+    (setq org-startup-truncated nil)
+    (setq org-treat-S-cursor-todo-selection-as-state-change nil)
     (setq-default org-catch-invisible-edits 'smart)
-    (setq org-html-validation-link nil)
-    (setq org-clock-x11idle-program-name "xprintidle")
 
     (setq org-file-apps
          (quote ((auto-mode . emacs)
@@ -310,17 +324,6 @@ graphical display, but hide it if in terminal."
                 ("\\.mm\\'" . default)
                 ("\\.x?html?\\'" . browse-url)
                 ("\\.pdf\\'" . default))))
-
-    ;; Don't split line for M-return or org-meta-return
-    (setq org-M-RET-may-split-line '((default . nil)))
-
-    ;; Keep mouse-1 clicks from following a link
-    (setq org-mouse-1-follows-link nil)
-
-    ;; Separate drawers for clocking and logs
-    (setq org-drawers (quote ("PROPERTIES" "LOGBOOK")))
-    ;; Save clock data and state changes and notes in the LOGBOOK drawer
-    (setq org-clock-into-drawer t)
 
     (setq org-capture-templates
           '(("n" "Note" entry (file+olp "" "Inbox" "Notes")
@@ -346,14 +349,6 @@ graphical display, but hide it if in terminal."
             (todo . " %i %-12:c %b ")
             (tags . " %i %-12:c %b ")
             (search . " %i %-12:c %b "))))
-    (setq org-agenda-remove-tags nil)
-    (setq org-agenda-skip-archived-trees t)
-    (setq org-agenda-use-time-grid t)
-    (setq org-startup-truncated nil)
-    (setq org-agenda-window-setup 'current-window)
-    (setq org-agenda-start-with-clockreport-mode t)
-    (setq org-default-priority ?D)
-    (setq org-lowest-priority ?D)
 
     ;; Automatically save org buffers after refile
     (advice-add 'org-refile :after
@@ -371,8 +366,6 @@ graphical display, but hide it if in terminal."
                   ("CURRENT" . org-agenda-current-time)
                   ("WAITING" . org-priority)
                   ("STARTED" . org-warning))))
-
-    (setq org-treat-S-cursor-todo-selection-as-state-change nil)
 
     ;; agenda clock report
     (setq org-agenda-clockreport-parameter-plist
