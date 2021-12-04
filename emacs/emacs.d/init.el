@@ -285,6 +285,7 @@ graphical display, but hide it if in terminal."
   (require 'ox-bibtex)
   :config
   (progn
+    (setq org-adapt-indentation t)
     (setq org-agenda-files '("~/Dropbox/Org"))
     (setq org-agenda-remove-tags nil)
     (setq org-agenda-skip-archived-trees t)
