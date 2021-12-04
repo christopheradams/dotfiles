@@ -434,6 +434,7 @@ graphical display, but hide it if in terminal."
   :straight t
   :init
   (when (memq window-system '(mac ns nil))
+    (setq exec-path-from-shell-check-startup-files nil)
     (exec-path-from-shell-initialize)))
 
 ;;; Evil
