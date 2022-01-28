@@ -5,4 +5,4 @@ Comment=Autostart
 Terminal=false
 Exec=xrandr --output HDMI-1 --mode "2560x1440R"
 Categories=
-X-Gnome-Autostart-Delay=5
+X-Gnome-Autostart-Delay=0
