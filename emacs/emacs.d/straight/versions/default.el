@@ -11,7 +11,7 @@
  ("editorconfig-emacs" . "9a73ff743b9fe820301ea9b5c5c7804bfc967324")
  ("el-get" . "d76ac84ae9670de7bf7725b362cafe86688771f9")
  ("emacs-async" . "86aef2c38e7d35e8509b7feeee3e989d825eba91")
- ("emacs-elixir" . "231291ecadc479295d83fee619049030940bfbe5")
+ ("emacs-elixir" . "6f61e04c8537c2e9a807dc29908f619b5202b0f8")
  ("emacs-slim" . "3636d18ab1c8b316eea71c4732eb44743e2ded87")
  ("emacs-solidity" . "d8eb460f1fc22aac65ad4926811df90df37ce68a")
  ("emacsmirror-mirror" . "f25882e0357482ef98629a0d5e39f18350024aef")
