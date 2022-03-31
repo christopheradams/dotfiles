@@ -122,3 +122,4 @@ export PS1="=> \W \$ "
 . $HOME/.asdf/completions/asdf.bash
 
 export ERL_AFLAGS="-kernel shell_history enabled"
+. "$HOME/.cargo/env"
