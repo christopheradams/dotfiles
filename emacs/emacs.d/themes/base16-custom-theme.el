@@ -82,6 +82,9 @@
    ;; font-lock
    `(font-lock-constant-face ((t (:foreground ,base-3024-0D))))
    `(font-lock-warning-face ((t (:foreground ,base-custom-cursor :weight bold))))
+   `(font-lock-function-name-face ((t (:weight bold))))
+   `(font-lock-variable-name-face ((t (:foreground ,base-3024-0B))))
+   `(font-lock-doc-face ((t (:foreground ,base-gray-02))))
 
    ;; elixir-mode
    `(elixir-atom-face ((t (:foreground ,base-3024-0D))))
