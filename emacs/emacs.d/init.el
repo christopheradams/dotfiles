@@ -209,11 +209,12 @@ graphical display, but hide it if in terminal."
    "4" 'balance-windows
    ":"  'eval-expression
    "<RET>" "<M-return>"
-   "a." 'alchemist-mix-test-at-point
+   "a." 'mix-test-current-test
+   "ab" 'mix-test-current-buffer
    "af" 'elixir-format
-   "amc" 'alchemist-mix-compile
-   "at" 'alchemist-mix-test
-   "ax" 'alchemist-mix
+   "ac" 'mix-compile
+   "at" 'mix-test
+   "ax" 'mix-execute-task
    "b" 'previous-buffer
    "c" 'comment-or-uncomment-region
    "d" 'dired
