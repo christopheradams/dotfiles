@@ -738,6 +738,12 @@ graphical display, but hide it if in terminal."
   (add-hook 'elixir-mode-hook
             (function (lambda()
                         (setq evil-shift-width elixir-smie-indent-basic)))))
+
+(use-package mix
+  :straight t
+  :config
+  (add-hook 'elixir-mode-hook 'mix-minor-mode))
+
 (use-package alchemist
   :straight t)
 
