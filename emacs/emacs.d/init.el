@@ -434,11 +434,17 @@ graphical display, but hide it if in terminal."
     (setq exec-path-from-shell-check-startup-files nil)
     (exec-path-from-shell-initialize)))
 
+;;; Undo Fu
+(use-package undo-fu
+  :straight t)
+
 ;;; Evil
 (setq evil-want-C-i-jump nil)
 
 (use-package evil
   :straight t
+  :init
+  (setq evil-undo-system 'undo-fu)
   :config
   (evil-mode +1)
   (fset 'evil-visual-update-x-selection 'ignore)

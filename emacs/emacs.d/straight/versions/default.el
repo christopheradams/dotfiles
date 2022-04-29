@@ -14,6 +14,7 @@
  ("emacs-elixir" . "6f61e04c8537c2e9a807dc29908f619b5202b0f8")
  ("emacs-slim" . "3636d18ab1c8b316eea71c4732eb44743e2ded87")
  ("emacs-solidity" . "d8eb460f1fc22aac65ad4926811df90df37ce68a")
+ ("emacs-undo-fu" . "f9c39c248cb965cd3c7cb3c8e15a4eee71921f8c")
  ("emacsmirror-mirror" . "396f84f731b6364d03422a88aae75726104df40e")
  ("epl" . "78ab7a85c08222cd15582a298a364774e3282ce6")
  ("evil" . "008a6cdb12f15e748979a7d1c2f26c34c84dedbf")
