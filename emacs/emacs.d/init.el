@@ -260,6 +260,7 @@ graphical display, but hide it if in terminal."
    "pr" 'projectile-replace
    "ps" 'counsel-projectile-ag
    "pS" 'projectile-ag
+   "r" 're-builder
    "s" 'save-buffer
    "S" 'save-some-buffers
    "T" 'toggle-truncate-lines
