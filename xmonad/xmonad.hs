@@ -4,14 +4,22 @@ import XMonad.Hooks.DynamicLog
 import XMonad.Layout.ResizableTile
 import XMonad.Hooks.ManageDocks (ToggleStruts(..),avoidStruts,docks,manageDocks)
 import XMonad.Hooks.ManageHelpers
+import XMonad.ManageHook
 import XMonad.Layout.NoBorders
 import XMonad.Util.Dmenu
 import XMonad.Util.Run(spawnPipe)
+import XMonad.Util.NamedScratchpad
 import XMonad.Actions.SpawnOn
 import XMonad.Util.EZConfig(additionalKeys)
 import System.Exit
 import System.IO
 import Control.Monad
+
+-- scratchPads
+scratchpads :: [NamedScratchpad]
+scratchpads = [
+  NS "1password" "1password" (className =? "1Password") doCenterFloat
+              ]
 
 myLayout = ( smartBorders $ avoidStruts  (resizableTile ||| Mirror resizableTile |||  Full ))
     where
@@ -30,7 +38,7 @@ myManageHooks = composeAll
 main = do
 xmproc <- spawnPipe "xmobar ~/.xmobarrc"
 xmonad $ docks gnomeConfig
-    { manageHook = myManageHooks <+> manageDocks <+> manageHook defaultConfig
+    { manageHook = (myManageHooks <+> manageDocks) <+> namedScratchpadManageHook scratchpads <+> manageHook defaultConfig
     , terminal = "gnome-terminal"
     , logHook = dynamicLogWithPP $ xmobarPP
         { ppOutput = hPutStrLn xmproc
@@ -51,6 +59,7 @@ xmonad $ docks gnomeConfig
     , ((mod1Mask .|. shiftMask, xK_g), spawnHere "google-chrome") -- %! Launch Chrome
     , ((mod1Mask .|. shiftMask, xK_b), spawnHere "brave-browser") -- %! Launch Brave
     , ((mod1Mask .|. shiftMask, xK_r), spawnHere "nautilus -w") -- %! Launch Nautilus
+    , ((mod1Mask .|. shiftMask, xK_p), namedScratchpadAction scratchpads "1password")
     , ((mod1Mask .|. shiftMask, xK_t), spawnHere "thunderbird") -- %! Launch Thunderbird
     , ((mod1Mask .|. shiftMask, xK_u), spawnHere "gnome-control-center network")
     , ((mod1Mask .|. shiftMask, xK_d), spawnHere "gnome-calculator")
