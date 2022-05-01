@@ -214,7 +214,7 @@ graphical display, but hide it if in terminal."
    "af" 'elixir-format
    "ac" 'mix-compile
    "at" 'mix-test
-   "ax" 'mix-execute-task
+   "ax" 'mix-execute-task ;; C-u C-u SPC a x (choose MIX_ENV and tasks params)
    "b" 'previous-buffer
    "c" 'comment-or-uncomment-region
    "d" 'dired
