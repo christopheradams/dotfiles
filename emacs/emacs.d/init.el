@@ -523,7 +523,10 @@ graphical display, but hide it if in terminal."
 (use-package company
   :straight t
   :init
-  (add-hook 'after-init-hook 'global-company-mode))
+  (add-hook 'after-init-hook 'global-company-mode)
+  :config
+  (setq company-idle-delay 1
+        company-minimum-prefix-length 3))
 
 ;;; Ag
 (use-package ag
