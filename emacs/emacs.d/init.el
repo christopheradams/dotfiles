@@ -85,7 +85,6 @@
 (add-hook 'nxml-mode-hook 'cxa-truncate-no-wrap)
 (add-hook 'org-mode-hook 'cxa-truncate-no-wrap)
 (add-hook 'org-agenda-mode-hook 'cxa-truncate-no-wrap)
-(add-hook 'epresent-mode-hook 'cxa-truncate-no-wrap)
 (add-hook 'diff-mode-hook (lambda () (setq truncate-lines nil)))
 
 ;;; Line wrap fringe bitmaps
@@ -455,7 +454,6 @@ graphical display, but hide it if in terminal."
     (kbd "<down>") 'comint-next-input)
   (evil-set-initial-state 'git-rebase-mode 'emacs)
   (evil-set-initial-state 'magit-popup-mode 'emacs)
-  (evil-set-initial-state 'epresent-mode 'emacs)
   (evil-set-initial-state 'dired-mode 'emacs))
 
 ;; https://gist.github.com/xahlee/d364cbbff9b3abd12d29
