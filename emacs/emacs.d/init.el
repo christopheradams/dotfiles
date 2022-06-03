@@ -526,7 +526,7 @@ graphical display, but hide it if in terminal."
   (setq company-idle-delay 1
         company-minimum-prefix-length 3))
 
-;;; Ag
+;;; The Silver Searcher
 (use-package ag
   :straight t
   :config
