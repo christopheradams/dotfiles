@@ -11,15 +11,17 @@ import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.NamedScratchpad
 import XMonad.Actions.SpawnOn
 import XMonad.Util.EZConfig(additionalKeys)
+import XMonad.StackSet as W
 import System.Exit
 import System.IO
 import Control.Monad
 
 -- scratchPads
 scratchpads :: [NamedScratchpad]
-scratchpads = [
-  NS "1password" "1password" (className =? "1Password") doCenterFloat
-              ]
+scratchpads =
+  [ NS "1password" "1password" (className =? "1Password") doCenterFloat
+  , NS "qalculate" "qalculate" (className =? "Qalculate-gtk") (customFloating $ W.RationalRect (1/4) (1/4) (1/2) (1/2))
+  ]
 
 myLayout = ( smartBorders $ avoidStruts  (resizableTile ||| Mirror resizableTile |||  Full ))
     where
@@ -60,9 +62,9 @@ xmonad $ docks gnomeConfig
     , ((mod1Mask .|. shiftMask, xK_b), spawnHere "brave-browser") -- %! Launch Brave
     , ((mod1Mask .|. shiftMask, xK_r), spawnHere "nautilus -w") -- %! Launch Nautilus
     , ((mod1Mask .|. shiftMask, xK_p), namedScratchpadAction scratchpads "1password")
+    , ((mod1Mask .|. shiftMask, xK_d), namedScratchpadAction scratchpads "qalculate")
     , ((mod1Mask .|. shiftMask, xK_t), spawnHere "thunderbird") -- %! Launch Thunderbird
     , ((mod1Mask .|. shiftMask, xK_u), spawnHere "gnome-control-center network")
-    , ((mod1Mask .|. shiftMask, xK_d), spawnHere "gnome-calculator")
     , ((mod1Mask .|. shiftMask, xK_q), spawn "gnome-session-quit")
     , ((mod1Mask,               xK_p), spawn "dmenu_run -fn 'Input Bold-8' -nf 'white' -nb '#252525' -sf 'white' -sb '#DB2D20'")
     , ((mod1Mask,               xK_z), sendMessage MirrorShrink)
