@@ -551,6 +551,9 @@ graphical display, but hide it if in terminal."
           (magit-blame-quit)
         (magit-blame))))
   :init
+  (add-hook 'magit-blame-mode-hook
+            (lambda ()
+              (setq magit-blame--style '(headings (heading-format . "%H %-20a %C %s\n")))))
   (add-hook 'magit-diff-mode-hook (lambda () (setq truncate-lines nil)))
   (add-hook 'magit-status-mode-hook (lambda () (setq truncate-lines nil)))
   (add-hook 'with-editor-mode-hook 'evil-insert-state)
