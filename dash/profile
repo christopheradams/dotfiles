@@ -31,4 +31,5 @@ PATH=/usr/local/texlive/2020/bin/x86_64-linux:$PATH
 PATH=$PATH:/usr/local/go/bin
 PATH=$PATH:~/go/bin
 PATH=$PATH:~/.gem/ruby/2.7.0/bin
+PATH=$PATH:~/.gem/ruby/3.0.0/bin
 . "$HOME/.cargo/env"
