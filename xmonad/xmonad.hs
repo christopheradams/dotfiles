@@ -20,6 +20,7 @@ import Control.Monad
 scratchpads :: [NamedScratchpad]
 scratchpads =
   [ NS "1password" "1password" (className =? "1Password") doCenterFloat
+  , NS "gnome-control-center" "gnome-control-center network" (className =? "Gnome-control-center") doCenterFloat
   , NS "qalculate" "qalculate" (className =? "Qalculate-gtk") (customFloating $ W.RationalRect (1/4) (1/4) (1/2) (1/2))
   ]
 
@@ -32,7 +33,6 @@ myLayout = ( smartBorders $ avoidStruts  (resizableTile ||| Mirror resizableTile
 
 myManageHooks = composeAll
   [ className =? "Gnome-calculator" --> doFloat
-  , className =? "Gnome-control-center" --> doFloat
   , className =? "kruler" --> doFloat
   , isFullscreen --> doFullFloat
   ]
@@ -64,7 +64,7 @@ xmonad $ docks gnomeConfig
     , ((mod1Mask .|. shiftMask, xK_p), namedScratchpadAction scratchpads "1password")
     , ((mod1Mask .|. shiftMask, xK_d), namedScratchpadAction scratchpads "qalculate")
     , ((mod1Mask .|. shiftMask, xK_t), spawnHere "thunderbird") -- %! Launch Thunderbird
-    , ((mod1Mask .|. shiftMask, xK_u), spawnHere "gnome-control-center network")
+    , ((mod1Mask .|. shiftMask, xK_u), namedScratchpadAction scratchpads "gnome-control-center")
     , ((mod1Mask .|. shiftMask, xK_q), spawn "gnome-session-quit")
     , ((mod1Mask,               xK_p), spawn "dmenu_run -fn 'Input Bold-8' -nf 'white' -nb '#252525' -sf 'white' -sb '#DB2D20'")
     , ((mod1Mask,               xK_z), sendMessage MirrorShrink)
