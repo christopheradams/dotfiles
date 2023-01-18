@@ -14,6 +14,7 @@
  '(jdee-db-spec-breakpoint-face-colors (cons "#f0f0f0" "#9ca0a4"))
  '(magit-dispatch-arguments nil)
  '(org-export-backends '(ascii html icalendar latex md org))
+ '(org-export-with-sub-superscripts '{})
  '(org-fontify-done-headline t)
  '(org-fontify-quote-and-verse-blocks t)
  '(org-fontify-whole-heading-line t)
