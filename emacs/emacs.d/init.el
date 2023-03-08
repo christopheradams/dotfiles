@@ -265,7 +265,7 @@ graphical display, but hide it if in terminal."
    "S" 'save-some-buffers
    "T" 'toggle-truncate-lines
    "w" 'widen
-   "x"  'eval-defun
+   "x" 'eval-defun
    "Y" 'cxa-copy-simple
    "yc" 'yankpad-capture-snippet
    "yi" 'yankpad-insert
