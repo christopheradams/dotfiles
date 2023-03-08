@@ -287,7 +287,7 @@ graphical display, but hide it if in terminal."
   (require 'ox-bibtex)
   :config
   (progn
-    (setq org-adapt-indentation t)
+    (setq org-adapt-indentation 'headline-data)
     (setq org-agenda-remove-tags nil)
     (setq org-agenda-skip-archived-trees t)
     (setq org-agenda-start-with-clockreport-mode t)
