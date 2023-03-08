@@ -135,7 +135,7 @@
    `(org-block-end-line ((t (:foreground ,base-gray-02 :background ,base-gray-00))))
    `(org-level-1 ((t (:foreground ,base-3024-0D :weight bold))))
    `(org-level-2 ((t (:foreground ,base-3024-0E :weight bold))))
-   `(org-level-3 ((t (:foreground ,base-gray-04 :weight bold))))
+   `(org-level-3 ((t (:foreground ,base-gray-06 :weight bold))))
    `(org-level-4 ((t (:foreground ,base-gray-04 :weight bold))))
    `(org-level-5 ((t (:foreground ,base-gray-04 :weight bold))))
    `(org-level-6 ((t (:foreground ,base-gray-04 :weight bold))))
