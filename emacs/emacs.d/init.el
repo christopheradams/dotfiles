@@ -370,7 +370,7 @@ graphical display, but hide it if in terminal."
           (quote (("TODO" . org-warning)
                   ("NEXT" . org-scheduled-today)
                   ("CURRENT" . org-agenda-current-time)
-                  ("WAITING" . org-priority)
+                  ("WAITING" . org-warning)
                   ("STARTED" . org-warning))))
 
     ;; agenda clock report
