@@ -236,6 +236,7 @@ graphical display, but hide it if in terminal."
    "o/" 'org-show-todo-tree
    "oa" 'org-agenda
    "ob" 'org-switchb
+   "oB" 'org-tree-to-indirect-buffer
    "oc" 'org-capture
    "oD" 'org-dblock-update
    "od" 'org-deadline
