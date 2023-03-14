@@ -332,19 +332,19 @@ graphical display, but hide it if in terminal."
 
     (setq org-capture-templates
           '(("n" "Note" entry (file+olp "" "Inbox" "Notes")
-             "* %?\n  %i" :prepend t)
+             "* %?\n%i" :prepend t)
             ("t" "Todo" entry (file+olp "" "Inbox" "Tasks")
-             "* TODO %?\n  %i" :prepend t)
+             "* TODO %?\n%i" :prepend t)
             ("i" "Idea" entry (file+olp "" "Inbox" "Ideas")
-             "* IDEA %?\n  %i" :prepend t)
+             "* IDEA %?\n%i" :prepend t)
             ("d" "Date" entry (file+olp "" "Inbox" "Tasks")
-             "* %?%t\n  %i" :prepend t)
+             "* %?%t\n%i" :prepend t)
             ("m" "Time" entry (file+olp "" "Inbox" "Tasks")
-             "* %?%T\n  %i" :prepend t)
+             "* %?%T\n%i" :prepend t)
             ("r" "Range" entry (file+olp "" "Inbox" "Tasks")
-             "* %?%t--%t\n  %i" :prepend t)
+             "* %?%t--%t\n%i" :prepend t)
             ("l" "Link" entry (file+olp "" "Inbox" "Tasks")
-             "* TODO %?\n  %a" :prepend t)))
+             "* TODO %?\n%a" :prepend t)))
 
     (add-hook 'org-capture-before-finalize-hook 'cxa-add-property-with-date-created)
 
