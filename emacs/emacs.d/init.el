@@ -345,7 +345,9 @@ graphical display, but hide it if in terminal."
             ("r" "Range" entry (file+olp "" "Inbox" "Tasks")
              "* %?%t--%t\n%i" :prepend t)
             ("l" "Link" entry (file+olp "" "Inbox" "Tasks")
-             "* TODO %?\n%a" :prepend t)))
+             "* TODO %?\n%a" :prepend t)
+            ("y" "Diary" entry (file+olp "" "Inbox" "Tasks")
+             "* Diary%?%t\n%i" :prepend t)))
 
     (add-hook 'org-capture-before-finalize-hook 'cxa-add-property-with-date-created)
 
