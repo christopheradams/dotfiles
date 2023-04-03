@@ -27,6 +27,7 @@ emacs/emacs.d/eln-cache
 emacs/emacs.d/secret.el
 emacs/emacs.d/transient
 emacs/emacs.d/session*
+emacs/emacs.d/history
 emacs/emacs.d/recentf
 emacs/emacs.d/recentf~
 emacs/emacs.d/eshell
