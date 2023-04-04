@@ -482,6 +482,14 @@ graphical display, but hide it if in terminal."
   :init
   (savehist-mode))
 
+;;; VERTical Interactive COmpletion
+(use-package vertico
+  :straight t
+  :custom
+  (vertico-count 10)
+  :init
+  (vertico-mode))
+
 ;;; Smex
 (use-package smex
   :straight t
