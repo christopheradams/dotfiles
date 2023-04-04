@@ -640,13 +640,12 @@ graphical display, but hide it if in terminal."
 ;;; YAML
 (use-package yaml-mode
   :straight t
+  :mode ("\\.yml\\'" "\\.yaml\\'")
+  :hook (yaml-mode . (lambda () (setq-local comment-auto-fill-only-comments t)))
   :config
-  (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
-  :init
-  (add-hook 'yaml-mode-hook (lambda () (auto-fill-mode -1)))
   (add-hook 'yaml-mode-hook
-            #'(lambda ()
-                (define-key yaml-mode-map "\C-m" 'newline-and-indent))))
+            (lambda ()
+              (define-key yaml-mode-map (kbd "RET") 'newline-and-indent))))
 
 ;;; Slim
 (use-package slim-mode
