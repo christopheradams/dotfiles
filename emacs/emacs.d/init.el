@@ -645,8 +645,8 @@ graphical display, but hide it if in terminal."
   :init
   (add-hook 'yaml-mode-hook (lambda () (auto-fill-mode -1)))
   (add-hook 'yaml-mode-hook
-            '(lambda ()
-               (define-key yaml-mode-map "\C-m" 'newline-and-indent))))
+            #'(lambda ()
+                (define-key yaml-mode-map "\C-m" 'newline-and-indent))))
 
 ;;; Slim
 (use-package slim-mode
