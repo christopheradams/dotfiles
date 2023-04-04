@@ -477,6 +477,11 @@ graphical display, but hide it if in terminal."
         (fill-region (point-min) (point-max)))
       (kill-region (point-min) (point-max)))))
 
+;;; Persist history over Emacs restarts.
+(use-package savehist
+  :init
+  (savehist-mode))
+
 ;;; Smex
 (use-package smex
   :straight t
