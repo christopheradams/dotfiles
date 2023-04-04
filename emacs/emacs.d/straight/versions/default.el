@@ -38,6 +38,7 @@
  ("melpa" . "deae8f07ccee183288487c3fd3580705feae0fae")
  ("mix.el" . "bfe61ed4e7dd8cfc0bb2603fbac3eb44b32438bf")
  ("nginx-mode" . "a2bab83c2eb233d57d76b236e7c141c2ccc97005")
+ ("nongnu-elpa" . "0120f3dfe80cffe0c3016080d9205d12be3b741d")
  ("org" . "1ed9e42238bc0cc721f41dec8ab5f01a65d862d9")
  ("org-clock-convenience" . "efc9773a8dedf834cf4a78fb6f5f8fffe55ef8eb")
  ("org-contrib" . "4936783e74b7b51d73a0ac397710ef59081819de")
@@ -60,4 +61,4 @@
  ("with-editor" . "54d1e816ac0f3203f0065ea9e6a551b9d103dad4")
  ("yaml-mode" . "34648f2502f52f4744d62758fa381fa35db1da49")
  ("yankpad" . "acfccf3633d7fd3b91d717fda4ae98e8e3345a06"))
-:beta
+:gamma
