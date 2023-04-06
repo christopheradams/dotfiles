@@ -34,6 +34,7 @@
  ("json-snatcher" . "b28d1c0670636da6db508d03872d96ffddbc10f2")
  ("know-your-http-well" . "3cc5ab6d2764ab7aacb1b6e026abaccbeb6c37f2")
  ("magit" . "1abfb52886536f90f3561b18a49182ad21b6d8e8")
+ ("marginalia" . "c1ae5807731fea4837d20489436232731ae8fb9f")
  ("markdown-mode" . "023da0f25399b1cd05cf4f5e8cff3e9f61d3e44e")
  ("melpa" . "deae8f07ccee183288487c3fd3580705feae0fae")
  ("mix.el" . "bfe61ed4e7dd8cfc0bb2603fbac3eb44b32438bf")
