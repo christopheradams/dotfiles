@@ -56,7 +56,7 @@
  ("swiper" . "7489968257a74f176c0d1de7ec8bd1e2011f0db4")
  ("transient" . "84f2d12ef31ec74c85e616283926780532fed13f")
  ("typescript.el" . "b369d7d2518fa11760ac3908a383405350cd51d2")
- ("use-package" . "a7422fb8ab1baee19adb2717b5b47b9c3812a84c")
+ ("use-package" . "9090080b15486c3e337be254226efe7e5fde4c99")
  ("web-mode" . "186a7c21049c50ecfd4109eb06c91196404f8bc5")
  ("with-editor" . "54d1e816ac0f3203f0065ea9e6a551b9d103dad4")
  ("yaml-mode" . "34648f2502f52f4744d62758fa381fa35db1da49")
