@@ -1,1 +1,0 @@
-vimrc-base16-gray
