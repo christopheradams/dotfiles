@@ -498,16 +498,6 @@ graphical display, but hide it if in terminal."
   (completion-category-defaults nil)
   (completion-category-overrides '((file (styles basic partial-completion)))))
 
-;;; Smex
-(use-package smex
-  :straight t
-  :disabled t
-  :init
-  (smex-initialize)
-  :config
-  (global-set-key (kbd "M-x") 'smex)
-  (global-set-key (kbd "M-X") 'smex-major-mode-commands))
-
 ;;; Projectile
 (use-package projectile
   :straight t
