@@ -51,7 +51,6 @@
  ("restclient.el" . "ac8aad6c6b9e9d918062fa3c89c22c2f4ec48bc3")
  ("ruby-end.el" . "a136f75abb6d5577ce40d61dfeb778c2e9bb09c0")
  ("s.el" . "08661efb075d1c6b4fa812184c1e5e90c08795a9")
- ("smex" . "55aaebe3d793c2c990b39a302eb26c184281c42c")
  ("sql-indent" . "c338484064beda89e23840718eccf81ffe8b5deb")
  ("straight.el" . "3eca39dfc6797243ec7d1c6a7d45142407f73f88")
  ("swiper" . "7489968257a74f176c0d1de7ec8bd1e2011f0db4")
