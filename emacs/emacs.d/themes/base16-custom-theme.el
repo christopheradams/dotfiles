@@ -123,6 +123,12 @@
    `(mode-line ((t (:background ,base-3024-0A :foreground ,base-gray-07 :box ,base-gray-04))))
    `(mode-line-inactive ((t (:background ,base-gray-00 :foreground ,base-gray-03 :box ,base-gray-03))))
 
+   ;; orderless
+   `(orderless-match-face-0 ((t (:foreground ,base-3024-0D :weight bold))))
+   `(orderless-match-face-1 ((t (:foreground ,base-3024-0E :weight bold))))
+   `(orderless-match-face-2 ((t (:foreground ,base-3024-0B :weight bold))))
+   `(orderless-match-face-3 ((t (:foreground ,base-3024-0F :weight bold))))
+
    ;; org-mode
    `(org-date ((t (:foreground ,base-gray-0E))))
    `(org-drawer ((t (:foreground ,base-gray-0E))))
