@@ -39,7 +39,6 @@ Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
                     , Run Com "/bin/bash" ["-c", "~/dotfiles/bin/xmobar-tz 'America/Los_Angeles'"] "latime" 30
                     , Run Com "/bin/bash" ["-c", "~/dotfiles/bin/xmobar-tz 'America/New_York'"] "nytime" 30
                     , Run Com "/bin/bash" ["-c", "~/dotfiles/bin/xmobar-utc"] "utcdate" 30
-                    , Run Com "/bin/bash" ["-c", "~/dotfiles/bin/wireless.sh"] "wifi" 30
                     ]
        , sepChar = "%"
        , alignSep = "}{"
