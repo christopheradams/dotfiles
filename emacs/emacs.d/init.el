@@ -498,6 +498,15 @@ graphical display, but hide it if in terminal."
   (completion-category-defaults nil)
   (completion-category-overrides '((file (styles basic partial-completion)))))
 
+;;; Marginalia in the minibuffer
+(use-package marginalia
+  :straight t
+  :custom
+  (marginalia-max-relative-age 0)
+  (marginalia-align 'right)
+  :init
+  (marginalia-mode))
+
 ;;; Projectile
 (use-package projectile
   :straight t
