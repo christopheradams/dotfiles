@@ -39,6 +39,7 @@
  ("mix.el" . "bfe61ed4e7dd8cfc0bb2603fbac3eb44b32438bf")
  ("nginx-mode" . "a2bab83c2eb233d57d76b236e7c141c2ccc97005")
  ("nongnu-elpa" . "0120f3dfe80cffe0c3016080d9205d12be3b741d")
+ ("orderless" . "e6784026717a8a6a7dcd0bf31fd3414f148c542e")
  ("org" . "1ed9e42238bc0cc721f41dec8ab5f01a65d862d9")
  ("org-clock-convenience" . "efc9773a8dedf834cf4a78fb6f5f8fffe55ef8eb")
  ("org-contrib" . "4936783e74b7b51d73a0ac397710ef59081819de")
