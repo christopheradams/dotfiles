@@ -518,14 +518,6 @@ graphical display, but hide it if in terminal."
 (use-package counsel-projectile
   :straight t)
 
-;;; Ivy
-(use-package ivy
-  :straight t
-  :disabled t
-  :config
-  (ivy-mode 1)
-  (setq ivy-use-selectable-prompt t))
-
 ;;; EditorConfig
 (use-package editorconfig
   :straight t
