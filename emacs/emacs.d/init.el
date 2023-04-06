@@ -511,9 +511,9 @@ graphical display, but hide it if in terminal."
 (use-package projectile
   :straight t
   :init (projectile-global-mode +1)
-  :config
-  (setq projectile-indexing-method 'hybrid)
-  (setq projectile-completion-system 'ivy))
+  :custom
+  (projectile-indexing-method 'hybrid)
+  (projectile-completion-system 'default))
 
 (use-package counsel-projectile
   :straight t)
@@ -521,6 +521,7 @@ graphical display, but hide it if in terminal."
 ;;; Ivy
 (use-package ivy
   :straight t
+  :disabled t
   :config
   (ivy-mode 1)
   (setq ivy-use-selectable-prompt t))
