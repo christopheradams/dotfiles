@@ -200,7 +200,7 @@ graphical display, but hide it if in terminal."
    :keymaps 'override
    :prefix "SPC"
    "" nil
-   "<SPC>" 'smex
+   "<SPC>" 'execute-extended-command
    "0" 'delete-window
    "1" 'delete-other-windows
    "2" 'split-window-below
@@ -501,6 +501,7 @@ graphical display, but hide it if in terminal."
 ;;; Smex
 (use-package smex
   :straight t
+  :disabled t
   :init
   (smex-initialize)
   :config
