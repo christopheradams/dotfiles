@@ -490,6 +490,14 @@ graphical display, but hide it if in terminal."
   :init
   (vertico-mode))
 
+;;; Orderless completion style
+(use-package orderless
+  :straight t
+  :custom
+  (completion-styles '(orderless basic))
+  (completion-category-defaults nil)
+  (completion-category-overrides '((file (styles basic partial-completion)))))
+
 ;;; Smex
 (use-package smex
   :straight t
