@@ -507,6 +507,11 @@ graphical display, but hide it if in terminal."
   :init
   (marginalia-mode))
 
+;;; Consulting completing-read
+(use-package consult
+  :straight t
+  :hook (completion-list-mode . consult-preview-at-point-mode))
+
 ;;; Projectile
 (use-package projectile
   :straight t
