@@ -6,6 +6,7 @@
  ("company-mode" . "d5145006b948f93e673f439a766da01f636d39fc")
  ("company-restclient" . "e5a3ec54edb44776738c13e13e34c85b3085277b")
  ("compat" . "a518b1589d24245629a7aaaa00773f1b76156705")
+ ("consult" . "f93949999d3681dbede5cd88c849199d7adf3d8d")
  ("counsel-projectile" . "40d1e1d4bb70acb00fddd6f4df9778bf2c52734b")
  ("dash.el" . "c30c6bea49b79d966c92ce606fea53dea647b959")
  ("diff-hl" . "ab2f4f0db9b0c3484db837252ce2dc75f4696b1d")
