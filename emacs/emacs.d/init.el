@@ -518,6 +518,7 @@ graphical display, but hide it if in terminal."
 ;;; Company
 (use-package company
   :straight t
+  :disabled t
   :init
   (add-hook 'after-init-hook 'global-company-mode)
   :config
@@ -580,6 +581,7 @@ graphical display, but hide it if in terminal."
   :straight t)
 (use-package company-restclient
   :straight t
+  :disabled t
   :config
   (add-to-list 'company-backends 'company-restclient))
 
@@ -788,6 +790,7 @@ graphical display, but hide it if in terminal."
   :config
   (setq solidity-comment-style 'slash))
 (use-package company-solidity
+  :disabled t
   :straight t)
 
 ;; (init-open-recentf)
