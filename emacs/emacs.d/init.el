@@ -206,7 +206,8 @@ graphical display, but hide it if in terminal."
    "2" 'split-window-below
    "3" 'split-window-right
    "4" 'balance-windows
-   ":"  'eval-expression
+   ":" 'eval-expression
+   "/" 'consult-line
    "<RET>" "<M-return>"
    "a." 'mix-test-current-test
    "ab" 'mix-test-current-buffer
@@ -267,6 +268,7 @@ graphical display, but hide it if in terminal."
    "T" 'toggle-truncate-lines
    "w" 'widen
    "x" 'eval-defun
+   "y" 'consult-yank-from-kill-ring
    "Y" 'cxa-copy-simple))
 
 ;;; base16
