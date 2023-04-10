@@ -224,12 +224,12 @@ graphical display, but hide it if in terminal."
    "G" 'magit-blame-toggle
    "g" 'magit-status
    "h" 'evil-window-left
-   "I" 'counsel-unicode-char
+   "I" 'insert-char
    "i" 'fill-paragraph
    "j" 'evil-window-down
    "k" 'evil-window-up
    "l" 'evil-window-right
-   "m" 'switch-to-buffer
+   "m" 'consult-buffer
    "n" 'next-buffer
    "o <RET>" 'org-meta-return
    "o*" 'org-table-iterate
@@ -256,10 +256,10 @@ graphical display, but hide it if in terminal."
    "ow" 'cxa-org-refile
    "oW" 'org-refile-goto-last-stored
    "pf" 'projectile-find-file
-   "pm" 'projectile-switch-to-buffer
+   "pm" 'consult-project-buffer
    "pp" 'projectile-switch-project
    "pr" 'projectile-replace
-   "ps" 'counsel-projectile-ag
+   "ps" 'consult-git-grep
    "pS" 'projectile-ag
    "r" 're-builder
    "s" 'save-buffer
