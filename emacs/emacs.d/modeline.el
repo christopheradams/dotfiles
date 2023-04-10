@@ -6,6 +6,13 @@
 (defun ml-update-all ()
   (force-mode-line-update t))
 
+(defun ml-project-current ()
+  (if (project-current)
+      (file-name-nondirectory
+       (directory-file-name
+        (file-name-directory (project-root (project-current)))))
+    "none"))
+
 (add-hook 'post-command-hook 'ml-record-selected-window)
 
 (add-hook 'buffer-list-update-hook 'ml-update-all)
@@ -14,7 +21,7 @@
        (list
 
         "[" ;; projectile
-        '(:eval (projectile-project-name))
+        '(:eval (ml-project-current))
         "]"
 
         ;; is this buffer read-only?
