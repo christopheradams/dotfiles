@@ -4,6 +4,7 @@
  ("column-marker" . "a60a26ea9e740d568bd7c9c158cfd1e872d56ee9")
  ("compat" . "a518b1589d24245629a7aaaa00773f1b76156705")
  ("consult" . "f93949999d3681dbede5cd88c849199d7adf3d8d")
+ ("corfu" . "781425098b3cf4a8fc22cb7e2d131a2121e2da1e")
  ("dash.el" . "c30c6bea49b79d966c92ce606fea53dea647b959")
  ("diff-hl" . "ab2f4f0db9b0c3484db837252ce2dc75f4696b1d")
  ("editorconfig-emacs" . "1f6f16c24fd0030322d59c2853067a6dccc9e736")
