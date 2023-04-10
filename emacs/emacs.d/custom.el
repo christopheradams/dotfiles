@@ -18,8 +18,6 @@
  '(org-fontify-done-headline t)
  '(org-fontify-quote-and-verse-blocks t)
  '(org-fontify-whole-heading-line t)
- '(package-selected-packages
-   '(use-package nginx-mode solidity-flycheck company-solidity solidity-mode erlang ruby-end slim-mode yaml-mode yankpad web-mode smex general graphql-mode sql-indent js2-mode go-mode base16-theme epresent org-clock-convenience gscholar-bibtex org-plus-contrib counsel-projectile ivy hlinum rainbow-mode php-mode markdown-mode magit init-open-recentf ibuffer-vc haskell-mode git-gutter-fringe format-sql exec-path-from-shell evil-leader eproject editorconfig diff-hl company-restclient column-marker auctex alchemist ag))
  '(show-paren-mode t)
  '(split-window-keep-point nil)
  '(tool-bar-mode nil)
