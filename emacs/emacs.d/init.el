@@ -510,6 +510,15 @@ graphical display, but hide it if in terminal."
   :straight t
   :hook (completion-list-mode . consult-preview-at-point-mode))
 
+;;; Completion Overlay Region FUnction
+(use-package corfu
+  :straight t
+  :custom
+  (corfu-cycle t)
+  (corfu-auto t)
+  :init
+  (global-corfu-mode))
+
 ;;; EditorConfig
 (use-package editorconfig
   :straight t
