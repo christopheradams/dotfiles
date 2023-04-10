@@ -267,10 +267,7 @@ graphical display, but hide it if in terminal."
    "T" 'toggle-truncate-lines
    "w" 'widen
    "x" 'eval-defun
-   "Y" 'cxa-copy-simple
-   "yc" 'yankpad-capture-snippet
-   "yi" 'yankpad-insert
-   "yy" 'yankpad-set-category))
+   "Y" 'cxa-copy-simple))
 
 ;;; base16
 (use-package base16-theme
