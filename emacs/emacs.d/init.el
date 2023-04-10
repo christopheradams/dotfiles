@@ -212,7 +212,6 @@ graphical display, but hide it if in terminal."
    "a." 'mix-test-current-test
    "ab" 'mix-test-current-buffer
    "af" 'elixir-format
-   "ag" 'alchemist-goto-definition-at-point
    "ac" 'mix-compile
    "at" 'mix-test
    "ax" 'mix-execute-task ;; C-u C-u SPC a x (choose MIX_ENV and tasks params)
@@ -754,9 +753,6 @@ graphical display, but hide it if in terminal."
   :straight t
   :config
   (add-hook 'elixir-mode-hook 'mix-minor-mode))
-
-(use-package alchemist
-  :straight t)
 
 ;;; Haskell
 (use-package haskell-mode
