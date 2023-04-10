@@ -43,7 +43,7 @@
  ("org" . "1ed9e42238bc0cc721f41dec8ab5f01a65d862d9")
  ("org-clock-convenience" . "efc9773a8dedf834cf4a78fb6f5f8fffe55ef8eb")
  ("org-contrib" . "4936783e74b7b51d73a0ac397710ef59081819de")
- ("otp" . "08420ec3fcdf9aa49d298e36009707e8059e90f8")
+ ("otp" . "91b9369f320ae04de0bcff07cd0d4e5ba9a34414")
  ("php-mode" . "a7687e454adc2e6c1e13d90beac122af32169eb8")
  ("pkg-info" . "76ba7415480687d05a4353b27fea2ae02b8d9d61")
  ("rainbow-mode" . "f780ddb18c2a73a666d093f606df92058e5601ea")
