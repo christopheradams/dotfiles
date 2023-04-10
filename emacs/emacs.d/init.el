@@ -516,18 +516,6 @@ graphical display, but hide it if in terminal."
   :straight t
   :config (editorconfig-mode 1))
 
-;;; ibuffer-vc
-(use-package ibuffer-vc
-  :straight t
-  :init
-  (global-set-key (kbd "C-x C-b") 'ibuffer)
-  :config
-  (add-hook 'ibuffer-hook
-            (lambda ()
-              (ibuffer-vc-set-filter-groups-by-vc-root)
-              (unless (eq ibuffer-sorting-mode 'alphabetic)
-                (ibuffer-do-sort-by-alphabetic)))))
-
 ;;; Company
 (use-package company
   :straight t

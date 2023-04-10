@@ -28,7 +28,6 @@
  ("gscholar-bibtex" . "3b651e3de116860eb1f1aef9b547a561784871fe")
  ("haskell-mode" . "6e8e9478665c70493ea3204e7b46d27b481f517c")
  ("hlinum-mode" . "f17360fe93de6df99a05b4b64b0a1ca4ee45abb6")
- ("ibuffer-vc" . "5fa6aea09bc67f71ea743302d609f459967b1e81")
  ("js2-mode" . "e8bbfd204bfa34571b58b21b7ad7eb378e627037")
  ("json-mode" . "eedb4560034f795a7950fa07016bd4347c368873")
  ("json-snatcher" . "b28d1c0670636da6db508d03872d96ffddbc10f2")
