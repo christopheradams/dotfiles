@@ -256,12 +256,12 @@ graphical display, but hide it if in terminal."
    "ot" 'org-todo
    "ow" 'cxa-org-refile
    "oW" 'org-refile-goto-last-stored
-   "pf" 'projectile-find-file
+   "pf" 'project-find-file
    "pm" 'consult-project-buffer
-   "pp" 'projectile-switch-project
-   "pr" 'projectile-replace
+   "pp" 'project-switch-project
+   "pr" 'project-query-replace-regexp
    "ps" 'consult-git-grep
-   "pS" 'projectile-ag
+   "pS" 'project-find-regexp
    "r" 're-builder
    "s" 'save-buffer
    "S" 'save-some-buffers
