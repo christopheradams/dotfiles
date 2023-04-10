@@ -514,8 +514,16 @@ graphical display, but hide it if in terminal."
 (use-package corfu
   :straight t
   :custom
-  (corfu-cycle t)
   (corfu-auto t)
+  (corfu-cycle t)
+  (corfu-preselect 'prompt)
+  (corfu-auto-delay 0.25)
+  :bind
+  (:map corfu-map
+        ("TAB" . corfu-next)
+        ([tab] . corfu-next)
+        ("S-TAB" . corfu-previous)
+        ([backtab] . corfu-previous))
   :init
   (global-corfu-mode))
 
