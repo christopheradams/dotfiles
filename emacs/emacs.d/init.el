@@ -511,17 +511,6 @@ graphical display, but hide it if in terminal."
   :straight t
   :hook (completion-list-mode . consult-preview-at-point-mode))
 
-;;; Projectile
-(use-package projectile
-  :straight t
-  :init (projectile-global-mode +1)
-  :custom
-  (projectile-indexing-method 'hybrid)
-  (projectile-completion-system 'default))
-
-(use-package counsel-projectile
-  :straight t)
-
 ;;; EditorConfig
 (use-package editorconfig
   :straight t
