@@ -520,6 +520,7 @@ graphical display, but hide it if in terminal."
   (corfu-auto-delay 0.25)
   :bind
   (:map corfu-map
+        ("SPC" . corfu-insert-separator)
         ("TAB" . corfu-next)
         ([tab] . corfu-next)
         ("S-TAB" . corfu-previous)
