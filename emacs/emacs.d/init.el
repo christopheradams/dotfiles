@@ -496,8 +496,11 @@ graphical display, but hide it if in terminal."
                                 vertico-unobtrusive))
   :custom
   (vertico-count 10)
+  (vertico-multiform-commands
+   '((execute-extended-command flat)))
   :init
-  (vertico-mode))
+  (vertico-mode)
+  (vertico-multiform-mode))
 
 ;;; Orderless completion style
 (use-package orderless
