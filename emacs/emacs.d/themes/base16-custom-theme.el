@@ -153,6 +153,8 @@
    `(org-scheduled-today ((t (:foreground ,base-3024-0B :weight bold))))
    `(org-imminent-deadline ((t (:foreground ,base-3024-08 :weight bold))))
    `(org-agenda-current-time ((t (:foreground ,base-3024-0D))))
+   `(org-agenda-date-weekend ((t (:inherit org-agenda-date :weight normal :slant italic))))
+   `(org-document-title ((t (:foreground ,base-gray-07 :weight bold))))
    `(org-tag ((t (:foreground ,base-gray-06 :weight normal))))
 
    ;; show-paren-mode
