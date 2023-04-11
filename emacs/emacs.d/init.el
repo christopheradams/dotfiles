@@ -482,7 +482,18 @@ graphical display, but hide it if in terminal."
 
 ;;; VERTical Interactive COmpletion
 (use-package vertico
-  :straight t
+  :straight (vertico :files (:defaults "extensions/*")
+                     :includes (vertico-indexed
+                                vertico-flat
+                                vertico-grid
+                                vertico-mouse
+                                vertico-quick
+                                vertico-buffer
+                                vertico-repeat
+                                vertico-reverse
+                                vertico-directory
+                                vertico-multiform
+                                vertico-unobtrusive))
   :custom
   (vertico-count 10)
   :init
