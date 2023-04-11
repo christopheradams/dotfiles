@@ -43,6 +43,7 @@
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
 (setq inhibit-startup-screen t)
+(setq font-use-system-font t)
 ;; (menu-bar-mode -1)
 
 ;; line numbers
@@ -59,6 +60,7 @@
 (setq sort-fold-case t)
 (show-paren-mode t)
 (winner-mode 1)
+(setq split-window-keep-point nil)
 
 (put 'upcase-region 'disabled nil)
 
@@ -315,6 +317,12 @@ graphical display, but hide it if in terminal."
     (setq org-startup-truncated nil)
     (setq org-treat-S-cursor-todo-selection-as-state-change nil)
     (setq-default org-catch-invisible-edits 'smart)
+
+    (setq org-export-backends '(ascii html icalendar latex md org))
+    (setq org-export-with-sub-superscripts '{})
+    (setq org-fontify-done-headline t)
+    (setq org-fontify-quote-and-verse-blocks t)
+    (setq org-fontify-whole-heading-line t)
 
     ;; Org files
     (setq org-directory '"~/Dropbox/Org")
