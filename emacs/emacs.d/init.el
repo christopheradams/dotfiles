@@ -533,16 +533,6 @@ graphical display, but hide it if in terminal."
   :straight t
   :config (editorconfig-mode 1))
 
-;;; Company
-(use-package company
-  :straight t
-  :disabled t
-  :init
-  (add-hook 'after-init-hook 'global-company-mode)
-  :config
-  (setq company-idle-delay 1
-        company-minimum-prefix-length 3))
-
 ;;; The Silver Searcher
 (use-package ag
   :straight t
@@ -597,11 +587,6 @@ graphical display, but hide it if in terminal."
 ;;; restclient
 (use-package restclient
   :straight t)
-(use-package company-restclient
-  :straight t
-  :disabled t
-  :config
-  (add-to-list 'company-backends 'company-restclient))
 
 ;;; know-your-http-well
 (use-package know-your-http-well
@@ -807,9 +792,6 @@ graphical display, but hide it if in terminal."
                     indent-tabs-mode nil)))
   :config
   (setq solidity-comment-style 'slash))
-(use-package company-solidity
-  :disabled t
-  :straight t)
 
 ;; (init-open-recentf)
 (put 'downcase-region 'disabled nil)
