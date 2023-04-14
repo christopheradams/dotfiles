@@ -151,11 +151,6 @@
 ;;; Lock files
 (setq create-lockfiles nil)
 
-;;; Secrets
-(let ((secret.el (expand-file-name "secret.el" user-emacs-directory)))
-  (when (file-exists-p secret.el)
-    (load secret.el)))
-
 ;;; SQLi
 (add-hook 'sql-interactive-mode-hook
           (lambda ()
@@ -821,3 +816,8 @@ graphical display, but hide it if in terminal."
 ;;; mode-line
 (let ((modeline.el (expand-file-name "modeline.el" user-emacs-directory)))
   (load modeline.el))
+
+;;; Secrets
+(let ((secret.el (expand-file-name "secret.el" user-emacs-directory)))
+  (when (file-exists-p secret.el)
+    (load secret.el)))
