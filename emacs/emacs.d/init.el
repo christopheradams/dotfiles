@@ -42,6 +42,7 @@
 ;;; Appearance
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
+(blink-cursor-mode -1)
 (setq inhibit-startup-screen t)
 (setq font-use-system-font t)
 ;; (menu-bar-mode -1)
