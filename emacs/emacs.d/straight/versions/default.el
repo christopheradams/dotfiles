@@ -10,7 +10,6 @@
  ("editorconfig-emacs" . "1f6f16c24fd0030322d59c2853067a6dccc9e736")
  ("el-get" . "9353309744e4f8a7c9b1adf22ec99536fb2146b0")
  ("emacs-elixir" . "6f61e04c8537c2e9a807dc29908f619b5202b0f8")
- ("emacs-slim" . "3636d18ab1c8b316eea71c4732eb44743e2ded87")
  ("emacs-solidity" . "d8eb460f1fc22aac65ad4926811df90df37ce68a")
  ("emacs-undo-fu" . "f9c39c248cb965cd3c7cb3c8e15a4eee71921f8c")
  ("emacsmirror-mirror" . "396f84f731b6364d03422a88aae75726104df40e")

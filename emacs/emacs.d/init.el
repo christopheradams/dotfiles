@@ -664,16 +664,6 @@ graphical display, but hide it if in terminal."
             (lambda ()
               (define-key yaml-mode-map (kbd "RET") 'newline-and-indent))))
 
-;;; Slim
-(use-package slim-mode
-  :straight t
-  :init
-  (add-hook 'slim-mode-hook
-            (function (lambda()
-                        (setq evil-shift-width 2))))
-  :config
-  (add-to-list 'auto-mode-alist '("\\.slim\\'" . slim-mode)))
-
 ;;; SQL
 ;;; sudo pip install format-sql --prefix='/usr/local'
 (use-package format-sql
