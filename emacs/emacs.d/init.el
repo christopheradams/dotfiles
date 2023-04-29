@@ -304,10 +304,6 @@ graphical display, but hide it if in terminal."
     (setq org-lowest-priority ?D)
     (setq org-M-RET-may-split-line '((default . nil)))
     (setq org-mouse-1-follows-link nil)
-    (setq org-refile-targets '((org-agenda-files . (:maxlevel
-                                                    . 2))))
-    (setq org-refile-use-outline-path 'file
-          org-outline-path-complete-in-steps nil)
     (setq org-reverse-note-order t)
     (setq org-src-window-setup 'split-window-below)
     (setq org-startup-truncated nil)
@@ -325,6 +321,17 @@ graphical display, but hide it if in terminal."
     (setq org-agenda-files '("~/Dropbox/Org"))
     (setq org-default-notes-file (concat
                                   org-directory "/Notes.org"))
+
+    ;; Org refile
+    (setq org-refile-targets '((org-agenda-files . (:maxlevel
+                                                    . 2))))
+    (setq org-refile-use-outline-path 'file
+          org-outline-path-complete-in-steps nil)
+
+    ;; Automatically save org buffers after refile
+    (advice-add 'org-refile :after
+                (lambda (&rest _)
+                  (org-save-all-org-buffers)))
 
     (setq org-file-apps
          (quote ((auto-mode . emacs)
@@ -359,11 +366,6 @@ graphical display, but hide it if in terminal."
             (todo . " %i %-12:c %b ")
             (tags . " %i %-12:c %b ")
             (search . " %i %-12:c %b "))))
-
-    ;; Automatically save org buffers after refile
-    (advice-add 'org-refile :after
-                (lambda (&rest _)
-                  (org-save-all-org-buffers)))
 
     ;; ‘!’ (for a timestamp) or ‘@’ (for a note with timestamp)
     (setq org-todo-keywords
