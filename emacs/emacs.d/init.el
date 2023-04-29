@@ -278,6 +278,7 @@ graphical display, but hide it if in terminal."
 ;;; Org-mode
 (straight-use-package 'org-contrib)
 (use-package org
+  :straight t
   :init
   (require 'ol-bibtex)
   (require 'org-tempo)
