@@ -310,6 +310,7 @@ graphical display, but hide it if in terminal."
     (setq org-startup-truncated nil)
     (setq org-treat-S-cursor-todo-selection-as-state-change nil)
     (setq-default org-catch-invisible-edits 'smart)
+    (setq org-use-fast-todo-selection 'expert)
 
     (setq org-export-backends '(ascii html icalendar latex md org))
     (setq org-export-with-sub-superscripts '{})
