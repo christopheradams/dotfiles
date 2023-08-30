@@ -22,6 +22,7 @@ scratchpads =
   [ NS "1password" "1password" (className =? "1Password") doCenterFloat
   , NS "gnome-clocks" "gnome-clocks" (className =? "Org.gnome.clocks") (customFloating $ W.RationalRect (1/4) (1/4) (1/2) (1/2))
   , NS "gnome-control-center" "gnome-control-center network" (className =? "Gnome-control-center") doCenterFloat
+  , NS "terminal" "gnome-terminal --title Scratchpad" (title =? "Scratchpad") doFloat
   , NS "qalculate" "qalculate" (className =? "Qalculate-gtk") (customFloating $ W.RationalRect (1/4) (1/4) (1/2) (1/2))
   , NS "nextcloud" "nextcloud-desktop-client.nextcloud" (className =? "Nextcloud") doCenterFloat
   ]
@@ -37,6 +38,7 @@ myManageHooks = composeAll
   [ className =? "Gnome-calculator" --> doFloat
   , className =? "kruler" --> doFloat
   , isFullscreen --> doFullFloat
+  , title =? "Scratchpad" <&&> className =? "Gnome-terminal" --> doFloat
   ]
 
 main = do
@@ -69,6 +71,7 @@ xmonad $ docks gnomeConfig
     , ((mod1Mask .|. shiftMask, xK_w), namedScratchpadAction scratchpads "gnome-clocks")
     , ((mod1Mask .|. shiftMask, xK_u), namedScratchpadAction scratchpads "gnome-control-center")
     , ((mod1Mask .|. shiftMask, xK_n), namedScratchpadAction scratchpads "nextcloud")
+    , ((mod1Mask .|. shiftMask, xK_m), namedScratchpadAction scratchpads "terminal")
     , ((mod1Mask .|. shiftMask, xK_q), spawn "gnome-session-quit")
     , ((mod1Mask,               xK_p), spawn "dmenu_run -fn 'Input Bold-8' -nf 'white' -nb '#252525' -sf 'white' -sb '#DB2D20'")
     , ((mod1Mask,               xK_z), sendMessage MirrorShrink)
