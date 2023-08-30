@@ -42,7 +42,7 @@ myManageHooks = composeAll
 main = do
 xmproc <- spawnPipe "xmobar ~/.xmobarrc"
 xmonad $ docks gnomeConfig
-    { manageHook = (myManageHooks <+> manageDocks) <+> namedScratchpadManageHook scratchpads <+> manageHook defaultConfig
+    { manageHook = myManageHooks <+> namedScratchpadManageHook scratchpads <+> manageDocks <+> manageHook defaultConfig
     , terminal = "gnome-terminal"
     , logHook = dynamicLogWithPP $ xmobarPP
         { ppOutput = hPutStrLn xmproc
