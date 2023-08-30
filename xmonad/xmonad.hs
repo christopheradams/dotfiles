@@ -20,7 +20,7 @@ import Control.Monad
 scratchpads :: [NamedScratchpad]
 scratchpads =
   [ NS "1password" "1password" (className =? "1Password") doCenterFloat
-  , NS "gnome-clocks" "gnome-clocks" (className =? "Org.gnome.clocks") doCenterFloat
+  , NS "gnome-clocks" "gnome-clocks" (className =? "Org.gnome.clocks") (customFloating $ W.RationalRect (1/4) (1/4) (1/2) (1/2))
   , NS "gnome-control-center" "gnome-control-center network" (className =? "Gnome-control-center") doCenterFloat
   , NS "qalculate" "qalculate" (className =? "Qalculate-gtk") (customFloating $ W.RationalRect (1/4) (1/4) (1/2) (1/2))
   , NS "nextcloud" "nextcloud-desktop-client.nextcloud" (className =? "Nextcloud") doCenterFloat
