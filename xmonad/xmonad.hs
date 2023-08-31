@@ -36,6 +36,7 @@ myLayout = ( smartBorders $ avoidStruts  (resizableTile ||| Mirror resizableTile
 
 myManageHooks = composeAll
   [ className =? "Gnome-calculator" --> doFloat
+  , className =? "Gnome-system-monitor" --> doCenterFloat
   , className =? "kruler" --> doFloat
   , isFullscreen --> doFullFloat
   ]
@@ -69,6 +70,7 @@ xmonad $ docks gnomeConfig
     , ((mod1Mask .|. shiftMask, xK_t), spawnHere "thunderbird") -- %! Launch Thunderbird
     , ((mod1Mask .|. shiftMask, xK_w), namedScratchpadAction scratchpads "gnome-clocks")
     , ((mod1Mask .|. shiftMask, xK_u), namedScratchpadAction scratchpads "gnome-control-center")
+    , ((mod1Mask .|. shiftMask, xK_i), spawnHere "gnome-system-monitor")
     , ((mod1Mask .|. shiftMask, xK_n), namedScratchpadAction scratchpads "nextcloud")
     , ((mod1Mask .|. shiftMask, xK_m), namedScratchpadAction scratchpads "terminal")
     , ((mod1Mask .|. shiftMask, xK_q), spawn "gnome-session-quit")
