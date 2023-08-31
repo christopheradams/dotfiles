@@ -22,7 +22,7 @@ scratchpads =
   [ NS "1password" "1password" (className =? "1Password") doCenterFloat
   , NS "gnome-clocks" "gnome-clocks" (className =? "Org.gnome.clocks") (customFloating $ W.RationalRect (1/4) (1/4) (1/2) (1/2))
   , NS "gnome-control-center" "gnome-control-center network" (className =? "Gnome-control-center") doCenterFloat
-  , NS "terminal" "gnome-terminal --title Scratchpad" (title =? "Scratchpad") doFloat
+  , NS "terminal" "gnome-terminal --class Gnome-terminal-scratch" (className =? "Gnome-terminal-scratch") (customFloating $ W.RationalRect (1/4) (1/4) (1/2) (1/2))
   , NS "qalculate" "qalculate" (className =? "Qalculate-gtk") (customFloating $ W.RationalRect (1/4) (1/4) (1/2) (1/2))
   , NS "nextcloud" "nextcloud-desktop-client.nextcloud" (className =? "Nextcloud") doCenterFloat
   ]
@@ -38,7 +38,6 @@ myManageHooks = composeAll
   [ className =? "Gnome-calculator" --> doFloat
   , className =? "kruler" --> doFloat
   , isFullscreen --> doFullFloat
-  , title =? "Scratchpad" <&&> className =? "Gnome-terminal" --> doFloat
   ]
 
 main = do
