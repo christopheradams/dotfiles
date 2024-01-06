@@ -462,8 +462,10 @@ graphical display, but hide it if in terminal."
     (kbd "<up>") 'comint-previous-input
     (kbd "<down>") 'comint-next-input)
   (evil-set-initial-state 'git-rebase-mode 'emacs)
+  (evil-set-initial-state 'git-rebase-mode 'emacs)
   (evil-set-initial-state 'magit-popup-mode 'emacs)
   (evil-set-initial-state 'ag-mode 'emacs)
+  (evil-set-initial-state 'xref--xref-buffer-mode 'emacs)
   (evil-set-initial-state 'dired-mode 'emacs))
 
 ;; https://gist.github.com/xahlee/d364cbbff9b3abd12d29
