@@ -27,9 +27,10 @@ scratchpads =
   , NS "nextcloud" "nextcloud-desktop-client.nextcloud" (className =? "Nextcloud") doCenterFloat
   ]
 
-myLayout = ( smartBorders $ avoidStruts  (resizableTile ||| Mirror resizableTile |||  Full ))
+myLayout = ( smartBorders $ avoidStruts  (resizableTile ||| mirrorResizableTile ||| Full ))
     where
     resizableTile = ResizableTall 1 (3/100) (1/2) []
+    mirrorResizableTile = Mirror resizableTile
 
 myManageHooks = composeAll
   [ className =? "Gnome-calculator" --> doFloat
