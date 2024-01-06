@@ -2,6 +2,7 @@ import XMonad
 import XMonad.Config.Gnome
 import XMonad.Hooks.DynamicLog
 import XMonad.Layout.ResizableTile
+import XMonad.Layout.ThreeColumns
 import XMonad.Hooks.ManageDocks (ToggleStruts(..),avoidStruts,docks,manageDocks)
 import XMonad.Hooks.ManageHelpers
 import XMonad.ManageHook
@@ -27,10 +28,11 @@ scratchpads =
   , NS "nextcloud" "nextcloud-desktop-client.nextcloud" (className =? "Nextcloud") doCenterFloat
   ]
 
-myLayout = ( smartBorders $ avoidStruts  (resizableTile ||| mirrorResizableTile ||| Full ))
+myLayout = ( smartBorders $ avoidStruts  (resizableTile ||| threeColMid ||| mirrorResizableTile ||| Full ))
     where
     resizableTile = ResizableTall 1 (3/100) (1/2) []
     mirrorResizableTile = Mirror resizableTile
+    threeColMid = ThreeColMid 1 (3/100) (1/2)
 
 myManageHooks = composeAll
   [ className =? "Gnome-calculator" --> doFloat
