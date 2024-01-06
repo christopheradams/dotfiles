@@ -29,10 +29,7 @@ scratchpads =
 
 myLayout = ( smartBorders $ avoidStruts  (resizableTile ||| Mirror resizableTile |||  Full ))
     where
-    resizableTile = ResizableTall nmaster delta ratio []
-    nmaster = 1
-    ratio = toRational (2/(1+sqrt(5)::Double))
-    delta = 3/100
+    resizableTile = ResizableTall 1 (3/100) (1/2) []
 
 myManageHooks = composeAll
   [ className =? "Gnome-calculator" --> doFloat
