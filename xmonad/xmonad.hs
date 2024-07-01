@@ -23,6 +23,7 @@ scratchpads =
   [ NS "1password" "1password" (className =? "1Password") doCenterFloat
   , NS "gnome-clocks" "gnome-clocks" (className =? "Org.gnome.clocks") (customFloating $ W.RationalRect (1/4) (1/4) (1/2) (1/2))
   , NS "gnome-control-center" "gnome-control-center network" (className =? "Gnome-control-center") doCenterFloat
+  , NS "gnome-system-monitor" "gnome-system-monitor" (className =? "Gnome-system-monitor") (customFloating $ W.RationalRect (1/4) (1/4) (1/2) (1/2))
   , NS "terminal" "gnome-terminal --class Gnome-terminal-scratch" (className =? "Gnome-terminal-scratch") (customFloating $ W.RationalRect (1/4) (1/4) (1/2) (1/2))
   , NS "qalculate" "qalculate" (className =? "Qalculate-gtk") (customFloating $ W.RationalRect (1/4) (1/4) (1/2) (1/2))
   , NS "nextcloud" "nextcloud-desktop-client.nextcloud" (className =? "Nextcloud") doCenterFloat
@@ -36,7 +37,6 @@ myLayout = ( smartBorders $ avoidStruts  (resizableTile ||| threeColMid ||| mirr
 
 myManageHooks = composeAll
   [ className =? "Gnome-calculator" --> doFloat
-  , className =? "Gnome-system-monitor" --> doCenterFloat
   , className =? "kruler" --> doFloat
   , isFullscreen --> doFullFloat
   ]
@@ -70,7 +70,7 @@ xmonad $ docks gnomeConfig
     , ((mod1Mask .|. shiftMask, xK_t), spawnHere "thunderbird") -- %! Launch Thunderbird
     , ((mod1Mask .|. shiftMask, xK_w), namedScratchpadAction scratchpads "gnome-clocks")
     , ((mod1Mask .|. shiftMask, xK_u), namedScratchpadAction scratchpads "gnome-control-center")
-    , ((mod1Mask .|. shiftMask, xK_i), spawnHere "gnome-system-monitor")
+    , ((mod1Mask .|. shiftMask, xK_i), namedScratchpadAction scratchpads "gnome-system-monitor")
     , ((mod1Mask .|. shiftMask, xK_n), namedScratchpadAction scratchpads "nextcloud")
     , ((mod1Mask .|. shiftMask, xK_m), namedScratchpadAction scratchpads "terminal")
     , ((mod1Mask .|. shiftMask, xK_q), spawn "gnome-session-quit")
