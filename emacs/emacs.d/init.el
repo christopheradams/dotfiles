@@ -358,7 +358,7 @@ graphical display, but hide it if in terminal."
             ("l" "Link" entry (file+olp "" "Inbox" "Tasks")
              "* TODO %?\n%a" :prepend t)
             ("y" "Diary" entry (file+olp "" "Inbox" "Tasks")
-             "* Diary%?%t\n%i" :prepend t)))
+             "* Diary%?%t :taiwan:taipei:\n%i" :prepend t)))
 
     (add-hook 'org-capture-before-finalize-hook 'cxa-add-property-with-date-created)
 
