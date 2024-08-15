@@ -171,6 +171,11 @@
                       (setq evil-shift-width css-indent-offset))))
 (add-to-list 'auto-mode-alist '("\\.less$" . css-mode))
 
+;;; Java
+(add-hook 'java-mode-hook
+          (lambda ()
+            (setq c-basic-offset 2)))
+
 ;;; xml-mode
 (add-to-list `auto-mode-alist '("\\.svg\\'" . xml-mode))
 
