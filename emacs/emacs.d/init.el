@@ -175,6 +175,7 @@
 (add-hook 'java-mode-hook
           (lambda ()
             (setq c-basic-offset 2)))
+(add-to-list 'auto-mode-alist '("\\.pde$" . java-mode))
 
 ;;; xml-mode
 (add-to-list `auto-mode-alist '("\\.svg\\'" . xml-mode))
