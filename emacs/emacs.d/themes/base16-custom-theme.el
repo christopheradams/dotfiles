@@ -3,29 +3,29 @@
 
 (deftheme base16-custom)
 
-(let ((base-gray-00 (plist-get base16-grayscale-light-colors :base00)) ;; #f7f7f7
-      (base-gray-01 (plist-get base16-grayscale-light-colors :base01)) ;; #e3e3e3
-      (base-gray-02 (plist-get base16-grayscale-light-colors :base02)) ;; #b9b9b9
-      (base-gray-03 (plist-get base16-grayscale-light-colors :base03)) ;; #ababab
-      (base-gray-04 (plist-get base16-grayscale-light-colors :base04)) ;; #525252
-      (base-gray-05 (plist-get base16-grayscale-light-colors :base05)) ;; #464646
-      (base-gray-06 (plist-get base16-grayscale-light-colors :base06)) ;; #252525
-      (base-gray-07 (plist-get base16-grayscale-light-colors :base07)) ;; #101010
-      (base-gray-08 (plist-get base16-grayscale-light-colors :base08)) ;; #7c7c7c
-      (base-gray-0A (plist-get base16-grayscale-light-colors :base0A)) ;; #a0a0a0
-      (base-gray-0B (plist-get base16-grayscale-light-colors :base0B)) ;; #8e8e8e
-      (base-gray-0C (plist-get base16-grayscale-light-colors :base0C)) ;; #868686
-      (base-gray-0D (plist-get base16-grayscale-light-colors :base0D)) ;; #686868
-      (base-gray-0E (plist-get base16-grayscale-light-colors :base0E)) ;; #747474
-      (base-gray-0F (plist-get base16-grayscale-light-colors :base0F)) ;; #5e5e5e
-      (base-3024-08 (plist-get base16-3024-colors            :base08)) ;; #db2d20
-      (base-3024-09 (plist-get base16-3024-colors            :base09)) ;; #e8bbd0
-      (base-3024-0A (plist-get base16-3024-colors            :base0A)) ;; #fded02
-      (base-3024-0B (plist-get base16-3024-colors            :base0B)) ;; #01a252
-      (base-3024-0C (plist-get base16-3024-colors            :base0C)) ;; #b5e4f4
-      (base-3024-0D (plist-get base16-3024-colors            :base0D)) ;; #01a0e4
-      (base-3024-0E (plist-get base16-3024-colors            :base0E)) ;; #a16a94
-      (base-3024-0F (plist-get base16-3024-colors            :base0F)) ;; #cdab53
+(let ((base-gray-00 (plist-get base16-grayscale-light-theme-colors :base00)) ;; #f7f7f7
+      (base-gray-01 (plist-get base16-grayscale-light-theme-colors :base01)) ;; #e3e3e3
+      (base-gray-02 (plist-get base16-grayscale-light-theme-colors :base02)) ;; #b9b9b9
+      (base-gray-03 (plist-get base16-grayscale-light-theme-colors :base03)) ;; #ababab
+      (base-gray-04 (plist-get base16-grayscale-light-theme-colors :base04)) ;; #525252
+      (base-gray-05 (plist-get base16-grayscale-light-theme-colors :base05)) ;; #464646
+      (base-gray-06 (plist-get base16-grayscale-light-theme-colors :base06)) ;; #252525
+      (base-gray-07 (plist-get base16-grayscale-light-theme-colors :base07)) ;; #101010
+      (base-gray-08 (plist-get base16-grayscale-light-theme-colors :base08)) ;; #7c7c7c
+      (base-gray-0A (plist-get base16-grayscale-light-theme-colors :base0A)) ;; #a0a0a0
+      (base-gray-0B (plist-get base16-grayscale-light-theme-colors :base0B)) ;; #8e8e8e
+      (base-gray-0C (plist-get base16-grayscale-light-theme-colors :base0C)) ;; #868686
+      (base-gray-0D (plist-get base16-grayscale-light-theme-colors :base0D)) ;; #686868
+      (base-gray-0E (plist-get base16-grayscale-light-theme-colors :base0E)) ;; #747474
+      (base-gray-0F (plist-get base16-grayscale-light-theme-colors :base0F)) ;; #5e5e5e
+      (base-3024-08 (plist-get base16-3024-theme-colors            :base08)) ;; #db2d20
+      (base-3024-09 (plist-get base16-3024-theme-colors            :base09)) ;; #e8bbd0
+      (base-3024-0A (plist-get base16-3024-theme-colors            :base0A)) ;; #fded02
+      (base-3024-0B (plist-get base16-3024-theme-colors            :base0B)) ;; #01a252
+      (base-3024-0C (plist-get base16-3024-theme-colors            :base0C)) ;; #b5e4f4
+      (base-3024-0D (plist-get base16-3024-theme-colors            :base0D)) ;; #01a0e4
+      (base-3024-0E (plist-get base16-3024-theme-colors            :base0E)) ;; #a16a94
+      (base-3024-0F (plist-get base16-3024-theme-colors            :base0F)) ;; #cdab53
       (base-custom-diff-change "#DDEEFF")
       (base-custom-cursor "#AB4642"))
 
