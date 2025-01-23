@@ -608,12 +608,6 @@ graphical display, but hide it if in terminal."
   (setq diff-hl-side 'right)
   (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh))
 
-;;; hlinum-mode
-(use-package hlinum
-  :straight t
-  :init
-  (hlinum-activate))
-
 ;;; restclient
 (use-package restclient
   :straight t)

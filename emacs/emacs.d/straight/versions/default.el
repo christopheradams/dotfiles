@@ -24,7 +24,6 @@
  ("graphql-mode" . "ee49531935ede7a2c9597713e13a4c9d33ef2220")
  ("gscholar-bibtex" . "3b651e3de116860eb1f1aef9b547a561784871fe")
  ("haskell-mode" . "4cec530008ef4054826eb1b55d6b26ae8e2807c0")
- ("hlinum-mode" . "5646d9c0b9e7598b20b2004eab5439fdc6dbeda5")
  ("js2-mode" . "e0c302872de4d26a9c1614fac8d6b94112b96307")
  ("json-mode" . "77125b01c0ddce537085201098bea9b4b8ba6be3")
  ("json-snatcher" . "b28d1c0670636da6db508d03872d96ffddbc10f2")
