@@ -1,4 +1,4 @@
-Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
+Config { font = "Input Regular 8"
        , additionalFonts = []
        , borderColor = "#505050"
        , border = NoBorder
