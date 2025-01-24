@@ -1,5 +1,6 @@
 import XMonad
 import XMonad.Config.Gnome
+import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.StatusBar
 import XMonad.Hooks.StatusBar.PP
@@ -49,6 +50,8 @@ myXmobarPP = def
 
 main :: IO ()
 main = xmonad
+       . ewmhFullscreen
+       . ewmh
        . withEasySB (statusBarProp "xmobar ~/.xmobarrc" (pure myXmobarPP)) defToggleStrutsKey
        $ docks gnomeConfig
     { manageHook = myManageHooks <+> namedScratchpadManageHook scratchpads <+> manageDocks
