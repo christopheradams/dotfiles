@@ -1,6 +1,8 @@
 import XMonad
 import XMonad.Config.Gnome
 import XMonad.Hooks.DynamicLog
+import XMonad.Hooks.StatusBar
+import XMonad.Hooks.StatusBar.PP
 import XMonad.Layout.ResizableTile
 import XMonad.Layout.ThreeColumns
 import XMonad.Hooks.ManageDocks (ToggleStruts(..),avoidStruts,docks,manageDocks)
@@ -41,19 +43,16 @@ myManageHooks = composeAll
   , isFullscreen --> doFullFloat
   ]
 
-main = do
-xmproc <- spawnPipe "xmobar ~/.xmobarrc"
-xmonad $ docks gnomeConfig
-    { manageHook = myManageHooks <+> namedScratchpadManageHook scratchpads <+> manageDocks <+> manageHook defaultConfig
+myXmobarPP :: PP
+myXmobarPP = def
+-- TODO customize config
+
+main :: IO ()
+main = xmonad
+       . withEasySB (statusBarProp "xmobar ~/.xmobarrc" (pure myXmobarPP)) defToggleStrutsKey
+       $ docks gnomeConfig
+    { manageHook = myManageHooks <+> namedScratchpadManageHook scratchpads <+> manageDocks
     , terminal = "gnome-terminal"
-    , logHook = dynamicLogWithPP $ xmobarPP
-        { ppOutput = hPutStrLn xmproc
-        , ppCurrent = xmobarColor "#6A9FB5" "" . wrap "[" "]"
-        , ppHidden = xmobarColor "#505050" ""
-        , ppHiddenNoWindows = xmobarColor "#AAAAAA" ""
-        , ppUrgent = xmobarColor "#CCCCCC" ""
-        , ppTitle = xmobarColor "#505050" "" . shorten 7
-        }
     , layoutHook = myLayout
         , borderWidth = 2
         , focusedBorderColor = "#E7766B"
