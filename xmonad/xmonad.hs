@@ -1,5 +1,6 @@
 import XMonad
 import XMonad.Actions.SpawnOn
+import XMonad.Actions.Volume
 import XMonad.Config.Gnome
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.EwmhDesktops
@@ -79,6 +80,8 @@ main = xmonad
     , ((mod1Mask,               xK_p), spawn "dmenu_run -fn 'Input Bold-8' -nf 'white' -nb '#252525' -sf 'white' -sb '#DB2D20'")
     , ((mod1Mask,               xK_z), sendMessage MirrorShrink)
     , ((mod1Mask,               xK_a), sendMessage MirrorExpand)
+    , ((0, xK_F11), lowerVolume 10 >> return ())
+    , ((0, xK_F12), raiseVolume 10 >> return ())
     , ((0, xK_Print), spawn "gnome-screenshot")
     ]
 
