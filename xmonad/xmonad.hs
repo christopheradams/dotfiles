@@ -1,24 +1,24 @@
 import XMonad
+import XMonad.Actions.SpawnOn
 import XMonad.Config.Gnome
-import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.DynamicLog
-import XMonad.Hooks.StatusBar
-import XMonad.Hooks.StatusBar.PP
-import XMonad.Layout.ResizableTile
-import XMonad.Layout.ThreeColumns
+import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.ManageDocks (ToggleStruts(..),avoidStruts,docks,manageDocks)
 import XMonad.Hooks.ManageHelpers
-import XMonad.ManageHook
+import XMonad.Hooks.StatusBar
+import XMonad.Hooks.StatusBar.PP
 import XMonad.Layout.NoBorders
-import XMonad.Util.Dmenu
-import XMonad.Util.Run(spawnPipe)
-import XMonad.Util.NamedScratchpad
-import XMonad.Actions.SpawnOn
-import XMonad.Util.EZConfig(additionalKeys)
+import XMonad.Layout.ResizableTile
+import XMonad.Layout.ThreeColumns
+import XMonad.ManageHook
 import XMonad.StackSet as W
+import XMonad.Util.Dmenu
+import XMonad.Util.EZConfig(additionalKeys)
+import XMonad.Util.NamedScratchpad
+import XMonad.Util.Run(spawnPipe)
+import Control.Monad
 import System.Exit
 import System.IO
-import Control.Monad
 
 -- scratchPads
 scratchpads :: [NamedScratchpad]
