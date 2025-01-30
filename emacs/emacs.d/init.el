@@ -303,7 +303,6 @@ graphical display, but hide it if in terminal."
     (setq org-clock-out-switch-to-state "STARTED")
     (setq org-clock-x11idle-program-name "xprintidle")
     (setq org-default-priority ?D)
-    (setq org-drawers '("PROPERTIES" "LOGBOOK")) ;; separate drawers
     (setq org-duration-format '(("h" . nil) (special . 2)))
     (setq org-ellipsis "…") ;; … ⤵ ⬎
     (setq org-html-validation-link nil)
