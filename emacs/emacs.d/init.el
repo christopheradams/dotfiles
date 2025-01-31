@@ -308,6 +308,7 @@ graphical display, but hide it if in terminal."
     (setq org-ellipsis "…") ;; … ⤵ ⬎
     (setq org-html-validation-link nil)
     (setq org-log-done t)
+    (setq org-log-into-drawer "LOGBOOK")
     (setq org-lowest-priority ?D)
     (setq org-M-RET-may-split-line '((default . nil)))
     (setq org-mouse-1-follows-link nil)
