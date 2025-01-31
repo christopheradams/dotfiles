@@ -250,6 +250,7 @@ graphical display, but hide it if in terminal."
    "oL" 'org-insert-link
    "ol" 'org-store-link
    "on" 'org-insert-heading-respect-content
+   "oN" 'org-add-note
    "oo" 'org-clock-out
    "oq" 'org-set-tags-command
    "or" 'org-reveal
