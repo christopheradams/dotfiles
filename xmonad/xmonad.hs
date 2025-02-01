@@ -27,6 +27,7 @@ scratchpads =
   , NS "gnome-clocks" "gnome-clocks" (className =? "org.gnome.clocks") (customFloating $ W.RationalRect (1/4) (1/4) (1/2) (1/2))
   , NS "gnome-control-center" "gnome-control-center network" (className =? "gnome-control-center") doCenterFloat
   , NS "gnome-system-monitor" "gnome-system-monitor" (className =? "gnome-system-monitor") (customFloating $ W.RationalRect (1/4) (1/4) (1/2) (1/2))
+  , NS "localsend" "localsend" (className =? "Localsend_app") (customFloating $ W.RationalRect (1/4) (1/4) (1/2) (1/2))
   , NS "nextcloud" "nextcloud-desktop-client.nextcloud" (className =? "Nextcloud") doCenterFloat
   , NS "qalculate" "qalculate" (className =? "Qalculate-gtk") (customFloating $ W.RationalRect (1/4) (1/4) (1/2) (1/2))
   , NS "terminal" "gnome-terminal --class Gnome-terminal-scratch" (className =? "Gnome-terminal-scratch") (customFloating $ W.RationalRect (1/4) (1/4) (1/2) (1/2))
@@ -73,6 +74,7 @@ main = xmonad
     , ((mod1Mask .|. shiftMask, xK_w), namedScratchpadAction scratchpads "gnome-clocks")
     , ((mod1Mask .|. shiftMask, xK_u), namedScratchpadAction scratchpads "gnome-control-center")
     , ((mod1Mask .|. shiftMask, xK_i), namedScratchpadAction scratchpads "gnome-system-monitor")
+    , ((mod1Mask .|. shiftMask, xK_l), namedScratchpadAction scratchpads "localsend")
     , ((mod1Mask .|. shiftMask, xK_n), namedScratchpadAction scratchpads "nextcloud")
     , ((mod1Mask .|. shiftMask, xK_m), namedScratchpadAction scratchpads "terminal")
     , ((mod1Mask .|. shiftMask, xK_q), spawn "gnome-session-quit")
