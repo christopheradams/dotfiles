@@ -17,7 +17,6 @@ import XMonad.Util.Dmenu
 import XMonad.Util.EZConfig(additionalKeys)
 import XMonad.Util.NamedScratchpad
 import XMonad.Util.Run(spawnPipe)
-import Control.Monad
 import System.Exit
 import System.IO
 
