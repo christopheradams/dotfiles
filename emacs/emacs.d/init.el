@@ -378,7 +378,7 @@ graphical display, but hide it if in terminal."
 
     ;; ‘!’ (for a timestamp) or ‘@’ (for a note with timestamp)
     (setq org-todo-keywords
-          (quote ((sequence "TODO(t)" "IDEA(i)" "NEXT(n)" "CURRENT(c)" "STARTED(s)" "WAITING(w@)" "|" "DONE(d)")
+          (quote ((sequence "TODO(t)" "IDEA(i)" "CURRENT(c)" "STARTED(s)" "WAITING(w@)" "|" "DONE(d)")
                   (sequence "|" "CANCELLED(x)" "DELEGATED(l@/!)" "DEFERRED(f!)"))))
 
     (setq org-todo-keyword-faces
