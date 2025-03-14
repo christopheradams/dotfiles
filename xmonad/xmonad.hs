@@ -28,6 +28,7 @@ scratchpads =
   , NS "gnome-control-center" "gnome-control-center network" (className =? "gnome-control-center") doCenterFloat
   , NS "gnome-system-monitor" "gnome-system-monitor" (className =? "gnome-system-monitor") (customFloating $ W.RationalRect (1/4) (1/4) (1/2) (1/2))
   , NS "localsend" "localsend" (className =? "Localsend_app") (customFloating $ W.RationalRect (1/4) (1/4) (1/2) (1/2))
+  , NS "keepassxc" "keepassxc" (className =? "KeePassXC") doCenterFloat
   , NS "nextcloud" "nextcloud-desktop-client.nextcloud" (className =? "Nextcloud") doCenterFloat
   , NS "qalculate" "qalculate" (className =? "Qalculate-gtk") (customFloating $ W.RationalRect (1/4) (1/4) (1/2) (1/2))
   , NS "terminal" "gnome-terminal --class Gnome-terminal-scratch" (className =? "Gnome-terminal-scratch") (customFloating $ W.RationalRect (1/4) (1/4) (1/2) (1/2))
@@ -68,7 +69,7 @@ main = xmonad
     , ((mod1Mask .|. shiftMask, xK_g), spawnHere "google-chrome") -- %! Launch Chrome
     , ((mod1Mask .|. shiftMask, xK_b), spawnHere "brave-browser") -- %! Launch Brave
     , ((mod1Mask .|. shiftMask, xK_r), spawnHere "nautilus -w") -- %! Launch Nautilus
-    , ((mod1Mask .|. shiftMask, xK_p), namedScratchpadAction scratchpads "1password")
+    , ((mod1Mask .|. shiftMask, xK_p), namedScratchpadAction scratchpads "keepassxc")
     , ((mod1Mask .|. shiftMask, xK_d), namedScratchpadAction scratchpads "qalculate")
     , ((mod1Mask .|. shiftMask, xK_t), spawnHere "thunderbird") -- %! Launch Thunderbird
     , ((mod1Mask .|. shiftMask, xK_w), namedScratchpadAction scratchpads "gnome-clocks")
