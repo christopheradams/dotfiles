@@ -42,6 +42,7 @@ myLayout = ( smartBorders $ avoidStruts  (resizableTile ||| threeColMid ||| mirr
 
 myManageHooks = composeAll
   [ className =? "Gnome-calculator" --> doFloat
+  , className =? "Gpick" --> (customFloating $ W.RationalRect (3/8) (3/8) (1/4) (1/4))
   , className =? "kruler" --> doFloat
   , isFullscreen --> doFullFloat
   ]
