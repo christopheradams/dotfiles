@@ -32,6 +32,7 @@ Config { font = "Input Regular 8"
                                      ] 10
                     , Run Memory ["-t","Mem: <usedratio>%"] 10
                     , Run Swap [] 10
+                    , Run Com "/bin/bash" ["-c", "pactl get-sink-volume @DEFAULT_SINK@ | awk '/Volume/ {print \"Vol: \" $5}'"] "volume" 10
                     , Run Com "uname" ["-s","-r"] "" 36000
                     , Run Com "hostname" ["-s"] "" 36000
                     , Run Com "/bin/bash" ["-c", "~/dotfiles/bin/xmobar-ip"] "ipaddress" 36000
@@ -42,5 +43,5 @@ Config { font = "Input Regular 8"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%XMonadLog% | %multicpu% | %memory% * %swap% | %dynnetwork% }{ %latime% | %nytime% | %utcdate% | <fc=#8F5536>%date%</fc> | %hostname% %ipaddress% "
+       , template = "%XMonadLog% | %multicpu% | %memory% * %swap% | %volume% | %dynnetwork% }{ %latime% | %nytime% | %utcdate% | <fc=#8F5536>%date%</fc> | %hostname% %ipaddress% "
        }
