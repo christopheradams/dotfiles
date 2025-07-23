@@ -436,6 +436,12 @@ graphical display, but hide it if in terminal."
   (let ((org-use-last-clock-out-time-as-effective-time t))
     (org-todo "DONE")))
 
+(defun cxa-org-export-subtree-to-html-and-open ()
+  "Export the current Org subtree to an HTML file and open it."
+  (interactive)
+  (let ((output-file (org-export-to-file 'html (org-export-output-file-name ".html" t) nil t)))
+    (browse-url output-file)))
+
 ;;; Column-marker
 (use-package column-marker
   :straight t
