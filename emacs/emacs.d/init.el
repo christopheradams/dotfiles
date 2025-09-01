@@ -643,11 +643,13 @@ graphical display, but hide it if in terminal."
   (setq web-mode-code-indent-offset 2)
   (setq web-mode-markup-indent-offset 2)
   (setq web-mode-enable-auto-closing t)
+  (setq web-mode-enable-css-indent t)
   (add-to-list 'auto-mode-alist '("\\.htm[l]?\\'" . web-mode))
   (add-to-list 'auto-mode-alist '("\\.eex\\'" . web-mode))
   (add-to-list 'auto-mode-alist '("\\.heex\\'" . web-mode))
   (add-to-list 'auto-mode-alist '("\\.hbs\\'" . web-mode))
   (add-to-list 'auto-mode-alist '("\\.[s]?css\\'" . web-mode))
+  (add-to-list 'web-mode-engines-alist '("none" . "\\.html\\'"))
   :init
   (add-hook 'web-mode-hook
             (function (lambda()
