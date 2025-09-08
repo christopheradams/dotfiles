@@ -292,7 +292,7 @@ graphical display, but hide it if in terminal."
 
 ;;; Org-mode
 (use-package org
-  :straight t
+  :straight (:type git :host github :repo "bzg/org-mode")
   :init
   (require 'ol-bibtex)
   (require 'org-tempo)
