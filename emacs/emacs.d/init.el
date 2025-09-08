@@ -291,7 +291,6 @@ graphical display, but hide it if in terminal."
   (load-theme 'base16-custom t))
 
 ;;; Org-mode
-(straight-use-package 'org-contrib)
 (use-package org
   :straight t
   :init
@@ -417,6 +416,8 @@ graphical display, but hide it if in terminal."
     ;; bibtex
     (setq bibtex-set-dialect 'biblatex)
     (setq org-bibtex-file "Papers.org")))
+
+(straight-use-package 'org-contrib)
 
 (use-package org-clock-convenience
   :straight t)
