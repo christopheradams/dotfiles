@@ -326,8 +326,8 @@ graphical display, but hide it if in terminal."
     (setq org-fontify-whole-heading-line t)
 
     ;; Org files
-    (setq org-directory '"~/Dropbox/Org")
-    (setq org-agenda-files '("~/Dropbox/Org"))
+    (setq org-directory '"~/Nextcloud/Org")
+    (setq org-agenda-files '("~/Nextcloud/Org"))
     (setq org-default-notes-file (concat
                                   org-directory "/Notes.org"))
 
