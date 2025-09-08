@@ -296,7 +296,7 @@ graphical display, but hide it if in terminal."
   :init
   (require 'ol-bibtex)
   (require 'org-tempo)
-  (require 'ox-bibtex)
+  ;; (require 'ox-bibtex) ;; consider org-ref
   :config
   (progn
     (setq org-adapt-indentation 'headline-data)
