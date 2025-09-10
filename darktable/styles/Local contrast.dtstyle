@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<darktable_style version="1.0"><info><name>Local contrast</name><description></description></info><style><plugin><num>16</num><module>3</module><operation>bilat</operation><op_params>010000000000003f0000003f0000803e0000003f</op_params><enabled>1</enabled><blendop_params>gz11eJxjYGBgYAJiCQYYOOHEgAZY0QVwggZ7CB6pfOqC/0AAogFsRh0G</blendop_params><blendop_version>13</blendop_version><multi_priority>0</multi_priority><multi_name></multi_name><multi_name_hand_edited>0</multi_name_hand_edited></plugin></style></darktable_style>

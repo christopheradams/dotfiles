@@ -47,3 +47,9 @@ irssi/irssi/config.autosave
 
 # ruby
 ruby/bundle/cache
+
+# darktable
+darktable/data.db*
+darktable/library.db*
+darktable/shortcutsrc.backup
+darktable/shortcutsrc.defaults
