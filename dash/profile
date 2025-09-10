@@ -26,13 +26,6 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-# NOTE: Not using this yet. Maybe when starting on a fresh install? (2025-06-26)
-# Set XDG variables
-# export XDG_CONFIG_HOME="$HOME/.config"
-# export XDG_DATA_HOME="$HOME/.local/share"
-# export XDG_CACHE_HOME="$HOME/.cache"
-# export XDG_STATE_HOME="$HOME/.local/state"
-
 PATH=~/.npm-global/bin:$PATH
 PATH=$PATH:/usr/local/go/bin
 PATH=$PATH:~/go/bin
