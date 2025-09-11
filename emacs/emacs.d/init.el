@@ -224,6 +224,10 @@ graphical display, but hide it if in terminal."
    "d" 'dired
    "D" 'dired-jump
    "e" 'evil-edit
+   "E" (lambda ()
+         (interactive)
+         (let ((current-prefix-arg '(4))) ; C-u
+           (call-interactively #'eat)))
    "f" 'find-file
    "G" 'magit-blame-toggle
    "g" 'magit-status
@@ -456,6 +460,18 @@ graphical display, but hide it if in terminal."
   (when (memq window-system '(mac ns nil))
     (setq exec-path-from-shell-check-startup-files nil)
     (exec-path-from-shell-initialize)))
+
+;;; Eat: Emulate A Terminal
+(use-package eat
+  :straight
+  (eat :type git
+       :host codeberg
+       :repo "akib/emacs-eat"
+       :files ("*.el" ("term" "term/*.el") "*.texi"
+               "*.ti" ("terminfo/e" "terminfo/e/*")
+               ("terminfo/65" "terminfo/65/*")
+               ("integration" "integration/*")
+               (:exclude ".dir-locals.el" "*-tests.el"))))
 
 ;;; Undo Fu
 (use-package undo-fu
