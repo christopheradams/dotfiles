@@ -73,8 +73,17 @@
         ;; the current major mode for the buffer.
         '(:propertize ("" mode-name))
 
-        ;; " --"
-        ;; minor-mode-alist  ;; list of minor modes
+        " "
+
+        ;; show evil state in the modeline
+        '(:eval
+          (let ((tag (pcase evil-state
+                       ('normal "NORMAL")
+                       ('insert "INSERT")
+                       ('visual "VISUAL")
+                       ('emacs  "EMACS")
+                       (_       (upcase (symbol-name evil-state))))))
+            (propertize tag 'face '(:weight normal))))
 
         '(:eval
           (if (eq ml-selected-window (selected-window))
