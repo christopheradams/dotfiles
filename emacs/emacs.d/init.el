@@ -473,6 +473,11 @@ graphical display, but hide it if in terminal."
                ("integration" "integration/*")
                (:exclude ".dir-locals.el" "*-tests.el"))))
 
+(add-hook 'eat-exec-hook
+          (lambda (&rest _)
+            (eat-line-mode)
+            (evil-insert-state)))
+
 ;;; Undo Fu
 (use-package undo-fu
   :straight t)
