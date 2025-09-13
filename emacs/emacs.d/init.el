@@ -274,7 +274,7 @@ graphical display, but hide it if in terminal."
    "pr" 'project-query-replace-regexp
    "ps" 'consult-git-grep
    "pS" 'project-find-regexp
-   "r" 're-builder
+   "R" 're-builder
    "s" 'save-buffer
    "S" 'save-some-buffers
    "T" 'toggle-truncate-lines
