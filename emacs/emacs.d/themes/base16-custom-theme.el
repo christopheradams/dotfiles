@@ -157,6 +157,12 @@
    `(org-document-title ((t (:foreground ,base-gray-07 :weight bold))))
    `(org-tag ((t (:foreground ,base-gray-06 :weight normal))))
 
+   ;; re-builder regex
+   `(reb-match-0 ((t (:foreground ,base-gray-00 :background ,base-3024-0B)))) ; the whole match
+   `(reb-match-1 ((t (:foreground ,base-gray-07 :background ,base-3024-0C)))) ; first subexpression
+   `(reb-match-2 ((t (:foreground ,base-gray-07 :background ,base-3024-09)))) ; second subexpression
+   `(reb-match-3 ((t (:foreground ,base-gray-07 :background ,base-3024-0F)))) ; third subexpression
+
    ;; show-paren-mode
    `(show-paren-match ((t (:foreground ,base-3024-08 :background ,base-gray-00 :weight bold))))
 
