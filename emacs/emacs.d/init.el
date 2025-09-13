@@ -185,6 +185,10 @@
           (lambda ()
             (setq evil-shift-width 8)))
 
+;;; Regex re-builder
+(require 're-builder)
+(setq reb-re-syntax 'string)
+
 ;;; Functions
 (defun cxa-contextual-menubar (&optional frame)
   "Display the menubar in FRAME (default: selected frame) if on a
