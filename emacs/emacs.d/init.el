@@ -405,6 +405,7 @@ graphical display, but hide it if in terminal."
      'org-babel-load-languages
      '((emacs-lisp . t)
        (calc .t)
+       (python . t)
        (ruby . t)
        (js . t)
        (shell . t)))
@@ -412,6 +413,8 @@ graphical display, but hide it if in terminal."
     (defun cxa-org-confirm-babel-evaluate (lang body)
       (not (member lang '("emacs-lisp"))))
     (setq org-confirm-babel-evaluate 'cxa-org-confirm-babel-evaluate)
+
+    (setq org-babel-python-command "python3")
 
     ;; bibtex
     (setq bibtex-set-dialect 'biblatex)
