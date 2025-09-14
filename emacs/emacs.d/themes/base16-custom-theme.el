@@ -166,6 +166,9 @@
    ;; show-paren-mode
    `(show-paren-match ((t (:foreground ,base-3024-08 :background ,base-gray-00 :weight bold))))
 
+   ;; trailing whitespace
+   `(trailing-whitespace ((t (:background ,base-gray-01))))
+
    ))
 
 (provide-theme 'base16-custom)
