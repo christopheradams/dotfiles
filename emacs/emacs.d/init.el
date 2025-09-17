@@ -641,10 +641,6 @@ graphical display, but hide it if in terminal."
   (setq diff-hl-side 'right)
   (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh))
 
-;;; gscholar bibtex
-(use-package gscholar-bibtex
-  :straight t)
-
 ;;; nginx
 (use-package nginx-mode
   :straight t)
