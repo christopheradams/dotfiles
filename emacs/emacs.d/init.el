@@ -361,7 +361,7 @@ graphical display, but hide it if in terminal."
                 ("\\.pdf\\'" . default))))
 
     (setq org-capture-templates
-          '(("n" "Note" entry (file+olp "" "Inbox" "Notes")
+          `(("n" "Note" entry (file+olp "" "Inbox" "Notes")
              "* %?\n- %i" :prepend t)
             ("t" "Todo" entry (file+olp "" "Inbox" "Tasks")
              "* TODO %?\n- %i" :prepend t)
@@ -375,7 +375,7 @@ graphical display, but hide it if in terminal."
              "* %?%t--%t\n- %i" :prepend t)
             ("l" "Link" entry (file+olp "" "Inbox" "Tasks")
              "* TODO %?\n- %a" :prepend t)
-            ("y" "Diary" entry (file+olp "" "Inbox" "Tasks")
+            ("y" "Diary" entry (file+olp ,(concat org-directory "/Journal.org") "Diary" ,(format-time-string "%Y"))
              "* Diary%?%t :taiwan:taipei:\n- %i" :prepend t)))
 
     (add-hook 'org-capture-before-finalize-hook 'cxa-add-property-with-date-created)
