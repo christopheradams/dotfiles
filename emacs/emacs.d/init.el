@@ -300,7 +300,6 @@ graphical display, but hide it if in terminal."
   ;; (require 'ox-bibtex) ;; consider org-ref
   :config
   (progn
-    (setq org-adapt-indentation 'headline-data)
     (setq org-agenda-remove-tags nil)
     (setq org-agenda-skip-archived-trees t)
     (setq org-agenda-start-with-clockreport-mode t)
@@ -332,6 +331,10 @@ graphical display, but hide it if in terminal."
     (setq org-fontify-done-headline t)
     (setq org-fontify-quote-and-verse-blocks t)
     (setq org-fontify-whole-heading-line t)
+
+    ;; indentation
+    (setq org-adapt-indentation 'headline-data)
+    (add-hook 'org-mode-hook (lambda () (electric-indent-local-mode -1)))
 
     ;; Org files
     (setq org-directory '"~/Nextcloud/Org")
