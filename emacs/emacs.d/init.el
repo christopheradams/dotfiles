@@ -410,9 +410,7 @@ graphical display, but hide it if in terminal."
        (js . t)
        (shell . t)))
     (setq org-src-fontify-natively t)
-    (defun cxa-org-confirm-babel-evaluate (lang body)
-      (not (member lang '("emacs-lisp"))))
-    (setq org-confirm-babel-evaluate 'cxa-org-confirm-babel-evaluate)
+    (setq org-confirm-babel-evaluate nil)
 
     (setq org-babel-python-command "python3")
 
@@ -642,14 +640,6 @@ graphical display, but hide it if in terminal."
   ;;(diff-hl-margin-mode)
   (setq diff-hl-side 'right)
   (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh))
-
-;;; restclient
-(use-package restclient
-  :straight t)
-
-;;; know-your-http-well
-(use-package know-your-http-well
-  :straight t)
 
 ;;; gscholar bibtex
 (use-package gscholar-bibtex
