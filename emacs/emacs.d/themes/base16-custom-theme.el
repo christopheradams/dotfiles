@@ -41,7 +41,7 @@
    `(highlight ((t (:foreground ,base-custom-cursor))))
    `(link ((t (:underline t :foreground ,base-gray-0D))))
    `(link-visited ((t (:underline t :foreground ,base-gray-0E))))
-   `(region ((t (:background ,base-3024-0A))))
+   `(region ((t (:background ,base-3024-0A :foreground ,base-gray-07))))
    `(secondary-selection ((t (:background ,base-gray-01))))
    `(vertical-border ((t (:foreground ,base-gray-03))))
    `(widget-field ((t (:foreground ,base-gray-07 :background ,base-gray-04 :box (:line-width 1 :color ,base-gray-01)))))
