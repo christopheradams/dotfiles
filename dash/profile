@@ -31,3 +31,6 @@ PATH=$PATH:/usr/local/go/bin
 PATH=$PATH:~/go/bin
 PATH=$PATH:~/.gem/ruby/3.2.0/bin
 . "$HOME/.cargo/env"
+
+# pipx
+export PATH="$PATH:/home/christopher/.local/bin"
