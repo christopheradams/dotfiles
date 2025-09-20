@@ -484,9 +484,14 @@ graphical display, but hide it if in terminal."
                (:exclude ".dir-locals.el" "*-tests.el"))))
 
 (add-hook 'eat-exec-hook
-          (lambda (&rest _)
-            (eat-line-mode)
-            (evil-insert-state)))
+           (lambda (&rest _)
+             (eat-semi-char-mode)
+             (evil-insert-state)))
+
+;; Make C-y in Evil insert (or Emacs) always call Eat yank
+(with-eval-after-load 'eat
+  (define-key eat-semi-char-mode-map (kbd "C-y") #'eat-yank)
+  (define-key eat-semi-char-mode-map (kbd "M-y") #'eat-yank-pop))
 
 ;;; Undo Fu
 (use-package undo-fu
@@ -505,6 +510,8 @@ graphical display, but hide it if in terminal."
   (evil-define-key 'insert comint-mode-map
     (kbd "<up>") 'comint-previous-input
     (kbd "<down>") 'comint-next-input)
+  (evil-define-key 'insert eat-semi-char-mode-map
+    (kbd "C-y") #'eat-yank)
   (evil-set-initial-state 'git-rebase-mode 'emacs)
   (evil-set-initial-state 'git-rebase-mode 'emacs)
   (evil-set-initial-state 'magit-popup-mode 'emacs)
