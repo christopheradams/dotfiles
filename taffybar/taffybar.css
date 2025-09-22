@@ -1,11 +1,11 @@
 @define-color transparent rgba(0, 0, 0, 0.0);
-@define-color white #FFFFFF;
-@define-color black #000000;
+@define-color white #F7F7F7;
+@define-color black #505050;
 @define-color taffy-blue #0c7cd5;
 
 @define-color active-window-color @white;
 @define-color urgent-window-color @taffy-blue;
-@define-color font-color @white;
+@define-color font-color @black;
 @define-color menu-background-color @white;
 @define-color menu-font-color @black;
 
@@ -18,30 +18,30 @@
    */
   all: unset;
 
-  font-family: "Noto Sans", sans-serif;
-  font-size: 10pt;
+  font-family: "Input Regular", monospace;
+  font-size: 8pt;
   color: @font-color;
 }
 
 .taffy-box {
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 0;
+  background-color: @white;
 }
 
 .inner-pad {
-  padding-bottom: 5px;
-  padding-top: 5px;
+  padding-bottom: 1px;
+  padding-top: 1px;
   padding-left: 2px;
   padding-right: 2px;
 }
 
 .contents {
-  padding-bottom: 4px;
-  padding-top: 4px;
+  padding-bottom: 1px;
+  padding-top: 1px;
   padding-right: 2px;
   padding-left: 2px;
   transition: background-color .5s;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 /* Workspaces styling */
@@ -49,15 +49,15 @@
 .workspace-label {
   padding-right: 3px;
   padding-left: 2px;
-  font-size: 12pt;
+  font-size: 8pt;
 }
 
 .active .contents {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .visible .contents {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .window-icon-container {
@@ -65,12 +65,16 @@
   opacity: 1;
 }
 
+.window-icon {
+  padding: 0 2px;
+}
+
 /* This gives space for the box-shadow (they look like underlines) that follow.
    This will actually affect all widgets, (not just the workspace icons), but
    that is what we want since we want the icons to look the same. */
 .auto-size-image, .sni-tray {
-  padding-top: 3px;
-  padding-bottom: 3px;
+  padding-top: 1px;
+  padding-bottom: 1px;
 }
 
 .window-icon-container.active {
@@ -124,4 +128,10 @@ button:checked, button:hover .Contents:hover {
 
 .taffy-window menuitem:hover > label, menuitem:hover > label {
   color: @white;
+}
+
+/* Other styling */
+
+.taffy-window .right-1 label {
+  padding-right: 0.5em;
 }
