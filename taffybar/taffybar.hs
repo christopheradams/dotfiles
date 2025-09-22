@@ -24,8 +24,8 @@ main = simpleTaffybar defaultSimpleTaffyConfig
                         , textMemoryMonitorNew "| $used$" 1.0
                         , networkMonitorNew "| ▼ $inAuto$ ▲ $outAuto$" Nothing
                         ]
-  , endWidgets = [ textClockNewWith myClockConfig
-                 , textClockNewWith utcClockConfig
-                 ]
-  , barHeight    = ScreenRatio (1 / 40)  -- smaller than default 1/27
-  }
+       , endWidgets = [ textClockNewWith myClockConfig
+                      , textClockNewWith utcClockConfig
+                      ]
+       , barHeight    = ScreenRatio (1 / 60)  -- smaller than default 1/27
+       }
