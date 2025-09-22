@@ -9,6 +9,12 @@ import System.Taffybar.Widget.Workspaces
 
 import Data.Time.LocalTime (utc)
 
+myWorkspacesConfig :: WorkspacesConfig
+myWorkspacesConfig = defaultWorkspacesConfig
+  { showWorkspaceFn = hideEmpty -- hide empty workspaces
+  -- , maxIcons = Just 0 -- hide icons
+  }
+
 myClockConfig :: ClockConfig
 myClockConfig = defaultClockConfig
   { clockFormatString = "%a %b %d %Y %H:%M %Z" } -- 24 hour clock
@@ -19,7 +25,7 @@ utcClockConfig = defaultClockConfig
 
 main :: IO ()
 main = simpleTaffybar defaultSimpleTaffyConfig
-       { startWidgets = [workspacesNew defaultWorkspacesConfig
+       { startWidgets = [workspacesNew myWorkspacesConfig
                         , textCpuMonitorNew "| $total$%" 1.0
                         , textMemoryMonitorNew "| $used$" 1.0
                         , networkMonitorNew "| ▼ $inAuto$ ▲ $outAuto$" Nothing
