@@ -6,7 +6,7 @@ import System.Taffybar.Widget.Workspaces
 
 myClockConfig :: ClockConfig
 myClockConfig = defaultClockConfig
-  { clockFormatString = "%a %b %d %Y %H:%M" } -- 24 hour clock
+  { clockFormatString = "%a %b %d %Y %H:%M %Z" } -- 24 hour clock
 
 main :: IO ()
 main = simpleTaffybar defaultSimpleTaffyConfig
