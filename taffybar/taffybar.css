@@ -18,7 +18,7 @@
    */
   all: unset;
 
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Input Regular", monospace;
   font-size: 10pt;
   color: @font-color;
 }
