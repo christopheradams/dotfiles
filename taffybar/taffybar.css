@@ -1,6 +1,6 @@
 @define-color transparent rgba(0, 0, 0, 0.0);
-@define-color white #FFFFFF;
-@define-color black #000000;
+@define-color white #F7F7F7;
+@define-color black #505050;
 @define-color taffy-blue #0c7cd5;
 
 @define-color active-window-color @white;
