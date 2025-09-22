@@ -129,3 +129,9 @@ button:checked, button:hover .Contents:hover {
 .taffy-window menuitem:hover > label, menuitem:hover > label {
   color: @white;
 }
+
+/* Other styling */
+
+.taffy-window .right-1 label {
+  padding-right: 0.5em;
+}
