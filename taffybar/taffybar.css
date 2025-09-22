@@ -19,7 +19,7 @@
   all: unset;
 
   font-family: "Input Regular", monospace;
-  font-size: 10pt;
+  font-size: 8pt;
   color: @font-color;
 }
 
@@ -49,7 +49,7 @@
 .workspace-label {
   padding-right: 3px;
   padding-left: 2px;
-  font-size: 12pt;
+  font-size: 8pt;
 }
 
 .active .contents {
@@ -63,6 +63,10 @@
 .window-icon-container {
   transition: opacity .5s, box-shadow .5s;
   opacity: 1;
+}
+
+.window-icon {
+  padding: 0 2px;
 }
 
 /* This gives space for the box-shadow (they look like underlines) that follow.

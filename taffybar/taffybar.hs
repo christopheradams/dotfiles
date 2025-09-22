@@ -8,4 +8,5 @@ main :: IO ()
 main = simpleTaffybar defaultSimpleTaffyConfig
   { startWidgets = [workspacesNew defaultWorkspacesConfig]
   , endWidgets = [textClockNewWith defaultClockConfig]
+  , barHeight    = ScreenRatio (1 / 40)  -- smaller than default 1/27
   }
