@@ -29,19 +29,19 @@
 }
 
 .inner-pad {
-  padding-bottom: 5px;
-  padding-top: 5px;
+  padding-bottom: 1px;
+  padding-top: 1px;
   padding-left: 2px;
   padding-right: 2px;
 }
 
 .contents {
-  padding-bottom: 4px;
-  padding-top: 4px;
+  padding-bottom: 1px;
+  padding-top: 1px;
   padding-right: 2px;
   padding-left: 2px;
   transition: background-color .5s;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 /* Workspaces styling */
@@ -73,8 +73,8 @@
    This will actually affect all widgets, (not just the workspace icons), but
    that is what we want since we want the icons to look the same. */
 .auto-size-image, .sni-tray {
-  padding-top: 3px;
-  padding-bottom: 3px;
+  padding-top: 1px;
+  padding-bottom: 1px;
 }
 
 .window-icon-container.active {

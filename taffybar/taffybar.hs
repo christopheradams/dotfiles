@@ -27,5 +27,6 @@ main = simpleTaffybar defaultSimpleTaffyConfig
        , endWidgets = [ textClockNewWith myClockConfig
                       , textClockNewWith utcClockConfig
                       ]
-       , barHeight    = ScreenRatio (1 / 60)  -- smaller than default 1/27
-       }
+       , barHeight    = ScreenRatio (1 / 70)  -- smaller than default 1/27
+       , barPosition  = Bottom
+    }
