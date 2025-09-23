@@ -8,6 +8,7 @@ import XMonad.Hooks.ManageDocks (ToggleStruts(..),avoidStruts,docks,manageDocks)
 import XMonad.Hooks.ManageHelpers
 import XMonad.Hooks.StatusBar
 import XMonad.Hooks.StatusBar.PP
+import XMonad.Hooks.TaffybarPagerHints (pagerHints)
 import XMonad.Layout.NoBorders
 import XMonad.Layout.ResizableTile
 import XMonad.Layout.ThreeColumns
@@ -55,7 +56,7 @@ main :: IO ()
 main = xmonad
        . ewmhFullscreen
        . ewmh
-       . withEasySB (statusBarProp "xmobar ~/.xmobarrc" (pure myXmobarPP)) defToggleStrutsKey
+       . pagerHints
        $ docks gnomeConfig
     { manageHook = myManageHooks <+> namedScratchpadManageHook scratchpads <+> manageDocks
     , terminal = "gnome-terminal"
