@@ -1,0 +1,9 @@
+# ~/.config/autostart/taffybar.desktop
+[Desktop Entry]
+Type=Application
+Exec=taffybar
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name=Taffybar
+Comment=Panel for XMonad
