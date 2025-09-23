@@ -35,5 +35,4 @@ main = simpleTaffybar defaultSimpleTaffyConfig
                       ]
        , barHeight    = ExactSize 18  -- default is ScreenRatio (1 / 27)
        , barPosition  = Bottom
-       -- , monitorsAction = usePrimaryMonitor
     }
