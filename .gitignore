@@ -1,6 +1,7 @@
 .netrwhist
 
 xmonad/build-x86_64-linux
+xmonad/build.log
 xmonad-x86_64-linux
 xmonad.errors
 xmonad.state
