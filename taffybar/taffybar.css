@@ -65,10 +65,6 @@
   opacity: 1;
 }
 
-.window-icon {
-  padding: 0 2px;
-}
-
 /* This gives space for the box-shadow (they look like underlines) that follow.
    This will actually affect all widgets, (not just the workspace icons), but
    that is what we want since we want the icons to look the same. */
@@ -94,6 +90,7 @@
 }
 
 .window-icon {
+  padding: 0 2px;
   opacity: 1;
   transition: opacity .5s;
 }
