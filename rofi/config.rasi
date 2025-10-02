@@ -1,0 +1,7 @@
+configuration {
+              modes: "combi";
+              font: "Input Condensed Regular 12";
+              combi-modes: [window,drun];
+}
+
+@theme "/usr/share/rofi/themes/Arc.rasi"
