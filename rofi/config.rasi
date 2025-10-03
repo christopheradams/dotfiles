@@ -1,6 +1,6 @@
 configuration {
               modes: "combi";
-              font: "Input Condensed Regular 12";
+              font: "Input Condensed Regular 9";
               combi-modes: [window,drun];
 }
 
