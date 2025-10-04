@@ -537,6 +537,12 @@ graphical display, but hide it if in terminal."
         (fill-region (point-min) (point-max)))
       (kill-region (point-min) (point-max)))))
 
+(use-package evil-collection
+  :after evil
+  :straight t
+  :config
+  (evil-collection-init))
+
 ;;; Persist history over Emacs restarts.
 (use-package savehist
   :init
