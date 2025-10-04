@@ -1,13 +1,19 @@
 /* Fix black border artifacts in Nautilus popovers under Xmonad */
+/* Unnecessary if running a compositor like picom */
 
-popover contents {
-    border: 1px solid @borders;
-    border-radius: 0;
-    box-shadow: none;
-    background-color: @theme_base_color;
-    background-clip: border-box;
-    padding: 0;
-}
-popover contents > * {
-    border-radius: 0;
+/* popover contents {
+   border: 1px solid @borders;
+   border-radius: 0;
+   box-shadow: none;
+   background-color: @theme_base_color;
+   background-clip: border-box;
+   padding: 0;
+   }
+   popover contents > * {
+   border-radius: 0;
+   } */
+
+/* Remove rounded window corners from, e.g, Nautilus */
+window {
+   border-radius: 0px;
 }
