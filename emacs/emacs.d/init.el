@@ -279,6 +279,10 @@ graphical display, but hide it if in terminal."
    "s" 'save-buffer
    "S" 'save-some-buffers
    "T" 'toggle-truncate-lines
+   "V" (lambda ()
+         (interactive)
+         (let ((current-prefix-arg '(4))) ; C-u
+           (call-interactively #'vterm)))
    "w" 'widen
    "x" 'eval-defun
    "y" 'consult-yank-from-kill-ring
@@ -471,6 +475,10 @@ graphical display, but hide it if in terminal."
   (when (memq window-system '(mac ns nil))
     (setq exec-path-from-shell-check-startup-files nil)
     (exec-path-from-shell-initialize)))
+
+;;; Emacs libvterm integration
+(use-package vterm
+  :straight t)
 
 ;;; Eat: Emulate A Terminal
 (use-package eat
