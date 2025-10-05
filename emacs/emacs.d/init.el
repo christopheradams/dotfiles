@@ -501,11 +501,6 @@ graphical display, but hide it if in terminal."
              (eat-semi-char-mode)
              (evil-insert-state)))
 
-;; Make C-y in Evil insert (or Emacs) always call Eat yank
-(with-eval-after-load 'eat
-  (define-key eat-semi-char-mode-map (kbd "C-y") #'eat-yank)
-  (define-key eat-semi-char-mode-map (kbd "M-y") #'eat-yank-pop))
-
 ;;; Undo Fu
 (use-package undo-fu
   :straight t)
@@ -519,18 +514,7 @@ graphical display, but hide it if in terminal."
   (setq evil-undo-system 'undo-fu)
   :config
   (evil-mode +1)
-  (fset 'evil-visual-update-x-selection 'ignore)
-  (evil-define-key 'insert comint-mode-map
-    (kbd "<up>") 'comint-previous-input
-    (kbd "<down>") 'comint-next-input)
-  (evil-define-key 'insert eat-semi-char-mode-map
-    (kbd "C-y") #'eat-yank)
-  (evil-set-initial-state 'git-rebase-mode 'emacs)
-  (evil-set-initial-state 'git-rebase-mode 'emacs)
-  (evil-set-initial-state 'magit-popup-mode 'emacs)
-  (evil-set-initial-state 'ag-mode 'emacs)
-  (evil-set-initial-state 'xref--xref-buffer-mode 'emacs)
-  (evil-set-initial-state 'dired-mode 'emacs))
+  (fset 'evil-visual-update-x-selection 'ignore))
 
 ;; https://gist.github.com/xahlee/d364cbbff9b3abd12d29
 (defun cxa-copy-simple (&optional beg end)
