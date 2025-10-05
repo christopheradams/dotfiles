@@ -21,17 +21,16 @@ myClockConfig = defaultClockConfig
 
 utcClockConfig :: ClockConfig
 utcClockConfig = defaultClockConfig
-  { clockTimeZone = Just utc, clockFormatString = "%H:%M %Z |" }
+  { clockTimeZone = Just utc, clockFormatString = "| %H:%M %Z" }
 
 main :: IO ()
 main = simpleTaffybar defaultSimpleTaffyConfig
-       { startWidgets = [workspacesNew myWorkspacesConfig
-                        , textCpuMonitorNew "| $total$%" 1.0
-                        , textMemoryMonitorNew "| $used$" 1.0
-                        , networkMonitorNew "| ▼ $inAuto$ ▲ $outAuto$" Nothing
-                        ]
-       , endWidgets = [ textClockNewWith myClockConfig
-                      , textClockNewWith utcClockConfig
+       { startWidgets = [workspacesNew myWorkspacesConfig]
+       , centerWidgets = [ textClockNewWith myClockConfig ]
+       , endWidgets = [ textClockNewWith utcClockConfig
+                      , textCpuMonitorNew "| $total$%" 1.0
+                      , textMemoryMonitorNew "| $used$" 1.0
+                      , networkMonitorNew "▼ $inAuto$ ▲ $outAuto$" Nothing
                       ]
        , barHeight    = ExactSize 18  -- default is ScreenRatio (1 / 27)
        , barPosition  = Bottom

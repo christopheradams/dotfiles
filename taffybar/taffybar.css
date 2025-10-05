@@ -133,6 +133,10 @@ button:checked, button:hover .Contents:hover {
 
 /* Other styling */
 
+.taffy-window .center-1 label {
+  font-weight: bold;
+}
+
 .taffy-window .right-1 label {
   padding-right: 0.5em;
 }
