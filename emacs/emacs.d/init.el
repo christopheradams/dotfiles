@@ -74,6 +74,10 @@
 (global-set-key (kbd "s-a") 'shrink-window)
 (global-set-key (kbd "s-z") 'enlarge-window)
 
+;;; Window Navigate
+(global-set-key (kbd "s-j") (lambda () (interactive) (other-window 1)))
+(global-set-key (kbd "s-k") (lambda () (interactive) (other-window -1)))
+
 ;;; Scrolling
 (setq scroll-step 1)
 (setq scroll-conservatively 10000)
