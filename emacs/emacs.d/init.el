@@ -635,6 +635,10 @@ graphical display, but hide it if in terminal."
   (setq ag-reuse-buffers 't)
   (setq ag-highlight-search t))
 
+;;; ripgrep
+(use-package rg
+  :straight t)
+
 ;;; Magit
 (use-package magit
   :straight t
