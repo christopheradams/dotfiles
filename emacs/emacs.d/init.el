@@ -277,8 +277,8 @@ graphical display, but hide it if in terminal."
    "pm" 'consult-project-buffer
    "pp" 'project-switch-project
    "pr" 'project-query-replace-regexp
-   "ps" 'consult-git-grep
-   "pS" 'project-find-regexp
+   "ps" 'consult-ripgrep
+   "pS" 'rg-project-wide
    "R" 're-builder
    "s" 'save-buffer
    "S" 'save-some-buffers
