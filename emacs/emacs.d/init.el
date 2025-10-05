@@ -637,7 +637,13 @@ graphical display, but hide it if in terminal."
 
 ;;; ripgrep
 (use-package rg
-  :straight t)
+  :straight t
+  :config
+  (rg-define-search rg-project-wide
+    "Search project-wide."
+    :files "everything"
+    :dir project
+    :menu ("Search" "w" "Project-wide")))
 
 ;;; Magit
 (use-package magit
