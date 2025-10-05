@@ -11,8 +11,8 @@ import Data.Time.LocalTime (utc)
 
 myWorkspacesConfig :: WorkspacesConfig
 myWorkspacesConfig = defaultWorkspacesConfig
-  { showWorkspaceFn = hideEmpty -- hide empty workspaces
-  -- , maxIcons = Just 0 -- hide icons
+  { maxIcons = Just 0 -- hide icons
+    -- showWorkspaceFn = hideEmpty -- hide empty workspaces
   }
 
 myClockConfig :: ClockConfig
