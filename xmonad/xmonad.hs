@@ -9,6 +9,7 @@ import XMonad.Hooks.ManageHelpers
 import XMonad.Hooks.StatusBar
 import XMonad.Hooks.StatusBar.PP
 import XMonad.Hooks.TaffybarPagerHints (pagerHints)
+import XMonad.Layout.Dwindle as D
 import XMonad.Layout.NoBorders
 import XMonad.Layout.ResizableTile
 import XMonad.Layout.ThreeColumns
@@ -35,9 +36,10 @@ scratchpads =
   , NS "terminal" "gnome-terminal --class Gnome-terminal-scratch" (className =? "Gnome-terminal-scratch") (customFloating $ W.RationalRect (1/4) (1/4) (1/2) (1/2))
   ]
 
-myLayout = ( smartBorders $ avoidStruts  (resizableTile ||| threeColMid ||| mirrorResizableTile ||| Full ))
+myLayout = ( smartBorders $ avoidStruts  (resizableTile ||| dwindleTile ||| threeColMid ||| mirrorResizableTile ||| Full ))
     where
     resizableTile = ResizableTall 1 (3/100) (1/2) []
+    dwindleTile = D.Dwindle D.R D.CW 1.5 1.1
     mirrorResizableTile = Mirror resizableTile
     threeColMid = ThreeColMid 1 (3/100) (1/2)
 
