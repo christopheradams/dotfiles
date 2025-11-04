@@ -74,9 +74,9 @@
    ;; diff-hl-mode
    `(diff-added ((t (:foreground ,base-3024-0B))))
    `(diff-changed ((t (:foreground ,base-3024-0E))))
-   `(diff-file-header ((t (:foreground ,base-gray-02))))
-   `(diff-header ((t (:foreground ,base-gray-02))))
-   `(diff-hunk-header ((t (:foreground ,base-gray-02))))
+   `(diff-file-header ((t (:foreground ,base-gray-05 :background ,base-gray-01))))
+   `(diff-header ((t (:foreground ,base-gray-03))))
+   `(diff-hunk-header ((t (:foreground ,base-gray-03))))
    `(diff-removed ((t (:foreground ,base-custom-cursor))))
 
    ;; font-lock
