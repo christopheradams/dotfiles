@@ -511,6 +511,7 @@ graphical display, but hide it if in terminal."
 (use-package evil
   :straight t
   :init
+  (setq evil-want-keybinding nil)
   (setq evil-undo-system 'undo-fu)
   :config
   (evil-mode +1)
