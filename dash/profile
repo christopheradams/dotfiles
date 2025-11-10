@@ -34,3 +34,4 @@ PATH=$PATH:~/.gem/ruby/3.2.0/bin
 
 # pipx
 export PATH="$PATH:/home/christopher/.local/bin"
+. "/home/christopher/.deno/env"

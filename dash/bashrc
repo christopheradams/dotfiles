@@ -132,3 +132,4 @@ export PATH="$PATH:/home/christopher/.local/bin"
 # ghcup
 # export PATH="$HOME/.ghcup/bin:$PATH"
 # export PATH="$HOME/.cabal/bin:$PATH"
+. "/home/christopher/.deno/env"
