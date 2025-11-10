@@ -33,7 +33,7 @@
    'base16-custom
 
    ;; ag-mode
-   `(ag-match-face ((t (:inherit highlight :weight bold :background nil))))
+   `(ag-match-face ((t (:inherit highlight :weight bold :background unspecified))))
 
    ;; basic colors
    `(cursor ((t (:background ,base-custom-cursor))))
@@ -47,7 +47,7 @@
    `(widget-field ((t (:foreground ,base-gray-07 :background ,base-gray-04 :box (:line-width 1 :color ,base-gray-01)))))
 
    ;; column-marker
-   `(column-marker-1 ((t (:background nil :inherit highlight))))
+   `(column-marker-1 ((t (:background unspecified :inherit highlight))))
 
    ;; compilation
    `(compilation-column-number ((t (:inherit default :underline t))))
@@ -114,8 +114,7 @@
    `(magit-branch-remote ((t (:foreground ,base-3024-0B))))
    `(magit-diff-hunk-heading ((t (:background ,base-gray-01))))
    `(magit-diff-hunk-heading-highlight ((t (:background ,base-gray-02))))
-   `(magit-popup-argument ((t (:inherit highlight :weight bold :background nil))))
-   `(magit-popup-argument ((t (:inherit highlight :weight bold :background nil))))
+   `(magit-popup-argument ((t (:inherit highlight :weight bold :background unspecified))))
    `(magit-popup-key ((t (:foreground ,base-3024-0D))))
    `(magit-section-heading ((t (:foreground ,base-3024-0F :weight bold))))
 
