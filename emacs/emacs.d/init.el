@@ -200,6 +200,12 @@ graphical display, but hide it if in terminal."
   (interactive)
   (set-frame-parameter frame 'menu-bar-lines (if (display-graphic-p frame) 1 0)))
 
+(defun title-case-region (beg end)
+  "Convert region to title case by first downcasing, then upcasing initials."
+  (interactive "r")
+  (downcase-region beg end)
+  (upcase-initials-region beg end))
+
 ;;; Packages
 (straight-use-package 'use-package)
 
