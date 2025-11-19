@@ -25,8 +25,7 @@ import System.IO
 -- scratchPads
 scratchpads :: [NamedScratchpad]
 scratchpads =
-  [ NS "1password" "1password" (className =? "1Password") doCenterFloat
-  , NS "gnome-clocks" "gnome-clocks" (className =? "org.gnome.clocks") (customFloating $ W.RationalRect (1/4) (1/4) (1/2) (1/2))
+  [ NS "gnome-clocks" "gnome-clocks" (className =? "org.gnome.clocks") (customFloating $ W.RationalRect (1/4) (1/4) (1/2) (1/2))
   , NS "gnome-control-center" "gnome-control-center network" (className =? "gnome-control-center") doCenterFloat
   , NS "gnome-system-monitor" "gnome-system-monitor" (className =? "gnome-system-monitor") (customFloating $ W.RationalRect (1/4) (1/4) (1/2) (1/2))
   , NS "localsend" "localsend" (className =? "Localsend_app") nonFloating
