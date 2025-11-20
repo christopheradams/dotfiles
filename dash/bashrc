@@ -130,6 +130,6 @@ export PATH="$PATH:/home/christopher/.local/bin"
 # export PATH="$HOME/.stack/programs/x86_64-linux/ghc-tinfo6-9.10.2/bin:$PATH"
 
 # ghcup
-# export PATH="$HOME/.ghcup/bin:$PATH"
-# export PATH="$HOME/.cabal/bin:$PATH"
+export PATH="$HOME/.ghcup/bin:$PATH"
+export PATH="$HOME/.cabal/bin:$PATH"
 . "/home/christopher/.deno/env"
