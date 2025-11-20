@@ -27,7 +27,7 @@ scratchpads :: [NamedScratchpad]
 scratchpads =
   [ NS "gnome-clocks" "gnome-clocks" (className =? "org.gnome.clocks") (customFloating $ W.RationalRect (1/4) (1/4) (1/2) (1/2))
   , NS "gnome-control-center" "gnome-control-center network" (className =? "gnome-control-center") doCenterFloat
-  , NS "gnome-system-monitor" "gnome-system-monitor" (className =? "gnome-system-monitor") (customFloating $ W.RationalRect (1/4) (1/4) (1/2) (1/2))
+  , NS "gnome-system-monitor" "gnome-system-monitor" (className =? "gnome-system-monitor") (customFloating $ W.RationalRect (1/4) 0 (1/2) (4/5))
   , NS "localsend" "localsend" (className =? "Localsend_app") nonFloating
   , NS "keepassxc" "keepassxc" (className =? "KeePassXC") (customFloating $ W.RationalRect (1/4) (1/4) (1/2) (1/2))
   , NS "nextcloud" "nextcloud-desktop-client" (className =? "Nextcloud") doCenterFloat
