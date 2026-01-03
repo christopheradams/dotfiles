@@ -390,8 +390,11 @@ graphical display, but hide it if in terminal."
              "* %?%t--%t\n- %i" :prepend t)
             ("l" "Link" entry (file+olp "" "Inbox" "Tasks")
              "* TODO %?\n- %a" :prepend t)
-            ("y" "Diary" entry (file+olp ,(concat org-directory "/Journal.org") "Diary" ,(format-time-string "%Y"))
-             "* Diary%?%t :taiwan:taipei:\n- %i" :prepend t)))
+            ("y" "Diary" entry
+             (file+datetree ,(concat org-directory "/Journal.org"))
+             "* Diary%?%t :taiwan:taipei:\n- %i"
+             :tree-type month
+             :prepend t)))
 
     (add-hook 'org-capture-before-finalize-hook 'cxa-add-property-with-date-created)
 
