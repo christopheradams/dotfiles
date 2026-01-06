@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<openbox_config>
+  <libinput>
+    <device category="default">
+      <naturalScroll>yes</naturalScroll>
+      <scrollFactor>1.0</scrollFactor>
+    </device>
+  </libinput>
+<theme><font place="ActiveWindow"><name>Nunito Sans</name><size>12</size><weight>Light</weight><slant>Normal</slant></font><font place="InactiveWindow"><name>Nunito Sans</name><size>12</size><weight>Light</weight><slant>Normal</slant></font><name>PiXtrix</name></theme></openbox_config>
