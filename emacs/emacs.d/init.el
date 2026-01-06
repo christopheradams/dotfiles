@@ -391,7 +391,7 @@ graphical display, but hide it if in terminal."
             ("l" "Link" entry (file+olp "" "Inbox" "Tasks")
              "* TODO %?\n- %a" :prepend t)
             ("y" "Diary" entry
-             (file+datetree ,(concat org-directory "/Journal.org"))
+             (file+olp+datetree ,(concat org-directory "/Journal.org"))
              "* Diary%?%t :taiwan:taipei:\n- %i"
              :tree-type month
              :prepend t)))
