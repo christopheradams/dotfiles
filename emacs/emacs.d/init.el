@@ -390,9 +390,9 @@ graphical display, but hide it if in terminal."
              "* %?%t--%t\n- %i" :prepend t)
             ("l" "Link" entry (file+olp "" "Inbox" "Tasks")
              "* TODO %?\n- %a" :prepend t)
-            ("y" "Diary" entry
+            ("j" "Journal" entry
              (file+olp+datetree ,(concat org-directory "/Journal.org"))
-             "* Diary%?%t :taiwan:taipei:\n- %i"
+             "* Journal%?%t :taiwan:taipei:\n- %i"
              :tree-type month
              :prepend t)))
 
