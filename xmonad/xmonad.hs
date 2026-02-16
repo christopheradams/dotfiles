@@ -28,6 +28,7 @@ scratchpads =
   [ NS "gnome-clocks" "gnome-clocks" (className =? "org.gnome.clocks") (customFloating $ W.RationalRect (1/4) (1/4) (1/2) (1/2))
   , NS "gnome-control-center" "gnome-control-center network" (className =? "gnome-control-center") doCenterFloat
   , NS "gnome-system-monitor" "gnome-system-monitor" (className =? "gnome-system-monitor") (customFloating $ W.RationalRect (1/4) 0 (1/2) (4/5))
+  , NS "blueman-manager" "blueman-manager" (className =? "Blueman-manager") doCenterFloat
   , NS "localsend" "localsend" (className =? "Localsend_app") nonFloating
   , NS "keepassxc" "keepassxc" (className =? "KeePassXC") (customFloating $ W.RationalRect (1/4) (1/4) (1/2) (1/2))
   , NS "nextcloud" "nextcloud-desktop-client" (className =? "Nextcloud") doCenterFloat
@@ -79,6 +80,7 @@ main = xmonad
     , ((mod1Mask .|. shiftMask, xK_w), namedScratchpadAction scratchpads "gnome-clocks")
     , ((mod1Mask .|. shiftMask, xK_u), namedScratchpadAction scratchpads "gnome-control-center")
     , ((mod1Mask .|. shiftMask, xK_i), namedScratchpadAction scratchpads "gnome-system-monitor")
+    , ((mod1Mask .|. shiftMask, xK_o), namedScratchpadAction scratchpads "blueman-manager")
     , ((mod1Mask .|. shiftMask, xK_l), namedScratchpadAction scratchpads "localsend")
     , ((mod1Mask .|. shiftMask, xK_n), namedScratchpadAction scratchpads "nextcloud")
     , ((mod1Mask .|. shiftMask, xK_m), namedScratchpadAction scratchpads "terminal")
