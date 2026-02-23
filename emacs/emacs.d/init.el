@@ -343,6 +343,7 @@ graphical display, but hide it if in terminal."
 
     (setq org-export-backends '(ascii html icalendar latex md org))
     (setq org-export-with-sub-superscripts '{})
+    (setq org-export-with-smart-quotes t)
     (setq org-fontify-done-headline t)
     (setq org-fontify-quote-and-verse-blocks t)
     (setq org-fontify-whole-heading-line t)
