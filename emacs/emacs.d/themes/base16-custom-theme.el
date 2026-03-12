@@ -168,6 +168,9 @@
    ;; trailing whitespace
    `(trailing-whitespace ((t (:background ,base-gray-01))))
 
+   ;; which-func
+   `(which-func ((t (:weight normal))))
+
    ))
 
 (provide-theme 'base16-custom)
