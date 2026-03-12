@@ -86,6 +86,7 @@ main = xmonad
     , ((mod1Mask,               xK_p), spawn "rofi -show combi")
     , ((mod1Mask,               xK_z), sendMessage MirrorShrink)
     , ((mod1Mask,               xK_a), sendMessage MirrorExpand)
+    , ((mod1Mask .|. shiftMask, xK_s), sendMessage ToggleStruts)
     , ((0, xK_F11), lowerVolume 5 >> return ())
     , ((0, xK_F12), raiseVolume 5 >> return ())
     , ((0, xK_Print), spawn "gnome-screenshot")
