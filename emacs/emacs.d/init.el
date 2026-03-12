@@ -477,6 +477,15 @@ graphical display, but hide it if in terminal."
   (let ((output-file (org-export-to-file 'html (org-export-output-file-name ".html" t) nil t)))
     (browse-url output-file)))
 
+(defun cxa-org-which-function ()
+  (when (derived-mode-p 'org-mode)
+    (mapconcat #'identity (org-get-outline-path t) " → ")))
+
+(defun cxa-org-which-func-setup ()
+  (setq-local which-func-functions '(cxa-org-which-function)))
+
+(add-hook 'org-mode-hook #'cxa-org-which-func-setup)
+
 ;;; Column-marker
 (use-package column-marker
   :straight t
