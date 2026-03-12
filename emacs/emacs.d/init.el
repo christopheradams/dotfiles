@@ -65,6 +65,8 @@
 
 (put 'upcase-region 'disabled nil)
 
+(which-function-mode 1)
+
 ;;; Frames
 (add-hook 'after-make-frame-functions 'cxa-contextual-menubar)
 
