@@ -5,6 +5,7 @@ import System.Taffybar.Widget.SimpleClock
 import System.Taffybar.Widget.Text.CPUMonitor
 import System.Taffybar.Widget.Text.MemoryMonitor
 import System.Taffybar.Widget.Text.NetworkMonitor
+import System.Taffybar.Widget.Windows (windowsNew, defaultWindowsConfig)
 import System.Taffybar.Widget.Workspaces
 
 import Data.Time.LocalTime (utc)
@@ -25,7 +26,9 @@ utcClockConfig = defaultClockConfig
 
 main :: IO ()
 main = simpleTaffybar defaultSimpleTaffyConfig
-       { startWidgets = [workspacesNew myWorkspacesConfig]
+       { startWidgets = [ workspacesNew myWorkspacesConfig
+                        , windowsNew defaultWindowsConfig
+                        ]
        , centerWidgets = [ textClockNewWith myClockConfig ]
        , endWidgets = [ textClockNewWith utcClockConfig
                       , textCpuMonitorNew "| $total$%" 1.0
