@@ -68,7 +68,7 @@
 (which-function-mode 1)
 
 ;;; Frames
-(add-hook 'after-make-frame-functions 'cxa-contextual-menubar)
+(add-hook 'after-make-frame-functions 'cxa/contextual-menubar)
 
 ;;; Window Resize
 (global-set-key (kbd "s-h") 'shrink-window-horizontally)
@@ -89,11 +89,11 @@
 
 ;;; Formatting
 (setq-default indent-tabs-mode nil)
-(defun cxa-truncate-no-wrap () (setq truncate-lines t word-wrap nil))
-(add-hook 'prog-mode-hook 'cxa-truncate-no-wrap)
-(add-hook 'nxml-mode-hook 'cxa-truncate-no-wrap)
-(add-hook 'org-mode-hook 'cxa-truncate-no-wrap)
-(add-hook 'org-agenda-mode-hook 'cxa-truncate-no-wrap)
+(defun cxa/truncate-no-wrap () (setq truncate-lines t word-wrap nil))
+(add-hook 'prog-mode-hook 'cxa/truncate-no-wrap)
+(add-hook 'nxml-mode-hook 'cxa/truncate-no-wrap)
+(add-hook 'org-mode-hook 'cxa/truncate-no-wrap)
+(add-hook 'org-agenda-mode-hook 'cxa/truncate-no-wrap)
 (add-hook 'diff-mode-hook (lambda () (setq truncate-lines nil)))
 
 ;;; Line wrap fringe bitmaps
@@ -196,7 +196,7 @@
 (setq reb-re-syntax 'string)
 
 ;;; Functions
-(defun cxa-contextual-menubar (&optional frame)
+(defun cxa/contextual-menubar (&optional frame)
   "Display the menubar in FRAME (default: selected frame) if on a
 graphical display, but hide it if in terminal."
   (interactive)
@@ -266,7 +266,7 @@ graphical display, but hide it if in terminal."
    "od" 'org-deadline
    "oe" 'org-set-effort
    "oi" 'org-clock-in
-   "oj" 'cxa-org-refile-jump
+   "oj" 'cxa/org-refile-jump
    "oL" 'org-insert-link
    "ol" 'org-store-link
    "on" 'org-insert-heading-respect-content
@@ -276,9 +276,9 @@ graphical display, but hide it if in terminal."
    "or" 'org-reveal
    "os" 'org-schedule
    "oS" 'org-narrow-to-subtree
-   "oT" 'cxa-org-todo-done-last-clock-out-time
+   "oT" 'cxa/org-todo-done-last-clock-out-time
    "ot" 'org-todo
-   "ow" 'cxa-org-refile
+   "ow" 'cxa/org-refile
    "oW" 'org-refile-goto-last-stored
    "pE" 'project-eshell
    "pf" 'project-find-file
@@ -298,7 +298,7 @@ graphical display, but hide it if in terminal."
    "w" 'widen
    "x" 'eval-defun
    "y" 'consult-yank-from-kill-ring
-   "Y" 'cxa-copy-simple))
+   "Y" 'cxa/copy-simple))
 
 ;;; base16
 (use-package base16-theme
@@ -399,7 +399,7 @@ graphical display, but hide it if in terminal."
              :tree-type month
              :prepend t)))
 
-    (add-hook 'org-capture-before-finalize-hook 'cxa-add-property-with-date-created)
+    (add-hook 'org-capture-before-finalize-hook 'cxa/add-property-with-date-created)
 
     (setq org-agenda-prefix-format
           (quote
@@ -447,44 +447,44 @@ graphical display, but hide it if in terminal."
 (use-package org-clock-convenience
   :straight t)
 
-(defun cxa-org-refile ()
+(defun cxa/org-refile ()
   "Move the entry or entries at point to another heading."
   (interactive)
   (if (bound-and-true-p org-capture-mode)
       (org-capture-refile)
     (org-refile)))
 
-(defun cxa-org-refile-jump ()
+(defun cxa/org-refile-jump ()
   "Use the refile interface to jump to a heading."
   (interactive)
   (let ((current-prefix-arg '(4))) ;; emulate C-u
     (call-interactively 'org-refile)))
 
-(defun cxa-add-property-with-date-created ()
+(defun cxa/add-property-with-date-created ()
   "Add CREATED property to the current item."
   (interactive)
   (org-set-property "CREATED" (format-time-string (org-time-stamp-format '(16) t))))
 
-(defun cxa-org-todo-done-last-clock-out-time ()
+(defun cxa/org-todo-done-last-clock-out-time ()
   "Close the task at the time of the last clock out."
   (interactive)
   (let ((org-use-last-clock-out-time-as-effective-time t))
     (org-todo "DONE")))
 
-(defun cxa-org-export-subtree-to-html-and-open ()
+(defun cxa/org-export-subtree-to-html-and-open ()
   "Export the current Org subtree to an HTML file and open it."
   (interactive)
   (let ((output-file (org-export-to-file 'html (org-export-output-file-name ".html" t) nil t)))
     (browse-url output-file)))
 
-(defun cxa-org-which-function ()
+(defun cxa/org-which-function ()
   (when (derived-mode-p 'org-mode)
     (mapconcat #'identity (org-get-outline-path t) " → ")))
 
-(defun cxa-org-which-func-setup ()
-  (setq-local which-func-functions '(cxa-org-which-function)))
+(defun cxa/org-which-func-setup ()
+  (setq-local which-func-functions '(cxa/org-which-function)))
 
-(add-hook 'org-mode-hook #'cxa-org-which-func-setup)
+(add-hook 'org-mode-hook #'cxa/org-which-func-setup)
 
 ;;; Column-marker
 (use-package column-marker
@@ -539,7 +539,7 @@ graphical display, but hide it if in terminal."
   (fset 'evil-visual-update-x-selection 'ignore))
 
 ;; https://gist.github.com/xahlee/d364cbbff9b3abd12d29
-(defun cxa-copy-simple (&optional beg end)
+(defun cxa/copy-simple (&optional beg end)
   "Save the current region (or line) to the `kill-ring' after stripping extra whitespace and new lines"
   (interactive
    (if (region-active-p)
