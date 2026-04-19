@@ -158,6 +158,9 @@
 ;;; Lock files
 (setq create-lockfiles nil)
 
+;;; ispell
+(setq ispell-help-in-bufferp t)
+
 ;;; SQLi
 (add-hook 'sql-interactive-mode-hook
           (lambda ()
