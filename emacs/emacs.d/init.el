@@ -96,6 +96,25 @@
 (add-hook 'org-agenda-mode-hook 'cxa/truncate-no-wrap)
 (add-hook 'diff-mode-hook (lambda () (setq truncate-lines nil)))
 
+;;; Zooming
+(defun cxa/zoom-in ()
+  "Increase text scale and line spacing together."
+  (interactive)
+  (text-scale-increase 1)
+  (setq-local line-spacing (+ (or line-spacing 0) 0.2)))
+
+(defun cxa/zoom-out ()
+  "Decrease text scale and line spacing together."
+  (interactive)
+  (text-scale-decrease 1)
+  (setq-local line-spacing (max 0 (- (or line-spacing 0) 0.2))))
+
+(defun cxa/zoom-reset ()
+  "Reset text scale and line spacing to defaults."
+  (interactive)
+  (text-scale-set 0)
+  (setq-local line-spacing nil))
+
 ;;; Line wrap fringe bitmaps
 (define-fringe-bitmap 'right-curly-arrow
   [#b00000000
