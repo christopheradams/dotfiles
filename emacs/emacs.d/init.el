@@ -322,13 +322,6 @@ graphical display, but hide it if in terminal."
    "y" 'consult-yank-from-kill-ring
    "Y" 'cxa/copy-simple))
 
-;;; base16
-(use-package base16-theme
-  :straight t
-  :config
-  (load-theme 'base16-grayscale-light t)
-  (load-theme 'base16-custom t))
-
 ;;; Org-mode
 (use-package org
   :straight (:type git :host github :repo "bzg/org-mode"
@@ -905,6 +898,170 @@ graphical display, but hide it if in terminal."
 ;;; mode-line
 (let ((modeline.el (expand-file-name "modeline.el" user-emacs-directory)))
   (load modeline.el))
+
+;;; base16
+(use-package base16-theme
+  :straight t
+  :config
+  (require 'base16-grayscale-light-theme)
+  (require 'base16-grayscale-dark-theme)
+  (require 'base16-3024-theme)
+
+  (defun cxa/current-base16-colors ()
+    (cond
+     ((member 'base16-grayscale-light custom-enabled-themes) base16-grayscale-light-theme-colors)
+     ((member 'base16-grayscale-dark custom-enabled-themes)  base16-grayscale-dark-theme-colors)))
+
+  (defun cxa/apply-custom-faces (&rest _)
+      (let* ((bases         (cxa/current-base16-colors))
+             (color         base16-3024-theme-colors)
+             (cust00         "#AB4642")
+             (base00        (plist-get bases :base00))  ; #f7f7f7 #101010
+             (base01        (plist-get bases :base01))  ; #e3e3e3 #252525
+             (base02        (plist-get bases :base02))  ; #b9b9b9 #464646
+             (base03        (plist-get bases :base03))  ; #ababab #525252
+             (base04        (plist-get bases :base04))  ; #525252 #ababab
+             (base05        (plist-get bases :base05))  ; #464646 #b9b9b9
+             (base06        (plist-get bases :base06))  ; #252525 #e3e3e3
+             (base07        (plist-get bases :base07))  ; #101010 #f7f7f7
+             (base08        (plist-get bases :base08))  ; #7c7c7c #7c7c7c
+             (base09        (plist-get bases :base09))  ; #999999 #999999
+             (base0A        (plist-get bases :base0A))  ; #a0a0a0 #a0a0a0
+             (base0B        (plist-get bases :base0B))  ; #8e8e8e #8e8e8e
+             (base0C        (plist-get bases :base0C))  ; #868686 #868686
+             (base0D        (plist-get bases :base0D))  ; #686868 #686868
+             (base0E        (plist-get bases :base0E))  ; #747474 #747474
+             (base0F        (plist-get bases :base0F))  ; #5e5e5e #5e5e5e
+             (colr00        (plist-get color :base00))  ; #090300
+             (colr01        (plist-get color :base01))  ; #3a3432
+             (colr02        (plist-get color :base02))  ; #4a4543
+             (colr03        (plist-get color :base03))  ; #5c5855
+             (colr04        (plist-get color :base04))  ; #807d7c
+             (colr05        (plist-get color :base05))  ; #a5a2a2
+             (colr06        (plist-get color :base06))  ; #d6d5d4
+             (colr07        (plist-get color :base07))  ; #f7f7f7
+             (colr08        (plist-get color :base08))  ; #db2d20
+             (colr09        (plist-get color :base09))  ; #e8bbd0
+             (colr0A        (plist-get color :base0A))  ; #fded02
+             (colr0B        (plist-get color :base0B))  ; #01a252
+             (colr0C        (plist-get color :base0C))  ; #b5e4f4
+             (colr0D        (plist-get color :base0D))  ; #01a0e4
+             (colr0E        (plist-get color :base0E))  ; #a16a94
+             (colr0F        (plist-get color :base0F))) ; #cdab53
+        (custom-set-faces
+         `(column-marker-1 ((t (:background unspecified :inherit highlight))))
+
+         `(compilation-column-number ((t (:inherit default :underline t))))
+         `(compilation-info ((t (:weight bold :foreground ,base08))))
+         `(compilation-line-number ((t (:inherit default :underline t))))
+
+         `(cursor ((t (:background ,cust00 :foreground ,colr07))))
+
+         `(diff-added ((t (:foreground ,colr0B))))
+         `(diff-changed ((t (:foreground ,colr0E))))
+         `(diff-file-header ((t (:foreground ,base05 :background ,base01))))
+         `(diff-header ((t (:foreground ,base03))))
+         `(diff-hl-change ((t (:inherit magit-diff-base))))
+         `(diff-hl-delete ((t (:inherit magit-diff-removed))))
+         `(diff-hl-insert ((t (:inherit magit-diff-added))))
+         `(diff-hl-unknown ((t (:foreground ,base02))))
+         `(diff-hunk-header ((t (:foreground ,base03))))
+         `(diff-removed ((t (:inherit magit-diff-removed))))
+
+         `(elixir-atom-face ((t (:foreground ,colr0D))))
+         `(elixir-attribute-face ((t (:foreground ,colr0E))))
+
+         `(font-lock-constant-face ((t (:foreground ,colr0D))))
+         `(font-lock-doc-face ((t (:foreground ,base02))))
+         `(font-lock-function-name-face ((t (:weight bold))))
+         `(font-lock-variable-name-face ((t (:foreground ,colr0B))))
+         `(font-lock-warning-face ((t (:foreground ,cust00 :weight bold))))
+
+         `(fringe ((t (:background ,base00))))
+
+         `(isearch ((t (:foreground ,colr0A :background ,base06 :inverse-video t))))
+         `(isearch-lazy-highlight-face ((t (:foreground ,base02 :background ,base06 :inverse-video t))))
+
+         `(link ((t (:underline t :foreground ,base0D))))
+         `(link-visited ((t (:underline t :foreground ,base0E))))
+
+         `(linum ((t (:background ,base00 :foreground ,base01))))
+         `(linum-highlight-face ((t (:background ,base00 :foreground ,colr09))))
+
+         `(magit-branch-current ((t (:foreground ,colr0D :weight bold))))
+         `(magit-branch-local ((t (:foreground ,colr0D))))
+         `(magit-branch-remote ((t (:foreground ,colr0B))))
+         `(magit-diff-hunk-heading ((t (:background ,base01))))
+         `(magit-diff-hunk-heading-highlight ((t (:background ,base02))))
+         `(magit-popup-argument ((t (:inherit highlight :weight bold :background unspecified))))
+         `(magit-popup-key ((t (:foreground ,colr0D))))
+         `(magit-section-heading ((t (:foreground ,colr0F :weight bold))))
+
+         `(mode-line ((t (:background ,colr0A :foreground ,colr00 :box ,base04))))
+         `(mode-line-highlight ((t (:background ,cust00 :foreground ,colr07))))
+         `(mode-line-inactive ((t (:background ,base00 :foreground ,base03 :box ,base03))))
+
+         `(orderless-match-face-0 ((t (:foreground ,colr0D :weight bold))))
+         `(orderless-match-face-1 ((t (:foreground ,colr0E :weight bold))))
+         `(orderless-match-face-2 ((t (:foreground ,colr0B :weight bold))))
+         `(orderless-match-face-3 ((t (:foreground ,colr0F :weight bold))))
+
+         `(org-agenda-current-time ((t (:foreground ,colr0D))))
+         `(org-agenda-date-weekend ((t (:inherit org-agenda-date :weight normal :slant italic))))
+         `(org-block ((t (:background ,base00))))
+         `(org-block-begin-line ((t (:foreground ,base02 :background ,base00))))
+         `(org-block-end-line ((t (:foreground ,base02 :background ,base00))))
+         `(org-date ((t (:foreground ,base0E))))
+         `(org-document-title ((t (:foreground ,base07 :weight bold))))
+         `(org-done ((t (:background ,base00 :foreground ,base02))))
+         `(org-drawer ((t (:foreground ,base0E))))
+         `(org-headline-done ((t (:background ,base00 :foreground ,base02 :weight normal))))
+         `(org-hide ((t (:foreground ,base06))))
+         `(org-imminent-deadline ((t (:foreground ,colr08 :weight bold))))
+         `(org-level-1 ((t (:foreground ,colr0D :weight bold))))
+         `(org-level-2 ((t (:foreground ,colr0E :weight bold))))
+         `(org-level-3 ((t (:foreground ,base06 :weight bold))))
+         `(org-level-4 ((t (:foreground ,base04 :weight bold))))
+         `(org-level-5 ((t (:foreground ,base04 :weight bold))))
+         `(org-level-6 ((t (:foreground ,base04 :weight bold))))
+         `(org-level-7 ((t (:foreground ,base04 :weight bold))))
+         `(org-level-8 ((t (:foreground ,base04 :weight bold))))
+         `(org-link ((t (:underline t :foreground ,base0D))))
+         `(org-link ((t (:underline t :foreground ,base0D))))
+         `(org-priority ((t (:foreground ,base07 :weight normal))))
+         `(org-scheduled-today ((t (:foreground ,colr0B :weight bold))))
+         `(org-tag ((t (:foreground ,base06 :weight normal))))
+         `(org-todo ((t (:background ,base00))))
+
+         `(reb-match-0 ((t (:foreground ,base00 :background ,colr0B)))) ; the whole match
+         `(reb-match-1 ((t (:foreground ,base07 :background ,colr0C)))) ; first subexpression
+         `(reb-match-2 ((t (:foreground ,base07 :background ,colr09)))) ; second subexpression
+         `(reb-match-3 ((t (:foreground ,base07 :background ,colr0F)))) ; third subexpression
+
+         `(region ((t (:background ,colr0A :foreground ,colr00))))
+
+         `(secondary-selection ((t (:background ,base01))))
+
+         `(show-paren-match ((t (:foreground ,colr08 :background ,base00 :weight bold))))
+
+         `(vertical-border ((t (:foreground ,base03))))
+
+         `(warning ((t (:foreground ,cust00 :weight normal))))
+
+         `(which-func ((t (:weight normal))))
+
+         `(widget-field ((t (:foreground ,base07 :background ,base04 :box (:line-width 1 :color ,base01)))))
+         )))
+
+  (add-hook 'enable-theme-functions #'cxa/apply-custom-faces)
+  (cxa/apply-custom-faces))
+
+;;; auto-dark
+(use-package auto-dark
+  :straight t
+  :config
+  (setq auto-dark-themes '((base16-grayscale-dark) (base16-grayscale-light)))
+  (auto-dark-mode))
 
 ;;; Secrets
 (let ((secret.el (expand-file-name "secret.el" user-emacs-directory)))
