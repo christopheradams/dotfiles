@@ -78,9 +78,12 @@
                        (_       (upcase (symbol-name evil-state))))))
             (propertize tag 'face '(:weight normal))))
 
+        ;; show misc info (like function name) in active window
         '(:eval
           (if (eq ml-selected-window (selected-window))
-              'mode-line-misc-info))
+              (propertize
+               (format-mode-line mode-line-misc-info)
+               'face '(:inherit mode-line :weight bold))))
 
         'mode-line-end-spaces
         )))
