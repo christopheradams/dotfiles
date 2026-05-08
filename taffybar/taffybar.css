@@ -1,7 +1,15 @@
 @define-color transparent rgba(0, 0, 0, 0.0);
+@define-color transparent2 rgba(0, 0, 0, 0.1);
+@define-color transparent3 rgba(0, 0, 0, 0.2);
+
 @define-color white #F7F7F7;
 @define-color black #505050;
 @define-color taffy-blue #0c7cd5;
+@define-color mute #b9b9b9;
+
+.visible .contents {
+  background-color: @transparent2;
+}
 
 @define-color active-window-color @white;
 @define-color urgent-window-color @taffy-blue;
@@ -53,15 +61,15 @@
 }
 
 .workspace-label.empty {
-  color: #b9b9b9;
+  color: @mute;
 }
 
 .active .contents {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: @transparent3;
 }
 
 .visible .contents {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: @transparent2;
 }
 
 .window-icon-container {
