@@ -583,25 +583,20 @@ graphical display, but hide it if in terminal."
 
 ;;; VERTical Interactive COmpletion
 (use-package vertico
-  :straight (vertico :files (:defaults "extensions/*")
-                     :includes (vertico-indexed
-                                vertico-flat
-                                vertico-grid
-                                vertico-mouse
-                                vertico-quick
-                                vertico-buffer
-                                vertico-repeat
-                                vertico-reverse
-                                vertico-directory
-                                vertico-multiform
-                                vertico-unobtrusive))
+  :straight t
   :custom
   (vertico-count 10)
   (vertico-multiform-commands
    '((execute-extended-command flat)))
   :init
   (vertico-mode)
-  (vertico-multiform-mode))
+  (if (minibufferp)
+      (run-at-time 0 nil #'vertico-multiform-mode)
+    (vertico-multiform-mode)))
+
+(use-package vertico-multiform
+  :after vertico
+  :ensure nil)
 
 ;;; Orderless completion style
 (use-package orderless
