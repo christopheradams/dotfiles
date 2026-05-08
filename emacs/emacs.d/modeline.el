@@ -50,21 +50,15 @@
         " "
 
         ;; the buffer name; the file name as a tool tip
-        '(:eval (propertize "%b " 'face 'font-lock-keyword-face
+        '(:eval (propertize "%b " 'face 'bold
                       'help-echo (buffer-file-name)))
 
         ;; line and column
-        "(" ;; '%02' to set to 2 chars at least; prevents flickering
-        (propertize "%02l" 'face 'font-lock-type-face) ","
-        (propertize "%02c" 'face 'font-lock-type-face)
-        ") "
+        ;; '%02' to set to 2 chars at least; prevents flickering
+        "(%02l,%02c) "
 
         ;; relative position, size of file
-        "["
-        (propertize "%p" 'face 'font-lock-type-face) ;; % above top
-        "/"
-        (propertize "%I" 'face 'font-lock-type-face) ;; size
-        "]"
+        "[%p/%I]"
 
         '(vc-mode vc-mode)
 
