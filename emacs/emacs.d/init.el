@@ -977,7 +977,7 @@ graphical display, but hide it if in terminal."
          `(isearch ((t (:foreground ,colr0A :background ,base06 :inverse-video t))))
          `(isearch-lazy-highlight-face ((t (:foreground ,base02 :background ,base06 :inverse-video t))))
 
-         `(link ((t (:underline t :foreground ,base0D))))
+         `(link ((t (:underline t :foreground unspecified))))
          `(link-visited ((t (:underline t :foreground ,base0E))))
 
          `(linum ((t (:background ,base00 :foreground ,base01))))
