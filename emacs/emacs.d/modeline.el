@@ -26,9 +26,8 @@
 
         ;; is this buffer read-only?
         '(:eval (when buffer-read-only
-                  (concat " "  (propertize "RO"
-                                           'face 'font-lock-type-face
-                                           'help-echo "Buffer is read-only"))))
+                  (concat " " (propertize "RO"
+                                          'help-echo "Buffer is read-only"))))
 
         ;;; is buffer modified?
         '(:eval (when (buffer-modified-p)
