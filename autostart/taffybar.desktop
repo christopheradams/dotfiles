@@ -1,7 +1,7 @@
 # ~/.config/autostart/taffybar.desktop
 [Desktop Entry]
 Type=Application
-Exec=taffybar
+Exec=env GTK_THEME=Yaru:dark taffybar
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true
