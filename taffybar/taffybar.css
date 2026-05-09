@@ -2,8 +2,8 @@
 @define-color transparent2 rgba(0, 0, 0, 0.1);
 @define-color transparent3 rgba(0, 0, 0, 0.2);
 
-@define-color white #F7F7F7;
-@define-color black #505050;
+@define-color white @theme_bg_color;
+@define-color black @theme_fg_color;
 @define-color taffy-blue #0c7cd5;
 @define-color mute #b9b9b9;
 
