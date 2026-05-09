@@ -54,6 +54,9 @@ myXmobarPP :: PP
 myXmobarPP = def
 -- TODO customize config
 
+darkMode :: Bool
+darkMode = False
+
 main :: IO ()
 main = xmonad
        . ewmhFullscreen
@@ -65,7 +68,8 @@ main = xmonad
     , layoutHook = myLayout
         , borderWidth = 2
         , focusedBorderColor = "#E7766B"
-        , normalBorderColor = "#E7E8EB"
+        , normalBorderColor =
+          if darkMode then "#2B2F36" else "#E7E8EB"
     } `additionalKeys`
     [ ((mod4Mask .|. shiftMask, xK_z), spawn "gnome-screensaver-command --lock") --mod4mask is the windows key
     , ((mod1Mask .|. shiftMask, xK_e), spawnHere "emacsclient --no-wait --create-frame --alternate-editor='' --eval '(switch-to-buffer nil)'") -- %! Launch emacs
