@@ -911,6 +911,7 @@ graphical display, but hide it if in terminal."
       (let* ((bases         (cxa/current-base16-colors))
              (color         base16-3024-theme-colors)
              (cust00         "#AB4642")
+             (cust01         "#F1E437")
              (base00        (plist-get bases :base00))  ; #f7f7f7 #101010
              (base01        (plist-get bases :base01))  ; #e3e3e3 #252525
              (base02        (plist-get bases :base02))  ; #b9b9b9 #464646
@@ -992,7 +993,7 @@ graphical display, but hide it if in terminal."
          `(magit-popup-key ((t (:foreground ,colr0D))))
          `(magit-section-heading ((t (:foreground ,colr0F :weight bold))))
 
-         `(mode-line ((t (:background ,colr0A :foreground ,colr00 :box ,base04))))
+         `(mode-line ((t (:background ,cust01 :foreground ,colr00 :box ,base04))))
          `(mode-line-highlight ((t (:background ,cust00 :foreground ,colr07))))
          `(mode-line-inactive ((t (:background ,base00 :foreground ,base03 :box ,base03))))
 
