@@ -676,6 +676,14 @@ graphical display, but hide it if in terminal."
       (if (member 'magit-blame-mode active)
           (magit-blame-quit)
         (magit-blame))))
+  (with-eval-after-load 'project
+    (setq project-switch-commands
+          (assq-delete-all 'project-vc-dir
+                           project-switch-commands))
+
+    (setq project-switch-commands
+          (append project-switch-commands
+                  '((magit-project-status "Magit" ?m)))))
   :init
   (add-hook 'magit-blame-mode-hook
             (lambda ()
