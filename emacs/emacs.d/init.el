@@ -781,6 +781,10 @@ graphical display, but hide it if in terminal."
   (add-to-list 'auto-mode-alist '("\\.latex\\'" . LaTeX-mode))
   (add-to-list 'auto-mode-alist '("\\.fontspec\\'" . LaTeX-mode)))
 
+;;; CSV
+(use-package csv-mode
+  :straight t)
+
 ;;; JSON
 (use-package json-mode
   :straight t
