@@ -681,9 +681,8 @@ graphical display, but hide it if in terminal."
           (assq-delete-all 'project-vc-dir
                            project-switch-commands))
 
-    (setq project-switch-commands
-          (append project-switch-commands
-                  '((magit-project-status "Magit" ?m)))))
+    (add-to-list 'project-switch-commands
+                 '(magit-project-status "Magit" ?m)))
   :init
   (add-hook 'magit-blame-mode-hook
             (lambda ()
