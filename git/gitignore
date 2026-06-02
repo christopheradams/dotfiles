@@ -11,3 +11,6 @@
 
 # Elixir
 .iex.exs
+
+# Mise
+mise.toml
