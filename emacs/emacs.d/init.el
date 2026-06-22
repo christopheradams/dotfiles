@@ -919,8 +919,8 @@ graphical display, but hide it if in terminal."
      ((member 'base16-grayscale-dark custom-enabled-themes)  base16-grayscale-dark-theme-colors)))
 
   (defun cxa/apply-custom-faces (&rest _)
-      (let* ((bases         (cxa/current-base16-colors))
-             (color         base16-3024-theme-colors)
+    (when-let ((bases (cxa/current-base16-colors)))
+      (let* ((color         base16-3024-theme-colors)
              (cust00         "#AB4642")
              (cust01         "#F1E437")
              (base00        (plist-get bases :base00))  ; #f7f7f7 #101010
@@ -1058,10 +1058,9 @@ graphical display, but hide it if in terminal."
          `(which-func ((t (:weight normal))))
 
          `(widget-field ((t (:foreground ,base07 :background ,base04 :box (:line-width 1 :color ,base01)))))
-         )))
+         ))))
 
-  (add-hook 'enable-theme-functions #'cxa/apply-custom-faces)
-  (cxa/apply-custom-faces))
+  (add-hook 'enable-theme-functions #'cxa/apply-custom-faces))
 
 ;;; auto-dark
 (use-package auto-dark
