@@ -180,6 +180,13 @@
 ;;; ispell
 (setq ispell-help-in-bufferp t)
 
+;;; sh-mode
+(add-hook 'sh-mode-hook
+          (lambda ()
+            (setq sh-basic-offset 2)
+            (setq sh-indentation 2)
+            (setq indent-tabs-mode nil)))
+
 ;;; SQLi
 (add-hook 'sql-interactive-mode-hook
           (lambda ()
