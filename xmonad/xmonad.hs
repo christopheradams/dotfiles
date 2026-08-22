@@ -88,7 +88,7 @@ main = xmonad
     , ((mod1Mask .|. shiftMask, xK_n), namedScratchpadAction scratchpads "nextcloud")
     , ((mod1Mask .|. shiftMask, xK_m), namedScratchpadAction scratchpads "terminal")
     , ((mod1Mask .|. shiftMask, xK_q), spawn "gnome-session-quit")
-    , ((mod1Mask,               xK_p), spawn "rofi -show combi")
+    , ((mod1Mask,               xK_p), spawn "rofi -show combi -theme-str 'window { width: 800px; height: 640px; }'")
     , ((mod1Mask,               xK_z), sendMessage MirrorShrink)
     , ((mod1Mask,               xK_a), sendMessage MirrorExpand)
     , ((mod1Mask .|. shiftMask, xK_s), sendMessage ToggleStruts)
