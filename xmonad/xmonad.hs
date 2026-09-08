@@ -14,6 +14,7 @@ import XMonad.Layout.NoBorders
 import XMonad.Layout.ResizableTile
 import XMonad.Layout.ThreeColumns
 import XMonad.ManageHook
+import XMonad.Prompt.ConfirmPrompt (confirmPrompt)
 import XMonad.StackSet as W
 import XMonad.Util.Dmenu
 import XMonad.Util.EZConfig(additionalKeys)
@@ -33,7 +34,7 @@ scratchpads =
   , NS "keepassxc" "keepassxc" (className =? "KeePassXC") (customFloating $ W.RationalRect (1/4) (1/4) (1/2) (1/2))
   , NS "nextcloud" "nextcloud-desktop-client" (className =? "Nextcloud") doCenterFloat
   , NS "gnome-calculator" "gnome-calculator" (className =? "gnome-calculator") (customFloating $ W.RationalRect (1/4) (1/4) (1/2) (1/2))
-  , NS "terminal" "gnome-terminal --class Gnome-terminal-scratch" (className =? "Gnome-terminal-scratch") (customFloating $ W.RationalRect (1/4) (1/4) (1/2) (1/2))
+  , NS "terminal" "gnome-terminal --role terminal-scratchpad" (stringProperty "WM_WINDOW_ROLE" =? "terminal-scratchpad") (customFloating $ W.RationalRect (1/4) (1/4) (1/2) (1/2))
   ]
 
 myLayout = ( smartBorders $ avoidStruts  (resizableTile ||| dwindleTile ||| threeColMid ||| mirrorResizableTile ||| Full ))
@@ -87,7 +88,7 @@ main = xmonad
     , ((mod1Mask .|. shiftMask, xK_l), namedScratchpadAction scratchpads "localsend")
     , ((mod1Mask .|. shiftMask, xK_n), namedScratchpadAction scratchpads "nextcloud")
     , ((mod1Mask .|. shiftMask, xK_m), namedScratchpadAction scratchpads "terminal")
-    , ((mod1Mask .|. shiftMask, xK_q), spawn "gnome-session-quit")
+    , ((mod1Mask .|. shiftMask, xK_q), confirmPrompt def "exit xmonad" (io exitSuccess))
     , ((mod1Mask,               xK_p), spawn "rofi -show combi -theme-str 'window { width: 800px; height: 640px; }'")
     , ((mod1Mask,               xK_z), sendMessage MirrorShrink)
     , ((mod1Mask,               xK_a), sendMessage MirrorExpand)
