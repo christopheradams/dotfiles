@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=XMonad (bare)
+Comment=xmonad without gnome-flashback
+Exec=xmonad-bare-session
+Type=XSession

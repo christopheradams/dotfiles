@@ -1,0 +1,3 @@
+#!/bin/sh
+# /usr/local/bin/xmonad-bare-session
+exec "$HOME"/.xsession-xmonad

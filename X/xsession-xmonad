@@ -1,0 +1,17 @@
+#!/bin/sh
+# ~/.xsession-xmonad
+
+export XDG_CURRENT_DESKTOP=GNOME
+
+setxkbmap -option caps:escape
+
+/usr/libexec/gsd-xsettings &
+/usr/libexec/gsd-media-keys &
+
+picom &
+
+systemctl --user start xdg-desktop-portal.service xdg-desktop-portal-gtk.service &
+
+GTK_THEME=Yaru:dark "$HOME/.local/bin/taffybar" &
+
+exec "$HOME/.local/bin/xmonad"
