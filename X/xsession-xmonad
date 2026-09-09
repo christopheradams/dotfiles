@@ -26,5 +26,8 @@ systemctl --user start xdg-desktop-portal.service xdg-desktop-portal-gtk.service
 # Status bar
 GTK_THEME=Yaru:dark "$HOME/.local/bin/taffybar" &
 
+# Notifications
+dunst &
+
 # Window manager
 exec "$HOME/.local/bin/xmonad"
