@@ -9,6 +9,9 @@ if command -v dbus-update-activation-environment >/dev/null 2>&1; then
     dbus-update-activation-environment --systemd DISPLAY XAUTHORITY XDG_CURRENT_DESKTOP DESKTOP_SESSION
 fi
 
+# Pre-warm daemons that gnome-session normally starts eagerly
+systemctl --user start dconf.service at-spi-dbus-bus.service gvfs-daemon.service gvfs-udisks2-volume-monitor.service &
+
 # Keyboard layouts
 setxkbmap -option -option caps:escape -option compose:ralt
 
