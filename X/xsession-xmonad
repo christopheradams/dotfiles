@@ -1,9 +1,6 @@
 #!/bin/sh
 # ~/.xsession-xmonad
 
-# Desktop environment
-export XDG_CURRENT_DESKTOP=GNOME
-
 # DBus environment
 if command -v dbus-update-activation-environment >/dev/null 2>&1; then
     dbus-update-activation-environment --systemd DISPLAY XAUTHORITY XDG_CURRENT_DESKTOP DESKTOP_SESSION
