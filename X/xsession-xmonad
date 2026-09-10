@@ -10,7 +10,7 @@ if command -v dbus-update-activation-environment >/dev/null 2>&1; then
 fi
 
 # Keyboard layouts
-setxkbmap -option caps:escape
+setxkbmap -option -option caps:escape -option compose:ralt
 
 # GNOME system daemons
 /usr/libexec/gsd-xsettings &
