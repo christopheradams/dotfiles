@@ -924,7 +924,7 @@ graphical display, but hide it if in terminal."
      ((member 'base16-grayscale-dark custom-enabled-themes)  base16-grayscale-dark-theme-colors)))
 
   (defun cxa/apply-custom-faces (&rest _)
-    (when-let ((bases (cxa/current-base16-colors)))
+    (when-let* ((bases (cxa/current-base16-colors)))
       (let* ((color         base16-3024-theme-colors)
              (cust00         "#AB4642")
              (cust01         "#F1E437")
