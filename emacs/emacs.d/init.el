@@ -1041,7 +1041,6 @@ graphical display, but hide it if in terminal."
          `(org-level-7 ((t (:foreground ,base04 :weight bold))))
          `(org-level-8 ((t (:foreground ,base04 :weight bold))))
          `(org-link ((t (:underline t :foreground ,base0D))))
-         `(org-link ((t (:underline t :foreground ,base0D))))
          `(org-priority ((t (:foreground ,base07 :weight normal))))
          `(org-scheduled-today ((t (:foreground ,colr0B :weight bold))))
          `(org-tag ((t (:foreground ,base06 :weight normal))))
