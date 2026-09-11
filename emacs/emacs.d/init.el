@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t; -*-
 ;; Start emacs as a server
 (server-start)
 

@@ -1,4 +1,6 @@
- ;; prevent package.el loading packages prior to their init-file loading
+;; -*- lexical-binding: t; -*-
+
+;; prevent package.el loading packages prior to their init-file loading
 (setq package-enable-at-startup nil)
 
 ;; disable native compilation
