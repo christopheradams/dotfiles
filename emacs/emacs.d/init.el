@@ -670,9 +670,14 @@ graphical display, but hide it if in terminal."
     :dir project
     :menu ("Search" "w" "Project-wide")))
 
+;;; transient
+(use-package transient
+  :straight t)
+
 ;;; Magit
 (use-package magit
   :straight t
+  :after transient
   :config
   (setq git-commit-summary-max-length 50
         git-commit-fill-column 72)
