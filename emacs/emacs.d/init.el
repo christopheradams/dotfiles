@@ -910,10 +910,6 @@ graphical display, but hide it if in terminal."
 ;; (init-open-recentf)
 (put 'downcase-region 'disabled nil)
 
-;;; mode-line
-(let ((modeline.el (expand-file-name "modeline.el" user-emacs-directory)))
-  (load modeline.el))
-
 ;;; base16
 (use-package base16-theme
   :straight t
@@ -1076,6 +1072,10 @@ graphical display, but hide it if in terminal."
   :config
   (setq auto-dark-themes '((base16-grayscale-dark) (base16-grayscale-light)))
   (auto-dark-mode))
+
+;;; mode-line
+(let ((modeline.el (expand-file-name "modeline.el" user-emacs-directory)))
+  (load modeline.el))
 
 ;;; Secrets
 (let ((secret.el (expand-file-name "secret.el" user-emacs-directory)))
