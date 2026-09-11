@@ -3,7 +3,7 @@
  ("annalist.el" . "e1ef5dad75fa502d761f70d9ddf1aeb1c423f41d")
  ("auctex" . "5f42ef42064af5458d2d175796aeb8da1983453f")
  ("auto-dark-emacs" . "6d1e8d2fc493dccbf05c9191611805c7e7881c70")
- ("base16-emacs" . "1d48474c3c07521276f4e7d73317a654997b4381")
+ ("base16-emacs" . "17acf7f6efd7a73dadb902d2f5586aec4e32051e")
  ("bind-key" . "d3c50aef4452d7cfaf8f11fe507b4bd9449270ad")
  ("column-marker" . "a60a26ea9e740d568bd7c9c158cfd1e872d56ee9")
  ("compat" . "6926fcc1c891d4ff677515c0eaadf84d3ab364b1")
