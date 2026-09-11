@@ -26,6 +26,7 @@
 (setq user-mail-address "info@christopheradams.io")
 
 ;;; Themes
+(setq custom-safe-themes t)
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (add-to-list 'default-frame-alist '(tty-color-mode . -1))
 
