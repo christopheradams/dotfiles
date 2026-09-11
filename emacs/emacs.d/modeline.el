@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t; -*-
 (defvar ml-selected-window nil)
 
 (defun ml-record-selected-window ()
