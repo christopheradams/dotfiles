@@ -637,6 +637,9 @@ graphical display, but hide it if in terminal."
   (corfu-cycle t)
   (corfu-preselect 'prompt)
   (corfu-auto-delay 0.25)
+  :config
+  (setq corfu-quit-no-match t)
+  (setq global-corfu-modes '((not org-mode markdown-mode) t))
   :bind
   (:map corfu-map
         ("SPC" . corfu-insert-separator)
