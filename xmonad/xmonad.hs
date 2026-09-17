@@ -30,7 +30,7 @@ scratchpads =
   , NS "gnome-control-center" "env XDG_CURRENT_DESKTOP=GNOME gnome-control-center background" (className =? "gnome-control-center") (customFloating $ W.RationalRect (1/4) (1/4) (1/2) (1/2))
   , NS "gnome-system-monitor" "gnome-system-monitor" (className =? "gnome-system-monitor") (customFloating $ W.RationalRect (1/4) 0 (1/2) (4/5))
   , NS "blueman-manager" "blueman-manager" (className =? "Blueman-manager") doCenterFloat
-  , NS "localsend" "localsend" (className =? "Localsend_app") nonFloating
+  , NS "localsend" "localsend" (className =? "Org.localsend.localsend_app") nonFloating
   , NS "keepassxc" "keepassxc" (className =? "KeePassXC") (customFloating $ W.RationalRect (1/4) (1/4) (1/2) (1/2))
   , NS "nextcloud" "nextcloud-desktop-client" (className =? "Nextcloud") doCenterFloat
   , NS "gnome-calculator" "gnome-calculator" (className =? "gnome-calculator") (customFloating $ W.RationalRect (1/4) (1/4) (1/2) (1/2))
