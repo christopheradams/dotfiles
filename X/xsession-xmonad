@@ -10,7 +10,7 @@ fi
 systemctl --user start dconf.service at-spi-dbus-bus.service gvfs-daemon.service gvfs-udisks2-volume-monitor.service &
 
 # Keyboard layouts
-setxkbmap -option -option caps:escape -option compose:ralt
+setxkbmap -option caps:escape -option compose:ralt
 
 # GNOME system daemons
 /usr/libexec/gsd-xsettings &
