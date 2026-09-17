@@ -999,6 +999,8 @@ graphical display, but hide it if in terminal."
 
          `(fringe ((t (:background ,base00))))
 
+         `(help-key-binding ((t (:foreground ,colr08 :background ,base00 :box (:line-width 1 :color ,colr08)))))
+
          `(isearch ((t (:foreground ,colr0A :background ,colr00 :inverse-video t))))
          `(isearch-lazy-highlight-face ((t (:foreground ,base02 :background ,base06 :inverse-video t))))
 
