@@ -1055,10 +1055,10 @@ graphical display, but hide it if in terminal."
                   `(org-tag ((t (:foreground ,base06 :weight normal))))
                   `(org-todo ((t (:background ,base00))))
 
-                  `(reb-match-0 ((t (:foreground ,base00 :background ,colr0B))))
-                  `(reb-match-1 ((t (:foreground ,base07 :background ,colr0C))))
-                  `(reb-match-2 ((t (:foreground ,base07 :background ,colr09))))
-                  `(reb-match-3 ((t (:foreground ,base07 :background ,colr0F))))
+                  `(reb-match-0 ((t (:foreground ,base00 :background ,colr0B)))) ; the whole match
+                  `(reb-match-1 ((t (:foreground ,base07 :background ,colr0C)))) ; first subexpression
+                  `(reb-match-2 ((t (:foreground ,base07 :background ,colr09)))) ; second subexpression
+                  `(reb-match-3 ((t (:foreground ,base07 :background ,colr0F)))) ; third subexpression
 
                   `(region ((t (:background ,colr0A :foreground ,colr00))))
 
