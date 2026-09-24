@@ -1076,6 +1076,29 @@ graphical display, but hide it if in terminal."
                  )
           (face-spec-set (car entry) (cadr entry) 'face-override-spec)))))
 
+  ;; base16-theme's generated Gnus group-level faces have a latent
+  ;; :inherit cycle across this whole family, surfaced by Emacs 31's
+  ;; new circular-inheritance check (bug#79672). Rather than patch
+  ;; each one as it's hit, neutralize the whole family up front.
+  (defconst cxa/gnus-group-faces
+    (append
+     (mapcar (lambda (n) (intern (format "gnus-group-mail-%s" n))) '(1 2 3 low))
+     (mapcar (lambda (n) (intern (format "gnus-group-mail-%s-empty" n))) '(1 2 3 low))
+     (mapcar (lambda (n) (intern (format "gnus-group-news-%s" n))) '(1 2 3 4 5 6 low))
+     (mapcar (lambda (n) (intern (format "gnus-group-news-%s-empty" n))) '(1 2 3 4 5 6 low)))
+    "All standard Gnus group-level faces, prone to base16-theme's inheritance cycle bug.")
+
+  (defun cxa/neutralize-gnus-group-faces (theme)
+    (apply #'custom-theme-set-faces theme
+           (mapcar (lambda (face) `(,face ((t (:inherit default :weight normal)))))
+                   cxa/gnus-group-faces)))
+
+  (with-eval-after-load 'base16-grayscale-dark-theme
+    (cxa/neutralize-gnus-group-faces 'base16-grayscale-dark))
+
+  (with-eval-after-load 'base16-grayscale-light-theme
+    (cxa/neutralize-gnus-group-faces 'base16-grayscale-light))
+
   (add-hook 'enable-theme-functions #'cxa/apply-custom-faces))
 
 ;;; auto-dark
