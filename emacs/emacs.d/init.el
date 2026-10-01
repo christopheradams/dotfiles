@@ -154,7 +154,7 @@
 (add-to-list 'auto-mode-alist '("\\.log\\'" . auto-revert-tail-mode))
 
 ;;; Auto Fill Mode (wraps line automatically)
-(add-hook 'text-mode-hook 'turn-on-auto-fill)
+(remove-hook 'text-mode-hook 'turn-on-auto-fill)
 (add-hook 'org-mode-hook 'turn-on-auto-fill)
 (setq-default fill-column 72)
 
@@ -558,6 +558,7 @@ graphical display, but hide it if in terminal."
   :init
   (setq evil-want-keybinding nil)
   (setq evil-undo-system 'undo-fu)
+  (setq evil-respect-visual-line-mode t)
   :config
   (evil-mode +1)
   (fset 'evil-visual-update-x-selection 'ignore))
@@ -762,7 +763,8 @@ graphical display, but hide it if in terminal."
   :straight t
   :config
   (add-hook 'markdown-mode-hook (lambda () (set-fill-column 72)))
-  (setq markdown-command "pandoc --from gfm --to html --standalone"))
+  (setq markdown-command "pandoc --from gfm --to html --standalone")
+  :hook (markdown-mode . visual-line-mode))
 
 ;;; YAML
 (use-package yaml-mode
