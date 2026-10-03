@@ -10,7 +10,9 @@ fi
 systemctl --user start dconf.service at-spi-dbus-bus.service gvfs-daemon.service gvfs-udisks2-volume-monitor.service &
 
 # Keyboard layouts
-setxkbmap -option caps:escape -option compose:ralt
+# These are instead set in xorg.conf.d by my playbook, since these
+# options would occasionally become unset.
+# setxkbmap -option caps:escape -option compose:ralt
 
 # GNOME system daemons
 /usr/libexec/gsd-xsettings &
