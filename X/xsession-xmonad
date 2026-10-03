@@ -32,5 +32,8 @@ GTK_THEME=Yaru:dark "$HOME/.local/bin/taffybar" &
 # Notifications
 dunst &
 
+# Nextcloud
+nextcloud-desktop-client --background &
+
 # Window manager
 exec "$HOME/.local/bin/xmonad"
