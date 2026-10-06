@@ -46,7 +46,6 @@
 (tool-bar-mode -1)
 (blink-cursor-mode -1)
 (setq inhibit-startup-screen t)
-(setq font-use-system-font t)
 ;; (menu-bar-mode -1)
 
 ;; line numbers
@@ -69,6 +68,14 @@
 
 (which-function-mode 1)
 
+;;; Fonts
+(setq font-use-system-font t)
+(set-fontset-font t 'bopomofo (font-spec :family "Noto Sans Mono CJK TC") nil 'prepend)
+(set-fontset-font t 'cjk-misc (font-spec :family "Noto Sans Mono CJK TC") nil 'prepend)
+(set-fontset-font t 'han      (font-spec :family "Noto Sans Mono CJK TC") nil 'prepend)
+(set-fontset-font t 'hangul   (font-spec :family "Noto Sans Mono CJK KR") nil 'prepend)
+(set-fontset-font t 'kana     (font-spec :family "Noto Sans Mono CJK JP") nil 'prepend)
+
 ;;; Frames
 (add-hook 'after-make-frame-functions 'cxa/contextual-menubar)
 
@@ -88,6 +95,7 @@
 (setq auto-window-vscroll nil)
 (setq mouse-wheel-progressive-speed nil)
 (setq mouse-wheel-scroll-amount '(2 ((shift) . 1)))
+(setq compilation-scroll-output t)
 
 ;;; Formatting
 (setq-default indent-tabs-mode nil)
