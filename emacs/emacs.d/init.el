@@ -1130,7 +1130,8 @@ graphical display, but hide it if in terminal."
 (use-package gptel
   :straight t
   :custom
-  (gptel-model 'gpt-5.4-mini))
+  (gptel-model 'gpt-5.4-mini)
+  (gptel-default-mode 'org-mode))
 
 ;;; Local file
 (let ((local-file (expand-file-name "local.el" user-emacs-directory)))
