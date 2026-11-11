@@ -1126,6 +1126,12 @@ graphical display, but hide it if in terminal."
 (let ((modeline.el (expand-file-name "modeline.el" user-emacs-directory)))
   (load modeline.el))
 
+;;; gptel
+(use-package gptel
+  :straight t
+  :custom
+  (gptel-model 'gpt-5.4-mini))
+
 ;;; Local file
 (let ((local-file (expand-file-name "local.el" user-emacs-directory)))
   (when (file-exists-p local-file)
