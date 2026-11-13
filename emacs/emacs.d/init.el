@@ -1123,7 +1123,7 @@ graphical display, but hide it if in terminal."
 (let ((modeline.el (expand-file-name "modeline.el" user-emacs-directory)))
   (load modeline.el))
 
-;;; Secrets
-(let ((secret.el (expand-file-name "secret.el" user-emacs-directory)))
-  (when (file-exists-p secret.el)
-    (load secret.el)))
+;;; Local file
+(let ((local-file (expand-file-name "local.el" user-emacs-directory)))
+  (when (file-exists-p local-file)
+    (load local-file nil 'nomessage)))
