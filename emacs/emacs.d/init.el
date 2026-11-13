@@ -1133,7 +1133,8 @@ graphical display, but hide it if in terminal."
   (gptel-model 'gpt-5.4-mini)
   (gptel-default-mode 'org-mode)
   :hook
-  (gptel-mode . visual-line-mode))
+  ((gptel-mode . visual-line-mode)
+   (gptel-post-stream . gptel-auto-scroll)))
 
 ;;; Local file
 (let ((local-file (expand-file-name "local.el" user-emacs-directory)))
