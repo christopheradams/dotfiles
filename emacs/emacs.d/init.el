@@ -1136,9 +1136,14 @@ graphical display, but hide it if in terminal."
   ((gptel-mode . visual-line-mode)
    (gptel-post-stream . gptel-auto-scroll))
   :config
-  ;; Make <return> trigger RET (gptel-send) in gtpel-menu
+  ;; Make <return> trigger RET (gptel-send) in menu and tools
   (with-eval-after-load 'gptel-transient
-    (transient-suffix-put 'gptel-menu (kbd "RET") :key "<return>")))
+    (dolist (menu '(gptel-menu gptel-tools))
+      (condition-case err
+          (transient-suffix-put menu "RET" :key "<return>")
+        (error
+         (message "gptel RET workaround skipped for %s: %s"
+                  menu (error-message-string err)))))))
 
 ;;; Local file
 (let ((local-file (expand-file-name "local.el" user-emacs-directory)))
