@@ -1136,22 +1136,6 @@ graphical display, but hide it if in terminal."
   ((gptel-mode . visual-line-mode)
    (gptel-post-stream . gptel-auto-scroll))
   :config
-  ;; tools
-  (gptel-make-tool
-  :name "toggle_appearance"
-  :function
-  (lambda (request)
-    (unless (stringp request)
-      (error "error: request must be a string"))
-    (auto-dark-toggle-appearance)
-    (format "Toggled auto-dark appearance in response to request: %s" request))
-  :description "Toggle Emacs appearance using auto-dark. Use this for requests to toggle appearance, light mode, dark mode, auto-dark mode, or theme appearance. Any phrasing like 'toggle dark mode', 'toggle light mode', or 'toggle auto-dark' should call this tool."
-  :args
-  (list
-    '(:name "request"
-      :type string
-      :description "The user's request text, such as 'toggle dark mode', 'toggle light mode', or 'toggle appearance'." ))
-  :category "emacs")
   ;; Make <return> trigger RET (gptel-send) in menu and tools
   (with-eval-after-load 'gptel-transient
     (dolist (menu '(gptel-menu gptel-tools))
@@ -1160,6 +1144,11 @@ graphical display, but hide it if in terminal."
         (error
          (message "gptel RET workaround skipped for %s: %s"
                   menu (error-message-string err)))))))
+
+;;; gptel-tools
+(let ((gptel-file (expand-file-name "gptel.el" user-emacs-directory)))
+  (when (file-exists-p gptel-file)
+    (load gptel-file nil 'nomessage)))
 
 ;;; Local file
 (let ((local-file (expand-file-name "local.el" user-emacs-directory)))
