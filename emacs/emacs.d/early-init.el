@@ -1,10 +1,10 @@
 ;; -*- lexical-binding: t; -*-
 
-;; prevent package.el loading packages prior to their init-file loading
+;; Keep package.el from activating packages before init.el runs.
 (setq package-enable-at-startup nil)
 
-;; Warnings
+;; Reduce startup noise from files that intentionally omit a lexical-binding cookie.
 (setq warning-inhibit-types '((files missing-lexbind-cookie)))
 
-;; disable native compilation
+;; Disable native compilation at startup if desired.
 ;; (setq native-comp-speed -1)
