@@ -339,14 +339,16 @@ graphical display, but hide it if in terminal."
    "y" 'consult-yank-from-kill-ring
    "Y" 'cxa/copy-simple))
 
+;;; bibtex
+(add-to-list 'safe-local-variable-values
+              '(eval bibtex-set-dialect 'biblatex))
+
 ;;; Org-mode
 (use-package org
   :straight (:type git :host github :repo "bzg/org-mode"
                    :commit "2afac54c573e373aa77912c5e5c8c9cbe477108e")
   :init
-  (require 'ol-bibtex)
   (require 'org-tempo)
-  ;; (require 'ox-bibtex) ;; consider org-ref
   :config
   (progn
     (setq org-agenda-remove-tags nil)
@@ -470,9 +472,8 @@ graphical display, but hide it if in terminal."
 
     (setq org-babel-python-command "python3")
 
-    ;; bibtex
-    (setq bibtex-set-dialect 'biblatex)
-    (setq org-bibtex-file "Papers.org")))
+    (setq org-cite-global-bibliography
+          (list (expand-file-name "Ref.bib" org-directory)))))
 
 (straight-use-package 'org-contrib)
 
