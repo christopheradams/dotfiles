@@ -1136,6 +1136,9 @@ graphical display, but hide it if in terminal."
   ((gptel-mode . visual-line-mode)
    (gptel-post-stream . gptel-auto-scroll))
   :config
+  (setq gptel-org-branching-context t)
+  (setf (alist-get 'org-mode gptel-prompt-prefix-alist) "_@me_\n")
+  (setf (alist-get 'org-mode gptel-response-prefix-alist) "_@bot_\n")
   ;; Make <return> trigger RET (gptel-send) in menu and tools
   (with-eval-after-load 'gptel-transient
     (dolist (menu '(gptel-menu gptel-tools))
