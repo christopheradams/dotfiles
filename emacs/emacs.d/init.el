@@ -1003,6 +1003,8 @@ graphical display, but hide it if in terminal."
                   `(elixir-atom-face ((t (:foreground ,colr0D))))
                   `(elixir-attribute-face ((t (:foreground ,colr0E))))
 
+                  `(error ((t (:foreground, colr08))))
+
                   `(font-lock-constant-face ((t (:foreground ,colr0D))))
                   `(font-lock-doc-face ((t (:foreground ,base02))))
                   `(font-lock-function-name-face ((t (:weight bold))))
@@ -1045,6 +1047,7 @@ graphical display, but hide it if in terminal."
                   `(org-block ((t (:background ,base00))))
                   `(org-block-begin-line ((t (:foreground ,base02 :background ,base00))))
                   `(org-block-end-line ((t (:foreground ,base02 :background ,base00))))
+                  `(org-cite-key ((t (:foreground ,colr0B))))
                   `(org-date ((t (:foreground ,base0E))))
                   `(org-document-title ((t (:foreground ,base07 :weight bold))))
                   `(org-done ((t (:background ,base00 :foreground ,base02))))
