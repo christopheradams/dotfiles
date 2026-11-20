@@ -330,6 +330,13 @@ graphical display, but hide it if in terminal."
    "s" 'save-buffer
    "S" 'save-some-buffers
    "T" 'toggle-truncate-lines
+   "ta" 'gptel-add
+   "tf" 'gptel-add-file
+   "tm" 'gptel-mode
+   "tr" 'gptel-rewrite
+   "ts" 'gptel-set-topic
+   "tt" 'gptel-tools
+   "tu" 'gptel-menu
    "V" (lambda ()
          (interactive)
          (let ((current-prefix-arg '(4))) ; C-u
