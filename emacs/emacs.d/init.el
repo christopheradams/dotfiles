@@ -1013,6 +1013,12 @@ graphical display, but hide it if in terminal."
 
                   `(fringe ((t (:background ,base00))))
 
+                  `(gptel-context-deletion-face ((t (:foreground ,colr09 :background ,colr0A))))
+                  `(gptel-context-highlight-face ((t (:foreground ,base07 :background ,colr0C))))
+                  `(gptel-response-fringe-highlight ((t (:foreground ,base03))))
+                  `(gptel-response-highlight ((t (:foreground ,base07 :background ,colr0C))))
+                  `(gptel-rewrite-highlight-face ((t (:foreground ,base07 :background ,colr0A))))
+
                   `(help-key-binding ((t (:foreground ,colr08 :background ,base00 :box (:line-width 1 :color ,colr08)))))
 
                   `(isearch ((t (:foreground ,colr0A :background ,colr00 :inverse-video t))))
