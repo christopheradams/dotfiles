@@ -1132,8 +1132,10 @@ graphical display, but hide it if in terminal."
   :custom
   (gptel-model 'gpt-5.4-mini)
   (gptel-default-mode 'org-mode)
+  (gptel-highlight-methods '(margin))
   :hook
   ((gptel-mode . visual-line-mode)
+   (gptel-mode . gptel-highlight-mode)
    (gptel-post-stream . gptel-auto-scroll))
   :config
   (setq gptel-expert-commands t)
