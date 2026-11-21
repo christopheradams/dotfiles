@@ -1139,6 +1139,19 @@ graphical display, but hide it if in terminal."
 (let ((modeline.el (expand-file-name "modeline.el" user-emacs-directory)))
   (load modeline.el))
 
+;;; agent-shell
+(use-package agent-shell
+  :straight t
+  :config
+  (setq agent-shell-openai-authentication
+        (agent-shell-openai-make-authentication
+         :api-key (lambda ()
+                    (auth-source-pick-first-password
+                     :host "api.openai.com"
+                     :user "apikey"))))
+  (setq agent-shell-preferred-agent-config
+        (agent-shell-openai-make-codex-config)))
+
 ;;; gptel
 (use-package gptel
   :straight t
