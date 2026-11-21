@@ -1155,6 +1155,14 @@ graphical display, but hide it if in terminal."
   (setq gptel-org-branching-context t)
   (setf (alist-get 'org-mode gptel-prompt-prefix-alist) "_@me_\n")
   (setf (alist-get 'org-mode gptel-response-prefix-alist) "_@bot_\n")
+
+  (defun cxa/gptel-save-if-modified (&rest _ignored)
+    (when (and buffer-file-name
+               (buffer-modified-p))
+      (save-buffer)))
+
+  (add-hook 'gptel-post-response-functions #'cxa/gptel-save-if-modified)
+
   ;; Make <return> trigger RET (gptel-send) in menu and tools
   (with-eval-after-load 'gptel-transient
     (dolist (menu '(gptel-menu gptel-tools))
