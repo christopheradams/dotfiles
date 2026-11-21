@@ -1176,14 +1176,15 @@ graphical display, but hide it if in terminal."
 
   (add-hook 'gptel-post-response-functions #'cxa/gptel-save-if-modified)
 
-  ;; Make <return> trigger RET (gptel-send) in menu and tools
+  ;; Evil Collection binds <return> directly in gptel buffers, bypassing
+  ;; Emacs's fallback to RET. Give the menu action both bindings.
   (with-eval-after-load 'gptel-transient
     (dolist (menu '(gptel-menu gptel-tools))
-      (condition-case err
-          (transient-suffix-put menu "RET" :key "<return>")
-        (error
-         (message "gptel RET workaround skipped for %s: %s"
-                  menu (error-message-string err)))))))
+      (unless (ignore-errors (transient-get-suffix menu "<return>"))
+        (let ((props (cdr (transient-get-suffix menu "RET"))))
+          (transient-append-suffix menu "RET"
+            (append (list (plist-get props :command))
+                    props '(:key "<return>"))))))))
 
 ;;; gptel-tools
 (let ((gptel-file (expand-file-name "gptel.el" user-emacs-directory)))
