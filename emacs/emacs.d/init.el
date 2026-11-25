@@ -319,6 +319,8 @@ graphical display, but hide it if in terminal."
    "ot" 'org-todo
    "ow" 'cxa/org-refile
    "oW" 'org-refile-goto-last-stored
+   "pc" 'project-compile
+   "pC" 'project-recompile
    "pE" 'project-eshell
    "pf" 'project-find-file
    "pm" 'consult-project-buffer
