@@ -1154,6 +1154,20 @@ graphical display, but hide it if in terminal."
   (setq agent-shell-preferred-agent-config
         (agent-shell-openai-make-codex-config)))
 
+(use-package agent-shell-manager
+  :straight (:type git
+             :host github
+             :repo "jethrokuan/agent-shell-manager"
+             :branch "main")
+  :after agent-shell
+  :config
+  (defun cxa/fit-agent-shell-manager (&rest _)
+    (when (derived-mode-p 'agent-shell-manager-mode)
+      (fit-window-to-buffer)))
+
+  (advice-add 'agent-shell-manager-toggle :after
+              #'cxa/fit-agent-shell-manager))
+
 ;;; gptel
 (use-package gptel
   :straight t
