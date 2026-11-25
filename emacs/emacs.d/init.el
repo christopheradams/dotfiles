@@ -1095,6 +1095,8 @@ graphical display, but hide it if in terminal."
 
                   `(show-paren-match ((t (:foreground ,colr08 :background ,base00 :weight bold))))
 
+                  `(success ((t (:foreground ,colr0B :weight normal))))
+
                   `(vertical-border ((t (:foreground ,base03))))
 
                   `(warning ((t (:foreground ,cust00 :weight normal))))
