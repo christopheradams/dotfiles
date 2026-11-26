@@ -1173,6 +1173,15 @@ graphical display, but hide it if in terminal."
   (advice-add 'agent-shell-manager-toggle :after
               #'cxa/fit-agent-shell-manager))
 
+(use-package agent-shell-org-transcript
+  :straight (:type git
+             :host github
+             :repo "lllShamanlll/agent-shell-org-transcript"
+             :branch "main")
+  :after agent-shell
+  :custom
+  (agent-shell-org-transcript-directory (concat org-directory "/agent-shell")))
+
 ;;; gptel
 (use-package gptel
   :straight t
