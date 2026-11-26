@@ -1065,7 +1065,7 @@ graphical display, but hide it if in terminal."
                   `(org-block-end-line ((t (:foreground ,base02 :background ,base00))))
                   `(org-cite-key ((t (:foreground ,colr0B))))
                   `(org-date ((t (:foreground ,base0E))))
-                  `(org-document-title ((t (:foreground ,base07 :weight bold))))
+                  `(org-document-title ((t (:foreground ,base07 :weight bold :height 1.0))))`
                   `(org-done ((t (:background ,base00 :foreground ,base02))))
                   `(org-drawer ((t (:foreground ,base0E))))
                   `(org-headline-done ((t (:background ,base00 :foreground ,base02 :weight normal))))
