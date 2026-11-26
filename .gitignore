@@ -35,6 +35,7 @@ emacs/emacs.d/history
 emacs/emacs.d/recentf
 emacs/emacs.d/recentf~
 emacs/emacs.d/eshell
+emacs/emacs.d/agent
 emacs/emacs.d/games
 emacs/emacs.d/tramp
 emacs/emacs.d/elpa
