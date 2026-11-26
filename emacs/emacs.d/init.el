@@ -520,7 +520,8 @@ graphical display, but hide it if in terminal."
     (browse-url output-file)))
 
 (defun cxa/org-which-function ()
-  (when (derived-mode-p 'org-mode)
+  (when (and (derived-mode-p 'org-mode)
+             (not (org-before-first-heading-p)))
     (mapconcat #'identity (org-get-outline-path t) " → ")))
 
 (defun cxa/org-which-func-setup ()
