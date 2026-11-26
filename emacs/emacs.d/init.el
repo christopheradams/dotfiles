@@ -1146,6 +1146,8 @@ graphical display, but hide it if in terminal."
 ;;; agent-shell
 (use-package agent-shell
   :straight t
+  :ensure-system-package
+  (codex-acp . "npm install -g @agentclientprotocol/codex-acp")
   :config
   (setq agent-shell-openai-authentication
         (agent-shell-openai-make-authentication
