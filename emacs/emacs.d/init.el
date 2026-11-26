@@ -1216,6 +1216,13 @@ graphical display, but hide it if in terminal."
             (append (list (plist-get props :command))
                     props '(:key "<return>"))))))))
 
+;;; gptel-agent
+(use-package gptel-agent
+  :straight t
+  :after gptel
+  :config
+  (gptel-agent-update))
+
 ;;; gptel-tools
 (let ((gptel-file (expand-file-name "gptel.el" user-emacs-directory)))
   (when (file-exists-p gptel-file)
